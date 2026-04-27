@@ -97,6 +97,10 @@ export const SERVICES = [
         text: 'A single confusing slide, an unclear chart, or a missing proof point can derail an otherwise strong narrative. These gaps need to be caught before investors do.',
       },
     ],
+     pricing: [
+      { tier: 'Essential Review', price: '$1,500', sub: '5 business days · Written critique' },
+      { tier: 'Founder Workshop', price: '$2,800', sub: '60-min live session + revisions' },
+    ],
     deliverHeading: 'Investor-grade feedback that tells you exactly what to fix and why.',
     deliver: [
       { title: 'Slide-by-Slide Annotation', text: 'Every slide reviewed with detailed written annotations on copy, structure, evidence, and visual clarity.' },
@@ -132,6 +136,10 @@ export const SERVICES = [
     accent: 'turquoise',
     why: 'We build investor-grade pitch decks from the ground up — crafting the narrative architecture, structuring each slide for maximum impact, and delivering a polished presentation that opens doors and moves investors to act.',
     whyHeading: 'Most pitch decks fail before a founder ever steps into the room.',
+    pricing: [
+      { tier: 'Pre-Seed Deck', price: '$5,500', sub: '12 slides · 3 weeks · 2 revisions' },
+      { tier: 'Seed / Series A', price: '$9,500', sub: '15 slides · 4 weeks · Coaching included' },
+    ],
     whyPoints: [
       {
         title: 'You Have 3 Minutes to Make an Impression',
@@ -181,7 +189,11 @@ export const SERVICES = [
     accent: 'teal',
     why: 'We build rigorous, investor-grade financial models from scratch — structured around how your business actually operates, with explicit assumptions investors can interrogate and scenarios that hold up under diligence.',
     whyHeading: 'Investors trust the model that survives scrutiny — not the spreadsheet that hides it.',
-    whyPoints: [
+     pricing: [
+      { tier: 'Pre-Revenue', price: '$4,500', sub: 'For pre-seed founders' },
+      { tier: 'Revenue Stage', price: '$7,500', sub: 'For seed / Series A' },
+    ],
+     whyPoints: [
       {
         title: 'Top-Down Forecasts Get Ignored',
         text: 'Serious investors discount any forecast that is not built bottom-up from real operating drivers. A top-down model signals you have not thought through the business.',
@@ -230,6 +242,10 @@ export const SERVICES = [
     accent: 'yellow',
     why: 'Defensible, market-grounded valuation analyses using the methodologies that institutional investors apply — comparable companies, precedent transactions, and DCF — calibrated to your stage, sector, and geography.',
     whyHeading: 'Valuation is where dollars are won and lost before term sheets are signed.',
+     pricing: [
+      { tier: 'Valuation Memo', price: '$3,500', sub: '2 weeks · Comps + DCF' },
+      { tier: 'Defense Package', price: '$6,000', sub: 'Adds founder coaching & live Q&A prep' },
+    ],
     whyPoints: [
       {
         title: 'Founders Anchor on Hope, Not Evidence',
@@ -279,6 +295,10 @@ export const SERVICES = [
     accent: 'turquoise',
     why: 'Strategic, targeted investor outreach built on thesis alignment, stage fit, and sector expertise — paired with warm introductions from our established network across North America and Europe.',
     whyHeading: 'A sharp pipeline beats a broad blast every time.',
+    pricing: [
+      { tier: 'Targeted Sprint', price: '$6,500', sub: '4 weeks · 30 investors' },
+      { tier: 'Full Round', price: '$12,000', sub: '8 weeks · up to 80 investors' },
+    ],
     whyPoints: [
       {
         title: 'Spray-and-Pray Burns Your Reputation',
@@ -329,6 +349,10 @@ export const SERVICES = [
     accent: 'teal',
     why: 'A comprehensive diagnostic of your entire fundraising package — deck, financials, data room, legal structure, and founder narrative — ensuring you present a watertight investment case before you approach a single investor.',
     whyHeading: 'The majority of failed raises are preventable with the right preparation.',
+     pricing: [
+      { tier: 'Diagnostic', price: '$3,200', sub: '2 weeks · Full report' },
+      { tier: 'Diagnostic + Roadmap', price: '$5,800', sub: 'Adds 4 advisory hours' },
+    ],
     whyPoints: [
       {
         title: 'Inconsistencies Are Investor Deal-Breakers',
@@ -379,6 +403,10 @@ export const SERVICES = [
     accent: 'yellow',
     why: 'Structured one-on-one advisory sessions with experienced venture investors and startup operators. Bring any challenge, any question — and get direct, unfiltered answers from people who have lived the fundraising journey from both sides of the table.',
     whyHeading: "Sometimes you don't need a full engagement. You need one hour with the right person.",
+     pricing: [
+      { tier: 'Single Session', price: '$650', sub: '60 min · Notes included' },
+      { tier: 'Pack of 4', price: '$2,200', sub: 'Use within 90 days' },
+    ],
     whyPoints: [
       {
         title: 'Generic Advice Is Everywhere — Specific Advice Is Rare',
