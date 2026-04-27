@@ -1,9 +1,27 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowRight, ArrowLeft, Check } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Plus, Minus, AlertTriangle } from 'lucide-react';
+import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
-import { SERVICE_BY_SLUG, SERVICES, INVESTOR_PIPELINE_CTA } from '../mock';
+import { SERVICE_BY_SLUG, SERVICES, HOW_WE_WORK_INTRO } from '../mock';
+
+function Faq({ q, a, defaultOpen=false }) {
+  const [open, setOpen] = useState(defaultOpen);
+  return (
+    <div className="card-pro">
+      <button onClick={()=>setOpen(!open)} className="w-full flex items-center justify-between gap-6 p-6 lg:p-7 text-left">
+        <span className="font-serif text-[18px] lg:text-[20px] font-medium text-amg-teal">{q}</span>
+        <span className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors shrink-0 ${open?'bg-amg-teal text-amg-yellow':'bg-amg-cream-2 text-amg-teal'}`}>
+          {open ? <Minus className="w-4 h-4"/> : <Plus className="w-4 h-4"/>}
+        </span>
+      </button>
+      {open && (
+        <div className="px-6 lg:px-7 pb-6 lg:pb-7 text-[14.5px] text-amg-teal/75 leading-relaxed border-t border-amg-line pt-5">{a}</div>
+      )}
+    </div>
+  );
+}
 
 export default function ServiceDetail() {
   const { slug } = useParams();
@@ -19,7 +37,7 @@ export default function ServiceDetail() {
     <>
       <Navbar />
 
-      {/* Hero */}
+      {/* HERO */}
       <section className={`relative overflow-hidden ${heroBg} border-b border-amg-line`}>
         <div className="absolute inset-0 grid-paper pointer-events-none opacity-40"/>
         <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-16 lg:py-24 relative">
@@ -33,6 +51,7 @@ export default function ServiceDetail() {
               </div>
               <h1 className="heading-display text-[44px] md:text-[72px] leading-[0.98] text-amg-teal">{service.title}</h1>
               <p className="mt-6 text-[18px] lg:text-[20px] text-amg-teal/85 max-w-2xl leading-relaxed">{service.tagline}</p>
+              <p className="mt-5 text-[15px] text-amg-teal/75 max-w-2xl leading-relaxed">{service.why}</p>
             </div>
             <div className="lg:col-span-4">
               <div className="flex flex-wrap gap-3">
@@ -45,86 +64,51 @@ export default function ServiceDetail() {
       </section>
 
       {/* WHY IT MATTERS */}
-      <section className="py-24 px-6 lg:px-10">
-        <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 items-start">
-          <div className="lg:col-span-4">
-            <div className="eyebrow mb-4">Why It Matters</div>
-          </div>
-          <div className="lg:col-span-8">
-            <p className="font-serif text-[24px] md:text-[30px] leading-[1.32] text-amg-teal">{service.why}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT'S INCLUDED */}
-      {service.included && service.included.length > 0 && (
-        <section className="py-24 px-6 lg:px-10 bg-amg-cream-2/40 border-y border-amg-line">
+      {service.whyPoints && service.whyPoints.length > 0 && (
+        <section className="py-24 px-6 lg:px-10">
           <div className="max-w-[1280px] mx-auto">
-            <div className="max-w-2xl mb-12">
-              <div className="eyebrow mb-4">What&rsquo;s Included</div>
-              <h2 className="heading-display text-[36px] md:text-[44px] text-amg-teal">Everything you receive.</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
+              <div className="lg:col-span-4">
+                <div className="eyebrow mb-4">Why It Matters</div>
+              </div>
+              <div className="lg:col-span-8">
+                <h2 className="font-serif text-[28px] md:text-[40px] font-medium leading-[1.18] text-amg-teal">
+                  {service.whyHeading}
+                </h2>
+              </div>
             </div>
-            <div className="card-pro shadow-soft p-2 lg:p-4">
-              <ul className="divide-y divide-amg-line">
-                {service.included.map((item, i) => (
-                  <li key={i} className="flex items-start gap-4 py-4 px-4 lg:px-6">
-                    <div className="w-7 h-7 rounded-full bg-amg-turquoise-bg border border-amg-turquoise flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="w-3.5 h-3.5 text-amg-teal"/>
-                    </div>
-                    <span className="text-[15px] text-amg-teal leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {service.whyPoints.map((p, i) => (
+                <div key={i} className="card-pro p-7 hover-lift">
+                  <div className="w-10 h-10 rounded-md bg-amg-cream-2 border border-amg-line flex items-center justify-center mb-5">
+                    <AlertTriangle className="w-4 h-4 text-amg-teal"/>
+                  </div>
+                  <div className="font-serif text-[20px] font-medium text-amg-teal leading-tight">{p.title}</div>
+                  <p className="mt-3 text-[14.5px] text-amg-teal/70 leading-relaxed">{p.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
       )}
 
-      {/* WHAT WE DELIVER (Investment Readiness) */}
-      {service.deliver && (
+      {/* WHAT WE DELIVER */}
+      {service.deliver && service.deliver.length > 0 && (
         <section className="py-24 px-6 lg:px-10 bg-amg-cream-2/40 border-y border-amg-line">
           <div className="max-w-[1280px] mx-auto">
             <div className="max-w-3xl mb-12">
               <div className="eyebrow mb-4">What We Deliver</div>
-              <h2 className="heading-display text-[32px] md:text-[42px] text-amg-teal leading-tight">{service.deliver.title}</h2>
-              <p className="mt-5 text-[15.5px] text-amg-teal/75 leading-relaxed">{service.deliver.description}</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {service.deliver.items.map((it, i) => {
-                const bar = i===0?'bg-amg-yellow':i===1?'bg-amg-turquoise':'bg-amg-teal';
-                return (
-                  <div key={i} className="card-pro shadow-soft overflow-hidden">
-                    <div className={`h-1 ${bar}`}/>
-                    <div className="p-7">
-                      <div className="font-serif text-[22px] font-medium text-amg-teal leading-tight">{it.title}</div>
-                      <p className="mt-3 text-[14.5px] text-amg-teal/75 leading-relaxed">{it.text}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* AMA Sessions Features */}
-      {service.amaFeatures && (
-        <section className="py-24 px-6 lg:px-10 bg-amg-cream-2/40 border-y border-amg-line">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="max-w-3xl mb-12">
-              <div className="eyebrow mb-4">AMA Sessions</div>
-              <h2 className="heading-display text-[32px] md:text-[42px] text-amg-teal leading-tight">{service.amaIntro.title}</h2>
-              <p className="mt-5 text-[15.5px] text-amg-teal/75 leading-relaxed">{service.amaIntro.description}</p>
+              <h2 className="heading-display text-[36px] md:text-[48px] text-amg-teal leading-tight">{service.deliverHeading}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {service.amaFeatures.map((f, i) => {
+              {service.deliver.map((d, i) => {
                 const bar = i%3===0?'bg-amg-yellow':i%3===1?'bg-amg-turquoise':'bg-amg-teal';
                 return (
-                  <div key={i} className="card-pro shadow-soft overflow-hidden">
+                  <div key={i} className="card-pro shadow-soft hover-lift overflow-hidden">
                     <div className={`h-1 ${bar}`}/>
                     <div className="p-7">
-                      <div className="font-serif text-[20px] font-medium text-amg-teal leading-tight">{f.title}</div>
-                      <p className="mt-2.5 text-[14px] text-amg-teal/75 leading-relaxed">{f.text}</p>
+                      <div className="font-serif text-[20px] font-medium text-amg-teal leading-tight">{d.title}</div>
+                      <p className="mt-2.5 text-[14px] text-amg-teal/75 leading-relaxed">{d.text}</p>
                     </div>
                   </div>
                 );
@@ -134,22 +118,80 @@ export default function ServiceDetail() {
         </section>
       )}
 
-      {/* Investor Outreach pipeline CTA */}
-      {service.pipelineCta && (
+      {/* HOW WE WORK TOGETHER */}
+      {service.process && service.process.length > 0 && (
         <section className="py-24 px-6 lg:px-10">
+          <div className="max-w-[1280px] mx-auto">
+            <div className="max-w-3xl mb-12">
+              <div className="eyebrow mb-4">{HOW_WE_WORK_INTRO.eyebrow}</div>
+              <h2 className="heading-display text-[36px] md:text-[48px] text-amg-teal leading-tight">A structured engagement.</h2>
+              <p className="mt-5 text-[15.5px] text-amg-teal/75 leading-relaxed">{HOW_WE_WORK_INTRO.description}</p>
+            </div>
+            <div className="space-y-4">
+              {service.process.map((p, i) => (
+                <div key={i} className="card-pro hover-lift overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-4 p-6 lg:p-7 items-center">
+                  <div className="md:col-span-1 flex md:block">
+                    <div className="step-num text-amg-turquoise-2">{String(i+1).padStart(2,'0')}</div>
+                  </div>
+                  <div className="md:col-span-7">
+                    <div className="font-serif text-[22px] font-medium text-amg-teal leading-tight">{p.step}</div>
+                    <p className="mt-2 text-[14.5px] text-amg-teal/70 leading-relaxed">{p.text}</p>
+                  </div>
+                  <div className="md:col-span-4 md:text-right">
+                    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amg-cream-2 border border-amg-line text-[12px] font-semibold text-amg-teal">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amg-turquoise"/>{p.day}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* PRICING NOTE */}
+      <section id="pricing" className="py-20 px-6 lg:px-10 bg-amg-cream-2/40 border-y border-amg-line">
+        <div className="max-w-[1100px] mx-auto text-center">
+          <div className="eyebrow mb-4 mx-auto">Pricing</div>
+          <h2 className="heading-display text-[36px] md:text-[48px] text-amg-teal leading-tight">Transparent, Flat-Fee Pricing.</h2>
+          <p className="mt-5 text-[15.5px] text-amg-teal/75 max-w-2xl mx-auto leading-relaxed">
+            No hourly surprises. Every engagement is scoped, priced, and agreed upon before we start.
+          </p>
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+            <Link to="/contact" className="btn-yellow">Request a Quote <ArrowRight className="w-4 h-4"/></Link>
+            <Link to="/pricing" className="btn-outline">View All Pricing</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      {service.faqs && service.faqs.length > 0 && (
+        <section className="py-24 px-6 lg:px-10">
+          <div className="max-w-[1100px] mx-auto">
+            <div className="eyebrow mb-4">FAQs</div>
+            <h2 className="heading-display text-[36px] md:text-[48px] text-amg-teal mb-10">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {service.faqs.map((f, i) => (<Faq key={i} q={f.q} a={f.a} defaultOpen={i===0} />))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FINAL CTA */}
+      {service.finalCta && (
+        <section className="py-20 px-6 lg:px-10">
           <div className="max-w-[1280px] mx-auto">
             <div className="relative rounded-2xl overflow-hidden card-dark">
               <div className="absolute inset-0 grid-paper pointer-events-none opacity-50"/>
               <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 p-10 lg:p-16 items-center">
                 <div className="lg:col-span-8">
-                  <h2 className="heading-display text-[36px] md:text-[52px] text-amg-cream">{INVESTOR_PIPELINE_CTA.title}</h2>
-                  <p className="mt-5 text-amg-cream/70 max-w-xl text-[15.5px] leading-relaxed">{INVESTOR_PIPELINE_CTA.description}</p>
+                  <h2 className="heading-display text-[36px] md:text-[52px] text-amg-cream leading-tight">{service.finalCta.title}</h2>
+                  <p className="mt-5 text-amg-cream/70 max-w-xl text-[15.5px] leading-relaxed">{service.finalCta.description}</p>
                 </div>
                 <div className="lg:col-span-4 lg:text-right">
-                  <Link to={INVESTOR_PIPELINE_CTA.cta.to} className="inline-flex items-center gap-2 bg-amg-yellow hover:bg-amg-yellow-2 text-amg-teal font-semibold px-5 py-3 rounded-md text-[14px] transition-colors">
-                    {INVESTOR_PIPELINE_CTA.cta.label} <ArrowRight className="w-4 h-4"/>
+                  <Link to={service.finalCta.cta.to} className="inline-flex items-center gap-2 bg-amg-yellow hover:bg-amg-yellow-2 text-amg-teal font-semibold px-5 py-3 rounded-md text-[14px] transition-colors">
+                    {service.finalCta.cta.label} <ArrowRight className="w-4 h-4"/>
                   </Link>
-                  <div className="mt-4 text-[12px] text-amg-cream/60">{INVESTOR_PIPELINE_CTA.note}</div>
                 </div>
               </div>
             </div>
@@ -157,12 +199,12 @@ export default function ServiceDetail() {
         </section>
       )}
 
-      {/* Other services */}
+      {/* OTHER SERVICES */}
       <section className="py-24 px-6 lg:px-10 bg-amg-cream-2/40 border-y border-amg-line">
         <div className="max-w-[1280px] mx-auto">
           <div className="flex items-end justify-between gap-6 mb-10 flex-wrap">
             <div>
-              <div className="eyebrow mb-4">Continue exploring</div>
+              <div className="eyebrow mb-4">Continue Exploring</div>
               <h2 className="heading-display text-[32px] md:text-[40px] text-amg-teal">Other services.</h2>
             </div>
             <Link to="/founder-services" className="btn-outline">All Services <ArrowRight className="w-4 h-4"/></Link>

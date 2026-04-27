@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight, FileText, Sparkles, Calculator, TrendingUp, Users, ShieldCheck, MessageCircle, Briefcase } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, FileText, Sparkles, Calculator, TrendingUp, Users, ShieldCheck, MessageCircle, Briefcase, CheckCircle2 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
-import { HERO, SERVICE_PILLARS, SERVICES, FOUNDER_SERVICES_INTRO } from '../mock';
+import { HERO, SERVICE_PILLARS, SERVICES, FOUNDER_SERVICES_INTRO, WHO_WE_ARE } from '../mock';
 
 const ICONS = {
   'pitch-deck-review': FileText,
@@ -63,8 +63,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOUNDER SERVICES */}
+      {/* WHO WE ARE */}
       <section className="py-24 px-6 lg:px-10 border-t border-amg-line">
+        <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="lg:col-span-6">
+            <div className="inline-flex items-center gap-2 mb-7">
+              <span className="tag-pill bg-amg-turquoise-bg border-amg-turquoise"><span className="dot bg-amg-turquoise"/>{WHO_WE_ARE.eyebrow}</span>
+            </div>
+            <h2 className="heading-display text-[44px] md:text-[64px] text-amg-teal leading-[0.98]">
+              Practical Insight.<br/><em>Real Results.</em>
+            </h2>
+            <div className="mt-7 space-y-5 text-[15.5px] text-amg-teal/75 leading-relaxed max-w-xl">
+              {WHO_WE_ARE.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
+            </div>
+            <ul className="mt-8 space-y-3.5">
+              {WHO_WE_ARE.bullets.map((b, i) => (
+                <li key={i} className="flex items-start gap-3 text-[15px] text-amg-teal">
+                  <CheckCircle2 className="w-5 h-5 text-amg-turquoise-2 shrink-0 mt-0.5"/>
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="lg:col-span-6 relative">
+            <div className="relative aspect-[4/5] w-full max-w-[560px] mx-auto rounded-2xl overflow-hidden border border-amg-line shadow-soft-lg">
+              <img src={WHO_WE_ARE.image} alt="AMG Venture Partners team working with a founder" className="w-full h-full object-cover"/>
+            </div>
+            <div className="absolute -bottom-6 -left-2 sm:left-6 lg:-left-6 card-pro shadow-soft-lg p-5 lg:p-6 max-w-[260px]">
+              <div className="text-[10.5px] tracking-[0.18em] uppercase font-semibold text-amg-teal/75">{WHO_WE_ARE.stat.label}</div>
+              <div className="font-serif text-[34px] lg:text-[40px] font-medium text-amg-turquoise-2 leading-none mt-2">{WHO_WE_ARE.stat.value}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOUNDER SERVICES */}
+      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-14">
             <div className="lg:col-span-7">
