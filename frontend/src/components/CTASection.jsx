@@ -1,35 +1,47 @@
 import { Link } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function CTASection() {
   return (
-    <section className="py-20 px-6 lg:px-10">
-      <div className="max-w-[1320px] mx-auto">
-        <div className="relative bg-amg-ink text-amg-cream border-2 border-amg-ink shadow-crisp-lg">
-          <div className="absolute inset-0 grid-paper pointer-events-none"/>
+    <section className="py-24 px-6 lg:px-10">
+      <div className="max-w-[1280px] mx-auto">
+        <div className="relative rounded-2xl overflow-hidden card-dark">
+          <div className="absolute inset-0 grid-paper pointer-events-none opacity-50"/>
           <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 p-10 lg:p-16">
             <div className="lg:col-span-7">
-              <div className="eyebrow text-amg-yellow mb-5">Not sure where to start?</div>
-              <h2 className="heading-display text-[44px] md:text-[60px] text-amg-cream">
-                Schedule a <span className="text-amg-yellow italic">free</span> strategy call.
+              <div className="kicker-row text-amg-yellow text-[11px] tracking-[0.18em] uppercase font-semibold mb-6">Free strategy call</div>
+              <h2 className="heading-display text-[40px] md:text-[56px] text-amg-cream">
+                Schedule a 30-minute <em className="text-amg-yellow not-italic font-serif" style={{fontStyle:'italic'}}>working session</em> with a partner.
               </h2>
-              <p className="mt-5 text-amg-cream/75 max-w-xl text-[16px] leading-relaxed">
-                Book a complimentary 30-minute call and we&rsquo;ll map the right service path for your stage — no obligation, no pitch, just clarity.
+              <p className="mt-6 text-amg-cream/65 max-w-xl text-[15.5px] leading-relaxed">
+                No obligation, no pitch. We&apos;ll map the right service path for your stage and leave you with a prioritised action roadmap.
               </p>
-              <div className="flex flex-wrap items-center gap-4 mt-8">
-                <Link to="/contact" className="btn-primary">Book a Free Strategy Call <ArrowUpRight className="w-4 h-4"/></Link>
-                <Link to="/founder-services" className="text-amg-cream font-semibold link-under">Explore Services →</Link>
+              <div className="flex flex-wrap items-center gap-4 mt-9">
+                <Link to="/contact" className="inline-flex items-center gap-2 bg-amg-yellow hover:bg-amg-yellow-soft text-amg-ink font-semibold px-5 py-3 rounded-md text-[14px] transition-colors">
+                  Book a free call <ArrowRight className="w-4 h-4"/>
+                </Link>
+                <Link to="/founder-services" className="text-amg-cream/85 hover:text-amg-cream font-medium text-[14px] link-under">Explore services →</Link>
               </div>
             </div>
 
             <div className="lg:col-span-5">
-              <div className="bg-amg-yellow text-amg-ink border-2 border-amg-ink p-6 shadow-crisp">
-                <div className="eyebrow mb-3">What you get</div>
-                <ul className="space-y-3 text-[14px] font-medium">
-                  <li className="flex gap-3"><span className="font-serif font-bold">01.</span><span>Audit of your current fundraising readiness across 6 dimensions.</span></li>
-                  <li className="flex gap-3"><span className="font-serif font-bold">02.</span><span>Honest investor-perspective feedback on your story and number.</span></li>
-                  <li className="flex gap-3"><span className="font-serif font-bold">03.</span><span>A prioritised action roadmap — yours to keep, no strings.</span></li>
+              <div className="rounded-xl bg-amg-ink-2/70 border border-amg-cream/10 p-7">
+                <div className="text-[11px] tracking-[0.18em] uppercase text-amg-yellow font-semibold mb-4">What you take away</div>
+                <ul className="space-y-4 text-[14px]">
+                  {[
+                    'Diagnostic of your fundraising readiness across six dimensions.',
+                    'Honest, investor-perspective view on your story and number.',
+                    'A prioritised, written action roadmap — yours to keep.',
+                  ].map((t, i) => (
+                    <li key={i} className="flex items-start gap-3 text-amg-cream/85">
+                      <CheckCircle2 className="w-4 h-4 text-amg-turquoise mt-0.5 shrink-0"/>
+                      <span>{t}</span>
+                    </li>
+                  ))}
                 </ul>
+                <div className="mt-6 pt-6 border-t border-amg-cream/10 text-[12px] text-amg-cream/55">
+                  Average response time: under 1 business day.
+                </div>
               </div>
             </div>
           </div>
