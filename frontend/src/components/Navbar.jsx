@@ -20,10 +20,13 @@ export default function Navbar() {
     <header className={`sticky top-0 z-50 transition-all ${scrolled ? 'bg-amg-cream/85 backdrop-blur-md border-b border-amg-line' : 'bg-amg-cream border-b border-transparent'}`}>
       <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[68px]">
         <Link to="/" className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-amg-ink text-amg-cream flex items-center justify-center font-serif text-[16px] rounded-[4px]">A</div>
+          <div className="relative w-9 h-9 bg-amg-teal text-amg-yellow flex items-center justify-center font-serif text-[17px] rounded-[5px] shadow-[0_2px_6px_rgba(14,76,92,0.25)]">
+            <span className="absolute inset-0 rounded-[5px] ring-1 ring-amg-yellow/30 pointer-events-none"/>
+            A
+          </div>
           <div className="leading-tight">
-            <div className="font-serif font-medium text-[15px] tracking-tight text-amg-ink">AMG Venture Partners</div>
-            <div className="text-[10px] tracking-[0.18em] uppercase font-medium text-amg-mute">Business Consulting</div>
+            <div className="font-serif font-medium text-[15px] tracking-tight text-amg-teal">AMG Venture Partners</div>
+            <div className="text-[10px] tracking-[0.2em] uppercase font-semibold text-amg-turquoise-2">Business Consulting</div>
           </div>
         </Link>
 
