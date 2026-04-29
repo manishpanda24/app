@@ -500,6 +500,25 @@ export const FEATURED_DOWNLOADS = [
     cta: 'Download (Google Slides)',
     accent: 'turquoise',
   },
+   {
+    label: 'Finance',
+    title: 'Burn Runaway Modeler',
+    cta: 'Plug in your expense and MRR, see your runway instantly.Know when to fundraise before its too late.',
+    accent: 'turquoise',
+    route:'/burnrunway',
+  }, {
+    label: 'Growth',
+    title: 'Revenue Projector',
+    cta: 'Model month-on-month growth scenerio.Bull,bear and base cases.',
+    accent: 'yellow',
+    route: '/revenueprojector',
+  }, {
+    label: 'Fundraising',
+    title: 'SAFE dilution Modeler',
+    cta: 'Stack multiple SAFE rounds, see dilution impact before your priced round. Know what you are giving away before you sign the term sheet. ',
+    accent: 'yellow',
+    route: '/safedilution',
+  },
 ];
 
 export const INVESTOR_PIPELINE_CTA = {

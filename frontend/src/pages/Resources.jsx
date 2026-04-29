@@ -38,9 +38,18 @@ export default function Resources() {
                     <div className="flex-1">
                       <div className="text-[10.5px] tracking-[0.18em] uppercase font-semibold text-amg-turquoise-2 mb-1">{d.label}</div>
                       <div className="font-serif text-[22px] font-medium text-amg-teal">{d.title}</div>
-                      <button className="mt-5 inline-flex items-center gap-2 font-semibold text-[13px] text-amg-turquoise-2 link-under">
-                        {d.cta} <ArrowRight className="w-4 h-4"/>
-                      </button>
+                      {d.route ? (
+                        <Link to={"/resources"+d.route} className="hover:text-amg-teal">
+                          <button className="mt-5 inline-flex items-center gap-2 font-semibold text-[13px] text-amg-turquoise-2 link-under">
+                            {d.cta} <ArrowRight className="w-4 h-4"/>
+                          </button>
+                        </Link>
+                      ):(<button className="mt-5 inline-flex items-center gap-2 font-semibold text-[13px] text-amg-turquoise-2 link-under">
+                            {d.cta} <ArrowRight className="w-4 h-4"/>
+                          </button>)
+                          }
+
+                      
                     </div>
                   </div>
                 </div>
