@@ -17,7 +17,7 @@ export default function Navbar() {
   useEffect(() => { setOpen(false); }, [location.pathname]);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all ${scrolled ? 'bg-amg-cream/85 backdrop-blur-md border-b border-amg-line' : 'bg-amg-cream border-b border-transparent'}`}>
+    <header className={`sticky top-0 z-50 transition-all ${scrolled ? 'bg-white/90 backdrop-blur-md border-b border-gray-100' : 'bg-white border-b border-transparent'}`}>
       <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[68px]">
         <Link to="/" className="flex items-center gap-3">
           <div className="relative w-9 h-9 bg-amg-teal text-amg-yellow flex items-center justify-center font-serif text-[17px] rounded-[5px] shadow-[0_2px_6px_rgba(14,76,92,0.25)]">
@@ -50,7 +50,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-amg-line bg-amg-cream">
+        <div className="lg:hidden border-t border-gray-100 bg-white">
           <div className="px-6 py-4 flex flex-col gap-3">
             {NAV_LINKS.map(l => (
               <NavLink key={l.to} to={l.to} className={({isActive})=>`py-2 font-medium ${isActive?'text-amg-teal':'text-amg-ink'}`}>{l.label}</NavLink>

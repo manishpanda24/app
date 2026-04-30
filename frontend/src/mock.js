@@ -5,6 +5,7 @@ export const NAV_LINKS = [
   { label: 'Pricing', to: '/pricing' },
   { label: 'Resources', to: '/resources' },
   { label: 'Contact', to: '/contact' },
+  // {label:'Investment Readiness Program', to: '/investment-readiness-program'},
 ];
 
 export const HERO = {

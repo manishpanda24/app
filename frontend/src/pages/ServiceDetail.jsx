@@ -80,7 +80,7 @@ export default function ServiceDetail() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {service.whyPoints.map((p, i) => (
                 <div key={i} className="card-pro p-7 hover-lift">
-                  <div className="w-10 h-10 rounded-md bg-amg-cream-2 border border-amg-line flex items-center justify-center mb-5">
+                  <div className="w-10 h-10 rounded-md bg-gray-100 border border-gray-200 flex items-center justify-center mb-5">
                     <AlertTriangle className="w-4 h-4 text-amg-teal"/>
                   </div>
                   <div className="font-serif text-[20px] font-medium text-amg-teal leading-tight">{p.title}</div>
@@ -94,7 +94,7 @@ export default function ServiceDetail() {
 
       {/* WHAT WE DELIVER */}
       {service.deliver && service.deliver.length > 0 && (
-        <section className="py-24 px-6 lg:px-10 bg-amg-cream-2/40 border-y border-amg-line">
+        <section className="py-24 px-6 lg:px-10 bg-gray-50 border-y border-gray-100">
           <div className="max-w-[1280px] mx-auto">
             <div className="max-w-3xl mb-12">
               <div className="eyebrow mb-4">What We Deliver</div>
@@ -138,7 +138,7 @@ export default function ServiceDetail() {
                     <p className="mt-2 text-[14.5px] text-amg-teal/70 leading-relaxed">{p.text}</p>
                   </div>
                   <div className="md:col-span-4 md:text-right">
-                    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amg-cream-2 border border-amg-line text-[12px] font-semibold text-amg-teal">
+                    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 border border-gray-200 text-[12px] font-semibold text-amg-teal">
                       <span className="w-1.5 h-1.5 rounded-full bg-amg-turquoise"/>{p.day}
                     </span>
                   </div>
@@ -150,7 +150,7 @@ export default function ServiceDetail() {
       )}
 
       {/* PRICING NOTE */}
-      <section id="pricing" className="py-20 px-6 lg:px-10 bg-amg-cream-2/40 border-y border-amg-line">
+      <section id="pricing" className="py-20 px-6 lg:px-10 bg-gray-50 border-y border-gray-100">
         <div className="max-w-[1100px] mx-auto text-center">
           <div className="eyebrow mb-4 mx-auto">Pricing</div>
           <h2 className="heading-display text-[36px] md:text-[48px] text-amg-teal leading-tight">Transparent, Flat-Fee Pricing.</h2>
@@ -200,7 +200,7 @@ export default function ServiceDetail() {
       )}
 
       {/* OTHER SERVICES */}
-      <section className="py-24 px-6 lg:px-10 bg-amg-cream-2/40 border-y border-amg-line">
+      <section className="py-24 px-6 lg:px-10 bg-gray-50 border-y border-gray-100">
         <div className="max-w-[1280px] mx-auto">
           <div className="flex items-end justify-between gap-6 mb-10 flex-wrap">
             <div>

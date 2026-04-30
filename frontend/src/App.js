@@ -14,7 +14,7 @@ import { Toaster } from "./components/ui/sonner";
 
 function App() {
   return (
-    <div className="App bg-amg-cream min-h-screen">
+    <div className="App bg-white min-h-screen">
       <BrowserRouter>
         <ScrollToTop />
         <Routes>

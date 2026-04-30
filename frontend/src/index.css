@@ -9,11 +9,21 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #FBF7E9;
+  /* background: #FBF7E9;  cream colour */
+    background: #ffffff;
     color: #06262F;
     font-feature-settings: 'ss01' on, 'cv11' on;
 }
-
+/* Enforce consistent base type scale */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+p, li, span, a, label, input, button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}                                          
 .font-serif { font-family: 'Fraunces', Georgia, serif; }
 .font-sans { font-family: 'Inter', sans-serif; }
 
@@ -21,7 +31,8 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
 
 @layer base {
   :root {
-        --background: 44 60% 96%;
+        /* --background: 44 60% 96%;  cream  colour */
+        --background: 0 0% 100%;
         --foreground: 195 50% 9%;
         --card: 0 0% 100%;
         --card-foreground: 195 50% 9%;
@@ -66,10 +77,14 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
   --amg-teal-bg: #E0EDF1;
   --amg-ink: #06262F;            /* very deep teal as primary "ink" */
   --amg-ink-2: #0A3744;
-  --amg-cream: #FBF7E9;          /* warm cream tinted with yellow */
-  --amg-cream-2: #F2EBD2;
-  --amg-line: #E4DABA;
-  --amg-line-2: #D6C997;
+  /* --amg-cream: #FBF7E9;          /* warm cream tinted with yellow */
+  /* --amg-cream-2: #F2EBD2; */
+  /* --amg-line: #E4DABA; */
+  /* --amg-line-2: #D6C997; */ 
+  --amg-cream: #ffffff;
+--amg-cream-2: #f5f5f5;
+--amg-line: #e8e8e8;
+--amg-line-2: #d4d4d4;
   --amg-mute: #486870;
 }
 
@@ -175,10 +190,17 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
   text-transform: uppercase; color: var(--amg-teal);
 }
 
-.heading-display {
+/* .heading-display {
   font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.025em; line-height: 1.02;
+/* } 
+  cream colour change */
+
+  .heading-display {
+  font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.035em; line-height: 1.0;
 }
-.heading-display em, .heading-display .accent { font-style: italic; font-weight: 400; color: var(--amg-teal); }
+.heading-display em, .heading-display .accent { font-style: normal; font-weight: 800; color: var(--amg-teal); }
+
+/* .heading-display em, .heading-display .accent { font-style: italic; font-weight: 400; color: var(--amg-teal); } */
 
 .divider-line { height: 1px; background: var(--amg-line); width: 100%; }
 .divider-line-strong { height: 1px; background: var(--amg-line-2); width: 100%; }

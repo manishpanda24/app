@@ -98,7 +98,8 @@ export default function Home() {
       </section>
 
       {/* FOUNDER SERVICES */}
-      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40">
+      {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
+      <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-gray-50">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-14">
             <div className="lg:col-span-7">

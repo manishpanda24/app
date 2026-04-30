@@ -5,7 +5,7 @@ import Navbar from '../../components/Navbar';
 
 const ToolLayout = ({ children, number, title, category, categoryColor, description }) => {
   return (
-    <div className="App bg-amg-cream min-h-screen">
+    <div className="App bg-white min-h-screen">
       <div className="absolute inset-x-0 top-0 h-[500px] bg-gradient-to-b from-indigo-500/[0.08] via-violet-500/[0.04] to-transparent pointer-events-none" />
       <div className="absolute inset-0 bg-grid opacity-40 [mask-image:radial-gradient(ellipse_at_top,black_20%,transparent_70%)] pointer-events-none" />
 
