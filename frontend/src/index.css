@@ -72,6 +72,7 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
   --amg-turquoise-bg: #D6F3EE;
   --amg-teal: #0E4C5C;          /* deep teal blue */
   --amg-teal-2: #0A3744;
+  --amg-cyan: darkcyan;
   --amg-teal-3: #06262F;
   --amg-teal-soft: #C9DEE3;
   --amg-teal-bg: #E0EDF1;
@@ -224,7 +225,7 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
 .card-pro:hover { border-color: var(--amg-turquoise); }
 
 .card-dark {
-  background: var(--amg-teal);
+  background: var(--amg-cyan);
   color: #FBF7E9;
   border: 1px solid var(--amg-teal-2);
   border-radius: 10px;

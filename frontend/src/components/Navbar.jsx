@@ -25,14 +25,14 @@ export default function Navbar() {
             A
           </div>
           <div className="leading-tight">
-            <div className="font-serif font-medium text-[15px] tracking-tight text-amg-teal">AMG Venture Partners</div>
-            <div className="text-[10px] tracking-[0.2em] uppercase font-semibold text-amg-turquoise-2">Business Consulting</div>
+            <div className="font-serif font-bold text-[20px] tracking-tight text-amg-teal">AMG </div>
+            <div className="text-[12px] tracking-[0.2em] uppercase font-bold text-amg-turquoise-2">Venture Partners</div>
           </div>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9">
           {NAV_LINKS.map(l => (
-            <NavLink key={l.to} to={l.to} className={({isActive})=>`text-[13.5px] font-medium link-under ${isActive ? 'text-amg-teal' : 'text-amg-ink/80 hover:text-amg-ink'}`}>
+            <NavLink key={l.to} to={l.to} className={({isActive})=>`text-[15px] font-medium link-under ${isActive ? 'text-amg-teal' : 'text-amg-ink/80 hover:text-amg-ink'}`}>
               {l.label}
             </NavLink>
           ))}

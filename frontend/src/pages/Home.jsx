@@ -46,7 +46,7 @@ export default function Home() {
             </div>
 
             {/* Pillars stack */}
-            <div className="lg:col-span-4 fade-in">
+            {/* <div className="lg:col-span-4 fade-in">
               <div className="grid grid-cols-2 gap-3">
                 {SERVICE_PILLARS.map((p,i) => {
                   const tone = p.accent === 'yellow' ? 'bg-amg-yellow-bg border-amg-yellow' : p.accent === 'turquoise' ? 'bg-amg-turquoise-bg border-amg-turquoise' : 'bg-amg-teal-bg border-amg-teal';
@@ -58,7 +58,7 @@ export default function Home() {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
