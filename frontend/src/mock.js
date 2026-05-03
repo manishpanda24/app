@@ -6,6 +6,7 @@ export const NAV_LINKS = [
   { label: 'Pricing', to: '/pricing' },
   { label: 'Resources', to: '/resources' },
   { label: 'Contact', to: '/contact' },
+  { label: 'About Us', to: '/about' }
   // {label:'Investment Readiness Program', to: '/investment-readiness-program'},
 ];
 
