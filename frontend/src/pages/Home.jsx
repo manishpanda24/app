@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight, FileText, Sparkles, Calculator, TrendingUp, Users, ShieldCheck, MessageCircle, Briefcase, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, FileText, Sparkles, Calculator, TrendingUp, Users, ShieldCheck, MessageCircle, Briefcase, CheckCircle2, Target, Globe } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
-import { HERO, SERVICE_PILLARS, SERVICES, FOUNDER_SERVICES_INTRO, WHO_WE_ARE } from '../mock';
+import { HERO, SERVICES, FOUNDER_SERVICES_INTRO, WHO_WE_ARE, HOW_WE_WORK_INTRO } from '../mock';
 
 const ICONS = {
   'pitch-deck-review': FileText,
@@ -14,6 +14,71 @@ const ICONS = {
   'investment-readiness': ShieldCheck,
   'ama-sessions': MessageCircle,
 };
+
+const ECOSYSTEM_FEATURES = [
+  {
+    icon: Target,
+    iconBg: 'bg-amg-turquoise-bg',
+    iconColor: 'text-amg-turquoise-2',
+    title: 'Portfolio Assessment',
+    desc: 'Evaluate investment readiness across your entire portfolio cohort with structured diagnostics.',
+  },
+  {
+    icon: Users,
+    iconBg: 'bg-amg-turquoise-bg',
+    iconColor: 'text-amg-turquoise-2',
+    title: 'Workshop Programs',
+    desc: 'Interactive fundraising and investor readiness workshops tailored for your cohort.',
+  },
+  {
+    icon: TrendingUp,
+    iconBg: 'bg-amg-yellow-bg',
+    iconColor: 'text-amg-teal',
+    title: 'Demo Day Preparation',
+    desc: 'End-to-end preparation support to ensure your founders shine in front of investors.',
+  },
+  {
+    icon: Globe,
+    iconBg: 'bg-amg-teal-bg',
+    iconColor: 'text-amg-teal',
+    title: 'Investor Network Access',
+    desc: 'Leverage our curated investor network to facilitate warm introductions for your portfolio.',
+  },
+];
+
+const STATS = [
+  { value: '200+',          label: 'Founders Supported',     color: 'text-amg-turquoise-2' },
+  { value: '$500M+',        label: 'Capital Facilitated',    color: 'text-amg-turquoise-2' },
+  { value: 'Pre-Seed → A', label: 'Stage Coverage',         color: 'text-green-600' },
+  { value: '2 Continents',  label: 'North America & Europe', color: 'text-amg-teal' },
+];
+
+const HOW_WE_WORK_STEPS = [
+  {
+    step: 'Intake & Context Setting',
+    day: 'Day 1',
+    text: 'You share your deck along with context: your stage, target investors, geography, fundraising goal, and any specific areas of concern.',
+    output: 'Context brief reviewed by our team',
+  },
+  {
+    step: 'Deep Deck Analysis',
+    day: 'Day 2–4',
+    text: 'We conduct a thorough review of your deck using a structured investor evaluation framework — narrative, market, traction, team, financials, and ask.',
+    output: 'Internal scoring and annotation across all slides',
+  },
+  {
+    step: 'Written Feedback Report',
+    day: 'Day 5',
+    text: 'You receive a detailed written report: slide-by-slide annotations, an executive summary of key strengths and critical gaps, and prioritized improvement recommendations.',
+    output: 'Written feedback report (PDF)',
+  },
+  {
+    step: 'Live Debrief Session',
+    day: 'Day 6',
+    text: 'We walk through the report together in a 60-minute call — discussing each finding, answering your questions, and mapping a revision roadmap.',
+    output: 'Clear prioritized action plan for your revision',
+  },
+];
 
 export default function Home() {
   return (
@@ -44,21 +109,6 @@ export default function Home() {
                 <Link to={HERO.secondaryCta.to} className="btn-outline">{HERO.secondaryCta.label}</Link>
               </div>
             </div>
-
-            {/* Pillars stack */}
-            {/* <div className="lg:col-span-4 fade-in">
-              <div className="grid grid-cols-2 gap-3">
-                {SERVICE_PILLARS.map((p,i) => {
-                  const tone = p.accent === 'yellow' ? 'bg-amg-yellow-bg border-amg-yellow' : p.accent === 'turquoise' ? 'bg-amg-turquoise-bg border-amg-turquoise' : 'bg-amg-teal-bg border-amg-teal';
-                  return (
-                    <div key={i} className={`rounded-lg p-5 border ${tone}`}>
-                      <div className="font-serif text-[20px] font-medium text-amg-teal leading-tight">{p.title}</div>
-                      <div className="mt-2 text-[12.5px] text-amg-teal/75">{p.desc}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
@@ -97,9 +147,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── ACCELERATORS & INCUBATORS ────────────────────────────────────── */}
+      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-gray-50">
+        <div className="max-w-[1280px] mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="tag-pill inline-flex mb-5">
+              <span className="dot bg-amg-turquoise"/>For Ecosystems
+            </span>
+            <h2 className="font-serif text-[44px] md:text-[64px] font-medium text-amg-teal leading-tight tracking-tight">
+              Accelerators &amp; Incubators
+            </h2>
+            <p className="mt-4 text-[16px] text-amg-teal/60 max-w-lg mx-auto leading-relaxed">
+              We partner with innovation programs to elevate the fundraising capability of their entire cohort at scale.
+            </p>
+          </div>
+
+          {/* 4-column feature cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {ECOSYSTEM_FEATURES.map((f, i) => {
+              const Icon = f.icon;
+              return (
+                <div key={i} className="card-pro shadow-soft p-7 hover-lift bg-white">
+                  <div className={`w-12 h-12 rounded-xl ${f.iconBg} flex items-center justify-center mb-6`}>
+                    <Icon className={`w-5 h-5 ${f.iconColor}`}/>
+                  </div>
+                  <div className="font-semibold text-[15.5px] text-amg-teal mb-2 leading-snug">{f.title}</div>
+                  <p className="text-[13.5px] text-amg-teal/60 leading-relaxed">{f.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Stats strip */}
+          <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 border border-amg-line rounded-2xl overflow-hidden bg-white shadow-soft">
+            {STATS.map((s, i) => (
+              <div
+                key={i}
+                className={`px-8 py-10 text-center ${i < STATS.length - 1 ? 'border-r border-amg-line' : ''}`}
+              >
+                <div className={`font-serif text-[34px] md:text-[42px] font-medium leading-none ${s.color}`}>
+                  {s.value}
+                </div>
+                <div className="mt-2.5 text-[13px] text-amg-teal/60 font-medium">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FOUNDER SERVICES */}
-      {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
-      <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-gray-50">
+      <section className="py-24 px-6 lg:px-10 border-t border-gray-100">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-14">
             <div className="lg:col-span-7">
@@ -110,11 +208,14 @@ export default function Home() {
               <p className="text-[15.5px] text-amg-teal/75 leading-relaxed">{FOUNDER_SERVICES_INTRO.description}</p>
             </div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((s, i) => {
               const Icon = ICONS[s.slug] || Briefcase;
-              const accent = s.accent === 'yellow' ? { bar:'bg-amg-yellow', iconBg:'bg-amg-yellow-bg', dot:'bg-amg-yellow' } : s.accent === 'turquoise' ? { bar:'bg-amg-turquoise', iconBg:'bg-amg-turquoise-bg', dot:'bg-amg-turquoise' } : { bar:'bg-amg-teal', iconBg:'bg-amg-teal-bg', dot:'bg-amg-teal' };
+              const accent = s.accent === 'yellow'
+                ? { bar:'bg-amg-yellow', iconBg:'bg-amg-yellow-bg', dot:'bg-amg-yellow' }
+                : s.accent === 'turquoise'
+                  ? { bar:'bg-amg-turquoise', iconBg:'bg-amg-turquoise-bg', dot:'bg-amg-turquoise' }
+                  : { bar:'bg-amg-teal', iconBg:'bg-amg-teal-bg', dot:'bg-amg-teal' };
               return (
                 <Link key={s.slug} to={`/services/${s.slug}`} className="group card-pro shadow-soft hover-lift block overflow-hidden">
                   <div className={`h-1 ${accent.bar}`}/>
@@ -139,6 +240,63 @@ export default function Home() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── HOW WE WORK TOGETHER ─────────────────────────────────────────── */}
+      <section className="py-24 px-6 lg:px-10 border-t border-amg-line">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+
+            {/* Left */}
+            <div className="lg:col-span-4">
+              <div className="eyebrow mb-4">{HOW_WE_WORK_INTRO.eyebrow}</div>
+              <h2 className="font-serif text-[36px] md:text-[48px] font-medium text-amg-teal leading-tight tracking-tight">
+                How We Work Together
+              </h2>
+              <p className="mt-5 text-[15px] text-amg-teal/65 leading-relaxed">
+                {HOW_WE_WORK_INTRO.description}
+              </p>
+            </div>
+
+            {/* Right: vertical timeline */}
+            <div className="lg:col-span-8">
+              <div className="relative pl-2">
+                {/* Vertical connector line */}
+                <div
+                  className="absolute left-[19px] top-5 w-px bg-amg-turquoise-soft"
+                  style={{ height: 'calc(100% - 40px)' }}
+                  aria-hidden="true"
+                />
+
+                <div className="space-y-10">
+                  {HOW_WE_WORK_STEPS.map((step, i) => (
+                    <div key={i} className="flex gap-6 items-start">
+                      {/* Step circle */}
+                      <div className="shrink-0 w-10 h-10 rounded-full bg-amg-turquoise-bg border-2 border-amg-turquoise-soft text-amg-teal font-semibold text-[14px] flex items-center justify-center z-10 relative">
+                        {i + 1}
+                      </div>
+
+                      {/* Step content */}
+                      <div className="flex-1 pt-1.5">
+                        <div className="flex flex-wrap items-center gap-3 mb-2">
+                          <span className="font-semibold text-[16.5px] text-amg-teal">{step.step}</span>
+                          <span className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
+                            {step.day}
+                          </span>
+                        </div>
+                        <p className="text-[14px] text-amg-teal/65 leading-relaxed mb-2.5">{step.text}</p>
+                        <p className="text-[13px] font-medium text-amg-turquoise-2">
+                          → Output: {step.output}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
