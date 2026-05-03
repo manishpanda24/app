@@ -236,7 +236,7 @@ export default function AboutUs() {
 
                   <div className="hr-thin mt-5 mb-5" />
                   <a
-                    href="https://www.linkedin.com/in/gauravmishra-amg/"
+                    href="https://www.linkedin.com/in/gauravbansalventurecapital/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-[13px] font-semibold text-amg-turquoise-2 hover:text-amg-turquoise transition-colors"
