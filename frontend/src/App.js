@@ -10,6 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import BurnRunway from "./calculator/pages/BurnRunway";
 import RevenueProjector from "./calculator/pages/RevenueProjector";
 import SafeDilution from "./calculator/pages/SafeDilution";
+import AboutUs from "./pages/AboutUs";
 import { Toaster } from "./components/ui/sonner";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/resources/burnrunway" element={<BurnRunway />} />
           <Route path="/resources/revenueprojector" element={<RevenueProjector />} />
           <Route path="/resources/safedilution" element={<SafeDilution />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
         <Toaster position="top-right" richColors />
       </BrowserRouter>
