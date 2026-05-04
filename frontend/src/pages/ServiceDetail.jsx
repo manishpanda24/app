@@ -122,28 +122,58 @@ export default function ServiceDetail() {
       {service.process && service.process.length > 0 && (
         <section className="py-24 px-6 lg:px-10">
           <div className="max-w-[1280px] mx-auto">
-            <div className="max-w-3xl mb-12">
-              <div className="eyebrow mb-4">{HOW_WE_WORK_INTRO.eyebrow}</div>
-              <h2 className="heading-display text-[36px] md:text-[48px] text-amg-teal leading-tight">A structured engagement.</h2>
-              <p className="mt-5 text-[15.5px] text-amg-teal/75 leading-relaxed">{HOW_WE_WORK_INTRO.description}</p>
-            </div>
-            <div className="space-y-4">
-              {service.process.map((p, i) => (
-                <div key={i} className="card-pro hover-lift overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-4 p-6 lg:p-7 items-center">
-                  <div className="md:col-span-1 flex md:block">
-                    <div className="step-num text-amg-turquoise-2">{String(i+1).padStart(2,'0')}</div>
-                  </div>
-                  <div className="md:col-span-7">
-                    <div className="font-serif text-[22px] font-medium text-amg-teal leading-tight">{p.step}</div>
-                    <p className="mt-2 text-[14.5px] text-amg-teal/70 leading-relaxed">{p.text}</p>
-                  </div>
-                  <div className="md:col-span-4 md:text-right">
-                    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 border border-gray-200 text-[12px] font-semibold text-amg-teal">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amg-turquoise"/>{p.day}
-                    </span>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+
+              {/* Left: heading */}
+              <div className="lg:col-span-4">
+                <div className="eyebrow mb-4">{HOW_WE_WORK_INTRO.eyebrow}</div>
+                <h2 className="font-serif text-[36px] md:text-[44px] font-medium text-amg-teal leading-tight tracking-tight">
+                  How We Work Together
+                </h2>
+                <p className="mt-5 text-[15px] text-amg-teal/65 leading-relaxed">
+                  {HOW_WE_WORK_INTRO.description}
+                </p>
+              </div>
+
+              {/* Right: vertical timeline */}
+              <div className="lg:col-span-8">
+                <div className="relative pl-2">
+                  {/* Connecting line */}
+                  <div
+                    className="absolute left-[19px] top-5 w-px bg-amg-line"
+                    style={{ height: 'calc(100% - 40px)' }}
+                    aria-hidden="true"
+                  />
+                  <div className="space-y-10">
+                    {service.process.map((p, i) => (
+                      <div key={i} className="flex gap-6 items-start">
+                        {/* Circle */}
+                        <div className="shrink-0 w-10 h-10 rounded-full bg-amg-turquoise-bg border-2 border-amg-line text-amg-teal font-semibold text-[14px] flex items-center justify-center z-10 relative">
+                          {i + 1}
+                        </div>
+                        {/* Content */}
+                        <div className="flex-1 pt-1.5">
+                          <div className="flex flex-wrap items-center gap-3 mb-2">
+                            <span className="font-semibold text-[16px] text-amg-teal">{p.step}</span>
+                            <span className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
+                              {p.day}
+                            </span>
+                          </div>
+                          <p className="text-[14px] text-amg-teal/65 leading-relaxed mb-2">
+                            {p.text}
+                          </p>
+                          {p.output && (
+                            <p className="text-[13px] font-medium text-amg-turquoise-2">
+                              → Output: {p.output}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
+              </div>
+
             </div>
           </div>
         </section>
