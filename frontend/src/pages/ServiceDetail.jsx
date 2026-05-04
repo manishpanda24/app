@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowRight, ArrowLeft, Plus, Minus, AlertTriangle } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Plus, Minus, AlertTriangle, CheckSquare, CheckCircle2 } from 'lucide-react';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -179,18 +179,115 @@ export default function ServiceDetail() {
         </section>
       )}
 
-      {/* PRICING NOTE */}
-      <section id="pricing" className="py-20 px-6 lg:px-10 bg-gray-50 border-y border-gray-100">
-        <div className="max-w-[1100px] mx-auto text-center">
-          <div className="eyebrow mb-4 mx-auto">Pricing</div>
-          <h2 className="heading-display text-[36px] md:text-[48px] text-amg-teal leading-tight">Transparent, Flat-Fee Pricing.</h2>
-          <p className="mt-5 text-[15.5px] text-amg-teal/75 max-w-2xl mx-auto leading-relaxed">
-            No hourly surprises. Every engagement is scoped, priced, and agreed upon before we start.
-          </p>
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-            <Link to="/contact" className="btn-yellow">Request a Quote <ArrowRight className="w-4 h-4"/></Link>
-            <Link to="/pricing" className="btn-outline">View All Pricing</Link>
+      {/* WHAT'S INCLUDED */}
+      {service.whatsIncluded && service.whatsIncluded.length > 0 && (
+        <section className="py-20 px-6 lg:px-10 border-t border-amg-line">
+          <div className="max-w-[1280px] mx-auto">
+            <div className="flex flex-wrap items-center justify-between gap-6 mb-10">
+              <div>
+                <div className="eyebrow mb-3">What's Included</div>
+                <h2 className="font-serif text-[32px] md:text-[42px] font-medium text-amg-teal leading-tight">
+                  Everything You Receive
+                </h2>
+              </div>
+              <Link to="/contact" className="btn-yellow shrink-0">
+                Get Started <ArrowRight className="w-4 h-4"/>
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {service.whatsIncluded.map((item, i) => (
+                <div key={i} className="flex items-start gap-3 p-4 rounded-lg border border-amg-line bg-white">
+                  <CheckSquare className="w-4 h-4 text-amg-turquoise-2 shrink-0 mt-0.5"/>
+                  <span className="text-[13.5px] text-amg-teal/80 leading-snug">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
+        </section>
+      )}
+
+      {/* PRICING */}
+      <section id="pricing" className="py-20 px-6 lg:px-10 bg-gray-50 border-y border-gray-100">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-12">
+            <div className="eyebrow mb-3 mx-auto">{service.pricingNote?.eyebrow || 'Pricing'}</div>
+            <h2 className="font-serif text-[32px] md:text-[44px] font-medium text-amg-teal leading-tight">
+              {service.pricingNote?.title || 'Transparent, Flat-Fee Pricing.'}
+            </h2>
+            <p className="mt-4 text-[15px] text-amg-teal/65 max-w-xl mx-auto leading-relaxed">
+              {service.pricingNote?.description}
+            </p>
+          </div>
+
+          {/* 3-tier pricing cards */}
+          {service.pricing && service.pricing.length > 0 && service.pricing[0].features ? (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {service.pricing.map((plan, i) => (
+                <div
+                  key={i}
+                  className={`relative rounded-xl overflow-hidden flex flex-col ${
+                    plan.popular
+                      ? 'bg-amg-teal text-white shadow-soft-lg ring-2 ring-amg-teal'
+                      : 'bg-white border border-amg-line shadow-soft'
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute top-4 right-4 text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full bg-amg-yellow text-amg-teal">
+                      Most Popular
+                    </div>
+                  )}
+                  <div className="p-7 flex-1 flex flex-col">
+                    <div className={`text-[11px] tracking-[0.2em] uppercase font-semibold mb-3 ${plan.popular ? 'text-amg-yellow' : 'text-amg-turquoise-2'}`}>
+                      {plan.tier}
+                    </div>
+                    <div className={`font-serif text-[44px] font-medium leading-none mb-3 ${plan.popular ? 'text-white' : 'text-amg-teal'}`}>
+                      {plan.price}
+                    </div>
+                    <p className={`text-[13.5px] leading-relaxed mb-6 ${plan.popular ? 'text-white/75' : 'text-amg-teal/60'}`}>
+                      {plan.sub}
+                    </p>
+                    <div className={`h-px mb-6 ${plan.popular ? 'bg-white/20' : 'bg-amg-line'}`}/>
+                    <ul className="space-y-3 flex-1">
+                      {plan.features.map((f, fi) => (
+                        <li key={fi} className="flex items-start gap-2.5">
+                          <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${plan.popular ? 'text-amg-yellow' : 'text-amg-turquoise-2'}`}/>
+                          <span className={`text-[13.5px] leading-snug ${plan.popular ? 'text-white/85' : 'text-amg-teal/75'}`}>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      to="/contact"
+                      className={`mt-8 flex items-center justify-center gap-2 font-semibold px-5 py-3 rounded-lg text-[14px] transition-colors ${
+                        plan.popular
+                          ? 'bg-amg-yellow text-amg-teal hover:bg-amg-yellow-2'
+                          : 'bg-amg-teal text-white hover:bg-amg-teal/90'
+                      }`}
+                    >
+                      {plan.cta} <ArrowRight className="w-4 h-4"/>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            /* Fallback: simple 2-col cards for services without 3-tier pricing */
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              {service.pricing?.map((plan, i) => (
+                <div key={i} className={`rounded-xl p-7 border ${i === 1 ? 'bg-amg-teal border-amg-teal text-white' : 'bg-white border-amg-line'}`}>
+                  <div className={`text-[11px] tracking-[0.2em] uppercase font-semibold mb-2 ${i === 1 ? 'text-amg-yellow' : 'text-amg-turquoise-2'}`}>{plan.tier}</div>
+                  <div className={`font-serif text-[40px] font-medium leading-none mb-2 ${i === 1 ? 'text-white' : 'text-amg-teal'}`}>{plan.price}</div>
+                  <div className={`text-[13px] ${i === 1 ? 'text-white/70' : 'text-amg-teal/60'}`}>{plan.sub}</div>
+                  <Link to="/contact" className={`mt-6 inline-flex items-center gap-2 font-semibold px-5 py-2.5 rounded-lg text-[13.5px] transition-colors ${i === 1 ? 'bg-amg-yellow text-amg-teal' : 'bg-amg-teal text-white'}`}>
+                    Get Started <ArrowRight className="w-4 h-4"/>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
+
+          <p className="mt-8 text-center text-[12.5px] text-amg-teal/50">
+            All engagements start with a free 30-minute strategy call. Prices are indicative — final scope agreed upon call.
+          </p>
         </div>
       </section>
 
