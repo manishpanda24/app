@@ -67,7 +67,7 @@ export const PRICING_INTRO = {
 };
 
 export const HOW_WE_WORK_INTRO = {
-  eyebrow: 'How We Work Together',
+  eyebrow: 'Our Process',
   description:
     'A structured engagement designed to be efficient, collaborative, and output-driven — no bureaucracy, no back-and-forth chaos.',
 };
@@ -144,6 +144,7 @@ const PITCH_DECK_REVIEW_INCLUDES = [
 export const SERVICES = [
   {
     slug: 'pitch-deck-review',
+    introTitle: 'Pitch Deck Review',
     title: 'Pitch Deck Review',
     tagline: 'Sharpen your story before you step into the room.',
     accent: 'yellow',
@@ -160,20 +161,38 @@ export const SERVICES = [
       },
       {
         title: 'One Weak Slide Can Kill the Whole Deck',
-        text: 'A single confusing slide, an unclear chart, or a missing proof point can derail an otherwise strong narrative. These gaps need to be caught before investors do.',
+        text: 'You get one shot with investors.If your deck doesn’t click in the first 20 seconds, the meeting evaporates.Your pitch deck needs to be clear, compelling, and investor-ready',
       },
     ],
      pricing: PITCH_DECK_REVIEW_PRICING,
     whatsIncluded: PITCH_DECK_REVIEW_INCLUDES,
     deliverHeading: 'Investor-grade feedback that tells you exactly what to fix and why.',
-    deliver: [
-      { title: 'Slide-by-Slide Annotation', text: 'Every slide reviewed with detailed written annotations on copy, structure, evidence, and visual clarity.' },
-      { title: 'Narrative Flow Analysis', text: 'Does your story compound, or fragment? We map the logical arc and flag where investor attention drops.' },
-      { title: 'Market & Story Review', text: 'Pressure-test your market sizing, segmentation, and category framing for institutional credibility.' },
-      { title: 'Red Flag Identification', text: 'We surface the questions a sophisticated investor will ask — before you walk into the room.' },
-      { title: 'Investor Q&A Anticipation', text: 'A list of the toughest questions your deck will trigger, with suggested answers and supporting data.' },
-      { title: 'Competitive & Team Review', text: 'Sharpen positioning against alternatives and stress-test how your team slide reads to investors.' },
-    ],
+   deliver: [
+  {
+    title: 'Investor-Readiness Score',
+    text: 'A single score out of 10 reflecting how a Seed–Series B partner would actually rate your deck. Indicates whether you are ready for outreach today, in weeks, or in months.'
+  },
+  {
+    title: 'Scoring Summary (11 Dimensions)',
+    text: 'Independent scoring across narrative, market, solution, business model, go-to-market, traction, competition, team, financials, and design. Color-coded to highlight strengths and risk areas instantly.'
+  },
+  {
+    title: 'Slide-by-Slide Feedback',
+    text: 'Every slide reviewed with score, strengths, investor concerns, and concrete rewrite suggestions. No generic advice — only actionable edits you can implement immediately.'
+  },
+  {
+    title: 'What’s Missing',
+    text: 'Identification of missing but critical slides such as competition, unit economics, use of funds, and risk mitigation — tailored to your stage and sector.'
+  },
+  {
+    title: 'Recommended Slide Order',
+    text: 'A restructured 13–16 slide flow aligned with investor expectations and your business model, ensuring narrative clarity and logical progression.'
+  },
+  {
+    title: 'Prioritized Action Plan',
+    text: 'A sequenced 10–14 day rebuild roadmap ranked by impact, helping you improve investor readiness efficiently with the highest ROI changes first.'
+  }
+],
     process: [
       { step: 'Intake & Context Setting', day: 'Day 1', text: 'You share your deck, target investor profile, and round context. We align on focus areas.' },
       { step: 'Deep Deck Analysis', day: 'Day 1–4', text: 'A senior partner reviews your deck slide-by-slide against an institutional evaluation framework.' },
@@ -195,6 +214,7 @@ export const SERVICES = [
   },
   {
     slug: 'pitch-deck-creation',
+    introTitle: 'Pitch Deck Creation',
     title: 'Pitch Deck Creation',
     tagline: 'Your story, told with clarity and conviction.',
     accent: 'turquoise',
@@ -284,13 +304,38 @@ export const SERVICES = [
       { title: 'Traction Storytelling', text: 'We translate your traction data into compelling proof points that signal momentum and de-risk the investment.' },
       { title: 'Editable Deliverables', text: 'Final deck delivered as PDF and editable PowerPoint — fully yours to update and adapt.' },
     ],
-    process: [
-      { step: 'Founder Discovery Session', day: 'Day 1', text: 'A 90-minute working session to extract your real story, traction, and the proof points investors need to see.', output: 'Preparation notes and specific question framework' },
-      { step: 'Narrative Architecture', day: 'Day 2–7', text: 'We map the slide-by-slide flow and write a narrative document that locks the story before any design work begins.', output: 'Slide-by-slide narrative outline' },
-      { step: 'First Draft Development', day: 'Day 8–12', text: 'We develop the full story: copy, charts, data visualisation, and visual design. Every slide is created for investor comprehension and decision making.', output: 'Slides first and 2th Revision' },
-      { step: 'Revision Rounds', day: 'Day 13–18', text: 'You provide structured feedback on our first revision, discussing the clear narrative, ensuring the deck tells a compelling story.' },
-      { step: 'Final Delivery & Walkthrough', day: 'Day 19', text: 'Final deck delivered as PDF and editable PowerPoint. All presentations ready to use, all slides created and without technical bugs.', output: 'Final deck + standalone coaching session' },
-    ],
+  process: [
+  {
+    step: 'Founder Discovery Session',
+    day: 'Day 1',
+    text: 'A 90-minute deep-dive interview to extract your story — the problem, the solution, the market insight, the traction, the team, and your vision for the company.',
+    output: 'Discovery brief and initial story hypotheses'
+  },
+  {
+    step: 'Narrative Architecture',
+    day: 'Day 2–3',
+    text: 'We design the logical flow of your deck — slide sequence, key messages per slide, and the overall investment argument. You review and align before we build.',
+    output: 'Slide-by-slide outline and narrative map'
+  },
+  {
+    step: 'First Draft Development',
+    day: 'Day 4–8',
+    text: 'We develop the full deck: copy, charts, data visualizations, and visual design. Every slide is built for investor comprehension, not internal reporting.',
+    output: 'First full draft (12–15 slides)'
+  },
+  {
+    step: 'Revision Rounds',
+    day: 'Day 9–13',
+    text: 'Two complete revision rounds based on your feedback, ensuring the deck reflects your voice, your vision, and is investor-ready at every slide.',
+    output: 'Revised and refined deck'
+  },
+  {
+    step: 'Final Delivery & Walkthrough',
+    day: 'Day 14',
+    text: 'Final deck delivered in editable PowerPoint and presentation-ready PDF. Live 60-minute walkthrough session covering how to present and defend each section.',
+    output: 'Final deck + presentation coaching session'
+  },
+],
     pricingNote: STANDARD_PRICING_NOTE,
     finalCta: {
       title: 'Ready to Build a Deck That Converts?',
@@ -306,6 +351,7 @@ export const SERVICES = [
   },
   {
     slug: 'financial-model',
+    introTitle: 'Financial Model',
     title: 'Financial Model',
     tagline: 'Numbers that tell a story investors trust.',
     accent: 'teal',
@@ -375,27 +421,45 @@ export const SERVICES = [
     ],
     whyPoints: [
       {
-        title: 'Top-Down Forecasts Get Ignored',
-        text: 'Serious investors discount any forecast that is not built bottom-up from real operating drivers. A top-down model signals you have not thought through the business.',
+        title: 'Investors Will Challenge Every Assumption',
+        text: 'VCs and angels dont just glance at your revenue projections — they dissect them. A model built on weak logic or missing drivers will collapse under even basic questions.',
       },
       {
-        title: 'Errors Destroy Credibility Instantly',
-        text: 'A single broken formula or implausible assumption can collapse an investor\u2019s confidence in the entire round. Models must be auditable, end to end.',
+        title: 'A Bad Model Destroys Credibility',
+        text: 'If you can\'t explain where your numbers come from, investors lose confidence in you as a business leader. The model reflects your strategic clarity.',
       },
       {
-        title: 'Weak Unit Economics Kill the Round',
-        text: 'If your contribution margin, payback, or LTV/CAC do not stand up to interrogation, no amount of narrative will fix it. Numbers must defend themselves.',
+        title: 'You Need It Before You Walk In the Room',
+        text: 'Most founders start building the model too late. By the time you\'re in investor meetings, your financials need to be airtight, not a work in progress.',
       },
     ],
-    deliverHeading: 'A bottom-up, driver-based model engineered for institutional diligence.',
+    deliverHeading: 'An investor-ready financial model built on the logic of your actual business.',
     deliver: [
-      { title: '5-Year P&L, Cash Flow & Balance Sheet', text: 'Three integrated statements that tie back to a single set of explicit assumptions.' },
-      { title: 'Driver-Based Revenue Build', text: 'Revenue modelled from the operating drivers that actually move your business — not a top-down growth percentage.' },
-      { title: 'Cohort & Unit Economics Module', text: 'Cohort retention, contribution margin, payback, and LTV/CAC structured the way institutional investors expect to see them.' },
-      { title: 'Hiring Plan & Runway Calculator', text: 'Headcount and burn modelled month-by-month with a clear view on cash runway across scenarios.' },
-      { title: 'Scenario Toggles', text: 'Base, upside and downside scenarios driven by the same assumption sheet — no parallel models, no inconsistencies.' },
-      { title: 'Investor Summary Page', text: 'A clean one-page summary of the model designed to slot directly into your deck or data room.' },
-    ],
+  { 
+    title: '3-Statement Model', 
+    text: 'Fully integrated P&L, balance sheet, and cash flow statement with all supporting schedules tied together dynamically.' 
+  },
+  { 
+    title: 'Revenue Build', 
+    text: 'Granular, driver-based revenue model built around your actual growth levers — pricing, volume, cohorts, channels, or contracts.' 
+  },
+  { 
+    title: 'Unit Economics', 
+    text: 'CAC, LTV, payback period, gross margin by cohort — the metrics investors will ask about, modeled with precision.' 
+  },
+  { 
+    title: 'Headcount Planning', 
+    text: 'Bottom-up hiring plan tied to revenue milestones, with salary bands, timing, and the resulting cost structure.' 
+  },
+  { 
+    title: 'Scenario Analysis', 
+    text: 'Base, bull, and bear cases that reflect genuine business risk and opportunity — not just ±10% on a single revenue line.' 
+  },
+  { 
+    title: 'KPI Dashboard', 
+    text: 'A clean investor-facing summary: MRR/ARR, burn, runway, CAC, LTV, gross margin — all in one view.' 
+  }
+],
     process: [
       { step: 'Business Model Deep Dive', day: 'Day 1–2', text: 'We map your business drivers, pricing mechanics, acquisition channels, and cost structure to ensure the model reflects how your business actually works.', output: 'Driver mapping and model architecture doc' },
       { step: 'Model Architecture & Build', day: 'Day 3–7', text: 'We construct the full bottom-up model with all supporting schedules, revenue build, unit costs, capex, headcount, and financing assumptions.', output: 'Working and functional model' },
@@ -416,121 +480,175 @@ export const SERVICES = [
       { q: 'Do you update the model after a raise?', a: 'Many founders engage us for a quarterly refresh after the round closes. The handoff model is yours to maintain in-house if you prefer.' },
     ],
   },
-  {
-    slug: 'valuation',
-    title: 'Valuation',
-    tagline: 'Know your worth and defend it.',
-    accent: 'yellow',
-    why: 'Defensible, market-grounded valuation analyses using the methodologies that institutional investors apply — comparable companies, precedent transactions, and DCF — calibrated to your stage, sector, and geography.',
-    whyHeading: 'Valuation is where dollars are won and lost before term sheets are signed.',
-    pricing: [
-      {
-        tier: 'Benchmarked Valuation',
-        price: '$1,200',
-        sub: 'A market-calibrated valuation range for founders calling the strategy for their next raise.',
-        popular: false,
-        features: [
-          'Comparable company analysis',
-          'Pre-money valuation range with written rationale',
-          'DCF model (where applicable)',
-          'Stage and sector benchmarks',
-          'Negotiation talking points',
-          '60-min results walkthrough',
-        ],
-        cta: 'Get Started',
-      },
-      {
-        tier: 'Full Valuation',
-        price: '$2,200',
-        sub: 'The complete analysis for founders actively negotiating or preparing for institutional due diligence.',
-        popular: true,
-        features: [
-          'Everything in Benchmarked Valuation',
-          'Precedent transaction analysis',
-          'DCF model (where applicable)',
-          'Investor M&A-style analysis',
-          'Dilution negotiation services',
-          'Investor preparation services',
-          'Investor prep Q&A support',
-          '60-min live debrief session',
-        ],
-        cta: 'Get Started',
-      },
-      {
-        tier: 'M&A + Board Delivery',
-        price: 'Custom',
-        sub: 'For complex situations: M&A, secondary sales, pre-IPO readiness, or board-level valuation review.',
-        popular: false,
-        features: [
-          'Full M&A situation analysis',
-          'Board-level presentation',
-          'Investor debt scenarios',
-          'Board / investor roadshow coaching',
-          'Ongoing strategy support',
-          'Priority turnaround',
-        ],
-        cta: 'Get Started',
-      },
-    ],
-    whatsIncluded: [
-      'Comparable company analysis (minimum 5 peer companies)',
-      'Precedent transaction analysis from your sector and stage',
-      'Pre-money valuation range with written rationale',
-      'Growth-adjusted and stage-appropriate multiples',
-      'Stage and sector benchmarks',
-      'Post-round cap table modelling and dilution analysis',
-      'Option pool analysis and how employee compensation analysis',
-      'Investor M&A-style scenario analysis (at multiple multiples)',
-      'Written valuation narrative for investor conversations',
-      'Negotiation talking points and position defence',
-      'NR / investor scenario modelling and results walkthrough',
-      'NR-minute strategy session and results walkthrough',
-    ],
-    whyPoints: [
-      {
-        title: 'Founders Anchor on Hope, Not Evidence',
-        text: 'Pricing your round on aspiration rather than analysis loses you both the deal and the trust of the investor. Defensibility is everything.',
-      },
-      {
-        title: 'Mispricing Kills Deals Quietly',
-        text: 'Anchor too high and investors walk away without explaining why. Anchor too low and you give away the company. Both are recoverable only with a defensible number.',
-      },
-      {
-        title: 'Investors Test Your Number — Are You Ready?',
-        text: 'Every serious investor will probe your valuation. The founders who close at strong numbers are the ones who can defend each one.',
-      },
-    ],
-    deliverHeading: 'A defensible valuation built on real market data — not optimism.',
-    deliver: [
-      { title: 'Comparable Companies Analysis', text: 'A trading-comps screen using the right comp set, time window, and valuation multiples for your stage and sector.' },
-      { title: 'Precedent Transactions Screen', text: 'M&A and financing precedents that establish a defensible valuation range based on what investors have actually paid.' },
-      { title: 'DCF With Sensitivities', text: 'A discounted cash flow model with explicit assumptions and full sensitivity tables — no black-box outputs.' },
-      { title: 'Pre-Money / Post-Money Waterfall', text: 'A clear cap-table waterfall showing dilution, ownership, and the implications of different round structures.' },
-      { title: 'Investor-Facing Valuation Memo', text: 'A concise written memo summarising methodology, key assumptions, and the defensible valuation range — built to be shared with investors.' },
-      { title: 'Founder Defense Playbook', text: 'A prep document with the toughest valuation questions investors will ask — and the data-backed answers to defend your number.' },
-    ],
-    process: [
-      { step: 'Business & Market Context', day: 'Day 1–2', text: 'We collect your financials, contracts, market context, and fundraising goals. We identify your comparable set and benchmark your business against sector peers.', output: 'Benchmark dataset and selected comparables universe' },
-      { step: 'Comparable Analysis', day: 'Day 3–5', text: 'We pull the comparable public set, M&A dataset, and growth-adjusted benchmarks. We standardise metrics and remove irrelevant outliers for the current investor stage.', output: 'Comparable investor universe and comparable companies' },
-      { step: 'Valuation Modelling', day: 'Day 6–8', text: 'We build the full valuation analysis: trading comps, precedent transactions, and DCF. We calibrate each with stage-specific multiples, and where applicable, DCF.', output: 'Value range matrix with sensitivity analysis' },
-      { step: 'Cap Table & Dilution Analysis', day: 'Day 9–10', text: 'We model your cap table, run your round at multiple valuations, and stress-test dilution at different round sizes. Show the impact on founder equity.', output: 'Post-round cap table and dilution waterfall scenarios' },
-      { step: 'Negotiation Preparation', day: 'Day 11–12', text: 'We prepare you for the negotiation: your valuation case, your defence, how to manage counter-offers, and how to run an NDA process efficiently.', output: 'Negotiation talking points and defence playbook (PDF)' },
-    ],
-    pricingNote: STANDARD_PRICING_NOTE,
-    finalCta: {
-      title: 'Ready to Defend Your Valuation?',
-      description: 'Book a 30-minute scoping call. We will frame the right valuation approach for your raise.',
-      cta: { label: 'Get Started', to: '/contact' },
+ {
+  slug: 'valuation',
+  introTitle: 'Valuation',
+  title: 'Valuation',
+  tagline: 'Know what your startup is worth — before you walk into the room.',
+  accent: 'yellow',
+
+  why: 'A defensible, investor-ready pre-money valuation built on five industry-standard methods, real precedent transactions, and the same data sources VCs use. Delivered in 5 business days.',
+  
+  whyHeading: 'Most founders lose leverage before the negotiation even begins.',
+
+  pricing: [
+    {
+      tier: 'Essential',
+      price: '$1,950',
+      sub: 'For Idea or Development-stage startups, pre-revenue or under $250K ARR.',
+      popular: false,
+      features: [
+        'All 5 methods + BVM triangulation',
+        'Excel calculator + PDF report',
+        '30-min walkthrough call',
+        '14-day delivery',
+      ],
+      cta: 'Get Started',
     },
-    faqs: [
-      { q: 'Will VCs actually accept your valuation?', a: 'Investors will always negotiate. Our memos hold up under diligence and equip you to defend a strong number with evidence.' },
-      { q: 'Which sectors do you cover?', a: 'SaaS, fintech, marketplaces, healthtech, deeptech, climate, and consumer. We engage where we have direct experience.' },
-      { q: 'How fast can you turn this around?', a: 'Standard 2 weeks. Rush turnarounds available for time-sensitive negotiations.' },
-      { q: 'Can you join the investor call to defend the number?', a: 'On request, and depending on stage. Many founders ask us to prep them rather than join — both work.' },
-    ],
+    {
+      tier: 'Standard',
+      price: '$3,450',
+      sub: 'For Startup or Expansion-stage companies, $250K–$3M ARR.',
+      popular: true,
+      features: [
+        'Everything in Essential',
+        '60-min walkthrough + scenario session',
+        'Investor Defense Pack',
+        '30-day email support',
+        '7-day delivery',
+      ],
+      cta: 'Get Started',
+    },
+    {
+      tier: 'Premium',
+      price: '$6,950',
+      sub: 'For Growth-stage companies, $3M+ ARR or complex cap tables.',
+      popular: false,
+      features: [
+        'Everything in Standard',
+        'Cap-table modeling + dilution waterfall',
+        '90-min walkthrough + investor Q&A prep',
+        'Two free re-runs (12 months)',
+        '5-day delivery',
+      ],
+      cta: 'Get Started',
+    },
+  ],
+
+  whatsIncluded: [
+    'Scorecard, Checklist (Berkus), VC, DCF (LTG & Multiples) methods',
+    'Precedent transaction analysis (5–10 comparable rounds)',
+    'Pre-money valuation range (low / mid / high)',
+    'Country, industry, and stage-specific benchmarks',
+    'Excel valuation calculator (15 tabs, 296 formulas)',
+    'Investor-ready valuation report (~25 pages)',
+    'Sensitivity analysis and risk assessment',
+    'Investor Q&A defense pack',
+    '30-day post-delivery support',
+  ],
+
+  whyPoints: [
+    {
+      title: 'Anchors the Negotiation',
+      text: 'With five methods and comparable transactions, you are no longer defending a number — you are explaining methodology.',
+    },
+    {
+      title: 'Prevents Mispricing',
+      text: 'Overpricing stalls rounds. Underpricing costs equity forever. A defensible valuation avoids both.',
+    },
+    {
+      title: 'Survives Investor Diligence',
+      text: 'Every number is sourced — Damodaran, Crunchbase, BLS — making your valuation audit-ready.',
+    },
+  ],
+
+  deliverHeading: 'A defensible valuation built on real data — not guesswork.',
+
+  deliver: [
+    {
+      title: 'Valuation Report (~25 pages)',
+      text: 'Executive summary, valuation range, method-by-method breakdown, precedent transactions, sensitivity analysis, and full data appendix.',
+    },
+    {
+      title: 'Excel Valuation Calculator',
+      text: 'Fully formula-driven workbook with 15 tabs. Change inputs → valuation updates instantly. No hardcoded outputs.',
+    },
+    {
+      title: 'Investor Defense Pack',
+      text: '2-page summary + investor Q&A prep designed to shorten diligence and strengthen negotiation.',
+    },
+    {
+      title: 'Five-Method Valuation',
+      text: 'Scorecard, Checklist, VC, and two DCF approaches blended using stage-based weights.',
+    },
+    {
+      title: 'Precedent Transactions',
+      text: 'Real comparable funding rounds filtered by industry, geography, and stage.',
+    },
+    {
+      title: 'Data-Backed Inputs',
+      text: 'Parameters sourced from Damodaran, Crunchbase, Trading Economics, and global statistical datasets.',
+    },
+  ],
+
+  process: [
+    {
+      step: 'Founder Intake',
+      day: 'Day 1',
+      text: 'Structured intake covering company profile, projections, and capital strategy.',
+      output: 'Complete dataset and assumptions baseline',
+    },
+    {
+      step: 'Market Research',
+      day: 'Day 1–2',
+      text: 'Load country, industry, and stage-specific parameters from global datasets.',
+      output: 'Validated input parameters',
+    },
+    {
+      step: 'Valuation Modelling',
+      day: 'Day 2–4',
+      text: 'Run all five valuation methods and triangulate against precedent transactions.',
+      output: 'Low / mid / high valuation range',
+    },
+    {
+      step: 'Delivery & Walkthrough',
+      day: 'Day 5',
+      text: 'Deliver report, Excel model, and conduct a full walkthrough.',
+      output: 'Investor-ready valuation + founder clarity',
+    },
+  ],
+
+  pricingNote: STANDARD_PRICING_NOTE,
+
+  finalCta: {
+    title: 'Ready to know what you’re worth?',
+    description:
+      'The next conversation you have with an investor will go better with a defensible number behind you.',
+    cta: { label: 'Get Your Valuation', to: '/contact' },
   },
+
+  faqs: [
+    {
+      q: 'Will investors accept this valuation?',
+      a: 'Investors negotiate — but this shifts the conversation from numbers to assumptions.',
+    },
+    {
+      q: 'Can pre-revenue startups be valued?',
+      a: 'Yes. Qualitative methods dominate early-stage valuation and carry the most weight.',
+    },
+    {
+      q: 'How long does it take?',
+      a: '5–7 business days depending on the engagement tier.',
+    },
+    {
+      q: 'Do you support multiple geographies?',
+      a: 'Yes — US, UK, Canada, EU, India, and more with localized parameters.',
+    },
+  ],
+},
   {
     slug: 'investor-outreach',
+    introTitle: 'Investor Outreach',
     title: 'Investor Outreach',
     tagline: 'The right investor, at the right time.',
     accent: 'turquoise',
@@ -648,226 +766,367 @@ export const SERVICES = [
     ],
   },
   {
-    slug: 'investment-readiness',
-    title: 'Investment Readiness',
-    tagline: 'Identify gaps before investors do.',
-    accent: 'teal',
-    why: 'A comprehensive diagnostic of your entire fundraising package — deck, financials, data room, legal structure, and founder narrative — ensuring you present a watertight investment case before you approach a single investor.',
-    whyHeading: 'The majority of failed raises are preventable with the right preparation.',
-    pricing: [
-      {
-        tier: 'Essentials Audit',
-        price: '$1,500',
-        sub: 'For founders who need a fast diagnostic of their core materials before approaching investors.',
-        popular: false,
-        features: [
-          'Pitch deck gap analysis',
-          'Financial package review',
-          'Written findings report',
-          'Top 3 priority action items',
-          'Top 3 priority risk items',
-          '60-min call and Q&A',
-        ],
-        cta: 'Get Started',
-      },
-      {
-        tier: 'Full Readiness',
-        price: '$3,200',
-        sub: 'The complete investment readiness diagnostic for founders preparing to launch their raise with confidence.',
-        popular: true,
-        features: [
-          'Everything in Essentials Audit',
-          'Data room completeness audit',
-          'Cap table and legal structure report',
-          'NR-dimension gap analysis worksheet',
-          'Prioritised action plan with investor-impact scoring',
-          'Mock investor Q&A session (60 min)',
-          '30-day engagement session window',
-        ],
-        cta: 'Get Started',
-      },
-      {
-        tier: 'Cohort Program',
-        price: 'Custom',
-        sub: 'For accelerators running readiness diagnostics across a full cohort before demo day.',
-        popular: false,
-        features: [
-          'Accelerator cohort value sets',
-          'Anonymised cohort benchmarking',
-          'Cohort risk and issue flagging',
-          'Cohort-wide NR-dimension analysis integration',
-          'Other data acquisition and management',
-          'Priority response within 24 hours',
-        ],
-        cta: 'Get Started',
-      },
-    ],
-    whatsIncluded: [
-      'Full fundraising materials collection (deck, financials, data room, cap table)',
-      'Pitch deck audit: narrative, gap analysis, and investor-appropriateness',
-      'Financial package review (model integrity, unit economics, consistency)',
-      'Data room completeness audit with detailed checklist',
-      'Live investor-readiness gap analysis with weighted dimensions (6 areas)',
-      'Prioritised action plan with investor-impact scoring (30-day CAT)',
-      '60-min debrief session from KPI-to-go perspective',
-      'Pitch deck review: story integrity and gap analysis',
-      'Follow-up action email with revision prioritisation list',
-      'Mock investor Q&A session: 60 min',
-      'Written gap analysis report (PDF)',
-      'Post-improvement check-in review',
-    ],
-    whyPoints: [
-      {
-        title: 'Inconsistencies Are Investor Deal-Breakers',
-        text: 'When your deck, model, and data room tell different stories, investors lose trust before they even ask a question. Consistency is non-negotiable.',
-      },
-      {
-        title: 'Missing Materials Stall Momentum',
-        text: 'Diligence that pauses for missing documents is diligence that quietly dies. Preparedness is what keeps a process moving.',
-      },
-      {
-        title: 'Hard Questions Will Come — Are You Ready?',
-        text: 'Founders who can answer the hardest questions cleanly are the ones who close. Readiness Review prepares you for every angle.',
-      },
-    ],
-    deliverHeading: 'A complete audit of your fundraising readiness across six dimensions.',
-    deliver: [
-      { title: 'Pitch Deck Audit', text: 'Narrative clarity, story structure, investor-appropriateness, and slide-by-slide gap analysis against your target investor profile.' },
-      { title: 'Financial Package Review', text: 'Financial model integrity, unit economics strength, projection credibility, and consistency between your deck and your model.' },
-      { title: 'Data Room Assessment', text: "Completeness and organisation of your data room against institutional due diligence standards with a detailed checklist of what's missing." },
-      { title: 'Legal & Corporate Structure', text: 'Cap table, share structure, IP assignments, and material contracts reviewed for any flag that could complicate or delay a round.' },
-      { title: 'Gap Analysis Report', text: 'A prioritised gap-analysis report showing what is investor-ready, what needs work, and what is high-risk before any meetings.' },
-      { title: 'Mock Investor Session', text: 'A simulated investor Q&A session designed to surface weaknesses in your story, your numbers, and your readiness — before the real thing.' },
-    ],
-    process: [
-      { step: 'Materials Collection', day: 'Day 1–2', text: 'You share your deck, financial model, data room, cap table, and key documents. NDAs in place from day one.', output: 'Secure document receipt and review checklist' },
-      { step: 'Structured Review (6 Dimensions)', day: 'Day 3–8', text: 'Systematic investment evaluation across six readiness dimensions: narrative, financials, data room, legal, team narrative, and investor appropriateness.', output: 'Weighted scoring and dimension-by-dimension analysis document' },
-      { step: 'Gap Analysis & Action Plan', day: 'Day 9–10', text: 'We identify the specific gaps across all six dimensions and prioritise by investor-impact, with a clear action plan and timeline to resolve each.', output: 'Prioritised action plan with investor-impact scoring (PDF)' },
-      { step: 'Debrief & Roadmap Session', day: 'Day 11', text: 'We walk through every finding in a 60-minute session, discuss the implications, and align on the roadmap for the next 30 days.', output: 'Shared improvement roadmap and next steps' },
-      { step: 'Mock Investor Q&A', day: 'Day 14', text: 'A simulated investor session run using the hardest questions your materials are likely to trigger. We surface weak answers and coach through each one.', output: 'Written Q&A prep document' },
-      { step: 'Post-Improvement Check-In', day: 'Day 30 (Post)', text: 'After you have made the improvements, we do a second pass to confirm you are investor-ready and clear your materials for outreach.', output: 'Green-light confirmation or next-level findings' },
-    ],
-    pricingNote: STANDARD_PRICING_NOTE,
-    finalCta: {
-      title: 'Ready Before You Walk in the Room?',
-      description: 'Run the diagnostic before you approach a single investor. Two weeks could save you a quarter of lost momentum.',
-      cta: { label: 'Get Started', to: '/contact' },
+  slug: 'investment-readiness',
+  introTitle: 'Investment Readiness Review',
+  title: 'Investment Readiness Review & Fundraising Roadmap',
+  tagline: 'Identify gaps before investors do.',
+  accent: 'teal',
+
+  why: 'A comprehensive diagnostic of your entire fundraising package — deck, financials, data room, legal structure, and founder narrative — ensuring you present a watertight investment case before approaching investors.',
+
+  whyHeading: 'The majority of failed raises are preventable with the right preparation.',
+
+  pricing: [
+    {
+      tier: 'Essentials Audit',
+      price: '$1,500',
+      sub: 'For founders who need a fast diagnostic of their core materials before approaching investors.',
+      popular: false,
+      features: [
+        'Pitch deck gap analysis',
+        'Financial package review',
+        'Written findings report',
+        'Top priority action items',
+        'Key risk identification',
+        '60-min debrief call',
+      ],
+      cta: 'Get Started',
     },
-    faqs: [
-      { q: 'How is this different from just reviewing my pitch deck?', a: 'Pitch Deck Review focuses on the deck. Investment Readiness is a full-package audit — deck, model, data room, legal, narrative — all in one engagement.' },
-      { q: "What if I don't have all my materials ready yet?", a: 'That is exactly when this engagement is most valuable. We will work with what you have and tell you precisely what to build before going out.' },
-      { q: 'Do you help fix the gaps you identify, or just flag them?', a: 'Both. The diagnostic surfaces gaps. We can remediate the highest-risk items directly via our other services or as ad-hoc advisory.' },
-      { q: 'Is this appropriate for first-time founders?', a: 'Especially for first-time founders. The diagnostic gives you a clear, written roadmap to investor-ready, with no guesswork.' },
-      { q: 'Can accelerators use this as a pre-demo-day program?', a: 'Yes. We run cohort-format Investment Readiness diagnostics for several accelerator partners across North America and Europe.' },
-    ],
-  },
-  {
-    slug: 'ama-sessions',
-    title: 'AMA Sessions',
-    tagline: "Ask the questions you can't afford to get wrong.",
-    accent: 'yellow',
-    why: 'Structured one-on-one advisory sessions with experienced venture investors and startup operators. Bring any challenge, any question — and get direct, unfiltered answers from people who have lived the fundraising journey from both sides of the table.',
-    whyHeading: "Sometimes you don't need a full engagement. You need one hour with the right person.",
-    pricing: [
-      {
-        tier: 'Single Session',
-        price: '$450',
-        sub: 'One focused advisory session on any pressing question, decision, or challenge.',
-        popular: false,
-        features: [
-          'Pre-session context review (30 min)',
-          'Contextual 60-min advisory session',
-          'Written session notes',
-          '48-hour follow-up questions',
-          'Optional session recording',
-        ],
-        cta: 'Get Started',
-      },
-      {
-        tier: 'Session Bundle',
-        price: '$1,100',
-        sub: 'Three sessions across your entire raise — ongoing advisory access when you need it most.',
-        popular: true,
-        features: [
-          'Everything in Single Session × 3',
-          'Summary of key 60-min advisory sessions',
-          'Session notes and action items',
-          'Priority booking (within 48 hours)',
-          'Async email thread between sessions',
-          'As many sessions as at start of each follow-in session',
-        ],
-        cta: 'Get Started',
-      },
-      {
-        tier: 'Monthly Advisory',
-        price: '$1,800 /mo',
-        sub: 'For founders who want a trusted advisor available across the full fundraise journey.',
-        popular: false,
-        features: [
-          '4 × 60-minute sessions per month',
-          'Unlimited async email access',
-          'Pre-meeting materials briefing, results reviewed',
-          'Term sheet and deal term review',
-          'Contact-level follow-up',
-          'Monthly review',
-          'Priority responded within 24 hours',
-        ],
-        cta: 'Get Started',
-      },
-    ],
-    whatsIncluded: [
-      'Pre-session context review by the advisor (your deck, model, or specific context shared)',
-      'Real-time feedback and coaching during the session',
-      'All-in-one focused advisory session with an experienced operator and investor',
-      'Written session notes delivered after the session',
-      'Written action points summary (delivered next business day)',
-      '48-hour follow-up window for any immediate post-session questions',
-      'Optional session recording for your reference (on request)',
-    ],
-    whyPoints: [
-      {
-        title: 'Generic Advice Is Everywhere — Specific Advice Is Rare',
-        text: 'Blog posts and articles give you frameworks. An AMA session gives you advice calibrated to your stage, your team, and your specific situation.',
-      },
-      {
-        title: "The Questions You Don't Know to Ask Are the Most Dangerous",
-        text: 'Experienced investors surface the risks and decisions you would not have spotted yourself. Outside perspective changes outcomes.',
-      },
-      {
-        title: 'Fast Access to Expertise Changes Outcomes',
-        text: 'Founders who get the right feedback before a critical decision close better rounds, sign better terms, and avoid avoidable mistakes.',
-      },
-    ],
-    deliverHeading: 'Direct, actionable answers from experienced operators and investors.',
-    deliver: [
-      { title: 'Investor-Perspective Feedback', text: 'Our advisors have evaluated hundreds of deals from the investor seat. They tell you what a VC is actually thinking — not what you want to hear.' },
-      { title: 'Fundraise Strategy Guidance', text: "Round sizing, valuation anchoring, sequencing, timing, term sheet navigation — whatever aspect of your fundraise you're wrestling with." },
-      { title: 'Pitch and Narrative Coaching', text: "Real-time feedback on how you're presenting your story — what's working, what's confusing, what's losing investor attention." },
-      { title: 'Materials Spot Review', text: 'Share a specific slide, a financial assumption, or a section of your deck and get direct feedback in the session.' },
-      { title: 'Investor Relationship Advice', text: "Navigating specific investor dynamics, follow-up strategy, managing multiple processes simultaneously — we've been in these situations." },
-      { title: 'Next-Day Session Notes', text: 'Written summary of key discussion points and recommended next steps delivered the following business day.' },
-    ],
-    process: [
-      { step: 'Pre-Session Brief', day: '24h before', text: 'You share a short brief on your situation, the questions you want to cover, and any materials for review. We prepare specifically for your context.', output: 'Preparation notes and specific question framework' },
-      { step: 'Structured 60-Minute Session', day: 'Session day', text: 'A focused working session with a senior partner that works through your questions and challenges. We make sure to right-first-time on your most important questions.', output: 'Session notes, clarifications, and next-right options' },
-      { step: 'Session Notes & Action Items', day: 'Next business day', text: 'Written summary of all key discussion points, recommended next steps, and open items to follow up on. Delivered the following business day (PDF).', output: 'Written session summary (PDF)' },
-      { step: 'All-Hour Follow-Up Window', day: '5 days after the call', text: 'Light follow-up access for 48 hours after the session to address any immediate questions or clarifications that come up as you start implementing.', output: 'Prioritised responses as you put together your session plan' },
-    ],
-    pricingNote: STANDARD_PRICING_NOTE,
-    finalCta: {
-      title: 'Ready to Get the Answer You Need?',
-      description: 'Book a single AMA session or a pack of four. Both start with a free 15-minute fit call.',
-      cta: { label: 'Book a Session', to: '/contact' },
+    {
+      tier: 'Full Readiness',
+      price: '$3,200',
+      sub: 'Complete investment readiness diagnostic for founders preparing to launch their raise with confidence.',
+      popular: true,
+      features: [
+        'Everything in Essentials Audit',
+        'Data room completeness audit',
+        'Cap table and legal structure review',
+        '6-dimension gap analysis framework',
+        'Prioritised action plan (investor-impact scoring)',
+        'Mock investor Q&A session (60 min)',
+        '30-day support window',
+      ],
+      cta: 'Get Started',
     },
-    faqs: [
-      { q: 'What kinds of questions are best suited for an AMA session?', a: 'Anything tactical and time-sensitive: round sizing, term sheet review, valuation anchoring, investor relationship dynamics, deck or model spot-review.' },
-      { q: 'Do I need to have a specific problem, or can I use it more generally?', a: 'Both work. Many founders use AMA for a specific decision; others book a pack of four to use across a quarter as questions arise.' },
-      { q: 'How quickly can I book a session?', a: 'Standard availability is within 5 business days. Same-week and next-day availability is often possible for time-sensitive situations.' },
-      { q: 'Who specifically will I be talking to?', a: 'A senior partner with direct VC and operator experience — not a generalist advisor.' },
-      { q: 'Can I share materials in advance for the advisor to review?', a: 'Yes. Sharing materials 24 hours in advance lets us prepare and makes the session more productive.' },
-      { q: 'Is this confidential?', a: 'Absolutely. Mutual NDAs are standard. Nothing discussed in the session is shared outside the engagement.' },
-    ],
+    {
+      tier: 'Cohort Program',
+      price: 'Custom',
+      sub: 'For accelerators running readiness diagnostics across a full cohort before demo day.',
+      popular: false,
+      features: [
+        'Cohort-wide readiness diagnostics',
+        'Benchmarking across startups',
+        'Risk flagging across cohort',
+        'Structured reporting for program teams',
+        'Data aggregation and insights',
+        'Priority response within 24 hours',
+      ],
+      cta: 'Get Started',
+    },
+  ],
+
+  whatsIncluded: [
+    'Full fundraising materials review (deck, financials, data room, cap table)',
+    'Pitch deck audit (narrative, clarity, investor positioning)',
+    'Financial model integrity and consistency review',
+    'Data room completeness checklist',
+    '6-dimension readiness scoring framework',
+    'Prioritised action plan (30-day roadmap)',
+    '60-min debrief session',
+    'Mock investor Q&A session',
+    'Written gap analysis report (PDF)',
+    'Follow-up action summary email',
+    'Post-improvement check-in review',
+  ],
+
+  whyPoints: [
+    {
+      title: 'Inconsistencies Are Investor Deal-Breakers',
+      text: 'When your deck, model, and data room tell different stories, investor trust breaks instantly. Consistency is non-negotiable.',
+    },
+    {
+      title: 'Missing Materials Stall Momentum',
+      text: 'Incomplete data rooms delay diligence and slow down fundraising. Prepared founders move faster.',
+    },
+    {
+      title: 'Hard Questions Will Come — Are You Ready?',
+      text: 'The strongest founders are those who can answer investor questions clearly and confidently. Preparation determines outcomes.',
+    },
+  ],
+
+  deliverHeading: 'A complete audit of your fundraising readiness across six dimensions.',
+
+  deliver: [
+    {
+      title: 'Pitch Deck Audit',
+      text: 'Narrative clarity, structure, investor messaging, and slide-by-slide gap analysis aligned with your target investor profile.',
+    },
+    {
+      title: 'Financial Package Review',
+      text: 'Model integrity, unit economics, projection credibility, and consistency with your narrative.',
+    },
+    {
+      title: 'Data Room Assessment',
+      text: 'Completeness and organisation of your data room against institutional due diligence standards.',
+    },
+    {
+      title: 'Legal & Corporate Structure',
+      text: 'Cap table, share structure, and documentation reviewed for risks that could delay or derail a round.',
+    },
+    {
+      title: 'Gap Analysis Report',
+      text: 'Clear identification of what is ready, what needs improvement, and what is high-risk before investor meetings.',
+    },
+    {
+      title: 'Mock Investor Session',
+      text: 'Simulated investor Q&A designed to stress-test your narrative, numbers, and positioning.',
+    },
+  ],
+
+  process: [
+    {
+      step: 'Materials Collection',
+      day: 'Day 1–2',
+      text: 'You share your deck, financial model, data room, and key documents. NDAs in place from day one.',
+      output: 'Structured document set and review checklist',
+    },
+    {
+      step: 'Structured Review (6 Dimensions)',
+      day: 'Day 3–8',
+      text: 'Systematic evaluation across narrative, financials, data room, legal, team, and investor positioning.',
+      output: 'Dimension-by-dimension readiness analysis',
+    },
+    {
+      step: 'Gap Analysis & Action Plan',
+      day: 'Day 9–10',
+      text: 'We identify gaps and prioritise improvements based on investor impact.',
+      output: 'Prioritised action plan (PDF)',
+    },
+    {
+      step: 'Debrief & Roadmap Session',
+      day: 'Day 11',
+      text: '60-minute walkthrough of findings, implications, and execution roadmap.',
+      output: 'Aligned roadmap and next steps',
+    },
+    {
+      step: 'Mock Investor Q&A',
+      day: 'Day 14',
+      text: 'Simulated investor session using the toughest likely questions.',
+      output: 'Q&A preparation document',
+    },
+    {
+      step: 'Post-Improvement Check-In',
+      day: 'Day 30 (Post)',
+      text: 'Final review after improvements to confirm investor readiness.',
+      output: 'Final readiness confirmation',
+    },
+  ],
+
+  pricingNote: STANDARD_PRICING_NOTE,
+
+  finalCta: {
+    title: 'Ready Before You Walk in the Room?',
+    description: 'Run the diagnostic before approaching investors. Two weeks of preparation can save months of lost momentum.',
+    cta: { label: 'Get Started', to: '/contact' },
   },
+
+  faqs: [
+    {
+      q: 'How is this different from a pitch deck review?',
+      a: 'Pitch Deck Review focuses on the deck. Investment Readiness evaluates your entire fundraising stack — deck, financials, data room, and narrative.',
+    },
+    {
+      q: "What if I don't have all materials ready?",
+      a: 'That is exactly when this is most useful. We help you identify what is missing and what needs to be built.',
+    },
+    {
+      q: 'Do you help fix the gaps?',
+      a: 'Yes — we identify gaps and can support remediation through advisory or related services.',
+    },
+    {
+      q: 'Is this suitable for first-time founders?',
+      a: 'Yes — especially valuable for first-time founders navigating fundraising for the first time.',
+    },
+    {
+      q: 'Can accelerators use this?',
+      a: 'Yes — we run cohort-based readiness diagnostics for accelerator programs globally.',
+    },
+  ],
+},
+ {
+  slug: 'ama-sessions',
+  introTitle: 'AMA Sessions',
+  title: 'AMA Sessions',
+  tagline: "Ask the questions you can't afford to get wrong.",
+  accent: 'yellow',
+
+  why: 'Structured one-on-one advisory sessions with experienced venture investors and startup operators. Bring any challenge, any question — and get direct, unfiltered answers from people who have lived the fundraising journey from both sides of the table.',
+
+  whyHeading: "Sometimes you don't need a full engagement. You need one hour with the right person.",
+
+  whyPoints: [
+    {
+      title: 'Generic Advice Is Everywhere — Specific Advice Is Rare',
+      text: 'Frameworks are abundant. Real, situation-specific advice is not. AMA sessions are tailored to your stage, team, and fundraising context.'
+    },
+    {
+      title: "The Questions You Don't Know to Ask Are the Most Dangerous",
+      text: 'Experienced investors surface blind spots, risks, and second-order effects you would not identify yourself.'
+    },
+    {
+      title: 'Fast Access to Expertise Changes Outcomes',
+      text: 'Getting the right answer at the right time improves decisions, accelerates fundraising, and prevents costly mistakes.'
+    }
+  ],
+
+  deliverHeading: 'Direct, actionable answers from experienced operators and investors.',
+
+  deliver: [
+    {
+      title: 'Investor-Perspective Feedback',
+      text: 'Get direct insight into how investors actually evaluate your situation, your deck, and your strategy.'
+    },
+    {
+      title: 'Fundraise Strategy Guidance',
+      text: 'Round sizing, valuation anchoring, sequencing, timing, and term sheet navigation — tailored to your raise.'
+    },
+    {
+      title: 'Pitch and Narrative Coaching',
+      text: 'Real-time feedback on your story — what is landing, what is confusing, and where investor attention drops.'
+    },
+    {
+      title: 'Materials Spot Review',
+      text: 'Share specific slides, financial assumptions, or sections of your deck and get targeted feedback.'
+    },
+    {
+      title: 'Investor Relationship Advice',
+      text: 'Handling investor conversations, follow-ups, competing offers, and managing multiple processes simultaneously.'
+    },
+    {
+      title: 'Next-Day Session Notes',
+      text: 'Clear written summary of key discussion points and recommended next steps delivered the next business day.'
+    }
+  ],
+
+  process: [
+    {
+      step: 'Pre-Session Brief',
+      day: '24 hours before',
+      text: 'You share context, key questions, and materials. We prepare specifically for your situation.',
+      output: 'Prepared context and focused discussion plan'
+    },
+    {
+      step: 'Structured 60-Minute Session',
+      day: 'Session day',
+      text: 'A focused working session addressing your highest priority questions and decisions.',
+      output: 'Clear answers and immediate next steps'
+    },
+    {
+      step: 'Session Notes & Action Items',
+      day: 'Next business day',
+      text: 'Written summary with key insights, recommendations, and follow-up actions.',
+      output: 'Session summary (PDF)'
+    },
+    {
+      step: '48-Hour Follow-Up Window',
+      day: 'Post-session',
+      text: 'Follow-up support for clarifications and immediate questions as you implement.',
+      output: 'Clarifications and follow-up answers'
+    }
+  ],
+
+  whatsIncluded: [
+    'Pre-session context review (deck, model, or materials)',
+    '60-minute live advisory session',
+    'Real-time feedback and coaching',
+    'Written session notes and action summary',
+    '48-hour follow-up support window',
+    'Optional session recording (on request)'
+  ],
+
+  pricing: [
+    {
+      tier: 'Single Session',
+      price: '$450',
+      sub: 'One focused advisory session on any pressing question or decision.',
+      popular: false,
+      features: [
+        'Pre-session review',
+        '60-minute advisory session',
+        'Session notes',
+        '48-hour follow-up',
+        'Optional recording'
+      ],
+      cta: 'Get Started'
+    },
+    {
+      tier: 'Session Bundle',
+      price: '$1,100',
+      sub: 'Three sessions across your fundraising journey.',
+      popular: true,
+      features: [
+        'Everything in Single Session × 3',
+        'Priority scheduling',
+        'Session summaries',
+        'Async email support between sessions',
+        'Flexible usage across fundraise'
+      ],
+      cta: 'Get Started'
+    },
+    {
+      tier: 'Monthly Advisory',
+      price: '$1,800 / month',
+      sub: 'Ongoing advisory support throughout your fundraise.',
+      popular: false,
+      features: [
+        '4 sessions per month',
+        'Unlimited async email access',
+        'Material reviews',
+        'Deal and term sheet support',
+        'Priority response within 24 hours'
+      ],
+      cta: 'Get Started'
+    }
+  ],
+
+  pricingNote: STANDARD_PRICING_NOTE,
+
+  finalCta: {
+    title: 'Ready to Get the Answer You Need?',
+    description: 'Book a single AMA session or a bundle. Start with a free 15-minute fit call.',
+    cta: {
+      label: 'Book a Session',
+      to: '/contact'
+    }
+  },
+
+  faqs: [
+    {
+      q: 'What kinds of questions are best suited for an AMA session?',
+      a: 'Tactical, time-sensitive questions — fundraising strategy, valuation, investor dynamics, pitch review, or decision-making.'
+    },
+    {
+      q: 'Do I need a specific problem?',
+      a: 'Not necessarily. Some founders come with one question, others use sessions as ongoing advisory support.'
+    },
+    {
+      q: 'How quickly can I book?',
+      a: 'Typically within 5 business days. Faster slots available for urgent needs.'
+    },
+    {
+      q: 'Who will I speak with?',
+      a: 'A senior partner with direct VC and operator experience.'
+    },
+    {
+      q: 'Can I share materials in advance?',
+      a: 'Yes — sharing materials 24 hours prior improves session quality significantly.'
+    },
+    {
+      q: 'Is it confidential?',
+      a: 'Yes. All sessions are strictly confidential, and NDAs can be signed if needed.'
+    }
+  ]
+}
 ];
 
 export const ARTICLES = [

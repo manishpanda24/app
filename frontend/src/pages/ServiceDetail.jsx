@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
+import GauravImage from '../images/GauravImage.jpg'
 import { SERVICE_BY_SLUG, SERVICES, HOW_WE_WORK_INTRO } from '../mock';
 
 function Faq({ q, a, defaultOpen=false }) {
@@ -91,7 +92,96 @@ export default function ServiceDetail() {
           </div>
         </section>
       )}
+{slug === "pitch-deck-review" && (
+  <section className="max-w-[1200px] mx-auto px-6 py-20">
 
+    {/* ---------------- HAPPY FOUNDERS ---------------- */}
+    <div className="border border-amg-yellow/40 rounded-xl p-8 mb-16 text-center bg-white">
+      <h2 className="font-serif text-[28px] font-semibold text-amg-teal">
+        Happy Founders <span className="text-amg-turquoise">supported so far</span>
+      </h2>
+
+      <p className="text-sm text-amg-ink/70 mt-3 max-w-[700px] mx-auto">
+        Worked with startups globally across sectors / business models including AI, SaaS,
+        Medical devices, Life Sciences, Fintech, Proptech, Hardware / Robotics, Supply Chain,
+        ClimateTech, Marketplaces, E-Commerce, and many more.
+      </p>
+
+      {/* Logos row */}
+      <div className="flex flex-wrap justify-center items-center gap-8 mt-8 opacity-70">
+        {["GLMP.IT", "TRAVELO", "gaze.it", "mtvs.news", "energat0r"].map((item, i) => (
+          <span key={i} className="text-sm font-medium text-amg-ink">
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+
+
+    {/* ---------------- WHY WORK WITH ME ---------------- */}
+    <div className="grid md:grid-cols-2 gap-10 items-center">
+
+      {/* Image */}
+      <div>
+        <img
+          src={GauravImage}
+          alt="Founder"
+          className="rounded-xl shadow-md w-full object-cover"
+        />
+      </div>
+
+      {/* Content */}
+      <div>
+        <h2 className="font-serif text-[30px] font-semibold text-amg-teal">
+          Why <span className="text-orange-500">Work With Me?</span>
+        </h2>
+
+        <p className="text-sm text-amg-ink/70 mt-2 mb-6">
+          Supported 250+ founders so far and counting...
+        </p>
+
+        <div className="space-y-5">
+
+          {[
+            {
+              title: 'Ex-VC, Ex-Angel, Ex-Investment Banker',
+              text: 'Engaged 35+ VC investments (mostly AI), made 50+ angel investments, closed US $2Bn+ funding deals, and worked as a technology consultant (AI).'
+            },
+            {
+              title: 'Trusted Partner',
+              text: 'Supported 250+ founders raising $300Mn+ so far. Also mentor / Screening Committee member in top startup programs globally.'
+            },
+            {
+              title: 'VC-quality Feedback',
+              text: 'Reviewed 11,000+ decks providing insights rooted in concrete slide-by-slide feedback and corrective action plan.'
+            },
+            {
+              title: 'Sector, Stage, Business Model',
+              text: 'No one-size-fits-all approach. You receive tailored guidance based on your sector, fundraising stage, and revenue model.'
+            }
+          ].map((item, i) => (
+            <div key={i} className="flex items-start gap-3">
+
+              {/* Icon */}
+              <div className="w-5 h-5 mt-1 flex items-center justify-center rounded-full bg-amg-turquoise/10">
+                <span className="text-amg-teal text-xs">✓</span>
+              </div>
+
+              <div>
+                <p className="font-medium text-amg-teal">{item.title}</p>
+                <p className="text-sm text-amg-ink/70">{item.text}</p>
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+)}
       {/* WHAT WE DELIVER */}
       {service.deliver && service.deliver.length > 0 && (
         <section className="py-24 px-6 lg:px-10 bg-gray-50 border-y border-gray-100">
@@ -205,7 +295,87 @@ export default function ServiceDetail() {
           </div>
         </section>
       )}
+   {slug === "financial-model" && (
+  <section className="max-w-[1200px] mx-auto px-6 py-20">
 
+    {/* ---------------- CLIENTS ---------------- */}
+    <div className="text-center mb-14">
+      <h2 className="font-serif text-[34px] font-semibold text-amg-teal">
+        Who Are <span className="text-amg-turquoise">Our Clients?</span>
+      </h2>
+      <p className="text-amg-ink/70 mt-2 text-sm">
+        We work with Pre-seed to Series A startups
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-6 mb-20">
+      
+      {[
+        {
+          title: "Bootstrapped Startups",
+          desc: "We work with bootstrapped founders who have never raised capital by mapping a solid business plan and capital structure..."
+        },
+        {
+          title: "VC-Backed Startups",
+          desc: "We work with startups who have raised their F&F or angel/pre-seed round and want to raise their next round..."
+        },
+        {
+          title: "Boards / Key Stakeholders",
+          desc: "We work with founders at seed to Series A who want to map out their business plan in numbers..."
+        }
+      ].map((item, i) => (
+        <div key={i} className="card-pro p-6">
+          <h3 className="font-serif text-[18px] font-medium text-amg-teal mb-3">
+            {item.title}
+          </h3>
+          <p className="text-[14px] text-amg-teal/75 mb-4 leading-relaxed">
+            {item.desc}
+          </p>
+
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 text-sm font-medium text-amg-teal"
+          >
+            Get Started <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      ))}
+
+    </div>
+
+    {/* ---------------- INDUSTRIES ---------------- */}
+    <div className="text-center mb-14">
+      <h2 className="font-serif text-[34px] font-semibold text-amg-teal">
+        Industries <span className="text-orange-500">We Serve</span>
+      </h2>
+      <p className="text-amg-ink/70 mt-2 text-sm">
+        We work globally across industries / business models
+      </p>
+    </div>
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      {[
+        "Fintech / Insurtech / Payments",
+        "Robotics / Hardware / Semiconductors",
+        "HealthTech / Medical Device",
+        "Cybersecurity / Infrastructure",
+        "Blockchain / Computer Networks",
+        "Food & Beverages / Retail / Consumer",
+        "Ecommerce / Marketplace",
+        "Biotech / Life Science",
+        "Cleantech / Sustainability",
+        "Software / B2B SaaS / AI",
+        "Travel / Logistics / SupplyChain",
+        "EdTech / Business Services / Consulting"
+      ].map((item, i) => (
+        <div key={i} className="card-pro p-6 text-center">
+          <p className="text-sm text-amg-teal">{item}</p>
+        </div>
+      ))}
+    </div>
+
+  </section>
+)}
       {/* PRICING */}
       <section id="pricing" className="py-20 px-6 lg:px-10 bg-gray-50 border-y border-gray-100">
         <div className="max-w-[1280px] mx-auto">

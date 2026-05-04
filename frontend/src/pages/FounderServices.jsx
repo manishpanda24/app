@@ -28,7 +28,7 @@ export default function FounderServices() {
             <span className="text-amg-teal">Founder Services</span>
           </nav>
           <div className="eyebrow mb-4">{FOUNDER_SERVICES_INTRO.eyebrow}</div>
-          <h1 className="heading-display text-[48px] md:text-[80px] text-amg-teal max-w-4xl">{FOUNDER_SERVICES_INTRO.title}</h1>
+          <h1 className="heading-display text-[48px] md:text-[80px] text-amg-teal max-w-4xl">{FOUNDER_SERVICES_INTRO.introTitle}</h1>
           <p className="mt-7 text-[17px] text-amg-teal/75 max-w-3xl leading-relaxed">
             {FOUNDER_SERVICES_INTRO.description}
           </p>
@@ -53,7 +53,7 @@ export default function FounderServices() {
                       <span className="text-[11px] tracking-[0.18em] uppercase font-semibold text-amg-teal/70">0{i+1}</span>
                     </div>
                   </div>
-                  <div className="font-serif text-[24px] font-medium text-amg-teal leading-tight">{s.title}</div>
+                  <div className="font-serif text-[24px] font-medium text-amg-teal leading-tight">{s.introTitle}</div>
                   <p className="mt-2.5 text-[14px] text-amg-teal/70 leading-relaxed">{s.tagline}</p>
                   <div className="hr-thin my-6"/>
                   <div className="flex items-center justify-between">
