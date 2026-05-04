@@ -57,7 +57,7 @@ export default function ServiceDetail() {
             <div className="lg:col-span-4">
               <div className="flex flex-wrap gap-3">
                 <Link to="/contact" className="btn-yellow">Get Started <ArrowRight className="w-4 h-4"/></Link>
-                <Link to="/pricing" className="btn-outline">View Pricing</Link>
+                <a href="#pricing" className="btn-outline">View Pricing</a>
               </div>
             </div>
           </div>
