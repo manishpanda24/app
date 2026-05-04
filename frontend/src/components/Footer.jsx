@@ -33,7 +33,7 @@ export default function Footer() {
               <Link to="/contact" className="inline-flex items-center gap-2 bg-amg-yellow hover:bg-amg-yellow-2 text-amg-teal font-semibold px-5 py-3 rounded-md text-[14px] transition-colors">
                 Book a call <ArrowRight className="w-4 h-4"/>
               </Link>
-              <a href="https://www.linkedin.com/in/gauravmishra-amg/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-11 h-11 rounded-full border border-amg-cream/20 flex items-center justify-center hover:bg-amg-yellow hover:text-amg-teal hover:border-amg-yellow transition-colors">
+              <a href="https://www.linkedin.com/in/gauravbansalventurecapital/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-11 h-11 rounded-full border border-amg-cream/20 flex items-center justify-center hover:bg-amg-yellow hover:text-amg-teal hover:border-amg-yellow transition-colors">
                 <Linkedin className="w-4 h-4"/>
               </a>
               <a href="mailto:info@amgventurepartners.com" aria-label="Email" className="w-11 h-11 rounded-full border border-amg-cream/20 flex items-center justify-center hover:bg-amg-yellow hover:text-amg-teal hover:border-amg-yellow transition-colors">

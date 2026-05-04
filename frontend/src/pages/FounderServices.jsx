@@ -39,7 +39,7 @@ export default function FounderServices() {
         <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.map((s, i) => {
             const Icon = ICONS[s.slug] || Briefcase;
-            const accent = s.accent === 'yellow' ? { bar:'bg-amg-yellow', iconBg:'bg-amg-yellow-bg', dot:'bg-amg-yellow' } : s.accent === 'turquoise' ? { bar:'bg-amg-turquoise', iconBg:'bg-amg-turquoise-bg', dot:'bg-amg-turquoise' } : { bar:'bg-amg-teal', iconBg:'bg-amg-teal-bg', dot:'bg-amg-teal' };
+            const accent = s.accent === 'yellow' ? { bar:'bg-amg-yellow', iconBg:'bg-amg-yellow-bg', dot:'bg-amg-yellow' } : s.accent === 'turquoise' ? { bar:'bg-amg-turquoise', iconBg:'bg-amg-turquoise-bg', dot:'bg-amg-turquoise' } : { bar:'bg-amg-dodgerblue', iconBg:'bg-amg-teal-bg', dot:'bg-amg-teal' };
             return (
               <Link key={s.slug} to={`/services/${s.slug}`} className="group card-pro shadow-soft hover-lift block overflow-hidden">
                 <div className={`h-1 ${accent.bar}`}/>

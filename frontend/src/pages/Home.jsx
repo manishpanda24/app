@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight, FileText, Sparkles, Calculator, TrendingUp, Users, ShieldCheck, MessageCircle, Briefcase, CheckCircle2, Target, Globe } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, FileText, Sparkles, Calculator, TrendingUp, Users, ShieldCheck, MessageCircle, Briefcase, CheckCircle2, Target, Globe, Linkedin, BadgeCheck } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
-import { HERO, SERVICES, FOUNDER_SERVICES_INTRO, WHO_WE_ARE, HOW_WE_WORK_INTRO } from '../mock';
+import GauravImage from '../images/GauravImage.jpg';
+import { HERO, SERVICE_PILLARS, SERVICES, FOUNDER_SERVICES_INTRO, WHO_WE_ARE } from '../mock';
 
 const ICONS = {
   'pitch-deck-review': FileText,
@@ -109,6 +110,21 @@ export default function Home() {
                 <Link to={HERO.secondaryCta.to} className="btn-outline">{HERO.secondaryCta.label}</Link>
               </div>
             </div>
+
+            {/* Pillars stack */}
+            {/* <div className="lg:col-span-4 fade-in">
+              <div className="grid grid-cols-2 gap-3">
+                {SERVICE_PILLARS.map((p,i) => {
+                  const tone = p.accent === 'yellow' ? 'bg-amg-yellow-bg border-amg-yellow' : p.accent === 'turquoise' ? 'bg-amg-turquoise-bg border-amg-turquoise' : 'bg-amg-teal-bg border-amg-teal';
+                  return (
+                    <div key={i} className={`rounded-lg p-5 border ${tone}`}>
+                      <div className="font-serif text-[20px] font-medium text-amg-teal leading-tight">{p.title}</div>
+                      <div className="mt-2 text-[12.5px] text-amg-teal/75">{p.desc}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -146,40 +162,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ── ACCELERATORS & INCUBATORS ────────────────────────────────────── */}
-      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-gray-50">
-        <div className="max-w-[1280px] mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <span className="tag-pill inline-flex mb-5">
-              <span className="dot bg-amg-turquoise"/>For Ecosystems
-            </span>
-            <h2 className="font-serif text-[44px] md:text-[64px] font-medium text-amg-teal leading-tight tracking-tight">
-              Accelerators &amp; Incubators
-            </h2>
-            <p className="mt-4 text-[16px] text-amg-teal/60 max-w-lg mx-auto leading-relaxed">
-              We partner with innovation programs to elevate the fundraising capability of their entire cohort at scale.
-            </p>
-          </div>
-
-          {/* 4-column feature cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {ECOSYSTEM_FEATURES.map((f, i) => {
-              const Icon = f.icon;
-              return (
-                <div key={i} className="card-pro shadow-soft p-7 hover-lift bg-white">
-                  <div className={`w-12 h-12 rounded-xl ${f.iconBg} flex items-center justify-center mb-6`}>
-                    <Icon className={`w-5 h-5 ${f.iconColor}`}/>
-                  </div>
-                  <div className="font-semibold text-[15.5px] text-amg-teal mb-2 leading-snug">{f.title}</div>
-                  <p className="text-[13.5px] text-amg-teal/60 leading-relaxed">{f.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Stats strip */}
+     <section className="py-6 px-6 lg:px-10 border-t border-amg-line bg-gray-50">
+        {/* Stats strip */}
           <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 border border-amg-line rounded-2xl overflow-hidden bg-white shadow-soft">
             {STATS.map((s, i) => (
               <div
@@ -193,11 +177,12 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
+        
+     </section>
+      
       {/* FOUNDER SERVICES */}
-      <section className="py-24 px-6 lg:px-10 border-t border-gray-100">
+      {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
+      <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-gray-50">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-14">
             <div className="lg:col-span-7">
@@ -208,14 +193,11 @@ export default function Home() {
               <p className="text-[15.5px] text-amg-teal/75 leading-relaxed">{FOUNDER_SERVICES_INTRO.description}</p>
             </div>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((s, i) => {
               const Icon = ICONS[s.slug] || Briefcase;
-              const accent = s.accent === 'yellow'
-                ? { bar:'bg-amg-yellow', iconBg:'bg-amg-yellow-bg', dot:'bg-amg-yellow' }
-                : s.accent === 'turquoise'
-                  ? { bar:'bg-amg-turquoise', iconBg:'bg-amg-turquoise-bg', dot:'bg-amg-turquoise' }
-                  : { bar:'bg-amg-teal', iconBg:'bg-amg-teal-bg', dot:'bg-amg-teal' };
+              const accent = s.accent === 'yellow' ? { bar:'bg-amg-yellow', iconBg:'bg-amg-yellow-bg', dot:'bg-amg-yellow' } : s.accent === 'turquoise' ? { bar:'bg-amg-turquoise', iconBg:'bg-amg-turquoise-bg', dot:'bg-amg-turquoise' } : { bar:'bg-amg-teal', iconBg:'bg-amg-teal-bg', dot:'bg-amg-teal' };
               return (
                 <Link key={s.slug} to={`/services/${s.slug}`} className="group card-pro shadow-soft hover-lift block overflow-hidden">
                   <div className={`h-1 ${accent.bar}`}/>
@@ -243,58 +225,118 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ── HOW WE WORK TOGETHER ─────────────────────────────────────────── */}
-      <section className="py-24 px-6 lg:px-10 border-t border-amg-line">
+{/* ── ACCELERATORS & INCUBATORS ────────────────────────────────────── */}
+      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-gray-50">
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="tag-pill inline-flex mb-5">
+              <span className="dot bg-amg-turquoise"/>For Ecosystems
+            </span>
+            <h2 className="font-serif text-[44px] md:text-[64px] font-medium text-amg-teal leading-tight tracking-tight">
+              Accelerators &amp; Incubators
+            </h2>
+            <p className="mt-4 text-[16px] text-amg-teal/60 max-w-lg mx-auto leading-relaxed">
+              We partner with innovation programs to elevate the fundraising capability of their entire cohort at scale.
+            </p>
+          </div>
+</div>
 
-            {/* Left */}
-            <div className="lg:col-span-4">
-              <div className="eyebrow mb-4">{HOW_WE_WORK_INTRO.eyebrow}</div>
-              <h2 className="font-serif text-[36px] md:text-[48px] font-medium text-amg-teal leading-tight tracking-tight">
-                How We Work Together
-              </h2>
-              <p className="mt-5 text-[15px] text-amg-teal/65 leading-relaxed">
-                {HOW_WE_WORK_INTRO.description}
-              </p>
-            </div>
+          {/* 4-column feature cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {ECOSYSTEM_FEATURES.map((f, i) => {
+              const Icon = f.icon;
+              return (
+                <div key={i} className="card-pro shadow-soft p-7 hover-lift bg-white">
+                  <div className={`w-12 h-12 rounded-xl ${f.iconBg} flex items-center justify-center mb-6`}>
+                    <Icon className={`w-5 h-5 ${f.iconColor}`}/>
+                  </div>
+                  <div className="font-semibold text-[15.5px] text-amg-teal mb-2 leading-snug">{f.title}</div>
+                  <p className="text-[13.5px] text-amg-teal/60 leading-relaxed">{f.desc}</p>
+                </div>
+              );
+            })}
+          </div>
 
-            {/* Right: vertical timeline */}
-            <div className="lg:col-span-8">
-              <div className="relative pl-2">
-                {/* Vertical connector line */}
-                <div
-                  className="absolute left-[19px] top-5 w-px bg-amg-turquoise-soft"
-                  style={{ height: 'calc(100% - 40px)' }}
-                  aria-hidden="true"
+        
+      </section>
+
+      {/* ── MEET THE FOUNDER ─────────────────────────────────────────────── */}
+      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#f0f2f8]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+            {/* Left: photo with floating badges */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-[520px] mx-auto shadow-soft-lg">
+                <img
+                  src={GauravImage}
+                  alt="Gaurav Bansal — Founder & CEO, AMG Venture Partners"
+                  className="w-full h-full object-cover object-top"
                 />
 
-                <div className="space-y-10">
-                  {HOW_WE_WORK_STEPS.map((step, i) => (
-                    <div key={i} className="flex gap-6 items-start">
-                      {/* Step circle */}
-                      <div className="shrink-0 w-10 h-10 rounded-full bg-amg-turquoise-bg border-2 border-amg-turquoise-soft text-amg-teal font-semibold text-[14px] flex items-center justify-center z-10 relative">
-                        {i + 1}
-                      </div>
+          
 
-                      {/* Step content */}
-                      <div className="flex-1 pt-1.5">
-                        <div className="flex flex-wrap items-center gap-3 mb-2">
-                          <span className="font-semibold text-[16.5px] text-amg-teal">{step.step}</span>
-                          <span className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
-                            {step.day}
-                          </span>
-                        </div>
-                        <p className="text-[14px] text-amg-teal/65 leading-relaxed mb-2.5">{step.text}</p>
-                        <p className="text-[13px] font-medium text-amg-turquoise-2">
-                          → Output: {step.output}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+                {/* Bottom name card */}
+                <div className="absolute bottom-0 left-0 right-0 bg-white px-5 py-4">
+                  <div className="flex items-center gap-3">
+                    <span className="font-bold text-[17px] text-amg-teal">Gaurav Bansal</span>
+                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-amg-teal/70 border border-amg-line rounded-full px-2.5 py-1">
+                      <BadgeCheck className="w-3.5 h-3.5 text-amg-yellow"/> Verified
+                    </span>
+                  </div>
+                  <div className="text-[12.5px] text-amg-teal/60 mt-1 mb-2">Founder & CEO, AMG Venture Partners</div>
+                  <a
+                    href="https://www.linkedin.com/in/gauravbansalventurecapital/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-7 h-7 rounded bg-[#0077b5] hover:bg-[#005f91] transition-colors"
+                  >
+                    <Linkedin className="w-3.5 h-3.5 text-white fill-white"/>
+                  </a>
                 </div>
               </div>
+            </div>
+
+            {/* Right: content */}
+            <div className="lg:col-span-7">
+              <div className="tag-pill inline-flex mb-6">
+                <span className="dot bg-amg-turquoise"/>Meet the Founder
+              </div>
+
+              <h2 className="font-serif text-[38px] md:text-[52px] font-medium text-amg-teal leading-tight tracking-tight">
+                Tech Investor &amp; Advisor<br/>
+                with <span className="text-amg-turquoise-2">Global Expertise</span>
+              </h2>
+
+              <p className="mt-6 text-[15.5px] text-amg-teal/75 leading-relaxed max-w-xl">
+                Gaurav is a tech investor and advisor with over 35+ VC investments across 10 countries
+                and experience in US $2Bn+ worth of IPOs, M&A, and private equity deals.
+              </p>
+
+              <ul className="mt-7 space-y-4">
+                {[
+                  'Expert in Residence & Mentor across startup programs',
+                  'Evaluator for government grant programs',
+                  'Specialist in AI/ML strategy & global expansion',
+                  'Family office portfolio manager',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-[15px] text-amg-teal">
+                    <span className="mt-1.5 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href="https://www.linkedin.com/in/gauravbansalventurecapital/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-9 inline-flex items-center gap-2 bg-amg-turquoise-2 hover:bg-amg-teal text-white font-semibold px-6 py-3 rounded-full text-[14px] transition-colors"
+              >
+                <Linkedin className="w-4 h-4"/>
+                View LinkedIn Profile
+              </a>
             </div>
 
           </div>

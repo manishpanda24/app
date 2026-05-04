@@ -6,7 +6,7 @@ export default function CTASection() {
   return (
     <section className="py-24 px-6 lg:px-10">
       <div className="max-w-[1280px] mx-auto">
-        <div className="relative rounded-2xl overflow-hidden card-dark">
+        <div className="relative rounded-2xl overflow-hidden card-amg">
           <div className="absolute inset-0 grid-paper pointer-events-none opacity-50"/>
           <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 p-10 lg:p-16 items-center">
             <div className="lg:col-span-8">
@@ -14,7 +14,7 @@ export default function CTASection() {
               <h2 className="heading-display text-[40px] md:text-[56px] text-amg-cream">
                 {NOT_SURE_CTA.title}
               </h2>
-              <p className="mt-6 text-amg-cream/70 max-w-xl text-[15.5px] leading-relaxed">
+              <p className="mt-6  max-w-xl text-[15.5px] leading-relaxed font-semibold">
                 {NOT_SURE_CTA.description}
               </p>
             </div>
@@ -22,7 +22,7 @@ export default function CTASection() {
               <Link to={NOT_SURE_CTA.cta.to} className="inline-flex items-center gap-2 bg-amg-yellow hover:bg-amg-yellow-2 text-amg-teal font-semibold px-5 py-3 rounded-md text-[14px] transition-colors">
                 {NOT_SURE_CTA.cta.label} <ArrowRight className="w-4 h-4"/>
               </Link>
-              <div className="mt-4 text-[12px] text-amg-cream/60">{NOT_SURE_CTA.note}</div>
+              <div className="mt-4 text-[12px] font-semibold">{NOT_SURE_CTA.note}</div>
             </div>
           </div>
         </div>

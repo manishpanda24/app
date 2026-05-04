@@ -74,7 +74,7 @@ export default function Contact() {
                 <div className="flex items-start gap-3"><Mail className="w-4 h-4 mt-0.5 text-amg-yellow"/><a href="mailto:hello@amgventures.co" className="link-under">hello@amgventures.co</a></div>
                 <div className="flex items-start gap-3"><Phone className="w-4 h-4 mt-0.5 text-amg-yellow"/><span>+1 (415) 555-0142</span></div>
                 <div className="flex items-start gap-3"><MapPin className="w-4 h-4 mt-0.5 text-amg-yellow"/><span>San Francisco · London · Toronto</span></div>
-                <div className="flex items-start gap-3"><Linkedin className="w-4 h-4 mt-0.5 text-amg-yellow"/><a href="https://www.linkedin.com/in/gauravmishra-amg/" target="_blank" rel="noreferrer" className="link-under">Connect on LinkedIn</a></div>
+                <div className="flex items-start gap-3"><Linkedin className="w-4 h-4 mt-0.5 text-amg-yellow"/><a href="https://www.linkedin.com/in/gauravbansalventurecapital/" target="_blank" rel="noreferrer" className="link-under">Connect on LinkedIn</a></div>
               </div>
             </div>
 

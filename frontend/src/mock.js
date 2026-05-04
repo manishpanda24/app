@@ -67,7 +67,7 @@ export const PRICING_INTRO = {
 };
 
 export const HOW_WE_WORK_INTRO = {
-  eyebrow: 'How We Work Together',
+  eyebrow: 'Our Process',
   description:
     'A structured engagement designed to be efficient, collaborative, and output-driven — no bureaucracy, no back-and-forth chaos.',
 };

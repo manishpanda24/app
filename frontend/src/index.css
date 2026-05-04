@@ -94,6 +94,7 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
 .bg-amg-turquoise { background-color: var(--amg-turquoise); }
 .bg-amg-turquoise-soft { background-color: var(--amg-turquoise-soft); }
 .bg-amg-teal { background-color: var(--amg-teal); }
+.bg-amg-dodgerblue { background-color: dodgerblue; }
 .bg-amg-teal-soft { background-color: var(--amg-teal-soft); }
 .bg-amg-ink { background-color: var(--amg-ink); }
 .bg-amg-ink-2 { background-color: var(--amg-ink-2); }
@@ -230,7 +231,12 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
   border: 1px solid var(--amg-teal-2);
   border-radius: 10px;
 }
-
+.card-amg {
+  background: #008080;
+  color: #FBF7E9;
+  border: 1px solid var(--amg-teal-2);
+  border-radius: 10px;
+}
 .card-yellow {
   background: var(--amg-yellow);
   color: var(--amg-teal);
