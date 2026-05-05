@@ -270,31 +270,59 @@ export default function ServiceDetail() {
       )}
 
       {/* WHAT'S INCLUDED */}
-      {service.whatsIncluded && service.whatsIncluded.length > 0 && (
-        <section className="py-20 px-6 lg:px-10 border-t border-amg-line">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="flex flex-wrap items-center justify-between gap-6 mb-10">
-              <div>
-                <div className="eyebrow mb-3">What's Included</div>
-                <h2 className="font-serif text-[32px] md:text-[42px] font-medium text-amg-teal leading-tight">
-                  Everything You Receive
-                </h2>
-              </div>
-              <Link to="/contact" className="btn-yellow shrink-0">
-                Get Started <ArrowRight className="w-4 h-4"/>
-              </Link>
+    {/* WHAT'S INCLUDED */}
+{service.whatsIncluded && service.whatsIncluded.length > 0 && (
+  <section className="py-20 px-6 lg:px-10 border-t border-amg-line">
+    <div className="max-w-[1280px] mx-auto">
+
+      {/* Header */}
+      <div className="flex flex-wrap items-center justify-between gap-6 mb-10">
+        <div>
+          <div className="eyebrow mb-3">What You Receive</div>
+          <h2 className="font-serif text-[32px] md:text-[42px] font-medium text-amg-teal leading-tight">
+            Everything You Receive
+          </h2>
+        </div>
+
+        <Link to="/contact" className="btn-yellow shrink-0">
+          Get Started <ArrowRight className="w-4 h-4"/>
+        </Link>
+      </div>
+
+      {/* Content Box */}
+      <div className="bg-[#F7F8F8] rounded-2xl p-6 md:p-8">
+
+        <div className="grid md:grid-cols-2 gap-x-10">
+
+          {[0, 1].map((col) => (
+            <div key={col}>
+              {service.whatsIncluded
+                .filter((_, i) => i % 2 === col)
+                .map((item, i) => (
+                  <div key={i} className="py-4 border-b last:border-b-0 border-amg-line">
+
+                    <div className="flex items-start gap-3">
+                      {/* Icon */}
+                      <div className="w-5 h-5 rounded-full bg-amg-turquoise-2 flex items-center justify-center shrink-0 mt-0.5">
+                        <span className="text-white text-[10px]">✓</span>
+                      </div>
+
+                      {/* Text */}
+                      <span className="text-[14px] text-amg-teal/80 leading-snug">
+                        {item}
+                      </span>
+                    </div>
+
+                  </div>
+                ))}
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {service.whatsIncluded.map((item, i) => (
-                <div key={i} className="flex items-start gap-3 p-4 rounded-lg border border-amg-line bg-white">
-                  <CheckSquare className="w-4 h-4 text-amg-turquoise-2 shrink-0 mt-0.5"/>
-                  <span className="text-[13.5px] text-amg-teal/80 leading-snug">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+          ))}
+
+        </div>
+      </div>
+    </div>
+  </section>
+)}
    {slug === "financial-model" && (
   <section className="max-w-[1200px] mx-auto px-6 py-20">
 

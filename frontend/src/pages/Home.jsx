@@ -130,38 +130,63 @@ export default function Home() {
       </section>
 
       {/* WHO WE ARE */}
-      <section className="py-24 px-6 lg:px-10 border-t border-amg-line">
-        <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div className="lg:col-span-6">
-            <div className="inline-flex items-center gap-2 mb-7">
-              <span className="tag-pill bg-amg-turquoise-bg border-amg-turquoise"><span className="dot bg-amg-turquoise"/>{WHO_WE_ARE.eyebrow}</span>
-            </div>
-            <h2 className="heading-display text-[44px] md:text-[64px] text-amg-teal leading-[0.98]">
-              Practical Insight.<br/><em>Real Results.</em>
-            </h2>
-            <div className="mt-7 space-y-5 text-[15.5px] text-amg-teal/75 leading-relaxed max-w-xl">
-              {WHO_WE_ARE.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
-            </div>
-            <ul className="mt-8 space-y-3.5">
-              {WHO_WE_ARE.bullets.map((b, i) => (
-                <li key={i} className="flex items-start gap-3 text-[15px] text-amg-teal">
-                  <CheckCircle2 className="w-5 h-5 text-amg-turquoise-2 shrink-0 mt-0.5"/>
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
+  <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-gray-50">
+  <div className="max-w-[1000px] mx-auto">
+
+    {/* Eyebrow */}
+    <div className="mb-6">
+      <span className="tag-pill inline-flex">
+        <span className="dot bg-amg-turquoise"/>Who We Are
+      </span>
+    </div>
+
+    {/* Heading */}
+    <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.02]">
+      Practical Insight.<br/><em>Real Results.</em>
+    </h2>
+
+    {/* Highlight Card */}
+    <div className="mt-10 bg-white border border-amg-line rounded-2xl p-8 shadow-soft">
+
+      <p className="text-[16px] text-amg-teal/80 leading-relaxed">
+        AMG Venture Partners is a <strong className="text-amg-teal">global business consulting and technology product firm</strong> operating across the <strong className="text-amg-teal">North American and European markets</strong>.
+      </p>
+
+      <p className="mt-5 text-[16px] text-amg-teal/80 leading-relaxed">
+        We partner with incubators and accelerators globally to deliver high-quality <strong className="text-amg-teal">investment-readiness content and fundraising services</strong> to tech startup CEOs.
+      </p>
+
+      <p className="mt-5 text-[16px] text-amg-teal/80 leading-relaxed">
+        We also partner directly with <strong className="text-amg-teal">startup CEOs</strong> on everything fundraising — from strategy and positioning to execution and investor engagement.
+      </p>
+
+    </div>
+
+    {/* Bullet Points */}
+    <div className="mt-12 grid md:grid-cols-3 gap-6">
+
+      {[
+        'Hands-on, founder-first methodology',
+        'Deep North American & European investor networks',
+        'Stage-appropriate advice from pre-seed to Series A'
+      ].map((item, i) => (
+        <div key={i} className="flex items-start gap-4 p-5 bg-white border border-amg-line rounded-xl shadow-soft-sm">
+
+          <div className="w-8 h-8 rounded-full bg-amg-turquoise-bg flex items-center justify-center shrink-0">
+            <CheckCircle2 className="w-4 h-4 text-amg-turquoise-2"/>
           </div>
-          <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/5] w-full max-w-[560px] mx-auto rounded-2xl overflow-hidden border border-amg-line shadow-soft-lg">
-              <img src={WHO_WE_ARE.image} alt="AMG Venture Partners team working with a founder" className="w-full h-full object-cover"/>
-            </div>
-            <div className="absolute -bottom-6 -left-2 sm:left-6 lg:-left-6 card-pro shadow-soft-lg p-5 lg:p-6 max-w-[260px]">
-              <div className="text-[10.5px] tracking-[0.18em] uppercase font-semibold text-amg-teal/75">{WHO_WE_ARE.stat.label}</div>
-              <div className="font-serif text-[34px] lg:text-[40px] font-medium text-amg-turquoise-2 leading-none mt-2">{WHO_WE_ARE.stat.value}</div>
-            </div>
-          </div>
+
+          <span className="text-[14.5px] text-amg-teal/80 leading-snug">
+            {item}
+          </span>
+
         </div>
-      </section>
+      ))}
+
+    </div>
+
+  </div>
+</section>
      <section className="py-6 px-6 lg:px-10 border-t border-amg-line bg-gray-50">
         {/* Stats strip */}
           <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 border border-amg-line rounded-2xl overflow-hidden bg-white shadow-soft">
@@ -299,45 +324,62 @@ export default function Home() {
             </div>
 
             {/* Right: content */}
-            <div className="lg:col-span-7">
-              <div className="tag-pill inline-flex mb-6">
-                <span className="dot bg-amg-turquoise"/>Meet the Founder
-              </div>
+         <div className="lg:col-span-7">
+  <div className="tag-pill inline-flex mb-6">
+    <span className="dot bg-amg-turquoise"/>Meet the Founder
+  </div>
 
-              <h2 className="font-serif text-[38px] md:text-[52px] font-medium text-amg-teal leading-tight tracking-tight">
-                Tech Investor &amp; Advisor<br/>
-                with <span className="text-amg-turquoise-2">Global Expertise</span>
-              </h2>
+  <h2 className="font-serif text-[38px] md:text-[52px] font-medium text-amg-teal leading-tight tracking-tight">
+    I am Gaurav Bansal, <span className="text-amg-turquoise-2">a VC turned Founder</span>
+  </h2>
 
-              <p className="mt-6 text-[15.5px] text-amg-teal/75 leading-relaxed max-w-xl">
-                Gaurav is a tech investor and advisor with over 35+ VC investments across 10 countries
-                and experience in US $2Bn+ worth of IPOs, M&A, and private equity deals.
-              </p>
+  <ul className="mt-8 space-y-4 text-[15.5px] text-amg-teal/80 leading-relaxed max-w-xl">
+    <li className="flex items-start gap-3">
+      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
+      <span><strong className="text-amg-turquoise-2">14+ years</strong> of experience in venture capital, angel investing, investment banking, and technology consulting</span>
+    </li>
 
-              <ul className="mt-7 space-y-4">
-                {[
-                  'Expert in Residence & Mentor across startup programs',
-                  'Evaluator for government grant programs',
-                  'Specialist in AI/ML strategy & global expansion',
-                  'Family office portfolio manager',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[15px] text-amg-teal">
-                    <span className="mt-1.5 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+    <li className="flex items-start gap-3">
+      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
+      <span>Member of <strong className="text-amg-turquoise-2">450+</strong> global angel investor syndicates</span>
+    </li>
 
-              <a
-                href="https://www.linkedin.com/in/gauravbansalventurecapital/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-9 inline-flex items-center gap-2 bg-amg-turquoise-2 hover:bg-amg-teal text-white font-semibold px-6 py-3 rounded-full text-[14px] transition-colors"
-              >
-                <Linkedin className="w-4 h-4"/>
-                View LinkedIn Profile
-              </a>
-            </div>
+    <li className="flex items-start gap-3">
+      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
+      <span><strong className="text-amg-turquoise-2">50+</strong> tech startup investments</span>
+    </li>
+
+    <li className="flex items-start gap-3">
+      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
+      <span><strong className="text-amg-turquoise-2">35+</strong> venture capital portfolio companies</span>
+    </li>
+
+    <li className="flex items-start gap-3">
+      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
+      <span>Investment banking deals worth <strong className="text-amg-turquoise-2">$2Bn+</strong></span>
+    </li>
+
+    <li className="flex items-start gap-3">
+      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
+      <span>Reviewed <strong className="text-amg-turquoise-2">20k+</strong> pitch decks & financial models; conducted <strong className="text-amg-turquoise-2">100+</strong> due diligence processes</span>
+    </li>
+
+    <li className="flex items-start gap-3">
+      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
+      <span><strong className="text-amg-turquoise-2">1000+</strong> mentor hours with founders globally</span>
+    </li>
+  </ul>
+
+  <a
+    href="https://www.linkedin.com/in/gauravbansalventurecapital/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-10 inline-flex items-center gap-2 bg-amg-turquoise-2 hover:bg-amg-teal text-white font-semibold px-6 py-3 rounded-full text-[14px] transition-colors"
+  >
+    <Linkedin className="w-4 h-4"/>
+    View LinkedIn Profile
+  </a>
+</div>
 
           </div>
         </div>

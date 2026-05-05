@@ -126,19 +126,14 @@ const PITCH_DECK_REVIEW_PRICING = [
 ];
 
 const PITCH_DECK_REVIEW_INCLUDES = [
-  'Intake questionnaire and context review',
-  'Slide-by-slide annotated feedback (every slide)',
-  'Narrative flow and story arc assessment',
-  'Market sizing logic and credibility review',
-  'Competitive landscape framing analysis',
-  'Traction and proof-point strength assessment',
-  'Team narrative review',
-  'Financial slide and ask review',
-  'Red flag identification (investor deal-breakers)',
-  'Investor Q&A anticipation notes (likely questions from your deck)',
-  'Executive summary, top 3 strengths and top 3 critical improvements',
-  '80-min live debrief call with walkthrough',
-  'Post-call email with revision prioritisation list',
+   'Investor-readiness score (out of 10)',
+  '11-dimension evaluation framework',
+  'Slide-by-slide written feedback',
+  'Clear investor concerns and gaps',
+  'Rewrite suggestions for key slides',
+  'Missing slides identification',
+  'Recommended slide structure (13–16 slides)',
+  'Prioritized improvement roadmap (10–14 days)'
 ];
 
 export const SERVICES = [
@@ -205,12 +200,19 @@ export const SERVICES = [
       description: 'Submit your deck and get a full investor-perspective review back within 5 business days.',
       cta: { label: 'Get Started', to: '/contact' },
     },
-    faqs: [
-      { q: 'How quickly can you turn around the review?', a: 'Standard turnaround is 5 business days from receipt of materials. Rush 48-hour turnaround is available for an additional fee.' },
-      { q: 'Is this feedback from someone who has actually sat on the investor side?', a: 'Yes. Reviews are conducted by partners who have evaluated hundreds of decks from the investor seat — not generalist consultants.' },
-      { q: 'Do you sign NDAs?', a: 'Mutual NDAs are standard for every engagement. Your deck and information are never shared.' },
-      { q: 'Will you also help me rewrite the deck?', a: 'The review focuses on critique and recommendations. If you want hands-on rebuilding, our Pitch Deck Creation service is the right next step.' },
-    ],
+   faqs: [
+  { q: 'How quickly can you turn around the review?', a: 'Standard turnaround is 5 business days from receipt of materials. Rush 48-hour turnaround is available for an additional fee.' },
+  { q: 'Is this feedback from someone who has actually sat on the investor side?', a: 'Yes. Reviews are conducted by partners who have evaluated hundreds of decks from the investor seat — not generalist consultants.' },
+  { q: 'Do you sign NDAs?', a: 'Mutual NDAs are standard for every engagement. Your deck and information are never shared.' },
+  { q: 'Will you also help me rewrite the deck?', a: 'The review focuses on critique and recommendations. If you want hands-on rebuilding, our Pitch Deck Creation service is the right next step.' },
+
+  { q: 'How quickly can you turn around the review?', a: 'Standard turnaround is 5–6 business days from when you submit your deck. If you have an urgent investor meeting, we offer expedited 48-hour reviews at a premium — just let us know when you book.' },
+  { q: 'What format should I send my deck in?', a: 'PDF or PowerPoint both work. We review the deck as investors will see it — the presentation-ready version. If you also want us to look at editable slides for structure, you can share the PPT.' },
+  { q: 'Is this feedback from someone who has actually sat on the investor side?', a: 'Yes. Our review team includes operators and advisors with direct experience evaluating and making investment decisions at early-stage funds. This is not generic pitch coaching — it\'s investor-perspective analysis.' },
+  { q: 'What if my deck needs a complete overhaul — not just tweaks?', a: 'We\'ll tell you directly in the review if that\'s the case. Some decks benefit more from a full rebuild than iterative improvements. If that\'s our assessment, we\'ll explain why and can scope a Pitch Deck Creation engagement at a credit toward the review fee.' },
+  { q: 'Do you review decks at all stages?', a: 'Yes — from pre-seed through Series A. The evaluation criteria we apply are calibrated to your stage. What we look for in a pre-seed deck is different from what we expect to see in a Series A deck.' },
+  { q: 'Can I share the review with my team or co-founders?', a: 'Absolutely. The written report is yours to share internally as you see fit. We only ask that you don\'t share it publicly, as it contains our proprietary evaluation frameworks.' }
+],
   },
   {
     slug: 'pitch-deck-creation',
@@ -268,18 +270,15 @@ export const SERVICES = [
       },
     ],
     whatsIncluded: [
-      'Full 90-min investor discovery session',
-      'Slide-by-slide copy and messaging development',
-      'Narrative one-page pitch outline',
-      'Presentation-ready PDF export',
-      'We conduct founder discovery sessions',
-      'Custom slide visualisations and brand elements',
-      'Market sizing and competitive landscape framing',
-      'You full rounds of revision based on your feedback',
-      'Narrative architecture across your story',
-      'Investor profile messaging customisation',
-      'Editable PowerPoint file (fully yours to update)',
-      'Live walkthrough session (60 min)',
+       '90-min founder discovery session',
+  'Narrative architecture & story flow',
+  'Slide-by-slide copywriting',
+  'Custom visual design & layouts',
+  'Market sizing & competitive positioning',
+  'Investor-tailored messaging',
+  '2 structured revision rounds',
+  'Editable PowerPoint + PDF delivery',
+  '60-min presentation walkthrough'
     ],
     whyPoints: [
       {
@@ -343,11 +342,18 @@ export const SERVICES = [
       cta: { label: 'Get Started', to: '/contact' },
     },
     faqs: [
-      { q: 'How long does the engagement take?', a: 'Typical timeline is 3–4 weeks from discovery session to final deck delivery, with two structured revision rounds built in.' },
-      { q: 'Who actually writes the slides?', a: 'A senior partner leads the narrative and copy work. You co-create the story — no junior consultants doing the thinking.' },
-      { q: 'Do you handle visual design too?', a: 'Yes. Every engagement includes polished, investor-ready visual design as a core deliverable.' },
-      { q: 'Can I update the deck later?', a: 'Yes. You receive the editable PowerPoint file — fully yours to update for follow-on conversations and future rounds.' },
-    ],
+  { q: 'How long does the engagement take?', a: 'Typical timeline is 3–4 weeks from discovery session to final deck delivery, with two structured revision rounds built in.' },
+  { q: 'Who actually writes the slides?', a: 'A senior partner leads the narrative and copy work. You co-create the story — no junior consultants doing the thinking.' },
+  { q: 'Do you handle visual design too?', a: 'Yes. Every engagement includes polished, investor-ready visual design as a core deliverable.' },
+  { q: 'Can I update the deck later?', a: 'Yes. You receive the editable PowerPoint file — fully yours to update for follow-on conversations and future rounds.' },
+
+  { q: 'How involved do I need to be in the process?', a: 'Significantly in the first few days, minimally after that. The discovery session is the most important step — the better the context you give us, the better the deck. After we have the narrative architecture approved, your time investment drops considerably.' },
+  { q: 'What if I already have a deck but want it rebuilt?', a: 'That\'s actually the most common engagement type. We review your existing deck, extract what\'s working, and rebuild the rest. We don\'t charge extra for this — the process is the same.' },
+  { q: 'Do you do the design work or just the content?', a: 'The Full Deck Creation package includes both — copy, narrative, and professional visual design. The Narrative & Copy package covers story and content only, which you can take to a designer. Both are full services; the right choice depends on your existing resources.' },
+  { q: 'How long does it take?', a: 'Most decks are delivered within 12–15 business days from the discovery session. Expedited delivery (7–8 days) is available at a premium.' },
+  { q: 'Will the deck be tailored to specific investors?', a: 'Yes. Before we start, we discuss your target investor profile — stage focus, thesis, sector expertise, and geography. All messaging is calibrated to that audience. If you\'re targeting multiple investor types, we can discuss a secondary version.' },
+  { q: 'Can you help me practice the verbal pitch as well?', a: 'Yes — the 60-minute walkthrough session included in the Full Deck Creation package covers exactly this. We go through how to open, how to tell each story beat, how to handle common objections, and how to pace the conversation.' }
+],
   },
   {
     slug: 'financial-model',
@@ -407,17 +413,16 @@ export const SERVICES = [
       },
     ],
     whatsIncluded: [
-      'Fully integrated 3-statement model (P&L, balance sheet, cash flow)',
-      'Unit economics: LTV/CAC, payback period, gross margin by cohort',
-      'Sensitivity analysis on key revenue and cost drivers',
-      'Live model walkthrough session (60 min)',
-      'Driver-based revenue model with your actual growth mechanics',
-      'Base, best and worst case scenario analysis with driver toggles',
-      'Capex requirements and fundraising schedule modelling',
-      'Update support through closure (60 days)',
-      'Hiring plan and headcount build (by role and timing)',
-      'Executive-level 1-through summary (your profitability)',
-      '30-day post-delivery Q&A support (email)',
+     'Fully integrated 3-statement model',
+  'Driver-based revenue model',
+  'Unit economics (LTV, CAC, payback)',
+  'Scenario analysis (base, bull, bear)',
+  'Sensitivity analysis dashboard',
+  'Headcount & hiring plan',
+  'Capex & fundraising schedule',
+  'KPI dashboard (ARR, burn, runway)',
+  '60-min walkthrough session',
+  '30-day post-delivery support'
     ],
     whyPoints: [
       {
@@ -473,11 +478,20 @@ export const SERVICES = [
       description: 'Book a 30-minute scoping call. We will define the right model depth for your stage and round size.',
       cta: { label: 'Get Started', to: '/contact' },
     },
-    faqs: [
-      { q: 'Excel or Google Sheets?', a: 'Either — your preference. The model is fully editable and auditable in either format.' },
-      { q: 'Can investors actually audit the assumptions?', a: 'Yes. Every assumption is explicit, sourced where relevant, and traceable through the model.' },
-      { q: 'How long does it take?', a: '3–4 weeks for a full build, depending on business complexity. Faster turnarounds available for straightforward businesses.' },
-      { q: 'Do you update the model after a raise?', a: 'Many founders engage us for a quarterly refresh after the round closes. The handoff model is yours to maintain in-house if you prefer.' },
+  
+   faqs: [
+  { q: 'Excel or Google Sheets?', a: 'Either — your preference. The model is fully editable and auditable in either format.' },
+  { q: 'Can investors actually audit the assumptions?', a: 'Yes. Every assumption is explicit, sourced where relevant, and traceable through the model.' },
+  { q: 'How long does it take?', a: '3–4 weeks for a full build, depending on business complexity. Faster turnarounds available for straightforward businesses.' },
+  { q: 'Do you update the model after a raise?', a: 'Many founders engage us for a quarterly refresh after the round closes. The handoff model is yours to maintain in-house if you prefer.' },
+
+  { q: 'How long does it take to build the model?', a: 'Most models are delivered within 10–14 business days from kickoff. More complex businesses (multi-product, marketplace, hardware) may take up to 18 days. We align on timeline before starting.' },
+  { q: 'What do you need from me to get started?', a: 'A clear description of your business model, any existing financial data or assumptions, and a 60-minute kickoff call. The more context you provide upfront, the faster and more accurate the model.' },
+  { q: 'Can you work with my existing model instead of starting from scratch?', a: 'Yes. We can audit and rebuild your existing model. In most cases we recommend a full rebuild for consistency and structural integrity, but we\'ll assess your model first and give you an honest recommendation.' },
+  { q: 'What format is the model delivered in?', a: 'We deliver in Excel by default. If you prefer Google Sheets, we can accommodate that. All models are fully unlocked — no black boxes or hidden formulas.' },
+  { q: 'I don\'t have a finance background. Can I still use and update the model?', a: 'Absolutely. We design our models for founders, not CFOs. The walkthrough session is specifically designed to make you confident owning and updating the model yourself. We also offer a 30-day Q&A window afterward.' },
+  { q: 'Do investors actually care about the financial model at the early stage?', a: 'Yes — though what they\'re evaluating changes by stage. At pre-seed, they\'re assessing your strategic thinking and assumptions. At seed and Series A, they\'re scrutinizing unit economics, runway, and the path to profitability. A weak model at any stage raises red flags.' }
+
     ],
   },
  {
@@ -536,15 +550,15 @@ export const SERVICES = [
   ],
 
   whatsIncluded: [
-    'Scorecard, Checklist (Berkus), VC, DCF (LTG & Multiples) methods',
-    'Precedent transaction analysis (5–10 comparable rounds)',
-    'Pre-money valuation range (low / mid / high)',
-    'Country, industry, and stage-specific benchmarks',
-    'Excel valuation calculator (15 tabs, 296 formulas)',
-    'Investor-ready valuation report (~25 pages)',
-    'Sensitivity analysis and risk assessment',
-    'Investor Q&A defense pack',
-    '30-day post-delivery support',
+     'Five-method valuation (VC, DCF, Scorecard, etc.)',
+  'Pre-money valuation range (low / mid / high)',
+  'Comparable company & transaction analysis',
+  'Industry, stage & geography benchmarks',
+  'Excel valuation calculator (fully editable)',
+  'Investor-ready valuation report (~25 pages)',
+  'Sensitivity analysis & risk assessment',
+  'Investor Q&A defense pack',
+  '30-day post-delivery support'
   ],
 
   whyPoints: [
@@ -628,23 +642,18 @@ export const SERVICES = [
   },
 
   faqs: [
-    {
-      q: 'Will investors accept this valuation?',
-      a: 'Investors negotiate — but this shifts the conversation from numbers to assumptions.',
-    },
-    {
-      q: 'Can pre-revenue startups be valued?',
-      a: 'Yes. Qualitative methods dominate early-stage valuation and carry the most weight.',
-    },
-    {
-      q: 'How long does it take?',
-      a: '5–7 business days depending on the engagement tier.',
-    },
-    {
-      q: 'Do you support multiple geographies?',
-      a: 'Yes — US, UK, Canada, EU, India, and more with localized parameters.',
-    },
-  ],
+  { q: 'Will investors accept this valuation?', a: 'Investors negotiate — but this shifts the conversation from numbers to assumptions.' },
+  { q: 'Can pre-revenue startups be valued?', a: 'Yes. Qualitative methods dominate early-stage valuation and carry the most weight.' },
+  { q: 'How long does it take?', a: '5–7 business days depending on the engagement tier.' },
+  { q: 'Do you support multiple geographies?', a: 'Yes — US, UK, Canada, EU, India, and more with localized parameters.' },
+
+  { q: 'What valuation methods do you use?', a: 'We use comparable company analysis, precedent transaction analysis, and discounted cash flow (DCF) modeling — weighted and calibrated based on your stage, sector, and the availability of market data. Early-stage companies typically rely more heavily on comps and market benchmarks, while later-stage companies with material revenue may benefit from DCF.' },
+  { q: 'How do you find comparable companies at the early stage?', a: 'We use a combination of proprietary databases, public company benchmarks, startup funding databases, and sector-specific research. For early-stage companies, the comp universe is often smaller — we\'re transparent about sample sizes and adjust our methodology accordingly.' },
+  { q: 'Can you help me after I receive a term sheet?', a: 'Yes — this is one of the most valuable moments for the valuation service. We can review the proposed valuation against market benchmarks, model the cap table implications, and prepare you for negotiation with specific talking points.' },
+  { q: 'How long does the valuation take?', a: 'Most engagements are completed within 8–12 business days. Urgency pricing is available if you have an active term sheet or investor deadline.' },
+  { q: 'Is a startup valuation really defensible? Aren\'t they just made up?', a: 'Early-stage valuations have wide ranges, but that doesn\'t mean they\'re arbitrary. The difference between a founder who says "we\'re worth $8M because I said so" and one who presents a comparable analysis, explains their growth-adjusted multiple, and ties it to real sector benchmarks is the difference between a credible and an amateur fundraiser.' },
+  { q: 'What if my sector has very few public comparables?', a: 'We work with this regularly. In sectors with thin public comps, we expand the analysis to include cross-sector benchmarks, private transaction data, and qualitative adjustments. We\'re always transparent about the analytical basis.' }
+],
 },
   {
     slug: 'investor-outreach',
@@ -708,18 +717,16 @@ export const SERVICES = [
       },
     ],
     whatsIncluded: [
-      'Curated long list (up to 150 firms) reviewed against your stage, sector, geography',
-      'Tier segmentation (priority / secondary / long-list)',
-      'Introduction pathway: introduction route vs. cold outreach',
-      'Investor one-pager / teaser format (used for outreach)',
-      'Personalised email sequences for each investor',
-      'Warm network via our North America and Europe connections',
-      'Outreach launch coordination (100M+ investors)',
-      'Investor one-page / teaser newsletter for outreach',
-      'Follow-up cadence management (each 1-week per campaign)',
-      'Weekly pipeline status report and action alignment',
-      'Post-meeting material and ideas (and quick questions)',
-      'Post-closing follow-up and investor feedback synthesis',
+       'Curated investor list (75–150 funds)',
+  'Thesis-fit targeting & tier segmentation',
+  'Warm introductions via network',
+  'Personalised email & outreach sequences',
+  'Investor teaser / one-pager creation',
+  'Outreach campaign launch support',
+  'Pipeline tracking & management',
+  'Weekly status reports & alignment',
+  'Follow-up & investor coordination',
+  'Post-close feedback & insights'
     ],
     whyPoints: [
       {
@@ -758,12 +765,19 @@ export const SERVICES = [
       description: "Let's map your investor universe and build an outreach strategy designed to convert.",
       cta: { label: 'Book a Free Strategy Call', to: '/contact' },
     },
-    faqs: [
-      { q: 'Do you guarantee meetings or term sheets?', a: 'No firm guarantees process quality. We commit to the right targeting, warm intros where relevant, and disciplined pipeline management.' },
-      { q: 'Can you raise the round for me?', a: 'No. Only the founder can lead a round. Our role is to put you in front of the right investors, fully prepared.' },
-      { q: 'What geographies do you cover?', a: 'North America and Europe primarily. Selective engagements in other regions where we have direct relationships.' },
-      { q: 'How long is the engagement?', a: 'Typical engagements run 8 weeks of active outreach, with shorter targeted sprints available.' },
-    ],
+  faqs: [
+  { q: 'Do you guarantee meetings or term sheets?', a: 'No firm guarantees process quality. We commit to the right targeting, warm intros where relevant, and disciplined pipeline management.' },
+  { q: 'Can you raise the round for me?', a: 'No. Only the founder can lead a round. Our role is to put you in front of the right investors, fully prepared.' },
+  { q: 'What geographies do you cover?', a: 'North America and Europe primarily. Selective engagements in other regions where we have direct relationships.' },
+  { q: 'How long is the engagement?', a: 'Typical engagements run 8 weeks of active outreach, with shorter targeted sprints available.' },
+
+  { q: 'How do you define a "warm introduction"?', a: 'A warm introduction is one where the connecting person has a genuine relationship with the investor — not just a LinkedIn connection. We\'ll be transparent about the strength of each introduction pathway before we commit to it.' },
+  { q: 'Can you guarantee I\'ll get investor meetings?', a: 'We can\'t guarantee outcomes — that\'s determined by your business, your stage, and current market conditions. What we can guarantee is a rigorous process, thesis-aligned targeting, and the highest quality outreach we can build. Our track record speaks to the effectiveness of the approach.' },
+  { q: 'What if I already have some investor connections I\'m working?', a: 'That\'s ideal — we can work with your existing pipeline and complement it with our additional targeting and introductions. We\'ll assess your current list as part of the strategy phase and fill in the gaps.' },
+  { q: 'How do you know which investors are actually active and relevant?', a: 'We maintain actively updated intelligence on investor thesis, portfolio, and check size across our network. We supplement this with real-time research and cross-reference recent deals to ensure we target genuinely active, relevant investors.' },
+  { q: 'What if I get rejections? Do you help me handle that?', a: 'Yes — rejection management and feedback synthesis is part of the Full Outreach Program. We capture reasons for investor passes and identify recurring patterns to improve your pitch and materials between meetings.' },
+  { q: 'Do you cover investors in both North America and Europe?', a: 'Yes. We have active relationships across both geographies. If you\'re targeting one market, we focus there; if both, we build a cross-geography list and advise on sequencing based on current activity.' }
+],
   },
   {
   slug: 'investment-readiness',
@@ -826,17 +840,16 @@ export const SERVICES = [
   ],
 
   whatsIncluded: [
-    'Full fundraising materials review (deck, financials, data room, cap table)',
-    'Pitch deck audit (narrative, clarity, investor positioning)',
-    'Financial model integrity and consistency review',
-    'Data room completeness checklist',
-    '6-dimension readiness scoring framework',
-    'Prioritised action plan (30-day roadmap)',
-    '60-min debrief session',
-    'Mock investor Q&A session',
-    'Written gap analysis report (PDF)',
-    'Follow-up action summary email',
-    'Post-improvement check-in review',
+   'Full fundraising stack audit (deck, model, data room)',
+  'Pitch deck narrative & structure review',
+  'Financial model integrity check',
+  'Data room completeness assessment',
+  '6-dimension readiness scorecard',
+  'Gap analysis report (PDF)',
+  'Prioritized 30-day action roadmap',
+  'Mock investor Q&A session',
+  '60-min debrief session',
+  'Post-improvement check-in'
   ],
 
   whyPoints: [
@@ -931,27 +944,19 @@ export const SERVICES = [
   },
 
   faqs: [
-    {
-      q: 'How is this different from a pitch deck review?',
-      a: 'Pitch Deck Review focuses on the deck. Investment Readiness evaluates your entire fundraising stack — deck, financials, data room, and narrative.',
-    },
-    {
-      q: "What if I don't have all materials ready?",
-      a: 'That is exactly when this is most useful. We help you identify what is missing and what needs to be built.',
-    },
-    {
-      q: 'Do you help fix the gaps?',
-      a: 'Yes — we identify gaps and can support remediation through advisory or related services.',
-    },
-    {
-      q: 'Is this suitable for first-time founders?',
-      a: 'Yes — especially valuable for first-time founders navigating fundraising for the first time.',
-    },
-    {
-      q: 'Can accelerators use this?',
-      a: 'Yes — we run cohort-based readiness diagnostics for accelerator programs globally.',
-    },
-  ],
+  { q: 'How is this different from a pitch deck review?', a: 'Pitch Deck Review focuses on the deck. Investment Readiness evaluates your entire fundraising stack — deck, financials, data room, and narrative.' },
+  { q: "What if I don't have all materials ready?", a: 'That is exactly when this is most useful. We help you identify what is missing and what needs to be built.' },
+  { q: 'Do you help fix the gaps?', a: 'Yes — we identify gaps and can support remediation through advisory or related services.' },
+  { q: 'Is this suitable for first-time founders?', a: 'Yes — especially valuable for first-time founders navigating fundraising for the first time.' },
+  { q: 'Can accelerators use this?', a: 'Yes — we run cohort-based readiness diagnostics for accelerator programs globally.' },
+
+  { q: 'How is this different from just reviewing my pitch deck?', a: 'A pitch deck review covers one document. The Investment Readiness Review covers your entire fundraising package — deck, financials, data room, legal structure, and founder narrative — and evaluates whether they\'re consistent with each other. It\'s an audit of your fundraising readiness, not just one asset.' },
+  { q: 'What if I don\'t have all my materials ready yet?', a: 'That\'s actually the best time to do this. We\'ll flag exactly what\'s missing, prioritize what needs to be built first, and help you structure your preparation timeline. You don\'t need a complete package to start — you just need to be ready to build one.' },
+  { q: 'Do you help fix the gaps you identify, or just flag them?', a: 'The Investment Readiness Review identifies and prioritizes gaps. Execution of fixes — rebuilding the deck, rebuilding the financial model — can be scoped as separate engagements at a credit toward the review fee.' },
+  { q: 'How long does the engagement take?', a: 'The full review takes approximately 10 days from kickoff to debrief. Including the mock Q&A session and post-improvement check-in, the full engagement window is 30–45 days. Most founders use this time to work through their action plan before the check-in.' },
+  { q: 'Is this appropriate for first-time founders?', a: 'Especially so. First-time founders are most likely to have blind spots they don\'t know they have. The structured diagnostic approach is particularly valuable for founders who haven\'t been through a full institutional fundraise before.' },
+  { q: 'Can accelerators use this as a pre-demo day program?', a: 'Yes — this is one of our core use cases for ecosystem partnerships. We have a cohort version designed to run across all companies in an accelerator cohort in a structured, time-bound format ahead of demo day.' }
+],
 },
  {
   slug: 'ama-sessions',
@@ -1036,12 +1041,15 @@ export const SERVICES = [
   ],
 
   whatsIncluded: [
-    'Pre-session context review (deck, model, or materials)',
-    '60-minute live advisory session',
-    'Real-time feedback and coaching',
-    'Written session notes and action summary',
-    '48-hour follow-up support window',
-    'Optional session recording (on request)'
+    'Pre-session material review',
+  '60-minute advisory session',
+  'Fundraise strategy guidance',
+  'Investor-perspective feedback',
+  'Pitch & narrative coaching',
+  'Live problem-solving discussion',
+  'Written session notes',
+  '48-hour follow-up support',
+  'Optional session recording'
   ],
 
   pricing: [
@@ -1100,32 +1108,21 @@ export const SERVICES = [
     }
   },
 
-  faqs: [
-    {
-      q: 'What kinds of questions are best suited for an AMA session?',
-      a: 'Tactical, time-sensitive questions — fundraising strategy, valuation, investor dynamics, pitch review, or decision-making.'
-    },
-    {
-      q: 'Do I need a specific problem?',
-      a: 'Not necessarily. Some founders come with one question, others use sessions as ongoing advisory support.'
-    },
-    {
-      q: 'How quickly can I book?',
-      a: 'Typically within 5 business days. Faster slots available for urgent needs.'
-    },
-    {
-      q: 'Who will I speak with?',
-      a: 'A senior partner with direct VC and operator experience.'
-    },
-    {
-      q: 'Can I share materials in advance?',
-      a: 'Yes — sharing materials 24 hours prior improves session quality significantly.'
-    },
-    {
-      q: 'Is it confidential?',
-      a: 'Yes. All sessions are strictly confidential, and NDAs can be signed if needed.'
-    }
-  ]
+ faqs: [
+  { q: 'What kinds of questions are best suited for an AMA session?', a: 'Tactical, time-sensitive questions — fundraising strategy, valuation, investor dynamics, pitch review, or decision-making.' },
+  { q: 'Do I need a specific problem?', a: 'Not necessarily. Some founders come with one question, others use sessions as ongoing advisory support.' },
+  { q: 'How quickly can I book?', a: 'Typically within 5 business days. Faster slots available for urgent needs.' },
+  { q: 'Who will I speak with?', a: 'A senior partner with direct VC and operator experience.' },
+  { q: 'Can I share materials in advance?', a: 'Yes — sharing materials 24 hours prior improves session quality significantly.' },
+  { q: 'Is it confidential?', a: 'Yes. All sessions are strictly confidential, and NDAs can be signed if needed.' },
+
+  { q: 'What kinds of questions are best suited for an AMA session?', a: 'Anything specific to your fundraise: Why am I getting passes after second meetings? How should I respond to this term sheet? How should I size my round? How do I handle a lead investor who wants to move slowly? Is my valuation defensible? How do I structure a convertible note? These are the highest-value questions for our sessions.' },
+  { q: 'Do I need to have a specific problem, or can I use it more generally?', a: 'Having specific questions makes the session significantly more valuable. We do ask you to submit your top questions in advance so we can prepare specific, substantive answers rather than generic frameworks. The more specific the question, the more specific and actionable the answer.' },
+  { q: 'How quickly can I book a session?', a: 'Standard sessions are available within 3–5 business days. If you have an urgent situation (active term sheet, imminent investor meeting), we offer priority booking within 24–48 hours — just let us know when you inquire.' },
+  { q: 'Who specifically will I be talking to?', a: 'Our advisory team consists of former VC investors, operators who have raised multiple rounds, and advisors with fundraising experience across North American and European markets. We\'ll match you with the advisor best suited to your specific question set and sector.' },
+  { q: 'Can I share materials in advance for the advisor to review?', a: 'Yes — and we strongly encourage it. Sending your deck, a specific slide, a term sheet, or a financial model in advance allows the advisor to come prepared with specific, substantive feedback rather than general observations.' },
+  { q: 'Is this confidential?', a: 'Completely. Everything shared in your session and submitted in advance is treated as strictly confidential. We do not share any materials or details from your engagement with any third parties.' }
+]
 }
 ];
 

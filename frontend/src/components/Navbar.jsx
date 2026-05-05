@@ -2,7 +2,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { NAV_LINKS } from '../mock';
-
+import Logo from '../images/logo.png';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -43,10 +43,11 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <div className="relative w-9 h-9 bg-amg-teal text-amg-yellow flex items-center justify-center font-serif text-[17px] rounded-[5px] shadow-[0_2px_6px_rgba(14,76,92,0.25)]">
-            <span className="absolute inset-0 rounded-[5px] ring-1 ring-amg-yellow/30 pointer-events-none"/>
-            A
-          </div>
+          <img
+  src={Logo}
+  alt="AMG Venture Partners"
+  className="w-9 h-9 object-contain"
+/>
           <div className="leading-tight">
             <div className="font-serif font-bold text-[20px] tracking-tight text-amg-teal">AMG</div>
             <div className="text-[12px] tracking-[0.2em] uppercase font-bold text-amg-turquoise-2">
