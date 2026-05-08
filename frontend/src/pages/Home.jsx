@@ -128,6 +128,97 @@ export default function Home() {
           </div>
         </div>
       </section>
+   {/* INVESTMENT READINESS PROGRAM */}
+<section className="px-6 lg:px-10 pb-10 bg-white">
+  <div className="max-w-[1280px] mx-auto">
+
+    <div className="relative overflow-hidden rounded-[32px] border border-amg-line bg-gradient-to-br from-[#f8fafc] to-[#eef4ff] shadow-soft">
+
+      {/* Background Blur */}
+      <div className="absolute top-0 right-0 w-[320px] h-[320px] bg-amg-turquoise/10 rounded-full blur-3xl pointer-events-none"/>
+      <div className="absolute bottom-0 left-0 w-[260px] h-[260px] bg-amg-yellow/10 rounded-full blur-3xl pointer-events-none"/>
+
+      <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-8 md:p-12 lg:p-14">
+
+        {/* LEFT */}
+        <div className="lg:col-span-8">
+
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amg-line bg-white mb-6">
+            <span className="w-2 h-2 rounded-full bg-amg-turquoise"/>
+            <span className="text-[12px] tracking-[0.16em] uppercase font-semibold text-amg-teal/70">
+              Investment Readiness Program
+            </span>
+          </div>
+
+          <h2 className="font-serif text-[38px] md:text-[54px] leading-[1.05] text-amg-teal max-w-3xl">
+            Helping Founders Become <em>Investor-Ready.</em>
+          </h2>
+
+          <p className="mt-6 text-[16px] md:text-[18px] leading-relaxed text-amg-teal/75 max-w-2xl">
+            Our Investment Readiness Program (IRP) helps startup founders refine
+            their pitch, strengthen financial narratives, prepare fundraising
+            materials, and confidently engage with investors.
+          </p>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-3 mt-8">
+
+            {[
+              'Pitch Deck Strategy',
+              'Financial Modeling',
+              'Fundraising Support',
+              'Investor Outreach',
+              'Demo Day Preparation'
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="px-4 py-2 rounded-full bg-white border border-amg-line text-[13px] font-medium text-amg-teal/75"
+              >
+                {item}
+              </div>
+            ))}
+
+          </div>
+        </div>
+
+        {/* RIGHT */}
+        <div className="lg:col-span-4">
+
+          <div className="bg-white border border-amg-line rounded-2xl p-7 shadow-soft">
+
+            <div className="text-[13px] uppercase tracking-[0.18em] text-amg-teal/50 font-semibold">
+              Learn More
+            </div>
+
+            <div className="mt-3 font-serif text-[28px] leading-tight text-amg-teal">
+              Explore the Full IRP Experience
+            </div>
+
+            <p className="mt-4 text-[14px] leading-relaxed text-amg-teal/65">
+              Discover the complete program structure, founder resources,
+              workshops, and fundraising preparation framework.
+            </p>
+
+            <a
+              href="https://investorreadinessprogram.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex items-center justify-center gap-2 w-full bg-amg-turquoise-2 hover:bg-amg-teal text-white font-semibold px-6 py-3.5 rounded-full transition-all duration-300"
+            >
+              Explore IRP
+              <ArrowUpRight className="w-4 h-4"/>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
       {/* WHO WE ARE */}
   <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-gray-50">
