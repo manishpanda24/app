@@ -1,12 +1,14 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
+import smtplib
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict
-from typing import List
+from email.message import EmailMessage
+from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
 
@@ -37,6 +39,18 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+class ContactInquiry(BaseModel):
+    name: str
+    email: str
+    company: Optional[str] = None
+    stage: Optional[str] = None
+    message: str
+
+class ContactInquiryStored(ContactInquiry):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    recipient: str = "manishpanda24@gmail.com"
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
@@ -65,6 +79,63 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+@api_router.post("/contact")
+async def submit_contact_inquiry(input: ContactInquiry):
+    if not input.name.strip() or not input.email.strip() or not input.message.strip():
+        raise HTTPException(status_code=400, detail="Name, email and message are required.")
+
+    inquiry = ContactInquiryStored(
+        **input.model_dump(),
+        recipient=os.environ.get("CONTACT_RECIPIENT_EMAIL", "manishpanda24@gmail.com"),
+    )
+    doc = inquiry.model_dump()
+    doc["timestamp"] = doc["timestamp"].isoformat()
+    await db.contact_inquiries.insert_one(doc)
+
+    try:
+        send_contact_email(inquiry)
+    except Exception as exc:
+        logger.exception("Failed to send contact inquiry email")
+        raise HTTPException(status_code=502, detail="Message saved, but email delivery failed.") from exc
+
+    return {"message": "Inquiry sent successfully."}
+
+def send_contact_email(inquiry: ContactInquiryStored):
+    smtp_host = os.environ.get("SMTP_HOST")
+    smtp_port = int(os.environ.get("SMTP_PORT", "587"))
+    smtp_user = os.environ.get("SMTP_USER")
+    smtp_password = os.environ.get("SMTP_PASSWORD")
+    smtp_from = os.environ.get("SMTP_FROM_EMAIL", smtp_user or inquiry.recipient)
+
+    if not smtp_host or not smtp_from:
+        raise RuntimeError("SMTP_HOST and SMTP_FROM_EMAIL/SMTP_USER must be configured.")
+
+    email = EmailMessage()
+    email["Subject"] = f"New AMG inquiry from {inquiry.name}"
+    email["From"] = smtp_from
+    email["To"] = inquiry.recipient
+    email["Reply-To"] = inquiry.email
+    email.set_content(
+        "\n".join([
+            "New founder inquiry",
+            "",
+            f"Name: {inquiry.name}",
+            f"Email: {inquiry.email}",
+            f"Company: {inquiry.company or '-'}",
+            f"Funding stage: {inquiry.stage or '-'}",
+            "",
+            "Message:",
+            inquiry.message,
+        ])
+    )
+
+    with smtplib.SMTP(smtp_host, smtp_port, timeout=20) as smtp:
+        if os.environ.get("SMTP_USE_TLS", "true").lower() != "false":
+            smtp.starttls()
+        if smtp_user and smtp_password:
+            smtp.login(smtp_user, smtp_password)
+        smtp.send_message(email)
 
 # Include the router in the main app
 app.include_router(api_router)

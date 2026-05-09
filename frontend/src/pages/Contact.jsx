@@ -7,18 +7,36 @@ import Footer from '../components/Footer';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', company: '', stage: 'Pre-Seed', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       toast.error('Please fill in name, email and message.');
       return;
     }
-    const stored = JSON.parse(localStorage.getItem('amg_contacts') || '[]');
-    stored.push({ ...form, ts: new Date().toISOString() });
-    localStorage.setItem('amg_contacts', JSON.stringify(stored));
-    toast.success('Thanks! We will be in touch within one business day.');
-    setForm({ name: '', email: '', company: '', stage: 'Pre-Seed', message: '' });
+
+    setIsSubmitting(true);
+    try {
+      const apiBase = process.env.REACT_APP_BACKEND_URL || '';
+      const response = await fetch(`${apiBase}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        const error = await response.json().catch(() => ({}));
+        throw new Error(error.detail || 'Unable to send your message right now.');
+      }
+
+      toast.success('Thanks! We will be in touch within one business day.');
+      setForm({ name: '', email: '', company: '', stage: 'Pre-Seed', message: '' });
+    } catch (error) {
+      toast.error(error.message || 'Unable to send your message right now.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -61,7 +79,9 @@ export default function Contact() {
               <label className="block text-[11px] tracking-[0.16em] uppercase font-semibold text-amg-mute mb-2">Message *</label>
               <textarea value={form.message} onChange={(e)=>setForm({...form, message:e.target.value})} rows={6} placeholder="What stage are you at, and what do you need help with?" className="w-full bg-white border border-amg-line rounded-md px-3.5 py-3 text-[14px] focus:border-amg-teal resize-none"/>
             </div>
-            <button type="submit" className="btn-primary mt-7">Send message <ArrowRight className="w-4 h-4"/></button>
+            <button type="submit" disabled={isSubmitting} className="btn-primary mt-7 disabled:opacity-70 disabled:cursor-not-allowed">
+              {isSubmitting ? 'Sending...' : 'Send message'} <ArrowRight className="w-4 h-4"/>
+            </button>
             <div className="mt-5 flex items-center gap-2 text-[12px] text-amg-mute">
               <ShieldCheck className="w-3.5 h-3.5"/> All inquiries protected under mutual NDA on request.
             </div>
