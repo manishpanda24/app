@@ -48,12 +48,17 @@ const ECOSYSTEM_FEATURES = [
 ];
 
 const STATS = [
-  { value: '200+',          label: 'Founders Supported',     color: 'text-amg-turquoise-2' },
-  { value: '$500M+',        label: 'Capital Facilitated',    color: 'text-amg-turquoise-2' },
-  { value: 'Pre-Seed → A', label: 'Stage Coverage',         color: 'text-green-600' },
+  { value: '200+',          label: 'Founders and Sectors Supported',     color: 'text-amg-turquoise-2' },
+  { value: '$100M+',        label: 'Raised by Founders',    color: 'text-amg-turquoise-2' },
+  { value: 'Pre-Seed →  Series A', label: 'Stage Coverage',         color: 'text-amg-yellow' },
   { value: '2 Continents',  label: 'North America & Europe', color: 'text-amg-teal' },
 ];
-
+const ACCELERATORSTATS = [
+  { value: '15+',          label: 'Ecosystem',     color: 'text-amg-turquoise-2' },
+  { value: '150+',        label: 'Workshops Conducted',    color: 'text-amg-turquoise-2' },
+  { value: '3000', label: 'Mentoring hours',         color: 'text-amg-yellow' },
+  { value: '2 Continents',  label: 'North America & Europe', color: 'text-amg-teal' },
+];
 const HOW_WE_WORK_STEPS = [
   {
     step: 'Intake & Context Setting',
@@ -128,100 +133,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-   {/* INVESTMENT READINESS PROGRAM */}
-<section className="px-6 lg:px-10 pb-10 bg-white">
-  <div className="max-w-[1280px] mx-auto">
-
-    <div className="relative overflow-hidden rounded-[32px] border border-amg-line bg-gradient-to-br from-[#f8fafc] to-[#eef4ff] shadow-soft">
-
-      {/* Background Blur */}
-      <div className="absolute top-0 right-0 w-[320px] h-[320px] bg-amg-turquoise/10 rounded-full blur-3xl pointer-events-none"/>
-      <div className="absolute bottom-0 left-0 w-[260px] h-[260px] bg-amg-yellow/10 rounded-full blur-3xl pointer-events-none"/>
-
-      <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-8 md:p-12 lg:p-14">
-
-        {/* LEFT */}
-        <div className="lg:col-span-8">
-
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amg-line bg-white mb-6">
-            <span className="w-2 h-2 rounded-full bg-amg-turquoise"/>
-            <span className="text-[12px] tracking-[0.16em] uppercase font-semibold text-amg-teal/70">
-              Investment Readiness Program
-            </span>
-          </div>
-
-          <h2 className="font-serif text-[38px] md:text-[54px] leading-[1.05] text-amg-teal max-w-3xl">
-            Helping Founders Become <em>Investor-Ready.</em>
-          </h2>
-
-          <p className="mt-6 text-[16px] md:text-[18px] leading-relaxed text-amg-teal/75 max-w-2xl">
-            Our Investment Readiness Program (IRP) helps startup founders refine
-            their pitch, strengthen financial narratives, prepare fundraising
-            materials, and confidently engage with investors.
-          </p>
-
-          {/* Tags */}
-          <div className="flex flex-wrap gap-3 mt-8">
-
-            {[
-              'Pitch Deck Strategy',
-              'Financial Modeling',
-              'Fundraising Support',
-              'Investor Outreach',
-              'Demo Day Preparation'
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="px-4 py-2 rounded-full bg-white border border-amg-line text-[13px] font-medium text-amg-teal/75"
-              >
-                {item}
-              </div>
-            ))}
-
-          </div>
-        </div>
-
-        {/* RIGHT */}
-        <div className="lg:col-span-4">
-
-          <div className="bg-white border border-amg-line rounded-2xl p-7 shadow-soft">
-
-            <div className="text-[13px] uppercase tracking-[0.18em] text-amg-teal/50 font-semibold">
-              Learn More
-            </div>
-
-            <div className="mt-3 font-serif text-[28px] leading-tight text-amg-teal">
-              Explore the Full IRP Experience
-            </div>
-
-            <p className="mt-4 text-[14px] leading-relaxed text-amg-teal/65">
-              Discover the complete program structure, founder resources,
-              workshops, and fundraising preparation framework.
-            </p>
-
-            <a
-              href="https://investorreadinessprogram.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-7 inline-flex items-center justify-center gap-2 w-full bg-amg-turquoise-2 hover:bg-amg-teal text-white font-semibold px-6 py-3.5 rounded-full transition-all duration-300"
-            >
-              Explore IRP
-              <ArrowUpRight className="w-4 h-4"/>
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
+   
 
 
       {/* WHO WE ARE */}
-  <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-gray-50">
+  <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white-50">
   <div className="max-w-[1000px] mx-auto">
 
     {/* Eyebrow */}
@@ -278,7 +194,7 @@ export default function Home() {
 
   </div>
 </section>
-     <section className="py-6 px-6 lg:px-10 border-t border-amg-line bg-gray-50">
+     <section className="py-6 px-6 lg:px-10 border-t border-amg-line bg-white-50">
         {/* Stats strip */}
           <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 border border-amg-line rounded-2xl overflow-hidden bg-white shadow-soft">
             {STATS.map((s, i) => (
@@ -286,10 +202,10 @@ export default function Home() {
                 key={i}
                 className={`px-8 py-10 text-center ${i < STATS.length - 1 ? 'border-r border-amg-line' : ''}`}
               >
-                <div className={`font-serif text-[34px] md:text-[42px] font-medium leading-none ${s.color}`}>
+                <div className={`font-serif text-[25px] md:text-[30px] font-medium leading-none ${s.color}`}>
                   {s.value}
                 </div>
-                <div className="mt-2.5 text-[13px] text-amg-teal/60 font-medium">{s.label}</div>
+                <div className="mt-2.5 text-[13px] text-amg-teal/60 font-bold">{s.label}</div>
               </div>
             ))}
           </div>
@@ -298,7 +214,7 @@ export default function Home() {
       
       {/* FOUNDER SERVICES */}
       {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
-      <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-gray-50">
+      <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-white-50">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-14">
             <div className="lg:col-span-7">
@@ -331,7 +247,7 @@ export default function Home() {
                     <p className="mt-2.5 text-[14px] text-amg-teal/70 leading-relaxed">{s.tagline}</p>
                     <div className="hr-thin my-6"/>
                     <div className="flex items-center justify-between">
-                      <span className="text-[13px] font-semibold text-amg-turquoise-2">View service</span>
+                      <span className="text-[13px] font-semibold text-amg-turquoise-2">Learn More</span>
                       <ArrowUpRight className="w-4 h-4 text-amg-turquoise-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"/>
                     </div>
                   </div>
@@ -342,7 +258,7 @@ export default function Home() {
         </div>
       </section>
 {/* ── ACCELERATORS & INCUBATORS ────────────────────────────────────── */}
-      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-gray-50">
+      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white-50">
         <div className="max-w-[1280px] mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
@@ -376,9 +292,25 @@ export default function Home() {
 
         
       </section>
-
+<section className="py-6 px-6 lg:px-10 border-t border-amg-line bg-white-50">
+        {/* Stats strip */}
+          <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 border border-amg-line rounded-2xl overflow-hidden bg-white shadow-soft">
+            {ACCELERATORSTATS.map((s, i) => (
+              <div
+                key={i}
+                className={`px-8 py-10 text-center ${i < ACCELERATORSTATS.length - 1 ? 'border-r border-amg-line' : ''}`}
+              >
+                <div className={`font-serif text-[25px] md:text-[40px] font-medium leading-none ${s.color}`}>
+                  {s.value}
+                </div>
+                <div className="mt-2.5 text-[15px] text-amg-teal/60 font-bold">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        
+     </section>
       {/* ── MEET THE FOUNDER ─────────────────────────────────────────────── */}
-      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#f0f2f8]">
+      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fff]">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
@@ -475,7 +407,96 @@ export default function Home() {
           </div>
         </div>
       </section>
+{/* INVESTMENT READINESS PROGRAM */}
+<section className="px-6 lg:px-10 pb-10 bg-white">
+  <div className="max-w-[1280px] mx-auto">
 
+    <div className="relative overflow-hidden rounded-[32px] border border-amg-line bg-gradient-to-br from-[#f8fafc] to-[#eef4ff] shadow-soft">
+
+      {/* Background Blur */}
+      <div className="absolute top-0 right-0 w-[320px] h-[320px] bg-amg-turquoise/10 rounded-full blur-3xl pointer-events-none"/>
+      <div className="absolute bottom-0 left-0 w-[260px] h-[260px] bg-amg-yellow/10 rounded-full blur-3xl pointer-events-none"/>
+
+      <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-8 md:p-12 lg:p-14">
+
+        {/* LEFT */}
+        <div className="lg:col-span-8">
+
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amg-line bg-white mb-6">
+            <span className="w-2 h-2 rounded-full bg-amg-turquoise"/>
+            <span className="text-[12px] tracking-[0.16em] uppercase font-semibold text-amg-teal/70">
+              Investment Readiness Program
+            </span>
+          </div>
+
+          <h2 className="font-serif text-[38px] md:text-[54px] leading-[1.05] text-amg-teal max-w-3xl">
+            Helping Founders Become Investor-Ready.
+          </h2>
+
+          <p className="mt-6 text-[16px] md:text-[18px] leading-relaxed semibold text-amg-teal/75 max-w-2xl">
+            Our Investment Readiness Program (IRP) helps startup founders refine
+            their pitch, strengthen financial narratives, prepare fundraising
+            materials, and confidently engage with investors.
+          </p>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-3 mt-8">
+
+            {[
+              'Pitch Deck Strategy',
+              'Financial Modeling',
+              'Fundraising Support',
+              'Investor Outreach',
+              'Demo Day Preparation'
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="px-4 py-2 rounded-full bg-white border border-amg-line text-[13px] font-medium text-amg-teal/75"
+              >
+                {item}
+              </div>
+            ))}
+
+          </div>
+        </div>
+
+        {/* RIGHT */}
+        <div className="lg:col-span-4">
+
+          <div className="bg-white border border-amg-line rounded-2xl p-7 shadow-soft">
+
+            <div className="text-[13px] uppercase tracking-[0.18em] text-amg-teal/50 font-semibold">
+              Learn More
+            </div>
+
+            <div className="mt-3 font-serif text-[28px] leading-tight text-amg-teal">
+              Explore the Full IRP Experience
+            </div>
+
+            <p className="mt-4 text-[14px] leading-relaxed text-amg-teal/65">
+              Discover the complete program structure, founder resources,
+              workshops, and fundraising preparation framework.
+            </p>
+
+            <a
+              href="https://investorreadinessprogram.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex items-center justify-center gap-2 w-full bg-amg-turquoise-2 hover:bg-amg-teal text-white font-semibold px-6 py-3.5 rounded-full transition-all duration-300"
+            >
+              Explore IRP
+              <ArrowUpRight className="w-4 h-4"/>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
       <CTASection />
       <Footer />
     </>

@@ -5,8 +5,8 @@ import { SERVICES } from '../mock';
 const COMPANY_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'Founder Services', to: '/founder-services' },
-  { label: 'Pricing', to: '/pricing' },
-  { label: 'Resources', to: '/resources' },
+  // { label: 'Pricing', to: '/pricing' },
+  // { label: 'Resources', to: '/resources' },
   { label: 'Contact', to: '/contact' },
 ];
 

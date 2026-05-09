@@ -4,7 +4,7 @@ export const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'Founder Services', to: '/founder-services' },
  // { label: 'Pricing', to: '/pricing' },
-  { label: 'Resources', to: '/resources' },
+  // { label: 'Resources', to: '/resources' },
   { label: 'Contact', to: '/contact' },
   {label:'About Us', to: '/about'},
   // {label:'Investment Readiness Program', to: '/investment-readiness-program'},
@@ -47,7 +47,7 @@ export const FOUNDER_SERVICES_INTRO = {
   eyebrow: 'For Founders',
   title: 'Founder Services',
   description:
-    'From your first pitch deck to your closing round, AMG Venture Partners provides hands-on, stage-appropriate support at every critical step of the fundraising journey. Each service is tailored to your specific context — your stage, sector, geography, and target investor.',
+    'From your first pitch deck to  closing round, AMG Venture Partners provides hands-on, stage-appropriate support at every critical step of the fundraising journey. Each service is tailored to your specific context — your stage, sector, geography, and target investor.',
 };
 
 export const NOT_SURE_CTA = {
@@ -127,7 +127,7 @@ const PITCH_DECK_REVIEW_PRICING = [
 
 const PITCH_DECK_REVIEW_INCLUDES = [
    'Investor-readiness score (out of 10)',
-  '11-dimension evaluation framework',
+  '13-dimension evaluation framework',
   'Slide-by-slide written feedback',
   'Clear investor concerns and gaps',
   'Rewrite suggestions for key slides',
@@ -144,7 +144,7 @@ export const SERVICES = [
     tagline: 'Sharpen your story before you step into the room.',
     accent: 'yellow',
     why: 'A meticulous, investor-perspective critique of your existing pitch deck — designed to identify narrative gaps, structural weaknesses, and missed opportunities before they cost you a term sheet.',
-    whyHeading: 'Most rejections happen because of how a story is told — not the business behind it.',
+    whyHeading: 'Most rejections 1en because of how a story is told — not the business behind it.',
     whyPoints: [
       {
         title: 'Vague Feedback Is Useless',
@@ -168,7 +168,7 @@ export const SERVICES = [
     text: 'A single score out of 10 reflecting how a Seed–Series B partner would actually rate your deck. Indicates whether you are ready for outreach today, in weeks, or in months.'
   },
   {
-    title: 'Scoring Summary (11 Dimensions)',
+    title: 'Scoring Summary (13 Dimensions)',
     text: 'Independent scoring across narrative, market, solution, business model, go-to-market, traction, competition, team, financials, and design. Color-coded to highlight strengths and risk areas instantly.'
   },
   {
@@ -217,7 +217,7 @@ export const SERVICES = [
   {
     slug: 'pitch-deck-creation',
     introTitle: 'Pitch Deck Creation',
-    title: 'Pitch Deck Creation',
+    title: 'Business Narrative and Pitch Deck Creation',
     tagline: 'Your story, told with clarity and conviction.',
     accent: 'turquoise',
     why: 'We build investor-grade pitch decks from the ground up — crafting the narrative architecture, structuring each slide for maximum impact, and delivering a polished presentation that opens doors and moves investors to act.',
@@ -358,7 +358,7 @@ export const SERVICES = [
   {
     slug: 'financial-model',
     introTitle: 'Financial Model',
-    title: 'Financial Model',
+    title: 'Financial Narrative and Financial Model',
     tagline: 'Numbers that tell a story investors trust.',
     accent: 'teal',
     why: 'We build rigorous, investor-grade financial models from scratch — structured around how your business actually operates, with explicit assumptions investors can interrogate and scenarios that hold up under diligence.',

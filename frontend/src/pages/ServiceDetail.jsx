@@ -108,13 +108,13 @@ export default function ServiceDetail() {
       </p>
 
       {/* Logos row */}
-      <div className="flex flex-wrap justify-center items-center gap-8 mt-8 opacity-70">
+      {/* <div className="flex flex-wrap justify-center items-center gap-8 mt-8 opacity-70">
         {["GLMP.IT", "TRAVELO", "gaze.it", "mtvs.news", "energat0r"].map((item, i) => (
           <span key={i} className="text-sm font-medium text-amg-ink">
             {item}
           </span>
         ))}
-      </div>
+      </div> */}
     </div>
 
 
