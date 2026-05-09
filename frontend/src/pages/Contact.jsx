@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', company: '', stage: 'Pre-Seed', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formSubmitUrl = 'https://formsubmit.co/ajax/manishpanda24@gmail.com';
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -18,11 +19,20 @@ export default function Contact() {
 
     setIsSubmitting(true);
     try {
-      const apiBase = process.env.REACT_APP_BACKEND_URL || '';
-      const response = await fetch(`${apiBase}/api/contact`, {
+      const formData = new FormData();
+      formData.append('name', form.name);
+      formData.append('email', form.email);
+      formData.append('company', form.company || '-');
+      formData.append('funding_stage', form.stage);
+      formData.append('message', form.message);
+      formData.append('_subject', `New AMG inquiry from ${form.name}`);
+      formData.append('_captcha', 'false');
+      formData.append('_template', 'table');
+
+      const response = await fetch(formSubmitUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        headers: { Accept: 'application/json' },
+        body: formData,
       });
 
       if (!response.ok) {
@@ -61,23 +71,26 @@ export default function Contact() {
 
       <section className="py-20 px-6 lg:px-10">
         <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <form onSubmit={onSubmit} className="lg:col-span-7 card-pro shadow-soft-lg p-8 lg:p-10">
+          <form onSubmit={onSubmit} action="https://formsubmit.co/manishpanda24@gmail.com" method="POST" className="lg:col-span-7 card-pro shadow-soft-lg p-8 lg:p-10">
+            <input type="hidden" name="_subject" value={`New AMG inquiry from ${form.name || 'website contact form'}`} />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
             <div className="eyebrow mb-2">Founder inquiry</div>
             <h2 className="font-serif text-[28px] font-medium text-amg-ink mb-7">Tell us about your raise.</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <Field label="Name *" value={form.name} onChange={(v)=>setForm({...form, name:v})} placeholder="Your full name"/>
-              <Field label="Email *" value={form.email} onChange={(v)=>setForm({...form, email:v})} placeholder="your@email.com" type="email"/>
-              <Field label="Company" value={form.company} onChange={(v)=>setForm({...form, company:v})} placeholder="Company name"/>
+              <Field name="name" label="Name *" value={form.name} onChange={(v)=>setForm({...form, name:v})} placeholder="Your full name"/>
+              <Field name="email" label="Email *" value={form.email} onChange={(v)=>setForm({...form, email:v})} placeholder="your@email.com" type="email"/>
+              <Field name="company" label="Company" value={form.company} onChange={(v)=>setForm({...form, company:v})} placeholder="Company name"/>
               <div>
                 <label className="block text-[11px] tracking-[0.16em] uppercase font-semibold text-amg-mute mb-2">Funding Stage</label>
-                <select value={form.stage} onChange={(e)=>setForm({...form, stage:e.target.value})} className="w-full bg-white border border-amg-line rounded-md px-3.5 py-3 text-[14px] text-amg-ink focus:border-amg-teal">
+                <select name="funding_stage" value={form.stage} onChange={(e)=>setForm({...form, stage:e.target.value})} className="w-full bg-white border border-amg-line rounded-md px-3.5 py-3 text-[14px] text-amg-ink focus:border-amg-teal">
                   {['Pre-Seed','Seed','Series A','Series B','Accelerator','Other'].map(s=> <option key={s}>{s}</option>)}
                 </select>
               </div>
             </div>
             <div className="mt-5">
               <label className="block text-[11px] tracking-[0.16em] uppercase font-semibold text-amg-mute mb-2">Message *</label>
-              <textarea value={form.message} onChange={(e)=>setForm({...form, message:e.target.value})} rows={6} placeholder="What stage are you at, and what do you need help with?" className="w-full bg-white border border-amg-line rounded-md px-3.5 py-3 text-[14px] focus:border-amg-teal resize-none"/>
+              <textarea name="message" value={form.message} onChange={(e)=>setForm({...form, message:e.target.value})} rows={6} placeholder="What stage are you at, and what do you need help with?" className="w-full bg-white border border-amg-line rounded-md px-3.5 py-3 text-[14px] focus:border-amg-teal resize-none"/>
             </div>
             <button type="submit" disabled={isSubmitting} className="btn-primary mt-7 disabled:opacity-70 disabled:cursor-not-allowed">
               {isSubmitting ? 'Sending...' : 'Send message'} <ArrowRight className="w-4 h-4"/>
@@ -118,11 +131,11 @@ export default function Contact() {
   );
 }
 
-function Field({ label, value, onChange, placeholder, type='text' }) {
+function Field({ name, label, value, onChange, placeholder, type='text' }) {
   return (
     <div>
       <label className="block text-[11px] tracking-[0.16em] uppercase font-semibold text-amg-mute mb-2">{label}</label>
-      <input type={type} value={value} onChange={(e)=>onChange(e.target.value)} placeholder={placeholder} className="w-full bg-white border border-amg-line rounded-md px-3.5 py-3 text-[14px] text-amg-ink focus:border-amg-teal"/>
+      <input name={name} type={type} value={value} onChange={(e)=>onChange(e.target.value)} placeholder={placeholder} className="w-full bg-white border border-amg-line rounded-md px-3.5 py-3 text-[14px] text-amg-ink focus:border-amg-teal"/>
     </div>
   );
 }
