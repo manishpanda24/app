@@ -63,6 +63,10 @@ export default function Contact() {
 
   const [isSubmitting, setIsSubmitting] =
     useState(false);
+    const [
+  isAcceleratorSubmitting,
+  setIsAcceleratorSubmitting,
+] = useState(false);
 
   /* ─────────────────────────────────────────────
      SNACKBAR
@@ -93,7 +97,7 @@ export default function Contact() {
 
   const formSubmitUrl =
     'https://formsubmit.co/ajax/manishpanda24@gmail.com';
-
+const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3IYBvP0LWN8lgkJ7UEXgdDk_LOpxgAPk3qqhR4eV0tHrvjvyg/exec";
   const update = (key, val) =>
     setForm(prev => ({
       ...prev,
@@ -137,6 +141,7 @@ export default function Contact() {
 
       formData.append('Full name', form.name);
       formData.append('Email', form.email);
+      formData.append('_webhook', webhookUrl);
 
       formData.append(
         'Company name',
@@ -834,7 +839,7 @@ export default function Contact() {
                   );
                   return;
                 }
-
+setIsAcceleratorSubmitting(true);
                 try {
                   const formData =
                     new FormData();
@@ -848,7 +853,7 @@ export default function Contact() {
                     'Name',
                     acceleratorForm.name
                   );
-
+                    
                   formData.append(
                     'Company Name',
                     acceleratorForm.company
@@ -864,7 +869,7 @@ export default function Contact() {
                     acceleratorForm.linkedin ||
                       '-'
                   );
-
+              formData.append('_webhook', "https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3IYBvP0LWN8lgkJ7UEXgdDk_LOpxgAPk3qqhR4eV0tHrvjvyg/exec");
                   formData.append(
                     'Message',
                     acceleratorForm.message ||
@@ -923,6 +928,8 @@ export default function Contact() {
                       'Unable to submit inquiry.',
                     'error'
                   );
+                } finally {
+                  setIsAcceleratorSubmitting(false);
                 }
               }}
               className="card-pro shadow-soft-lg p-7"
@@ -1014,9 +1021,12 @@ export default function Contact() {
 
               <button
                 type="submit"
+                  disabled={isAcceleratorSubmitting}
                 className="btn-primary mt-6"
               >
-                Submit Inquiry
+               {isAcceleratorSubmitting
+  ? 'Sending…'
+  : 'Submit Inquiry'}
 
                 <ArrowRight className="w-4 h-4" />
               </button>
