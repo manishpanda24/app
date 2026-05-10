@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
 import GauravImage from '../images/GauravImage.jpg';
 import { HERO, SERVICE_PILLARS, SERVICES, FOUNDER_SERVICES_INTRO, WHO_WE_ARE } from '../mock';
-
+import IndustriesGrid from '../components/IndustryGrid';
 const ICONS = {
   'pitch-deck-review': FileText,
   'pitch-deck-creation': Sparkles,
@@ -209,9 +209,15 @@ export default function Home() {
               </div>
             ))}
           </div>
-        
+          
      </section>
-      
+      <section className="py-6 px-15 lg:px-20 border-t border-amg-line bg-white-50">
+           <IndustriesGrid 
+              title="Industries"
+              highlight="We Serve"
+              highlightColor="text-amg-turquoise"
+            />
+            </section>
       {/* FOUNDER SERVICES */}
       {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
       <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-white-50">

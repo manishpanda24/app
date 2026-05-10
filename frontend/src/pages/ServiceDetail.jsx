@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
 import GauravImage from '../images/GauravImage.jpg'
 import { SERVICE_BY_SLUG, SERVICES, HOW_WE_WORK_INTRO } from '../mock';
-
+import IndustriesGrid from '../components/IndustryGrid';
 function Faq({ q, a, defaultOpen=false }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
@@ -80,7 +80,16 @@ export default function ServiceDetail() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {service.whyPoints.map((p, i) => (
-                <div key={i} className="card-pro p-7 hover-lift">
+              <div
+  key={i}
+  className={`p-7 hover-lift rounded-[20px] bg-white border-[5px] ${
+    i % 3 === 0
+      ? 'border-amg-yellow'
+      : i % 3 === 2
+      ? 'border-amg-teal'
+      : 'border-amg-turquoise'
+  }`}
+>
                   <div className="w-10 h-10 rounded-md bg-gray-100 border border-gray-200 flex items-center justify-center mb-5">
                     <AlertTriangle className="w-4 h-4 text-amg-teal"/>
                   </div>
@@ -96,7 +105,7 @@ export default function ServiceDetail() {
   <section className="max-w-[1200px] mx-auto px-6 py-20">
 
     {/* ---------------- HAPPY FOUNDERS ---------------- */}
-    <div className="border border-amg-yellow/40 rounded-xl p-8 mb-16 text-center bg-white">
+    <div className="border-[3px] border-amg-yellow/40 rounded-xl p-8 mb-16 text-center bg-white">
       <h2 className="font-serif text-[28px] font-semibold text-amg-teal">
         Happy Founders <span className="text-amg-turquoise">supported so far</span>
       </h2>
@@ -372,35 +381,59 @@ export default function ServiceDetail() {
     </div>
 
     {/* ---------------- INDUSTRIES ---------------- */}
+  {slug === "financial-model" && (
+  <section className="max-w-[1200px] mx-auto px-6 py-20">
+
+    {/* ---------------- CLIENTS ---------------- */}
     <div className="text-center mb-14">
       <h2 className="font-serif text-[34px] font-semibold text-amg-teal">
-        Industries <span className="text-orange-500">We Serve</span>
+        Who Are <span className="text-amg-turquoise">Our Clients?</span>
       </h2>
       <p className="text-amg-ink/70 mt-2 text-sm">
-        We work globally across industries / business models
+        We work with Pre-seed to Series A startups
       </p>
     </div>
 
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div className="grid md:grid-cols-3 gap-6 mb-20">
       {[
-        "Fintech / Insurtech / Payments",
-        "Robotics / Hardware / Semiconductors",
-        "HealthTech / Medical Device",
-        "Cybersecurity / Infrastructure",
-        "Blockchain / Computer Networks",
-        "Food & Beverages / Retail / Consumer",
-        "Ecommerce / Marketplace",
-        "Biotech / Life Science",
-        "Cleantech / Sustainability",
-        "Software / B2B SaaS / AI",
-        "Travel / Logistics / SupplyChain",
-        "EdTech / Business Services / Consulting"
+        {
+          title: "Bootstrapped Startups",
+          desc: "We work with bootstrapped founders who have never raised capital by mapping a solid business plan and capital structure..."
+        },
+        {
+          title: "VC-Backed Startups",
+          desc: "We work with startups who have raised their F&F or angel/pre-seed round and want to raise their next round..."
+        },
+        {
+          title: "Boards / Key Stakeholders",
+          desc: "We work with founders at seed to Series A who want to map out their business plan in numbers..."
+        }
       ].map((item, i) => (
-        <div key={i} className="card-pro p-6 text-center">
-          <p className="text-sm text-amg-teal">{item}</p>
+        <div key={i} className="card-pro p-6">
+          <h3 className="font-serif text-[18px] font-medium text-amg-teal mb-3">
+            {item.title}
+          </h3>
+          <p className="text-[14px] text-amg-teal/75 mb-4 leading-relaxed">
+            {item.desc}
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 text-sm font-medium text-amg-teal"
+          >
+            Get Started <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       ))}
     </div>
+
+    {/* ---------------- INDUSTRIES ---------------- */}
+     <IndustriesGrid 
+      title="Industries"
+      highlight="We Serve"
+      highlightColor="text-amg-turquoise"
+    />
+  </section>
+)}
 
   </section>
 )}
@@ -418,12 +451,53 @@ export default function ServiceDetail() {
           </div>
 
           {/* 3-tier pricing cards */}
-          {service.pricing && service.pricing.length > 0 && service.pricing[0].features ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {  slug === "financial-model" || slug === "investor-outreach" ? (
+  <div className="max-w-[520px] mx-auto">
+    <div className="card-dark rounded-2xl p-10 text-center">
+      <div className="text-[11px] tracking-[0.2em] uppercase font-semibold text-amg-yellow mb-4">
+        Custom Pricing
+      </div>
+
+      <h3 className="font-serif text-[42px] leading-none text-white mb-4">
+        Contact for Quote
+      </h3>
+
+      {slug=== "financial-model" ? (
+        <p className="text-[15px] text-white/70 leading-relaxed mb-8">
+          Financial model engagements are tailored based on business complexity,
+          forecasting depth, operating model, and turnaround requirements.
+        </p>
+      ) : <p className="text-[15px] text-white/70 leading-relaxed mb-8">
+  Investor outreach engagements are tailored based on fundraising stage,
+  target investor profile, outreach scope, campaign complexity, and level
+  of ongoing support required.
+</p>}
+      
+      <Link
+        to="/contact"
+        className="inline-flex items-center justify-center gap-2 bg-amg-yellow hover:bg-amg-yellow-2 text-amg-teal font-semibold px-6 py-3 rounded-lg text-[14px] transition-colors"
+      >
+        Contact Our Team
+
+        <ArrowRight className="w-4 h-4" />
+      </Link>
+    </div>
+  </div>
+) :
+          service.pricing && service.pricing.length > 0 && service.pricing[0].features ? (
+        <div
+  className={`grid gap-6 ${
+    service.pricing.length === 1
+      ? 'grid-cols-1 place-items-center'
+      : service.pricing.length === 2
+      ? 'grid-cols-1 md:grid-cols-2'
+      : 'grid-cols-1 md:grid-cols-3'
+  }`}
+>
               {service.pricing.map((plan, i) => (
                 <div
                   key={i}
-                  className={`relative rounded-xl overflow-hidden flex flex-col ${
+             className={`relative w-full max-w-[520px] rounded-xl overflow-hidden flex flex-col ${
                     plan.popular
                       ? 'bg-amg-teal text-white shadow-soft-lg ring-2 ring-amg-teal'
                       : 'bg-white border border-amg-line shadow-soft'
@@ -482,7 +556,7 @@ export default function ServiceDetail() {
               ))}
             </div>
           )}
-
+        
           <p className="mt-8 text-center text-[12.5px] text-amg-teal/50">
             All engagements start with a free 30-minute strategy call. Prices are indicative — final scope agreed upon call.
           </p>

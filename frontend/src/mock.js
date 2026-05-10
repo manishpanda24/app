@@ -81,48 +81,47 @@ const STANDARD_PRICING_NOTE = {
 const PITCH_DECK_REVIEW_PRICING = [
   {
     tier: 'Written Review',
-    price: '$650',
+    price: '$300',
     sub: 'Async written feedback you can action and self-direct revisions from.',
     popular: false,
     features: [
-      'Slide-by-slide annotated feedback',
-      'Red & green flag analysis',
-      'Market and competitive assessment',
-      'Written summary report',
-      'Metrics follow-up call',
+     'Investor-readiness score & evaluation framework',
+  'Slide-by-slide written feedback with rewrite suggestions',
+  'Clear investor concerns, gaps & missing slides identification',
+  'Recommended pitch deck structure (13–16 slides)',
+ 
     ],
     cta: 'Get Started',
   },
   {
     tier: 'Full Review + Expert',
-    price: '$1,100',
+    price: '$500',
     sub: 'The complete review experience — written analysis plus a live 60-minute session to align on your revision roadmap.',
     popular: true,
     features: [
-      'Everything in Written Review',
+      'Everything present in Written Review',
       'Investor Q&A anticipation notes',
       'Traction and team section deep dive',
       '60-min live debrief call',
-      'Revision prioritisation roadmap',
-      '14-day post-debrief email Q&A',
+       'Complete PDF report with actionable recommendations'
     ],
     cta: 'Get Started',
   },
-  {
-    tier: 'Concierge Review',
-    price: 'Custom',
-    sub: 'For founders who want an active, senior day-to-day co-pilot on investment readiness and fundraising readiness.',
-    popular: false,
-    features: [
-      'Structured evaluation calls',
-      'Iterative pricing (per deck)',
-      'Current-raise competitive insights',
-      'Dedicated founder debrief sessions',
-      'Demo day presentation recommendation',
-      'Dedicated account coordinator',
-    ],
-    cta: 'Get Started',
-  },
+  // {
+  //   tier: 'Concierge Review',
+  //   price: 'Custom',
+  //   sub: 'For founders who want an active, senior day-to-day co-pilot on investment readiness and fundraising readiness.',
+  //   popular: false,
+  //   features: [
+  //     'Structured evaluation calls',
+  //     'Iterative pricing (per deck)',
+  //     'Current-raise competitive insights',
+  //     'Dedicated founder debrief sessions',
+  //     'Demo day presentation recommendation',
+  //     'Dedicated account coordinator',
+  //   ],
+  //   cta: 'Get Started',
+  // },
 ];
 
 const PITCH_DECK_REVIEW_INCLUDES = [
@@ -133,7 +132,7 @@ const PITCH_DECK_REVIEW_INCLUDES = [
   'Rewrite suggestions for key slides',
   'Missing slides identification',
   'Recommended slide structure (13–16 slides)',
-  'Prioritized improvement roadmap (10–14 days)'
+  'Complete PDF report with all the details',
 ];
 
 export const SERVICES = [
@@ -223,48 +222,47 @@ export const SERVICES = [
     why: 'We build investor-grade pitch decks from the ground up — crafting the narrative architecture, structuring each slide for maximum impact, and delivering a polished presentation that opens doors and moves investors to act.',
     whyHeading: 'Most pitch decks fail before a founder ever steps into the room.',
     pricing: [
-      {
-        tier: 'Startup & Copy',
-        price: '$1,800',
-        sub: 'For founders who need the story structured and the slides written — design not included.',
-        popular: false,
-        features: [
-          'Founder discovery session',
-          'Narrative architecture doc',
-          'Slide-by-slide copy writing',
-          'Investor-tailored messaging',
-          '2 revision rounds',
-          'File delivery (editable)',
-        ],
-        cta: 'Get Started',
-      },
-      {
-        tier: 'Full Deck',
-        price: '$3,500',
-        sub: 'The complete pitch deck experience — story, copy, design, and presentation coaching.',
-        popular: true,
-        features: [
-          'Everything in Startup & Copy',
-          'Custom slide visualisations and brand',
-          'Market sizing and competitive landscape',
-          'You full rounds of revision based on your feedback',
-          'Editable PowerPoint file (fully yours to update)',
-          'Live walkthrough session (60 min)',
-        ],
-        cta: 'Get Started',
-      },
+      // {
+      //   tier: 'Startup & Copy',
+      //   price: '$1,800',
+      //   sub: 'For founders who need the story structured and the slides written — design not included.',
+      //   popular: false,
+      //   features: [
+      //     'Founder discovery session',
+      //     'Narrative architecture doc',
+      //     'Slide-by-slide copy writing',
+      //     'Investor-tailored messaging',
+      //     '2 revision rounds',
+      //     'File delivery (editable)',
+      //   ],
+      //   cta: 'Get Started',
+      // },
+      // {
+      //   tier: 'Full Deck',
+      //   price: '$3,500',
+      //   sub: 'The complete pitch deck experience — story, copy, design, and presentation coaching.',
+      //   popular: true,
+      //   features: [
+      //     'Everything in Startup & Copy',
+      //     'Custom slide visualisations and brand',
+      //     'Market sizing and competitive landscape',
+      //     'You full rounds of revision based on your feedback',
+      //     'Editable PowerPoint file (fully yours to update)',
+      //     'Live walkthrough session (60 min)',
+      //   ],
+      //   cta: 'Get Started',
+      // },
       {
         tier: 'Concierge / Custom',
         price: 'Custom',
         sub: 'For founders building to raise across multiple rounds, access to our senior advisory network.',
-        popular: false,
+        popular: true,
         features: [
-          'Iterative pricing',
-          'Unlimited revisions (per deck)',
-          'Current-raise competitive insights',
-          'Senior day-to-day advisory',
-          'Demo day presentation coaching',
-          'Dedicated account coordinator',
+           'Custom investor-ready narrative',
+    'Institutional-quality slide design',
+    'Messaging & storytelling support',
+    'Investor positioning strategy',
+    'Multiple review iterations'
         ],
         cta: 'Get Started',
       },
@@ -592,6 +590,18 @@ export const SERVICES = [
       text: '2-page summary + investor Q&A prep designed to shorten diligence and strengthen negotiation.',
     },
     {
+      title: 'Fundraising Dynamics',
+      text: 'Strategically determine your funding ask, runway requirements, and milestone targets aligned with your stage, sector, and investor expectations.',
+    },
+    {
+      title: 'Valuation Range',
+      text: 'Avoid key valuation mistakes that can drive investors away, and arrive at a logical valuation range (low / mid / high) based on method convergence and market benchmarks.',
+    },
+    {
+      title: 'Founder equity dilution and term sheet negotiation',
+      text: 'Understand how dilution impacts your equity from pre seed to series B.Negotiating terms with investors is more than just valuation — we prepare you to defend your number and negotiate from a position of strength.',
+    },
+    {
       title: 'Five-Method Valuation',
       text: 'Scorecard, Checklist, VC, and two DCF approaches blended using stage-based weights.',
     },
@@ -719,7 +729,7 @@ export const SERVICES = [
     whatsIncluded: [
        'Curated investor list (75–150 funds)',
   'Thesis-fit targeting & tier segmentation',
-  'Warm introductions via network',
+  // 'Warm introductions via network',
   'Personalised email & outreach sequences',
   'Investor teaser / one-pager creation',
   'Outreach campaign launch support',
@@ -745,19 +755,21 @@ export const SERVICES = [
     deliverHeading: 'Targeted outreach designed to convert — not just to generate noise.',
     deliver: [
       { title: 'Thesis-Aligned Targeting', text: 'A curated investor universe of 50–100 funds, scored on thesis fit, stage fit, sector focus, and warmth of relationship.' },
-      { title: 'Warm Introduction Network', text: 'Direct, warm introductions to investors where we have an established relationship and the fit is real.' },
-      { title: 'North America & Europe Coverage', text: 'Active investor relationships in both geographies — and the context to navigate the differences in investor expectations.' },
+      { title: 'Investor Outreach Support', text: 'Investor outreach support focused on helping founders secure qualified investor meetings.' },
+      // { title: 'North America & Europe Coverage', text: 'Active investor relationships in both geographies — and the context to navigate the differences in investor expectations.' },
       { title: 'Tailored Outreach Materials', text: 'Outreach copy, follow-up sequencing, and supporting one-pagers tailored to each investor archetype.' },
       { title: 'Pipeline Management', text: 'A structured process for tracking responses, managing diligence requests, and maintaining momentum across the full pipeline.' },
       { title: 'Investor Relationship Preparation', text: 'Briefing notes on each investor — fund focus, partner background, recent investments — so you walk into every meeting informed.' },
-    ],
+      { title: 'Investor QnA and due diligence support', text: 'Investor briefings and support on addressing questions and answer' },
+],
     process: [
       { step: 'Investors Targeting & Research', day: 'Day 1–5', text: 'We build a curated, scored investor long-list (50–150 firms). We segment by tier: thesis fit, stage, geography, and likely relationship to introduction.', output: 'Target investor long-list and tier segmentation document' },
       { step: 'Outreach Strategy Design', day: 'Day 6–7', text: 'We design full outreach methodology, timing, and approach. We write and customise outreach copy, personalise for each firm type, and align on campaign launch date.', output: 'Themed outreach strategy document' },
-      { step: 'Materials Development', day: 'Day 8–10', text: 'We develop all investor-facing materials for the campaign: one-pager, teaser email, subject lines for each firm type. All materials are reviewed by our team before launch.', output: 'Three investor outreach materials (per target)' },
-      { step: 'Introductions & Campaign Launch', day: 'Day 11–15', text: 'We launch the outreach and pipeline tracking. We start introductions via our network, followed by personalised email sequences for each firm.', output: 'Active pipeline with weekly reporting and actions aligned' },
+      { step: 'Materials Development', day: 'Day 8–10', text: 'We develop all investor-facing materials for the campaign: one-pager, teaser email, subject lines for each firm type. All materials are reviewed by our team before launch. This doesnot involve pitch deck creation and financial modelling subscription for these services are available.', output: 'Customised investor outreach materials for each investor.' },
+      { step: 'Introductions & Campaign Launch', day: 'Day 11–15', text: 'We assist on getting investor meetings for founders.', output: 'Active pipeline with weekly reporting and actions aligned' },
       { step: 'Pipeline Management & Follow-Up', day: 'Ongoing (4–8 weeks)', text: 'We track your investor pipeline, manage follow-ups, and provide co-ordination support throughout the process. Weekly status reports and investor feedback aligned.', output: 'Weekly pipeline status report with each action co-ordinated' },
-    ],
+    { step: 'Investor meetings and QnA', day: 'Ongoing (4–8 weeks)', text: 'We help founders prepare for investor meetings by refining their narrative, anticipating investor questions, and supporting Q&A preparation. Our team works closely with founders to improve confidence, clarity, and meeting effectiveness throughout the fundraising process.', output: 'Founder investor-meeting readiness with tailored Q&A preparation and discussion support' },
+],
     pricingNote: STANDARD_PRICING_NOTE,
     pipelineCta: true,
     finalCta: {
@@ -808,14 +820,14 @@ export const SERVICES = [
     },
     {
       tier: 'Full Readiness',
-      price: '$3,200',
+      price: '$2,500',
       sub: 'Complete investment readiness diagnostic for founders preparing to launch their raise with confidence.',
       popular: true,
       features: [
         'Everything in Essentials Audit',
         'Data room completeness audit',
         'Cap table and legal structure review',
-        '6-dimension gap analysis framework',
+        '6-dimension Investment Readiness framework',
         'Prioritised action plan (investor-impact scoring)',
         'Mock investor Q&A session (60 min)',
         '30-day support window',
@@ -845,7 +857,7 @@ export const SERVICES = [
   'Financial model integrity check',
   'Data room completeness assessment',
   '6-dimension readiness scorecard',
-  'Gap analysis report (PDF)',
+  'Investment Readiness report (PDF)',
   'Prioritized 30-day action roadmap',
   'Mock investor Q&A session',
   '60-min debrief session',
@@ -1008,8 +1020,8 @@ export const SERVICES = [
       text: 'Handling investor conversations, follow-ups, competing offers, and managing multiple processes simultaneously.'
     },
     {
-      title: 'Next-Day Session Notes',
-      text: 'Clear written summary of key discussion points and recommended next steps delivered the next business day.'
+      title: 'Investor Term Sheet Negotiation',
+      text: 'Strategic guidance on negotiating term sheets with investors, ensuring you understand the implications and protect your interests.'
     }
   ],
 
@@ -1040,22 +1052,22 @@ export const SERVICES = [
     }
   ],
 
-  whatsIncluded: [
-    'Pre-session material review',
-  '60-minute advisory session',
-  'Fundraise strategy guidance',
-  'Investor-perspective feedback',
-  'Pitch & narrative coaching',
-  'Live problem-solving discussion',
-  'Written session notes',
-  '48-hour follow-up support',
-  'Optional session recording'
-  ],
+  // whatsIncluded: [
+  //   'Pre-session material review',
+  // '60-minute advisory session',
+  // 'Fundraise strategy guidance',
+  // 'Investor-perspective feedback',
+  // 'Pitch & narrative coaching',
+  // 'Live problem-solving discussion',
+  // 'Written session notes',
+  // '48-hour follow-up support',
+  // 'Optional session recording'
+  // ],
 
   pricing: [
     {
       tier: 'Single Session',
-      price: '$450',
+      price: '$300',
       sub: 'One focused advisory session on any pressing question or decision.',
       popular: false,
       features: [
@@ -1069,7 +1081,7 @@ export const SERVICES = [
     },
     {
       tier: 'Session Bundle',
-      price: '$1,100',
+      price: '$810',
       sub: 'Three sessions across your fundraising journey.',
       popular: true,
       features: [
@@ -1083,7 +1095,7 @@ export const SERVICES = [
     },
     {
       tier: 'Monthly Advisory',
-      price: '$1,800 / month',
+      price: '$1000 / month',
       sub: 'Ongoing advisory support throughout your fundraise.',
       popular: false,
       features: [
