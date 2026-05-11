@@ -137,7 +137,7 @@ export default function Home() {
 
 
       {/* WHO WE ARE */}
-  <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white-50">
+  <section className="py-12 px-6 lg:px-10 border-t border-amg-line bg-white-50">
   <div className="max-w-[1000px] mx-auto">
 
     {/* Eyebrow */}
@@ -264,7 +264,7 @@ export default function Home() {
         </div>
       </section>
 {/* ── ACCELERATORS & INCUBATORS ────────────────────────────────────── */}
-      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white-50">
+      <section className="py-6 px-6 lg:px-10 border-t border-amg-line bg-white-50">
         <div className="max-w-[1280px] mx-auto">
           {/* Header */}
           <div className="text-center mb-16">

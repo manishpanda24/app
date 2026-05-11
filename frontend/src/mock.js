@@ -189,7 +189,7 @@ export const SERVICES = [
 ],
     process: [
       { step: 'Intake & Context Setting', day: 'Day 1', text: 'You share your deck, target investor profile, and round context. We align on focus areas.' },
-      { step: 'Deep Deck Analysis', day: 'Day 1–4', text: 'A senior partner reviews your deck slide-by-slide against an institutional evaluation framework.' },
+      { step: 'Deep Deck Analysis', day: 'Day 1–4', text: 'We review your deck slide-by-slide against an institutional evaluation framework.' },
       { step: 'Written Feedback Report', day: 'Day 5', text: 'You receive a written report with key strengths, critical gaps, and prioritised recommendations.' },
       { step: 'Live Debrief Session', day: 'Day 6', text: 'A 60-minute working session — discussing each finding, answering your questions, and creating a revision outline.' },
     ],

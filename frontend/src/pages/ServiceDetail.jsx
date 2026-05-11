@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowRight, ArrowLeft, Plus, Minus, AlertTriangle, CheckSquare, CheckCircle2 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
@@ -25,8 +25,15 @@ function Faq({ q, a, defaultOpen=false }) {
 }
 
 export default function ServiceDetail() {
+  const [pageLoaded, setPageLoaded] =
+  useState(false);
   const { slug } = useParams();
   const service = SERVICE_BY_SLUG[slug];
+    useEffect(() => {
+  setTimeout(() => {
+    setPageLoaded(true);
+  }, 100);
+}, []);
   if (!service) return <Navigate to="/founder-services" replace />;
 
   const heroBg = service.accent === 'yellow' ? 'bg-soft-yellow' : service.accent === 'turquoise' ? 'bg-soft-turquoise' : 'bg-soft-teal';
@@ -34,8 +41,15 @@ export default function ServiceDetail() {
 
   const otherServices = SERVICES.filter(s => s.slug !== slug).slice(0, 3);
 
+
   return (
-    <>
+<div
+  className={`transition-all duration-1000 ease-out ${
+    pageLoaded
+      ? 'opacity-100 translate-y-0 blur-0'
+      : 'opacity-0 translate-y-8 blur-sm'
+  }`}
+>
       <Navbar />
 
       {/* HERO */}
@@ -55,10 +69,10 @@ export default function ServiceDetail() {
               <p className="mt-5 text-[15px] text-amg-teal/75 max-w-2xl leading-relaxed">{service.why}</p>
             </div>
             <div className="lg:col-span-4">
-              <div className="flex flex-wrap gap-3">
-                <Link to="/contact" className="btn-yellow">Get Started <ArrowRight className="w-4 h-4"/></Link>
-                <a href="#pricing" className="btn-outline">View Pricing</a>
-              </div>
+              {/* <div className="flex flex-wrap gap-3">
+                {/* <Link to="/contact" className="btn-yellow">Learn More<ArrowRight className="w-4 h-4"/></Link> */}
+                {/* <a href="#pricing" className="btn-outline">View Pricing</a> */}
+              {/* </div> */}
             </div>
           </div>
         </div>
@@ -628,6 +642,6 @@ export default function ServiceDetail() {
 
       <CTASection />
       <Footer />
-    </>
+</div>
   );
 }

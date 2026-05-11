@@ -46,11 +46,11 @@ export default function Navbar() {
           <img
   src={Logo}
   alt="AMG Venture Partners"
-  className="w-9 h-9 object-contain"
+  className="w-16 h-16 object-contain"
 />
           <div className="leading-tight">
-            <div className="font-serif font-bold text-[20px] tracking-tight text-amg-teal">AMG</div>
-            <div className="text-[12px] tracking-[0.2em] uppercase font-bold text-amg-turquoise-2">
+            <div className="font-serif font-bold text-[28px] tracking-tight text-amg-teal">AMG</div>
+            <div className="text-[15px] tracking-[0.2em] uppercase font-bold text-amg-turquoise-2">
               Venture Partners
             </div>
           </div>

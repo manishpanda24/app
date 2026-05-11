@@ -49,7 +49,7 @@ export default function Footer() {
               {SERVICES.map(s => (
                 <li key={s.slug}>
                   <Link to={`/services/${s.slug}`} className="group inline-flex items-center gap-2 text-[15px] text-amg-cream/85 hover:text-amg-yellow transition-colors">
-                    <span className="link-under">{s.title}</span>
+                    <span className="link-under">{s.introTitle}</span>
                     <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all"/>
                   </Link>
                 </li>

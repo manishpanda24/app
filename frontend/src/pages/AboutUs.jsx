@@ -108,12 +108,88 @@ export default function AboutUs() {
             </div>
 
             {/* 2 & 3 */}
-            {['Founder Services', 'IRP 3 tracks'].map((item, i) => (
-              <p key={i} className="text-[15px] text-amg-teal/80">
-                <span className="font-semibold text-amg-teal">{i + 2}.</span>{' '}
-                {item}
-              </p>
-            ))}
+           {/* 2 */}
+<div>
+  <p className="text-[15px] font-semibold text-amg-teal mb-3">
+    2. Founder Services:
+  </p>
+
+  <div className="ml-6 space-y-2">
+    {[
+      'Pitch Deck Review',
+      'Pitch Deck Creation',
+      'Financial Model',
+      'Valuation',
+      'Investor Outreach',
+      'Investment Readiness Review',
+      'AMA Sessions',
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="flex items-start gap-3 text-[14.5px] text-amg-teal/75"
+      >
+        <span className="shrink-0 font-medium text-amg-turquoise-2 w-5">
+          {String.fromCharCode(97 + i)}.
+        </span>
+
+        <span>{item}</span>
+      </div>
+    ))}
+  </div>
+
+  <p className="mt-5 text-[14.5px] text-amg-teal/75 leading-relaxed">
+    We help startup founders prepare for fundraising with
+    investor-ready materials, financial strategy, valuation
+    guidance, and structured investor outreach support. Our
+    goal is to help founders communicate their business with
+    clarity, confidence, and institutional-level preparation.
+  </p>
+</div>
+
+{/* 3 */}
+{/* 3 */}
+<div>
+  <p className="text-[15px] font-semibold text-amg-teal mb-3">
+    3. Investment Readiness Program (IRP):
+  </p>
+
+  <p className="text-[14.5px] text-amg-teal/75 leading-relaxed">
+    Our Investment Readiness Program (IRP) is a structured
+    founder-focused fundraising program designed to help
+    startups become investor-ready through strategic
+    guidance, financial clarity, fundraising preparation,
+    and institutional-quality investor materials.
+  </p>
+
+  <div className="mt-5 ml-6 space-y-2">
+    {[
+      'Track 1 — DIY Investment Readiness',
+      'Track 2 — Guided Fundraising Support',
+      'Track 3 — End-to-End Fundraising Partnership',
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="flex items-start gap-3 text-[14.5px] text-amg-teal/75"
+      >
+        <span className="shrink-0 font-medium text-amg-turquoise-2 w-5">
+          {String.fromCharCode(97 + i)}.
+        </span>
+
+        <span>{item}</span>
+      </div>
+    ))}
+  </div>
+
+  <a
+    href="https://investorreadinessprogram.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 mt-5 text-[14px] font-medium text-amg-turquoise-2 hover:text-amg-teal transition-colors"
+  >
+    Explore the Investment Readiness Program
+    <ArrowRight className="w-4 h-4" />
+  </a>
+</div>
           </div>
         </section>
 

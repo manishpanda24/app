@@ -57,7 +57,7 @@ export default function FounderServices() {
                   <p className="mt-2.5 text-[14px] text-amg-teal/70 leading-relaxed">{s.tagline}</p>
                   <div className="hr-thin my-6"/>
                   <div className="flex items-center justify-between">
-                    <span className="text-[13px] font-semibold text-amg-turquoise-2">Get Started</span>
+                    <span className="text-[13px] font-semibold text-amg-turquoise-2">Learn More</span>
                     <ArrowUpRight className="w-4 h-4 text-amg-turquoise-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"/>
                   </div>
                 </div>
