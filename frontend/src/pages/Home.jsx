@@ -49,7 +49,7 @@ const ECOSYSTEM_FEATURES = [
 
 const STATS = [
   { value: '200+',          label: 'Founders and Sectors Supported',     color: 'text-amg-turquoise-2' },
-  { value: '$100M+',        label: 'Raised by Founders',    color: 'text-amg-turquoise-2' },
+  { value: '$1000M+',        label: 'Raised by Founders',    color: 'text-amg-turquoise-2' },
   { value: 'Pre-Seed →  Series A', label: 'Stage Coverage',         color: 'text-amg-yellow' },
   { value: '2 Continents',  label: 'North America & Europe', color: 'text-amg-teal' },
 ];
