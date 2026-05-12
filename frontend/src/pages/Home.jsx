@@ -96,10 +96,10 @@ export default function Home() {
   <div className="absolute inset-0 grid-paper pointer-events-none" />
 
   <div className="max-w-[1280px] mx-auto px-6 lg:px-10 pt-24 lg:pt-32 pb-20 relative">
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
+<div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">
 
       {/* LEFT CONTENT */}
-      <div className="lg:col-span-7 fade-in">
+      <div className="fade-in">
 
         {/* Tags */}
         <div className="flex items-center gap-3 flex-wrap mb-8">
@@ -150,80 +150,77 @@ export default function Home() {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="lg:col-span-5 relative fade-in">
+   {/* RIGHT SIDE */}
+<div className="max-w-[560px] w-full ml-auto">
 
-        {/* Main Card */}
-        <div className="bg-white rounded-3xl border border-amg-line shadow-soft p-6">
+  <div className="rounded-[32px] border border-amg-line bg-white p-8 md:p-10 shadow-soft-lg w-full">
 
-          {/* Top */}
-          <div className="flex items-center justify-between mb-8">
+    {/* Top */}
+    <div className="flex items-start justify-between gap-6 mb-10">
 
-            <div>
-              <div className="text-[12px] uppercase tracking-[0.18em] text-amg-teal/50 font-semibold">
-                Investor Readiness
-              </div>
+      <div className="flex-1 min-w-0">
 
-              <div className="text-[42px] font-serif text-amg-teal mt-2">
-                82%
-              </div>
-
-              <div className="text-[14px] text-amg-turquoise-2 mt-1">
-                Strong Readiness
-              </div>
-            </div>
-
-            {/* Circle */}
-            <div className="relative w-24 h-24">
-              <div className="absolute inset-0 rounded-full border-[10px] border-amg-line" />
-              <div className="absolute inset-0 rounded-full border-[10px] border-amg-yellow border-t-transparent border-l-transparent rotate-45" />
-            </div>
-
-          </div>
-
-          {/* Checklist */}
-          <div className="space-y-4">
-
-            {[
-              'Investor Narrative',
-              'Financial Model',
-              'Valuation Logic',
-              'Go-To-Market Strategy',
-              'Investor Materials',
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-between border-b border-amg-line pb-3"
-              >
-                <span className="text-[14px] text-amg-teal/75">
-                  {item}
-                </span>
-
-                <CheckCircle2 className="w-4 h-4 text-amg-turquoise-2" />
-              </div>
-            ))}
-
-          </div>
-
+        <div className="text-[12px] uppercase tracking-[0.18em] text-amg-teal/45 font-semibold">
+          Investor Readiness
         </div>
 
-        {/* Floating Card */}
-        <div className="absolute -bottom-8 -left-10 bg-amg-teal text-white rounded-2xl shadow-soft-lg p-5 hidden lg:block">
-
-          <div className="text-[11px] uppercase tracking-[0.18em] text-white/50 mb-3">
-            Market Opportunity
-          </div>
-
-          <div className="text-[30px] font-serif">
-            $48B
-          </div>
-
-          <div className="text-[13px] text-white/70 mt-1">
-            Total Addressable Market
-          </div>
-
-        </div>
+        <h3 className="font-serif text-[28px] md:text-[38px] leading-[0.98] text-amg-teal mt-4">
+          What investors actually evaluate.
+        </h3>
 
       </div>
+
+      {/* Icon */}
+      <div className="w-16 h-16 rounded-2xl bg-amg-yellow-bg flex items-center justify-center shrink-0">
+
+        <ShieldCheck className="w-7 h-7 text-amg-teal" />
+
+      </div>
+
+    </div>
+
+    {/* List */}
+    <div className="space-y-5">
+
+      {[
+        'Investor narrative clarity',
+        'Financial assumptions & logic',
+        'Market positioning',
+        'Fundraising strategy',
+        'Investor materials',
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="flex items-center justify-between gap-4 border-b border-amg-line pb-5"
+        >
+
+          <span className="text-[15px] md:text-[16px] text-amg-teal/78 leading-relaxed">
+            {item}
+          </span>
+
+          <CheckCircle2 className="w-5 h-5 text-amg-turquoise-2 shrink-0" />
+
+        </div>
+      ))}
+
+    </div>
+
+    {/* Bottom Note */}
+    <div className="mt-10 rounded-2xl bg-[#fafbfd] border border-amg-line p-5 md:p-6">
+
+      <p className="text-[14px] md:text-[15px] text-amg-teal/68 leading-relaxed">
+
+        Most founders do not fail fundraising because of weak ideas.
+        They fail because investors lack conviction in the narrative,
+        assumptions, positioning, or preparedness.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
 
     </div>
   </div>
@@ -248,7 +245,7 @@ export default function Home() {
      </section>
 
      {/* WHY FOUNDERS FAIL FUNDRAISING */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd]">
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
   <div className="max-w-[1280px] mx-auto">
 
@@ -400,7 +397,7 @@ export default function Home() {
 
 </section>
 {/* WHY AMG */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd]">
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
   <div className="max-w-[1280px] mx-auto">
 
@@ -585,7 +582,7 @@ export default function Home() {
 
 </section>
 {/* INDUSTRIES WE SERVE */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd]">
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
   <div className="max-w-[1280px] mx-auto">
 
@@ -625,7 +622,7 @@ export default function Home() {
 </section>
     {/* FOUNDER SERVICES */}
       {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
-      <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-[#fafbfd]">
+      <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-white">
   <div className="max-w-[1280px] mx-auto">
 
     {/* Heading */}
@@ -754,7 +751,7 @@ export default function Home() {
 
 {/* HOW WE WORK */}
 {/* HOW WE WORK */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd]">
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
   <div className="max-w-[1280px] mx-auto">
 
@@ -945,7 +942,7 @@ export default function Home() {
 
 </section>
 {/* INVESTMENT READINESS PROGRAM */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd] overflow-hidden">
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white overflow-hidden">
 
   <div className="max-w-[1280px] mx-auto">
 
@@ -1258,7 +1255,7 @@ export default function Home() {
 
 </section>
 {/* AI VS STRATEGIC ADVISORY */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd] overflow-hidden">
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white overflow-hidden">
 
   <div className="max-w-[1280px] mx-auto">
 
