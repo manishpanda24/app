@@ -6,15 +6,15 @@ export const NAV_LINKS = [
  // { label: 'Pricing', to: '/pricing' },
   // { label: 'Resources', to: '/resources' },
   { label: 'Contact', to: '/contact' },
-  {label:'About Us', to: '/about'},
+  {label:'Why AMG', to: '/about'},
   // {label:'Investment Readiness Program', to: '/investment-readiness-program'},
 ];
 
 export const HERO = {
   eyebrowTags: ['Pre-Seed', 'Seed', 'Series A'],
-  title: 'Raise Capital With Conviction.',
+  title: 'Raise Capital With Strategic Clarity.',
   description:
-    'AMG Venture Partners equips founders, incubators, and accelerators across North America and Europe with the strategic clarity, tools, and connections to close their rounds.',
+    'We help North American tech founders prepare their narrative, financials, and fundraising strategy before investor conversations begin.',
   primaryCta: { label: 'Explore Services', to: '/founder-services' },
   secondaryCta: { label: 'Book a Consultation', to: '/contact' },
 };
@@ -44,10 +44,12 @@ export const SERVICE_PILLARS = [
 ];
 
 export const FOUNDER_SERVICES_INTRO = {
-  eyebrow: 'For Founders',
-  title: 'Founder Services',
+  eyebrow: 'Strategic Fundraising Support',
+
+  title: 'Founder services built for investor readiness.',
+
   description:
-    'From your first pitch deck to  closing round, AMG Venture Partners provides hands-on, stage-appropriate support at every critical step of the fundraising journey. Each service is tailored to your specific context — your stage, sector, geography, and target investor.',
+    'Strategic fundraising support designed around how investors actually evaluate startups — from investor narrative and financial clarity to valuation strategy, investor outreach, and fundraising preparation.',
 };
 
 export const NOT_SURE_CTA = {
@@ -61,7 +63,7 @@ export const NOT_SURE_CTA = {
 
 export const PRICING_INTRO = {
   eyebrow: 'Pricing',
-  title: 'Transparent, Flat-Fee Pricing',
+  title: 'Engagement Structure',
   description:
     'No hourly surprises. Every engagement is scoped, priced, and agreed upon before we start.',
 };
@@ -74,7 +76,7 @@ export const HOW_WE_WORK_INTRO = {
 
 const STANDARD_PRICING_NOTE = {
   eyebrow: 'Pricing',
-  title: 'Transparent, Flat-Fee Pricing',
+  title: 'Engagement Structure',
   description: 'No hourly surprises. Every engagement is scoped, priced, and agreed upon before we start.',
 };
 
@@ -138,9 +140,9 @@ const PITCH_DECK_REVIEW_INCLUDES = [
 export const SERVICES = [
   {
     slug: 'pitch-deck-review',
-    introTitle: 'Pitch Deck Review',
-    title: 'Pitch Deck Review',
-    tagline: 'Sharpen your story before you step into the room.',
+    introTitle: 'Investor Narrative Review',
+    title: 'Investor Narrative Review',
+    tagline: 'Pressure-test your pitch deck and identify the gaps weakening investor conviction.',
     accent: 'yellow',
     why: 'A meticulous, investor-perspective critique of your existing pitch deck — designed to identify narrative gaps, structural weaknesses, and missed opportunities before they cost you a term sheet.',
     whyHeading: 'Most rejections 1en because of how a story is told — not the business behind it.',
@@ -215,9 +217,9 @@ export const SERVICES = [
   },
   {
     slug: 'pitch-deck-creation',
-    introTitle: 'Pitch Deck Creation',
-    title: 'Business Narrative and Pitch Deck Creation',
-    tagline: 'Your story, told with clarity and conviction.',
+    introTitle: 'Investor Narrative & Positioning',
+    title: 'Investor Narrative & Positioning',
+    tagline: 'Craft a sharper investor story with clarity, structure, and fundraising alignment.',
     accent: 'turquoise',
     why: 'We build investor-grade pitch decks from the ground up — crafting the narrative architecture, structuring each slide for maximum impact, and delivering a polished presentation that opens doors and moves investors to act.',
     whyHeading: 'Most pitch decks fail before a founder ever steps into the room.',
@@ -355,9 +357,9 @@ export const SERVICES = [
   },
   {
     slug: 'financial-model',
-    introTitle: 'Financial Model',
-    title: 'Financial Narrative and Financial Model',
-    tagline: 'Numbers that tell a story investors trust.',
+    introTitle:  'Financial Clarity & Modeling',
+    title:  'Financial Clarity & Modeling',
+    tagline: 'Build investor-grade financial models grounded in strategic assumptions.',
     accent: 'teal',
     why: 'We build rigorous, investor-grade financial models from scratch — structured around how your business actually operates, with explicit assumptions investors can interrogate and scenarios that hold up under diligence.',
     whyHeading: 'Investors trust the model that survives scrutiny — not the spreadsheet that hides it.',
@@ -494,9 +496,9 @@ export const SERVICES = [
   },
  {
   slug: 'valuation',
-  introTitle: 'Valuation',
-  title: 'Valuation',
-  tagline: 'Know what your startup is worth — before you walk into the room.',
+  introTitle: 'Valuation Strategy',
+  title: 'Valuation Strategy',
+  tagline: 'Arrive at a defensible valuation backed by logic, comparables, and market reality.',
   accent: 'yellow',
 
   why: 'A defensible, investor-ready pre-money valuation built on five industry-standard methods, real precedent transactions, and the same data sources VCs use. Delivered in 5 business days.',
@@ -669,7 +671,7 @@ export const SERVICES = [
     slug: 'investor-outreach',
     introTitle: 'Investor Outreach',
     title: 'Investor Outreach',
-    tagline: 'The right investor, at the right time.',
+    tagline: 'Target the right investors with structured outreach and fundraising preparation.',
     accent: 'turquoise',
     why: 'Strategic, targeted investor outreach built on thesis alignment, stage fit, and sector expertise — paired with warm introductions from our established network across North America and Europe.',
     whyHeading: 'A sharp pipeline beats a broad blast every time.',
@@ -793,9 +795,9 @@ export const SERVICES = [
   },
   {
   slug: 'investment-readiness',
-  introTitle: 'Investment Readiness Review',
-  title: 'Investment Readiness Review & Fundraising Roadmap',
-  tagline: 'Identify gaps before investors do.',
+  introTitle: 'Fundraising Readiness Review',
+  title: 'Fundraising Readiness Review & Fundraising Roadmap',
+  tagline: 'Identify weaknesses before investors do and prepare for scrutiny confidently.',
   accent: 'teal',
 
   why: 'A comprehensive diagnostic of your entire fundraising package — deck, financials, data room, legal structure, and founder narrative — ensuring you present a watertight investment case before approaching investors.',

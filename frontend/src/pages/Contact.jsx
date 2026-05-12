@@ -2,10 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
   ShieldCheck,
 } from 'lucide-react';
 
@@ -296,44 +292,110 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
       <Navbar />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-amg-line">
-        <div className="absolute inset-0 grid-paper pointer-events-none" />
+    {/* HERO */}
+<section className="relative overflow-hidden border-b border-amg-line bg-[#fafbfd]">
 
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 lg:py-24 relative">
-          <nav className="flex items-center gap-2 text-[12px] text-amg-mute mb-8">
-            <Link
-              to="/"
-              className="hover:text-amg-ink"
-            >
-              Home
-            </Link>
+  <div className="absolute inset-0 grid-paper pointer-events-none" />
 
-            <span>/</span>
+  <div className="max-w-[1280px] mx-auto px-6 lg:px-10 pt-32 pb-20 relative">
 
-            <span className="text-amg-ink">
-              Contact
-            </span>
-          </nav>
+    {/* Breadcrumb */}
+    <nav className="flex items-center gap-2 text-[13px] text-amg-teal/55 mb-10">
 
-          <div className="eyebrow mb-4">
-            Get in touch
-          </div>
+      <Link
+        to="/"
+        className="hover:text-amg-teal transition-colors"
+      >
+        Home
+      </Link>
 
-          <h1 className="heading-display text-[48px] md:text-[72px] text-amg-ink max-w-4xl">
-            Let&rsquo;s start the{' '}
-            <em>conversation</em>.
-          </h1>
+      <span>/</span>
 
-          <p className="mt-7 text-[17px] text-amg-ink/70 max-w-2xl leading-relaxed">
-            Whether you&rsquo;re a founder
-            ready to raise, an accelerator
-            looking to support your cohort,
-            or simply exploring how we can
-            help — we&rsquo;d love to hear
-            from you.
-          </p>
+      <span className="text-amg-teal font-medium">
+        Contact
+      </span>
+
+    </nav>
+
+    {/* Main Grid */}
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+
+      {/* Left */}
+      <div className="lg:col-span-7">
+
+        <div className="eyebrow mb-5">
+          Strategic Fundraising Support
         </div>
-      </section>
+
+        <h1 className="heading-display text-[52px] md:text-[82px] text-amg-teal leading-[0.96] max-w-5xl">
+          Discuss your
+          <br />
+          fundraising readiness.
+        </h1>
+
+        {/* Trust Strip */}
+        <div className="flex flex-wrap gap-3 mt-10">
+
+          {[
+            '30-Min Intro Call',
+            'Founder Confidential',
+            'Pre-Seed to Series A',
+            // 'North America Focused',
+          ].map((item) => (
+            <div
+              key={item}
+              className="px-4 py-2 rounded-full border border-amg-line bg-white text-[13px] text-amg-teal/72"
+            >
+              {item}
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+
+      {/* Right */}
+      <div className="lg:col-span-5">
+
+        <p className="text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-xl">
+
+          Strategic fundraising support for founders, accelerators,
+          and startup ecosystems preparing for investor scrutiny.
+
+        </p>
+
+        {/* Pain Points */}
+        <div className="mt-8 space-y-4">
+
+          {[
+            'Investor narrative feels unclear',
+            'Fundraising strategy lacks structure',
+            'Financial assumptions need pressure-testing',
+            'Preparing for investor conversations',
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3"
+            >
+
+              <div className="w-2 h-2 rounded-full bg-amg-yellow" />
+
+              <span className="text-[15px] text-amg-teal/70">
+                {item}
+              </span>
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* MAIN SECTION */}
       <section className="py-20 px-6 lg:px-10">
@@ -348,10 +410,13 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
             <div className="eyebrow mb-2">
               Founder inquiry
             </div>
-
-            <h2 className="font-serif text-[28px] font-medium text-amg-ink mb-7">
+<p className="text-[15px] text-amg-teal/65 leading-relaxed mb-8">
+  Share a few details about your startup and fundraising goals.
+  We’ll use this to understand where strategic support may be most valuable.
+</p>
+            {/* <h2 className="font-serif text-[28px] font-medium text-amg-ink mb-7">
               Tell us about your raise.
-            </h2>
+            </h2> */}
 
             {/* ROW 1 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -524,8 +589,7 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
             {/* RAISE */}
             <div className="mt-5">
               <Label>
-                How much are you looking to
-                raise?
+            Target fundraising range
               </Label>
 
               <SelectField
@@ -670,7 +734,7 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
 ───────────────────────────── */}
 <div className="mt-5">
   <Label>
-    What kind of support are you looking for in your fundraising process? *
+    What type of fundraising support would be most valuable right now? *
   </Label>
 
   <SelectField
@@ -723,7 +787,7 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
 ───────────────────────────── */}
 <div className="mt-5">
   <Label>
-    What services are you looking for? *
+Areas where you need strategic support *
   </Label>
 
   <SelectField
@@ -806,7 +870,7 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
             >
               {isSubmitting
                 ? 'Sending…'
-                : 'Submit Inquiry'}
+                : 'Start Fundraising Conversation'}
 
               <ArrowRight className="w-4 h-4" />
             </button>
@@ -1026,7 +1090,7 @@ setIsAcceleratorSubmitting(true);
               >
                {isAcceleratorSubmitting
   ? 'Sending…'
-  : 'Submit Inquiry'}
+  : 'Book Strategic Discussion'}
 
                 <ArrowRight className="w-4 h-4" />
               </button>

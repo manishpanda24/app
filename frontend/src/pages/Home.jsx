@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight, FileText, Sparkles, Calculator, TrendingUp, Users, ShieldCheck, MessageCircle, Briefcase, CheckCircle2, Target, Globe, Linkedin, BadgeCheck } from 'lucide-react';
+import { ArrowRight, ArrowUpRight,Rocket,Compass,Search, FileText, Sparkles, Calculator,Brain, X,Check,AlertTriangle,Building2,TrendingUp, Users, ShieldCheck, MessageCircle, Briefcase, CheckCircle2, Target, Globe, Linkedin, BadgeCheck } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
@@ -91,110 +91,145 @@ export default function Home() {
     <>
       <Navbar />
 
-      {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 grid-paper pointer-events-none"/>
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-10 pt-20 lg:pt-28 pb-20 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
-            <div className="lg:col-span-8 fade-in">
-              <div className="flex items-center gap-3 flex-wrap mb-7">
-                {HERO.eyebrowTags.map((t,i) => (
-                  <span key={t} className="tag-pill">
-                    <span className={`dot ${i===0?'bg-amg-yellow':i===1?'bg-amg-turquoise':'bg-amg-teal'}`}/>{t}
-                  </span>
-                ))}
+    {/* HERO SECTION */}
+<section className="relative overflow-hidden border-b border-amg-line bg-white">
+  <div className="absolute inset-0 grid-paper pointer-events-none" />
+
+  <div className="max-w-[1280px] mx-auto px-6 lg:px-10 pt-24 lg:pt-32 pb-20 relative">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
+
+      {/* LEFT CONTENT */}
+      <div className="lg:col-span-7 fade-in">
+
+        {/* Tags */}
+        <div className="flex items-center gap-3 flex-wrap mb-8">
+          {['Pre-Seed', 'Seed', 'Series A'].map((tag, i) => (
+            <span key={tag} className="tag-pill">
+              <span
+                className={`dot ${
+                  i === 0
+                    ? 'bg-amg-yellow'
+                    : i === 1
+                    ? 'bg-amg-turquoise'
+                    : 'bg-amg-teal'
+                }`}
+              />
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Heading */}
+        <h1 className="heading-display text-[54px] sm:text-[72px] lg:text-[88px] leading-[0.95] text-amg-teal max-w-5xl">
+          Raise Capital With
+          <br />
+          Strategic Clarity.
+        </h1>
+
+        {/* Subheading */}
+        <p className="mt-8 text-[18px] lg:text-[20px] leading-relaxed text-amg-teal/75 max-w-2xl">
+          We help North American tech founders prepare their narrative,
+          financials, valuation logic, and fundraising strategy before
+          investor conversations begin.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-wrap items-center gap-4 mt-10">
+
+          <Link to="/contact" className="btn-yellow">
+            Assess Your Readiness
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+
+          <Link to="/founder-services" className="btn-outline">
+            Explore Founder Services
+          </Link>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div className="lg:col-span-5 relative fade-in">
+
+        {/* Main Card */}
+        <div className="bg-white rounded-3xl border border-amg-line shadow-soft p-6">
+
+          {/* Top */}
+          <div className="flex items-center justify-between mb-8">
+
+            <div>
+              <div className="text-[12px] uppercase tracking-[0.18em] text-amg-teal/50 font-semibold">
+                Investor Readiness
               </div>
-              <h1 className="heading-display text-[52px] sm:text-[68px] lg:text-[88px] text-amg-teal">
-                Raise Capital With <em>Conviction</em>.
-              </h1>
-              <p className="mt-7 text-[17px] lg:text-[19px] leading-relaxed text-amg-teal/75 max-w-2xl">
-                {HERO.description}
-              </p>
-              <div className="flex flex-wrap items-center gap-4 mt-10">
-                <Link to={HERO.primaryCta.to} className="btn-yellow">{HERO.primaryCta.label} <ArrowRight className="w-4 h-4"/></Link>
-                <Link to={HERO.secondaryCta.to} className="btn-outline">{HERO.secondaryCta.label}</Link>
+
+              <div className="text-[42px] font-serif text-amg-teal mt-2">
+                82%
+              </div>
+
+              <div className="text-[14px] text-amg-turquoise-2 mt-1">
+                Strong Readiness
               </div>
             </div>
 
-            {/* Pillars stack */}
-            {/* <div className="lg:col-span-4 fade-in">
-              <div className="grid grid-cols-2 gap-3">
-                {SERVICE_PILLARS.map((p,i) => {
-                  const tone = p.accent === 'yellow' ? 'bg-amg-yellow-bg border-amg-yellow' : p.accent === 'turquoise' ? 'bg-amg-turquoise-bg border-amg-turquoise' : 'bg-amg-teal-bg border-amg-teal';
-                  return (
-                    <div key={i} className={`rounded-lg p-5 border ${tone}`}>
-                      <div className="font-serif text-[20px] font-medium text-amg-teal leading-tight">{p.title}</div>
-                      <div className="mt-2 text-[12.5px] text-amg-teal/75">{p.desc}</div>
-                    </div>
-                  );
-                })}
+            {/* Circle */}
+            <div className="relative w-24 h-24">
+              <div className="absolute inset-0 rounded-full border-[10px] border-amg-line" />
+              <div className="absolute inset-0 rounded-full border-[10px] border-amg-yellow border-t-transparent border-l-transparent rotate-45" />
+            </div>
+
+          </div>
+
+          {/* Checklist */}
+          <div className="space-y-4">
+
+            {[
+              'Investor Narrative',
+              'Financial Model',
+              'Valuation Logic',
+              'Go-To-Market Strategy',
+              'Investor Materials',
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-between border-b border-amg-line pb-3"
+              >
+                <span className="text-[14px] text-amg-teal/75">
+                  {item}
+                </span>
+
+                <CheckCircle2 className="w-4 h-4 text-amg-turquoise-2" />
               </div>
-            </div> */}
-          </div>
-        </div>
-      </section>
-   
+            ))}
 
-
-      {/* WHO WE ARE */}
-  <section className="py-12 px-6 lg:px-10 border-t border-amg-line bg-white-50">
-  <div className="max-w-[1000px] mx-auto">
-
-    {/* Eyebrow */}
-    <div className="mb-6">
-      <span className="tag-pill inline-flex">
-        <span className="dot bg-amg-turquoise"/>Who We Are
-      </span>
-    </div>
-
-    {/* Heading */}
-    <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.02]">
-      Practical Insight.<br/><em>Real Results.</em>
-    </h2>
-
-    {/* Highlight Card */}
-    <div className="mt-10 bg-white border border-amg-line rounded-2xl p-8 shadow-soft">
-
-      <p className="text-[16px] text-amg-teal/80 leading-relaxed">
-        AMG Venture Partners is a <strong className="text-amg-teal">global business consulting and technology product firm</strong> operating across the <strong className="text-amg-teal">North American and European markets</strong>.
-      </p>
-
-      <p className="mt-5 text-[16px] text-amg-teal/80 leading-relaxed">
-        We partner with incubators and accelerators globally to deliver high-quality <strong className="text-amg-teal">investment-readiness content and fundraising services</strong> to tech startup CEOs.
-      </p>
-
-      <p className="mt-5 text-[16px] text-amg-teal/80 leading-relaxed">
-        We also partner directly with <strong className="text-amg-teal">startup CEOs</strong> on everything fundraising — from strategy and positioning to execution and investor engagement.
-      </p>
-
-    </div>
-
-    {/* Bullet Points */}
-    <div className="mt-12 grid md:grid-cols-3 gap-6">
-
-      {[
-        'Hands-on, founder-first methodology',
-        'Deep North American & European investor networks',
-        'Stage-appropriate advice from pre-seed to Series A'
-      ].map((item, i) => (
-        <div key={i} className="flex items-start gap-4 p-5 bg-white border border-amg-line rounded-xl shadow-soft-sm">
-
-          <div className="w-8 h-8 rounded-full bg-amg-turquoise-bg flex items-center justify-center shrink-0">
-            <CheckCircle2 className="w-4 h-4 text-amg-turquoise-2"/>
           </div>
 
-          <span className="text-[14.5px] text-amg-teal/80 leading-snug">
-            {item}
-          </span>
+        </div>
+
+        {/* Floating Card */}
+        <div className="absolute -bottom-8 -left-10 bg-amg-teal text-white rounded-2xl shadow-soft-lg p-5 hidden lg:block">
+
+          <div className="text-[11px] uppercase tracking-[0.18em] text-white/50 mb-3">
+            Market Opportunity
+          </div>
+
+          <div className="text-[30px] font-serif">
+            $48B
+          </div>
+
+          <div className="text-[13px] text-white/70 mt-1">
+            Total Addressable Market
+          </div>
 
         </div>
-      ))}
+
+      </div>
 
     </div>
-
   </div>
 </section>
-     <section className="py-6 px-6 lg:px-10 border-t border-amg-line bg-white-50">
+   
+ <section className="py-6 px-6 lg:px-10 border-t border-amg-line bg-white-50">
         {/* Stats strip */}
           <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 border border-amg-line rounded-2xl overflow-hidden bg-white shadow-soft">
             {STATS.map((s, i) => (
@@ -211,298 +246,1159 @@ export default function Home() {
           </div>
           
      </section>
-      <section className="py-6 px-15 lg:px-20 border-t border-amg-line bg-white-50">
-           <IndustriesGrid 
-              title="Industries"
-              highlight="We Serve"
-              highlightColor="text-amg-turquoise"
-            />
-            </section>
-      {/* FOUNDER SERVICES */}
-      {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
-      <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-white-50">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-14">
-            <div className="lg:col-span-7">
-              <div className="eyebrow mb-4">{FOUNDER_SERVICES_INTRO.eyebrow}</div>
-              <h2 className="heading-display text-[40px] md:text-[56px] text-amg-teal">{FOUNDER_SERVICES_INTRO.title}</h2>
-            </div>
-            <div className="lg:col-span-5 flex lg:items-end">
-              <p className="text-[15.5px] text-amg-teal/75 leading-relaxed">{FOUNDER_SERVICES_INTRO.description}</p>
-            </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SERVICES.map((s, i) => {
-              const Icon = ICONS[s.slug] || Briefcase;
-              const accent = s.accent === 'yellow' ? { bar:'bg-amg-yellow', iconBg:'bg-amg-yellow-bg', dot:'bg-amg-yellow' } : s.accent === 'turquoise' ? { bar:'bg-amg-turquoise', iconBg:'bg-amg-turquoise-bg', dot:'bg-amg-turquoise' } : { bar:'bg-amg-teal', iconBg:'bg-amg-teal-bg', dot:'bg-amg-teal' };
-              return (
-                <Link key={s.slug} to={`/services/${s.slug}`} className="group card-pro shadow-soft hover-lift block overflow-hidden">
-                  <div className={`h-1 ${accent.bar}`}/>
-                  <div className="p-7">
-                    <div className="flex items-center justify-between mb-6">
-                      <div className={`w-11 h-11 rounded-md ${accent.iconBg} border border-amg-line flex items-center justify-center`}>
-                        <Icon className="w-5 h-5 text-amg-teal"/>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className={`w-2 h-2 rounded-full ${accent.dot}`}/>
-                        <span className="text-[11px] tracking-[0.18em] uppercase font-semibold text-amg-teal/70">0{i+1}</span>
-                      </div>
-                    </div>
-                    <div className="font-serif text-[24px] font-medium text-amg-teal leading-tight">{s.title}</div>
-                    <p className="mt-2.5 text-[14px] text-amg-teal/70 leading-relaxed">{s.tagline}</p>
-                    <div className="hr-thin my-6"/>
-                    <div className="flex items-center justify-between">
-                      <span className="text-[13px] font-semibold text-amg-turquoise-2">Learn More</span>
-                      <ArrowUpRight className="w-4 h-4 text-amg-turquoise-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"/>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-{/* ── ACCELERATORS & INCUBATORS ────────────────────────────────────── */}
-      <section className="py-6 px-6 lg:px-10 border-t border-amg-line bg-white-50">
-        <div className="max-w-[1280px] mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <span className="tag-pill inline-flex mb-5">
-              <span className="dot bg-amg-turquoise"/>For Ecosystems
-            </span>
-            <h2 className="font-serif text-[44px] md:text-[64px] font-medium text-amg-teal leading-tight tracking-tight">
-              Accelerators &amp; Incubators
-            </h2>
-            <p className="mt-4 text-[16px] text-amg-teal/60 max-w-lg mx-auto leading-relaxed">
-              We partner with innovation programs to elevate the fundraising capability of their entire cohort at scale.
-            </p>
-          </div>
-</div>
+     {/* WHY FOUNDERS FAIL FUNDRAISING */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd]">
 
-          {/* 4-column feature cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {ECOSYSTEM_FEATURES.map((f, i) => {
-              const Icon = f.icon;
-              return (
-                <div key={i} className="card-pro shadow-soft p-7 hover-lift bg-white">
-                  <div className={`w-12 h-12 rounded-xl ${f.iconBg} flex items-center justify-center mb-6`}>
-                    <Icon className={`w-5 h-5 ${f.iconColor}`}/>
-                  </div>
-                  <div className="font-semibold text-[15.5px] text-amg-teal mb-2 leading-snug">{f.title}</div>
-                  <p className="text-[13.5px] text-amg-teal/60 leading-relaxed">{f.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-
-        
-      </section>
-<section className="py-6 px-6 lg:px-10 border-t border-amg-line bg-white-50">
-        {/* Stats strip */}
-          <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 border border-amg-line rounded-2xl overflow-hidden bg-white shadow-soft">
-            {ACCELERATORSTATS.map((s, i) => (
-              <div
-                key={i}
-                className={`px-8 py-10 text-center ${i < ACCELERATORSTATS.length - 1 ? 'border-r border-amg-line' : ''}`}
-              >
-                <div className={`font-serif text-[25px] md:text-[40px] font-medium leading-none ${s.color}`}>
-                  {s.value}
-                </div>
-                <div className="mt-2.5 text-[15px] text-amg-teal/60 font-bold">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        
-     </section>
-      {/* ── MEET THE FOUNDER ─────────────────────────────────────────────── */}
-      <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fff]">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-
-            {/* Left: photo with floating badges */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-[520px] mx-auto shadow-soft-lg">
-                <img
-                  src={GauravImage}
-                  alt="Gaurav Bansal — Founder & CEO, AMG Venture Partners"
-                  className="w-full h-full object-cover object-top"
-                />
-
-          
-
-                {/* Bottom name card */}
-                <div className="absolute bottom-0 left-0 right-0 bg-white px-5 py-4">
-                  <div className="flex items-center gap-3">
-                    <span className="font-bold text-[17px] text-amg-teal">Gaurav Bansal</span>
-                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-amg-teal/70 border border-amg-line rounded-full px-2.5 py-1">
-                      <BadgeCheck className="w-3.5 h-3.5 text-amg-yellow"/> Verified
-                    </span>
-                  </div>
-                  <div className="text-[12.5px] text-amg-teal/60 mt-1 mb-2">Founder & CEO, AMG Venture Partners</div>
-                  <a
-                    href="https://www.linkedin.com/in/gauravbansalventurecapital/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-7 h-7 rounded bg-[#0077b5] hover:bg-[#005f91] transition-colors"
-                  >
-                    <Linkedin className="w-3.5 h-3.5 text-white fill-white"/>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: content */}
-         <div className="lg:col-span-7">
-  <div className="tag-pill inline-flex mb-6">
-    <span className="dot bg-amg-turquoise"/>Meet the Founder
-  </div>
-
-  <h2 className="font-serif text-[38px] md:text-[52px] font-medium text-amg-teal leading-tight tracking-tight">
-    I am Gaurav Bansal, <span className="text-amg-turquoise-2">a VC turned Founder</span>
-  </h2>
-
-  <ul className="mt-8 space-y-4 text-[15.5px] text-amg-teal/80 leading-relaxed max-w-xl">
-    <li className="flex items-start gap-3">
-      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
-      <span><strong className="text-amg-turquoise-2">14+ years</strong> of experience in venture capital, angel investing, investment banking, and technology consulting</span>
-    </li>
-
-    <li className="flex items-start gap-3">
-      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
-      <span>Member of <strong className="text-amg-turquoise-2">450+</strong> global angel investor syndicates</span>
-    </li>
-
-    <li className="flex items-start gap-3">
-      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
-      <span><strong className="text-amg-turquoise-2">50+</strong> tech startup investments</span>
-    </li>
-
-    <li className="flex items-start gap-3">
-      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
-      <span><strong className="text-amg-turquoise-2">35+</strong> venture capital portfolio companies</span>
-    </li>
-
-    <li className="flex items-start gap-3">
-      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
-      <span>Investment banking deals worth <strong className="text-amg-turquoise-2">$2Bn+</strong></span>
-    </li>
-
-    <li className="flex items-start gap-3">
-      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
-      <span>Reviewed <strong className="text-amg-turquoise-2">20k+</strong> pitch decks & financial models; conducted <strong className="text-amg-turquoise-2">100+</strong> due diligence processes</span>
-    </li>
-
-    <li className="flex items-start gap-3">
-      <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0"/>
-      <span><strong className="text-amg-turquoise-2">1000+</strong> mentor hours with founders globally</span>
-    </li>
-  </ul>
-
-  <a
-    href="https://www.linkedin.com/in/gauravbansalventurecapital/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mt-10 inline-flex items-center gap-2 bg-amg-turquoise-2 hover:bg-amg-teal text-white font-semibold px-6 py-3 rounded-full text-[14px] transition-colors"
-  >
-    <Linkedin className="w-4 h-4"/>
-    View LinkedIn Profile
-  </a>
-</div>
-
-          </div>
-        </div>
-      </section>
-{/* INVESTMENT READINESS PROGRAM */}
-<section className="px-6 lg:px-10 pb-10 bg-white">
   <div className="max-w-[1280px] mx-auto">
 
-    <div className="relative overflow-hidden rounded-[32px] border border-amg-line bg-gradient-to-br from-[#f8fafc] to-[#eef4ff] shadow-soft">
+    {/* Top Content */}
+    <div className="max-w-3xl">
 
-      {/* Background Blur */}
-      <div className="absolute top-0 right-0 w-[320px] h-[320px] bg-amg-turquoise/10 rounded-full blur-3xl pointer-events-none"/>
-      <div className="absolute bottom-0 left-0 w-[260px] h-[260px] bg-amg-yellow/10 rounded-full blur-3xl pointer-events-none"/>
+      <div className="tag-pill inline-flex mb-5">
+        <span className="dot bg-amg-yellow" />
+        Fundraising Reality
+      </div>
 
-      <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-10 items-center p-8 md:p-12 lg:p-14">
+      <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+        Most startups don’t fail fundraising because of bad products.
+      </h2>
 
-        {/* LEFT */}
-        <div className="lg:col-span-8">
+      <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/70 leading-relaxed max-w-2xl">
+        Investors lose confidence when the narrative lacks clarity,
+        financial assumptions feel weak, or founders enter the market
+        before they are truly investor-ready.
+      </p>
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amg-line bg-white mb-6">
-            <span className="w-2 h-2 rounded-full bg-amg-turquoise"/>
-            <span className="text-[12px] tracking-[0.16em] uppercase font-semibold text-amg-teal/70">
-              Investment Readiness Program
-            </span>
+    </div>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+
+      {[
+        {
+          title: 'Weak Investor Narrative',
+          text: 'The story sounds interesting internally but fails to create conviction externally.',
+        },
+        {
+          title: 'Unrealistic Valuation Expectations',
+          text: 'Founders lose credibility when pricing is disconnected from stage, traction, or market reality.',
+        },
+        {
+          title: 'Poor Fundraising Timing',
+          text: 'Many startups approach investors before metrics, positioning, or traction are ready.',
+        },
+        {
+          title: 'Confusing Business Models',
+          text: 'If investors cannot quickly understand how the company makes money, momentum disappears.',
+        },
+        {
+          title: 'Incomplete Investor Materials',
+          text: 'Missing data, weak decks, or inconsistent financials create immediate investor friction.',
+        },
+        {
+          title: 'Lack of Financial Clarity',
+          text: 'Weak assumptions and unclear runway planning reduce investor confidence quickly.',
+        },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="rounded-2xl border border-amg-line bg-white p-7 shadow-soft-sm hover-lift"
+        >
+
+          <div className="w-12 h-12 rounded-xl bg-amg-yellow-bg flex items-center justify-center mb-6">
+            <ShieldCheck className="w-5 h-5 text-amg-teal" />
           </div>
 
-          <h2 className="font-serif text-[38px] md:text-[54px] leading-[1.05] text-amg-teal max-w-3xl">
-            Helping Founders Become Investor-Ready.
-          </h2>
+          <h3 className="text-[20px] font-serif text-amg-teal leading-snug">
+            {item.title}
+          </h3>
 
-          <p className="mt-6 text-[16px] md:text-[18px] leading-relaxed semibold text-amg-teal/75 max-w-2xl">
-            Our Investment Readiness Program (IRP) helps startup founders refine
-            their pitch, strengthen financial narratives, prepare fundraising
-            materials, and confidently engage with investors.
+          <p className="mt-3 text-[14.5px] text-amg-teal/65 leading-relaxed">
+            {item.text}
           </p>
 
-          {/* Tags */}
-          <div className="flex flex-wrap gap-3 mt-8">
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
+{/* HOW INVESTORS THINK */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+
+  <div className="max-w-[1180px] mx-auto">
+
+    {/* Heading */}
+    <div className="text-center max-w-4xl mx-auto">
+
+      <div className="tag-pill inline-flex mb-5">
+        <span className="dot bg-amg-turquoise" />
+        Investor Psychology
+      </div>
+
+      <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+        Investors are not evaluating slides.
+        <br />
+        They are evaluating judgment.
+      </h2>
+
+      <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/70 leading-relaxed max-w-3xl mx-auto">
+        Your deck, financial model, valuation, and investor materials are
+        simply evidence supporting founder clarity, market understanding,
+        scalability, and execution maturity.
+      </p>
+
+    </div>
+
+    {/* Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+
+      {[
+        {
+          title: 'Strategic Clarity',
+          text: 'Can the founder clearly explain the market, problem, and growth strategy?',
+        },
+        {
+          title: 'Execution Maturity',
+          text: 'Does the company demonstrate operational discipline and realistic planning?',
+        },
+        {
+          title: 'Scalability',
+          text: 'Can this business become meaningfully large with venture-scale outcomes?',
+        },
+        {
+          title: 'Capital Efficiency',
+          text: 'Will the founder deploy capital intelligently with clear milestone logic?',
+        },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="rounded-2xl border border-amg-line bg-[#fafbfd] p-7 shadow-soft-sm hover-lift"
+        >
+
+          <div className="w-11 h-11 rounded-full bg-amg-turquoise-bg flex items-center justify-center mb-6">
+            <Target className="w-5 h-5 text-amg-turquoise-2" />
+          </div>
+
+          <h3 className="font-serif text-[22px] text-amg-teal leading-snug">
+            {item.title}
+          </h3>
+
+          <p className="mt-3 text-[14.5px] text-amg-teal/65 leading-relaxed">
+            {item.text}
+          </p>
+
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
+{/* WHY AMG */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd]">
+
+  <div className="max-w-[1280px] mx-auto">
+
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-start">
+
+      {/* LEFT */}
+      <div className="lg:col-span-5">
+
+        <div className="tag-pill inline-flex mb-5">
+          <span className="dot bg-amg-teal" />
+          Why AMG
+        </div>
+
+        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+          We are not a
+          <br />
+          pitch deck agency.
+        </h2>
+
+      </div>
+
+      {/* RIGHT */}
+      <div className="lg:col-span-7">
+
+        <p className="text-[17px] md:text-[18px] text-amg-teal/75 leading-relaxed">
+          AMG Venture Partners helps North American tech founders prepare
+          for investor scrutiny with strategic fundraising support designed
+          around how venture investors actually evaluate startups.
+        </p>
+
+        <p className="mt-6 text-[17px] md:text-[18px] text-amg-teal/75 leading-relaxed">
+          We work across investor narrative, fundraising readiness,
+          financial clarity, valuation logic, and investor preparation —
+          helping founders avoid the mistakes that quietly kill rounds.
+        </p>
+
+        {/* What We Challenge */}
+        <div className="mt-10 rounded-3xl border border-amg-line bg-white p-8 shadow-soft">
+
+          <div className="text-[13px] uppercase tracking-[0.18em] text-amg-teal/50 font-semibold mb-7">
+            What We Challenge
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
             {[
-              'Pitch Deck Strategy',
-              'Financial Modeling',
-              'Fundraising Support',
-              'Investor Outreach',
-              'Demo Day Preparation'
+              'Inflated valuations',
+              'Weak investor narratives',
+              'Unclear GTM strategies',
+              'Vanity metrics',
+              'Poor fundraising timing',
+              'Weak financial assumptions',
             ].map((item, i) => (
               <div
                 key={i}
-                className="px-4 py-2 rounded-full bg-white border border-amg-line text-[13px] font-medium text-amg-teal/75"
+                className="flex items-center gap-4"
               >
-                {item}
+
+                <div className="w-9 h-9 rounded-full bg-amg-yellow-bg flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-4 h-4 text-amg-teal" />
+                </div>
+
+                <span className="text-[15px] text-amg-teal/75 leading-snug">
+                  {item}
+                </span>
+
               </div>
             ))}
-
-          </div>
-        </div>
-
-        {/* RIGHT */}
-        <div className="lg:col-span-4">
-
-          <div className="bg-white border border-amg-line rounded-2xl p-7 shadow-soft">
-
-            <div className="text-[13px] uppercase tracking-[0.18em] text-amg-teal/50 font-semibold">
-              Learn More
-            </div>
-
-            <div className="mt-3 font-serif text-[28px] leading-tight text-amg-teal">
-              Explore the Full IRP Experience
-            </div>
-
-            <p className="mt-4 text-[14px] leading-relaxed text-amg-teal/65">
-              Discover the complete program structure, founder resources,
-              workshops, and fundraising preparation framework.
-            </p>
-
-            <a
-              href="https://investorreadinessprogram.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-7 inline-flex items-center justify-center gap-2 w-full bg-amg-turquoise-2 hover:bg-amg-teal text-white font-semibold px-6 py-3.5 rounded-full transition-all duration-300"
-            >
-              Explore IRP
-              <ArrowUpRight className="w-4 h-4"/>
-            </a>
 
           </div>
 
         </div>
 
       </div>
+
+    </div>
+
+  </div>
+
+</section>
+{/* MEET THE FOUNDER */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+
+  <div className="max-w-[1280px] mx-auto">
+
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+
+      {/* LEFT IMAGE */}
+      <div className="lg:col-span-5 relative">
+
+        <div className="relative rounded-[28px] overflow-hidden aspect-[4/5] shadow-soft-lg border border-amg-line">
+
+          <img
+            src={GauravImage}
+            alt="Gaurav Bansal"
+            className="w-full h-full object-cover object-top"
+          />
+
+          {/* Floating Badge */}
+          <div className="absolute top-5 left-5 bg-white/90 backdrop-blur rounded-full px-4 py-2 shadow-soft border border-amg-line">
+
+            <div className="flex items-center gap-2">
+              <BadgeCheck className="w-4 h-4 text-amg-yellow" />
+
+              <span className="text-[12px] font-semibold text-amg-teal">
+                VC Turned Founder
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT CONTENT */}
+      <div className="lg:col-span-7">
+
+        <div className="tag-pill inline-flex mb-5">
+          <span className="dot bg-amg-turquoise" />
+          Meet The Founder
+        </div>
+
+        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+          Investor-side experience.
+          <br />
+          Founder-side execution.
+        </h2>
+
+        <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/75 leading-relaxed max-w-3xl">
+          AMG Venture Partners was founded by Gaurav Bansal — a VC,
+          investor, and operator with deep experience across venture capital,
+          startup investing, fundraising strategy, and institutional dealmaking.
+        </p>
+
+        {/* Metrics */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
+
+          {[
+            '14+ years across VC, investment banking & consulting',
+            '50+ startup investments',
+            '20k+ pitch decks reviewed',
+            '$2Bn+ investment banking deal exposure',
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-4 rounded-2xl border border-amg-line bg-[#fafbfd] p-5"
+            >
+
+              <div className="w-10 h-10 rounded-full bg-amg-turquoise-bg flex items-center justify-center shrink-0">
+                <CheckCircle2 className="w-4 h-4 text-amg-turquoise-2" />
+              </div>
+
+              <span className="text-[15px] text-amg-teal/75 leading-relaxed">
+                {item}
+              </span>
+
+            </div>
+          ))}
+
+        </div>
+
+        {/* CTA */}
+        <a
+          href="https://www.linkedin.com/in/gauravbansalventurecapital/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-10 inline-flex items-center gap-3 bg-amg-teal hover:bg-amg-turquoise-2 text-white px-7 py-3 rounded-full text-[14px] font-semibold transition-colors"
+        >
+
+          <Linkedin className="w-4 h-4" />
+
+          View LinkedIn Profile
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+{/* INDUSTRIES WE SERVE */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd]">
+
+  <div className="max-w-[1280px] mx-auto">
+
+    {/* Heading */}
+    <div className="max-w-3xl">
+
+      <div className="tag-pill inline-flex mb-5">
+        <span className="dot bg-amg-yellow" />
+        Industry Focus
+      </div>
+
+      <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+        Built for ambitious
+        <br />
+        technology founders.
+      </h2>
+
+      <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/70 leading-relaxed max-w-2xl">
+        We support venture-scale startups across sectors where investor
+        expectations, business models, and fundraising dynamics require
+        strategic clarity and institutional-grade preparation.
+      </p>
+
+    </div>
+
+    {/* Industries Grid */}
+     <section className="py-6 px-15 lg:px-20 bg-white-50">
+           <IndustriesGrid 
+              title="Industries"
+              highlight="We Serve"
+              highlightColor="text-amg-turquoise"
+                showHeader={false}
+            />
+            </section>
+  </div>
+
+</section>
+    {/* FOUNDER SERVICES */}
+      {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
+      <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-[#fafbfd]">
+  <div className="max-w-[1280px] mx-auto">
+
+    {/* Heading */}
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+
+      <div className="lg:col-span-7">
+
+        <div className="eyebrow mb-4">
+          Strategic Fundraising Support
+        </div>
+
+        <h2 className="heading-display text-[40px] md:text-[60px] text-amg-teal leading-[1.03]">
+          Strategic fundraising support
+          <br />
+          built for investor readiness.
+        </h2>
+
+      </div>
+
+      <div className="lg:col-span-5 flex lg:items-end">
+
+        <p className="text-[15.5px] text-amg-teal/75 leading-relaxed">
+          Founder support designed around how investors actually evaluate
+          startups — from investor narrative and financial clarity to
+          valuation strategy and fundraising preparation.
+        </p>
+
+      </div>
+
+    </div>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      {SERVICES.map((s, i) => {
+
+        const Icon = ICONS[s.slug] || Briefcase;
+
+        const accent =
+          s.accent === 'yellow'
+            ? {
+                border: 'border-amg-yellow',
+                iconBg: 'bg-amg-yellow-bg',
+                dot: 'bg-amg-yellow',
+              }
+            : s.accent === 'turquoise'
+            ? {
+                border: 'border-amg-turquoise',
+                iconBg: 'bg-amg-turquoise-bg',
+                dot: 'bg-amg-turquoise',
+              }
+            : {
+                border: 'border-amg-teal',
+                iconBg: 'bg-amg-teal-bg',
+                dot: 'bg-amg-teal',
+              };
+
+        return (
+          <Link
+            key={s.slug}
+            to={`/services/${s.slug}`}
+            className={`group rounded-[28px] border border-amg-line border-t-[4px] ${accent.border} bg-white shadow-soft-sm hover-lift block overflow-hidden transition-all`}
+          >
+
+            <div className="p-8">
+
+              {/* Top */}
+              <div className="flex items-center justify-between mb-8">
+
+                <div
+                  className={`w-14 h-14 rounded-2xl ${accent.iconBg} flex items-center justify-center`}
+                >
+                  <Icon className="w-6 h-6 text-amg-teal" />
+                </div>
+
+                <div className="flex items-center gap-2">
+
+                  <span className={`w-2.5 h-2.5 rounded-full ${accent.dot}`} />
+
+                  <span className="text-[12px] tracking-[0.18em] uppercase font-semibold text-amg-teal/55">
+                    0{i + 1}
+                  </span>
+
+                </div>
+
+              </div>
+
+              {/* Title */}
+              <h3 className="font-serif text-[28px] text-amg-teal leading-[1.12] max-w-[320px]">
+                { s.title}
+              </h3>
+
+              {/* Description */}
+              <p className="mt-4 text-[15px] text-amg-teal/68 leading-relaxed max-w-[340px]">
+
+                {s.tagline}
+
+              </p>
+
+              {/* Divider */}
+              <div className="border-t border-amg-line mt-8 pt-7">
+
+                <div className="flex items-center justify-between">
+
+                  <span className="text-[13px] font-semibold text-amg-turquoise-2">
+                    Learn More
+                  </span>
+
+                  <ArrowUpRight className="w-4 h-4 text-amg-turquoise-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </Link>
+        );
+      })}
+
     </div>
 
   </div>
 </section>
+
+
+{/* HOW WE WORK */}
+{/* HOW WE WORK */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd]">
+
+  <div className="max-w-[1280px] mx-auto">
+
+    {/* Heading */}
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+
+      <div className="lg:col-span-7">
+
+        <div className="tag-pill inline-flex mb-5">
+          <span className="dot bg-amg-yellow" />
+          Process
+        </div>
+
+        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+          How we prepare founders
+          <br />
+          for investor conversations.
+        </h2>
+
+      </div>
+
+      <div className="lg:col-span-5 flex lg:items-end">
+
+        <p className="text-[16px] md:text-[17px] text-amg-teal/70 leading-relaxed">
+          A structured process designed to identify fundraising gaps,
+          strengthen investor positioning, and improve fundraising readiness
+          before outreach begins.
+        </p>
+
+      </div>
+
+    </div>
+
+    {/* Process Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      {[
+        {
+          step: '01',
+          title: 'Assessment',
+          text: 'We evaluate your narrative, financials, positioning, and fundraising readiness.',
+          icon: Search,
+        },
+        {
+          step: '02',
+          title: 'Strategic Positioning',
+          text: 'We sharpen your investor story, fundraising strategy, and market positioning.',
+          icon: Compass,
+        },
+        {
+          step: '03',
+          title: 'Investor Preparation',
+          text: 'We prepare your materials, valuation logic, and investor-facing communication.',
+          icon: ShieldCheck,
+        },
+        {
+          step: '04',
+          title: 'Fundraising Support',
+          text: 'We help founders navigate investor conversations with clarity and confidence.',
+          icon: Rocket,
+        },
+      ].map((item, i) => {
+
+        const Icon = item.icon;
+
+        return (
+          <div
+            key={i}
+            className="group rounded-[28px] border border-amg-line bg-white p-8 shadow-soft-sm hover-lift transition-all"
+          >
+
+            {/* Top */}
+            <div className="flex items-center justify-between mb-8">
+
+              <div className="w-14 h-14 rounded-2xl bg-amg-yellow-bg flex items-center justify-center">
+                <Icon className="w-6 h-6 text-amg-teal" />
+              </div>
+
+              <span className="text-[14px] tracking-[0.18em] uppercase font-semibold text-amg-teal/45">
+                {item.step}
+              </span>
+
+            </div>
+
+            {/* Content */}
+            <h3 className="font-serif text-[28px] text-amg-teal leading-[1.1]">
+              {item.title}
+            </h3>
+
+            <p className="mt-4 text-[15px] text-amg-teal/68 leading-relaxed">
+              {item.text}
+            </p>
+
+          </div>
+        );
+      })}
+
+    </div>
+
+  </div>
+
+</section>
+{/* ECOSYSTEM & PARTNERS */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+
+  <div className="max-w-[1280px] mx-auto">
+
+    {/* Heading */}
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+
+      <div className="lg:col-span-7">
+
+        <div className="tag-pill inline-flex mb-5">
+          <span className="dot bg-amg-turquoise" />
+          Ecosystem & Partnerships
+        </div>
+
+        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+          Supporting founders across
+          <br />
+          accelerators and startup ecosystems.
+        </h2>
+
+      </div>
+
+      <div className="lg:col-span-5 flex lg:items-end">
+
+        <p className="text-[16px] md:text-[17px] text-amg-teal/70 leading-relaxed">
+          We collaborate with accelerators, incubators, founder communities,
+          and startup ecosystems to help founders improve investment readiness
+          and fundraising preparation.
+        </p>
+
+      </div>
+
+    </div>
+
+    {/* Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      {[
+        {
+          title: 'Accelerator Partnerships',
+          text: 'Investment readiness diagnostics, fundraising workshops, and founder preparation support for accelerator cohorts.',
+          icon: Rocket,
+        },
+        {
+          title: 'Incubator Programs',
+          text: 'Strategic fundraising guidance and investor-readiness support for early-stage startup communities.',
+          icon: Building2,
+        },
+        {
+          title: 'Founder Communities',
+          text: 'Educational sessions, AMA discussions, and fundraising insights tailored for founder ecosystems.',
+          icon: Users,
+        },
+      ].map((item, i) => {
+
+        const Icon = item.icon;
+
+        return (
+          <div
+            key={i}
+            className="group rounded-[28px] border border-amg-line bg-[#fafbfd] p-8 shadow-soft-sm hover-lift transition-all"
+          >
+
+            {/* Icon */}
+            <div className="w-14 h-14 rounded-2xl bg-amg-turquoise-bg flex items-center justify-center mb-7">
+              <Icon className="w-6 h-6 text-amg-teal" />
+            </div>
+
+            {/* Content */}
+            <h3 className="font-serif text-[28px] text-amg-teal leading-[1.12]">
+              {item.title}
+            </h3>
+
+            <p className="mt-4 text-[15px] text-amg-teal/68 leading-relaxed">
+              {item.text}
+            </p>
+
+          </div>
+        );
+      })}
+
+    </div>
+
+  </div>
+
+</section>
+{/* INVESTMENT READINESS PROGRAM */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd] overflow-hidden">
+
+  <div className="max-w-[1280px] mx-auto">
+
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
+
+      {/* LEFT */}
+      <div className="lg:col-span-7">
+
+        <div className="tag-pill inline-flex mb-5">
+          <span className="dot bg-amg-yellow" />
+          Investment Readiness Program
+        </div>
+
+        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+          A structured fundraising
+          <br />
+          preparation program for founders.
+        </h2>
+
+        <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-3xl">
+          The Investment Readiness Program (IRP) is designed for founders
+          preparing for institutional fundraising — combining strategic
+          guidance, investor readiness diagnostics, fundraising education,
+          and founder support in one structured experience.
+        </p>
+
+        {/* Features */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
+
+          {[
+            'Fundraising readiness diagnostics',
+            'Investor narrative refinement',
+            'Financial clarity workshops',
+            'Mock investor Q&A sessions',
+            'Valuation & fundraising strategy',
+            'Founder mentoring & guidance',
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-4 rounded-2xl border border-amg-line bg-white p-5 shadow-soft-sm"
+            >
+
+              <div className="w-10 h-10 rounded-full bg-amg-yellow-bg flex items-center justify-center shrink-0">
+                <CheckCircle2 className="w-4 h-4 text-amg-teal" />
+              </div>
+
+              <span className="text-[15px] text-amg-teal/75 leading-relaxed">
+                {item}
+              </span>
+
+            </div>
+          ))}
+
+        </div>
+
+        {/* CTA */}
+        <div className="flex flex-wrap items-center gap-4 mt-10">
+
+          <a
+            href="https://investorreadinessprogram.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-yellow"
+          >
+            Explore IRP
+            <ArrowRight className="w-4 h-4" />
+          </a>
+
+          <Link
+            to="/contact"
+            className="btn-outline"
+          >
+            Partner With Us
+          </Link>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT */}
+      <div className="lg:col-span-5 relative">
+
+        {/* Main Card */}
+        <div className="rounded-[32px] border border-amg-line bg-white p-8 shadow-soft-lg relative z-10">
+
+          <div className="flex items-center justify-between mb-8">
+
+            <div>
+              <div className="text-[12px] uppercase tracking-[0.18em] text-amg-teal/45 font-semibold">
+                Founder Readiness
+              </div>
+
+              <div className="text-[42px] font-serif text-amg-teal mt-2">
+                IRP
+              </div>
+            </div>
+
+            <div className="w-16 h-16 rounded-2xl bg-amg-yellow-bg flex items-center justify-center">
+              <Rocket className="w-7 h-7 text-amg-teal" />
+            </div>
+
+          </div>
+
+          <div className="space-y-5">
+
+            {[
+              'Structured fundraising curriculum',
+              'Investor readiness frameworks',
+              'Live founder workshops',
+              'Practical fundraising guidance',
+              'Founder accountability support',
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-between border-b border-amg-line pb-4"
+              >
+
+                <span className="text-[15px] text-amg-teal/72">
+                  {item}
+                </span>
+
+                <CheckCircle2 className="w-4 h-4 text-amg-turquoise-2" />
+
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+
+        {/* Floating Badge */}
+        <div className="hidden lg:flex mt-6 bg-amg-teal text-white rounded-2xl shadow-soft-lg px-6 py-5 items-center gap-4 w-fit">
+
+          <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+            <Users className="w-5 h-5" />
+          </div>
+
+          <div>
+
+            <div className="text-[28px] font-serif leading-none">
+              Founder-Led
+            </div>
+
+            <div className="text-[13px] text-white/70 mt-1">
+              Built for early-stage founders
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+{/* CASE STUDIES / TRANSFORMATIONS */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+
+  <div className="max-w-[1280px] mx-auto">
+
+    {/* Heading */}
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+
+      <div className="lg:col-span-7">
+
+        <div className="tag-pill inline-flex mb-5">
+          <span className="dot bg-amg-yellow" />
+          Founder Transformations
+        </div>
+
+        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+          From unclear narratives
+          <br />
+          to investor-ready positioning.
+        </h2>
+
+      </div>
+
+      <div className="lg:col-span-5 flex lg:items-end">
+
+        <p className="text-[16px] md:text-[17px] text-amg-teal/70 leading-relaxed">
+          We help founders improve fundraising clarity, investor confidence,
+          and strategic positioning before entering high-stakes investor conversations.
+        </p>
+
+      </div>
+
+    </div>
+
+    {/* Case Study Grid */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      {/* BEFORE */}
+      <div className="rounded-[30px] border border-amg-line bg-[#fafbfd] p-9 shadow-soft-sm">
+
+        <div className="flex items-center gap-3 mb-8">
+
+          <div className="w-11 h-11 rounded-full bg-red-100 flex items-center justify-center">
+            <AlertTriangle className="w-5 h-5 text-red-500" />
+          </div>
+
+          <div>
+
+            <div className="text-[12px] uppercase tracking-[0.18em] text-red-500 font-semibold">
+              Before AMG
+            </div>
+
+            <div className="text-[22px] font-serif text-amg-teal mt-1">
+              Common Founder Challenges
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="space-y-5">
+
+          {[
+            'Weak investor narrative and unclear positioning',
+            'Financial assumptions lacking investor confidence',
+            'Unstructured fundraising strategy',
+            'Investor materials missing critical information',
+            'Poor preparation for investor scrutiny',
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-4 border-b border-amg-line pb-5"
+            >
+
+              <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                <X className="w-4 h-4 text-red-500" />
+              </div>
+
+              <span className="text-[15px] text-amg-teal/72 leading-relaxed">
+                {item}
+              </span>
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+
+      {/* AFTER */}
+      <div className="rounded-[30px] border border-amg-teal bg-amg-teal p-9 shadow-soft-sm text-white relative overflow-hidden">
+
+        {/* Glow */}
+        <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-3xl" />
+
+        <div className="relative z-10">
+
+          <div className="flex items-center gap-3 mb-8">
+
+            <div className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center">
+              <CheckCircle2 className="w-5 h-5 text-amg-yellow" />
+            </div>
+
+            <div>
+
+              <div className="text-[12px] uppercase tracking-[0.18em] text-amg-yellow font-semibold">
+                After AMG
+              </div>
+
+              <div className="text-[22px] font-serif text-white mt-1">
+                Investor-Ready Outcomes
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className="space-y-5">
+
+            {[
+              'Sharper investor narrative and clearer positioning',
+              'Investor-grade financial clarity and assumptions',
+              'Structured fundraising roadmap and preparation',
+              'Stronger investor confidence during conversations',
+              'Improved readiness for due diligence and scrutiny',
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-4 border-b border-white/10 pb-5"
+              >
+
+                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="w-4 h-4 text-amg-yellow" />
+                </div>
+
+                <span className="text-[15px] text-white/82 leading-relaxed">
+                  {item}
+                </span>
+
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+{/* AI VS STRATEGIC ADVISORY */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-[#fafbfd] overflow-hidden">
+
+  <div className="max-w-[1280px] mx-auto">
+
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
+
+      {/* LEFT CONTENT */}
+      <div className="lg:col-span-7">
+
+        <div className="tag-pill inline-flex mb-5">
+          <span className="dot bg-amg-turquoise" />
+          AI vs Strategic Judgment
+        </div>
+
+        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+          AI can generate slides.
+          <br />
+          It cannot replace strategic judgment.
+        </h2>
+
+        <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-3xl">
+          AI tools can help founders generate decks, models, and content faster.
+          But fundraising outcomes are still determined by strategic clarity,
+          investor psychology, timing, positioning, and founder judgment.
+        </p>
+
+        {/* Points */}
+        <div className="space-y-5 mt-10">
+
+          {[
+            'AI cannot pressure-test weak investor narratives.',
+            'AI cannot challenge unrealistic valuation assumptions.',
+            'AI cannot prepare founders for real investor scrutiny.',
+            'AI cannot replace fundraising judgment and strategic thinking.',
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-4 rounded-2xl border border-amg-line bg-white p-5 shadow-soft-sm"
+            >
+
+              <div className="w-10 h-10 rounded-full bg-amg-turquoise-bg flex items-center justify-center shrink-0">
+                <ShieldCheck className="w-4 h-4 text-amg-turquoise-2" />
+              </div>
+
+              <span className="text-[15px] text-amg-teal/75 leading-relaxed">
+                {item}
+              </span>
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+
+      {/* RIGHT VISUAL */}
+      <div className="lg:col-span-5 relative">
+
+        <div className="rounded-[32px] border border-amg-line bg-white shadow-soft-lg overflow-hidden">
+
+          {/* Top */}
+          <div className="p-8 border-b border-amg-line">
+
+            <div className="flex items-center justify-between mb-7">
+
+              <div>
+
+                <div className="text-[12px] uppercase tracking-[0.18em] text-amg-teal/45 font-semibold">
+                  Strategic Advantage
+                </div>
+
+                <div className="text-[38px] font-serif text-amg-teal mt-2">
+                  Human Insight
+                </div>
+
+              </div>
+
+              <div className="w-16 h-16 rounded-2xl bg-amg-yellow-bg flex items-center justify-center">
+                <Brain className="w-7 h-7 text-amg-teal" />
+              </div>
+
+            </div>
+
+            <p className="text-[15px] text-amg-teal/68 leading-relaxed">
+              Strategic fundraising still requires experience, pattern recognition,
+              investor understanding, and founder judgment.
+            </p>
+
+          </div>
+
+          {/* Comparison */}
+          <div className="p-8 space-y-5">
+
+            {[
+              {
+                left: 'Generate generic decks',
+                right: 'Craft investor conviction',
+              },
+              {
+                left: 'Automate templates',
+                right: 'Challenge weak assumptions',
+              },
+              {
+                left: 'Summarize information',
+                right: 'Prepare founders strategically',
+              },
+              {
+                left: 'Produce outputs',
+                right: 'Improve fundraising outcomes',
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="grid grid-cols-[1fr_auto_1fr] gap-4 items-center border-b border-amg-line pb-4"
+              >
+
+                <div className="text-[14px] text-amg-teal/55">
+                  AI
+                </div>
+
+                <ArrowRight className="w-4 h-4 text-amg-yellow shrink-0" />
+
+                <div className="text-[14px] font-semibold text-amg-teal text-right">
+                  {item.right}
+                </div>
+
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+    
       <CTASection />
       <Footer />
     </>

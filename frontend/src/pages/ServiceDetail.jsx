@@ -84,7 +84,10 @@ export default function ServiceDetail() {
           <div className="max-w-[1280px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
               <div className="lg:col-span-4">
-                <div className="eyebrow mb-4">Why It Matters</div>
+                <span className="text-[15px]  tracking-[0.18em] text-black font-bold">
+          -Why it Matters
+        </span>
+
               </div>
               <div className="lg:col-span-8">
                 <h2 className="font-serif text-[28px] md:text-[40px] font-medium leading-[1.18] text-amg-teal">
@@ -210,7 +213,9 @@ export default function ServiceDetail() {
         <section className="py-24 px-6 lg:px-10 bg-gray-50 border-y border-gray-100">
           <div className="max-w-[1280px] mx-auto">
             <div className="max-w-3xl mb-12">
-              <div className="eyebrow mb-4">What We Deliver</div>
+               <span className="text-[15px]  tracking-[0.18em] text-black font-bold">
+          -What Founder's Gain
+        </span>
               <h2 className="heading-display text-[36px] md:text-[48px] text-amg-teal leading-tight">{service.deliverHeading}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -239,7 +244,9 @@ export default function ServiceDetail() {
 
               {/* Left: heading */}
               <div className="lg:col-span-4">
-                <div className="eyebrow mb-4">{HOW_WE_WORK_INTRO.eyebrow}</div>
+                 <span className="text-[15px]  tracking-[0.18em] text-black font-bold">
+         -{HOW_WE_WORK_INTRO.eyebrow}
+        </span>
                 <h2 className="font-serif text-[36px] md:text-[44px] font-medium text-amg-teal leading-tight tracking-tight">
                   How We Work Together
                 </h2>
@@ -301,7 +308,9 @@ export default function ServiceDetail() {
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-6 mb-10">
         <div>
-          <div className="eyebrow mb-3">What You Receive</div>
+           <span className="text-[15px]  tracking-[0.18em] text-black font-bold">
+          -What you Recieve
+        </span>
           <h2 className="font-serif text-[32px] md:text-[42px] font-medium text-amg-teal leading-tight">
             Everything You Receive
           </h2>
@@ -457,7 +466,7 @@ export default function ServiceDetail() {
           <div className="text-center mb-12">
             <div className="eyebrow mb-3 mx-auto">{service.pricingNote?.eyebrow || 'Pricing'}</div>
             <h2 className="font-serif text-[32px] md:text-[44px] font-medium text-amg-teal leading-tight">
-              {service.pricingNote?.title || 'Transparent, Flat-Fee Pricing.'}
+              {service.pricingNote?.title || 'Engagement Structure'}
             </h2>
             <p className="mt-4 text-[15px] text-amg-teal/65 max-w-xl mx-auto leading-relaxed">
               {service.pricingNote?.description}
@@ -571,9 +580,7 @@ export default function ServiceDetail() {
             </div>
           )}
         
-          <p className="mt-8 text-center text-[12.5px] text-amg-teal/50">
-            All engagements start with a free 30-minute strategy call. Prices are indicative — final scope agreed upon call.
-          </p>
+        
         </div>
       </section>
 
@@ -618,7 +625,7 @@ export default function ServiceDetail() {
           <div className="flex items-end justify-between gap-6 mb-10 flex-wrap">
             <div>
               <div className="eyebrow mb-4">Continue Exploring</div>
-              <h2 className="heading-display text-[32px] md:text-[40px] text-amg-teal">Other services.</h2>
+              <h2 className="heading-display text-[32px] md:text-[40px] text-amg-teal">Explore Other Founder Capabilities</h2>
             </div>
             <Link to="/founder-services" className="btn-outline">All Services <ArrowRight className="w-4 h-4"/></Link>
           </div>

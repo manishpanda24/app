@@ -11,15 +11,36 @@ export default function Navbar() {
   const location = useLocation();
 
   // ✅ Dropdown routes
-  const founderServices = [
-    { label: "Pitch Deck Review", to: "/services/pitch-deck-review" },
-    { label: "Pitch Deck Creation", to: "/services/pitch-deck-creation" },
-    { label: "Financial Model", to: "/services/financial-model" },
-    { label: "Valuation", to: "/services/valuation" },
-    { label: "Investor Outreach", to: "/services/investor-outreach" },
-    { label: "Investment Readiness Review", to: "/services/investment-readiness" },
-    { label: "AMA Sessions", to: "/services/ama-sessions" },
-  ];
+const founderServices = [
+  {
+    label: "Investor Narrative Review",
+    to: "/services/pitch-deck-review",
+  },
+  {
+    label: "Investor Narrative & Positioning",
+    to: "/services/pitch-deck-creation",
+  },
+  {
+    label: "Financial Clarity & Modeling",
+    to: "/services/financial-model",
+  },
+  {
+    label: "Valuation Strategy",
+    to: "/services/valuation",
+  },
+  {
+    label: "Investor Outreach",
+    to: "/services/investor-outreach",
+  },
+  {
+    label: "Fundraising Readiness Review",
+    to: "/services/investment-readiness",
+  },
+  {
+    label: "AMA Sessions",
+    to: "/services/ama-sessions",
+  },
+];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
