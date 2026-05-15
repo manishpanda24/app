@@ -3,6 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+  font-size: 15px;
+}
 
 body {
     margin: 0;
@@ -12,6 +15,45 @@ body {
     background: #ffffff;
     color: #06262F;
     font-feature-settings: 'ss01' on, 'cv11' on;
+}
+/* Premium Gradient Cards */
+
+.bg-gradient-yellow {
+  background: linear-gradient(
+    135deg,
+    rgba(242, 194, 0, 0.16) 0%,
+    rgba(255, 255, 255, 1) 72%
+  );
+}
+
+.bg-gradient-teal {
+  background: linear-gradient(
+    135deg,
+    rgba(14, 76, 92, 0.14) 0%,
+    rgba(255, 255, 255, 1) 72%
+  );
+}
+
+.bg-gradient-turquoise {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 194, 176, 0.16) 0%,
+    rgba(255, 255, 255, 1) 72%
+  );
+}
+
+/* Matching Borders */
+
+.border-gradient-yellow {
+  border-color: rgba(242, 194, 0, 0.22);
+}
+
+.border-gradient-teal {
+  border-color: rgba(14, 76, 92, 0.16);
+}
+
+.border-gradient-turquoise {
+  border-color: rgba(20, 194, 176, 0.18);
 }
 
 /* Enforce consistent base type scale */

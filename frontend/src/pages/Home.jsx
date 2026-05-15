@@ -94,7 +94,7 @@ export default function Home() {
     {/* HERO SECTION */}
 {/* HERO SECTION */}
 <section className="relative overflow-hidden border-b border-amg-line bg-white">
-  <div className="max-w-[1280px] mx-auto px-6 lg:px-10 pt-24 lg:pt-32 pb-20 relative">
+  <div className="max-w-[1280px] mx-auto px-6 lg:px-10 pt-9 lg:pt-12 pb-20 relative">
     <div className="flex flex-col items-center text-center">
 
       {/* Tags */}
@@ -176,11 +176,11 @@ export default function Home() {
         Fundraising Reality
       </div>
 
-      <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+      <h2 className="heading-display text-[34px] md:text-[52px] text-amg-teal leading-[1.03]">
         Most startups don’t fail fundraising because of bad products.
       </h2>
 
-      <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/70 leading-relaxed max-w-2xl">
+      <p className="mt-7 text-[14px] md:text-[15px] text-amg-teal/70 leading-relaxed max-w-2xl">
         Investors lose confidence when the narrative lacks clarity,
         financial assumptions feel weak, or founders enter the market
         before they are truly investor-ready.
@@ -189,7 +189,7 @@ export default function Home() {
     </div>
 
     {/* Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
 
       {[
         {
@@ -219,11 +219,33 @@ export default function Home() {
       ].map((item, i) => (
         <div
           key={i}
-          className="rounded-2xl border border-amg-line bg-white p-7 shadow-soft-sm hover-lift"
+          className={`
+  rounded-[22px]
+  border
+  p-6
+  shadow-soft-sm
+  hover-lift
+  ${
+    i % 3 === 0
+      ? 'bg-gradient-teal border-gradient-teal'
+      : i % 3 === 1
+      ? 'bg-gradient-yellow border-gradient-yellow'
+      : 'bg-gradient-turquoise border-gradient-turquoise'
+  }
+`}
         >
 
-          <div className="w-12 h-12 rounded-xl bg-amg-yellow-bg flex items-center justify-center mb-6">
-            <ShieldCheck className="w-5 h-5 text-amg-teal" />
+          <div className={`
+  w-11 h-11 rounded-xl flex items-center justify-center mb-5
+  ${
+    i % 3 === 0
+      ? 'bg-amg-teal'
+      : i % 3 === 1
+      ? 'bg-amg-yellow'
+      : 'bg-amg-turquoise'
+  }
+`}>
+            <ShieldCheck className="w-4 h-4 text-white" />
           </div>
 
           <h3 className="text-[20px] font-serif text-amg-teal leading-snug">
