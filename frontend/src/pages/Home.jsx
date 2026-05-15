@@ -89,138 +89,57 @@ const HOW_WE_WORK_STEPS = [
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar />  
 
     {/* HERO SECTION */}
+{/* HERO SECTION */}
 <section className="relative overflow-hidden border-b border-amg-line bg-white">
-  <div className="absolute inset-0 grid-paper pointer-events-none" />
-
   <div className="max-w-[1280px] mx-auto px-6 lg:px-10 pt-24 lg:pt-32 pb-20 relative">
-<div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">
+    <div className="flex flex-col items-center text-center">
 
-      {/* LEFT CONTENT */}
-      <div className="fade-in">
-
-        {/* Tags */}
-        <div className="flex items-center gap-3 flex-wrap mb-8">
-          {['Pre-Seed', 'Seed', 'Series A'].map((tag, i) => (
-            <span key={tag} className="tag-pill">
-              <span
-                className={`dot ${
-                  i === 0
-                    ? 'bg-amg-yellow'
-                    : i === 1
-                    ? 'bg-amg-turquoise'
-                    : 'bg-amg-teal'
-                }`}
-              />
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        {/* Heading */}
-        <h1 className="heading-display text-[54px] sm:text-[72px] lg:text-[88px] leading-[0.95] text-amg-teal max-w-5xl">
-          Raise Capital With
-          <br />
-          Strategic Clarity.
-        </h1>
-
-        {/* Subheading */}
-        <p className="mt-8 text-[18px] lg:text-[20px] leading-relaxed text-amg-teal/75 max-w-2xl">
-          We help North American tech founders prepare their narrative,
-          financials, valuation logic, and fundraising strategy before
-          investor conversations begin.
-        </p>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-wrap items-center gap-4 mt-10">
-
-          <Link to="/contact" className="btn-yellow">
-            Assess Your Readiness
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-
-          <Link to="/founder-services" className="btn-outline">
-            Explore Founder Services
-          </Link>
-
-        </div>
-
-      </div>
-
-      {/* RIGHT SIDE */}
-   {/* RIGHT SIDE */}
-<div className="max-w-[560px] w-full ml-auto">
-
-  <div className="rounded-[32px] border border-amg-line bg-white p-8 md:p-10 shadow-soft-lg w-full">
-
-    {/* Top */}
-    <div className="flex items-start justify-between gap-6 mb-10">
-
-      <div className="flex-1 min-w-0">
-
-        <div className="text-[12px] uppercase tracking-[0.18em] text-amg-teal/45 font-semibold">
-          Investor Readiness
-        </div>
-
-        <h3 className="font-serif text-[28px] md:text-[38px] leading-[0.98] text-amg-teal mt-4">
-          What investors actually evaluate.
-        </h3>
-
-      </div>
-
-      {/* Icon */}
-      <div className="w-16 h-16 rounded-2xl bg-amg-yellow-bg flex items-center justify-center shrink-0">
-
-        <ShieldCheck className="w-7 h-7 text-amg-teal" />
-
-      </div>
-
-    </div>
-
-    {/* List */}
-    <div className="space-y-5">
-
-      {[
-        'Investor narrative clarity',
-        'Financial assumptions & logic',
-        'Market positioning',
-        'Fundraising strategy',
-        'Investor materials',
-      ].map((item, i) => (
-        <div
-          key={i}
-          className="flex items-center justify-between gap-4 border-b border-amg-line pb-5"
-        >
-
-          <span className="text-[15px] md:text-[16px] text-amg-teal/78 leading-relaxed">
-            {item}
+      {/* Tags */}
+      <div className="flex items-center gap-3 flex-wrap justify-center mb-8">
+        {['Pre-Seed', 'Seed', 'Series A'].map((tag, i) => (
+          <span key={tag} className="tag-pill">
+            <span
+              className={`dot ${
+                i === 0
+                  ? 'bg-amg-yellow'
+                  : i === 1
+                  ? 'bg-amg-turquoise'
+                  : 'bg-amg-teal'
+              }`}
+            />
+            {tag}
           </span>
+        ))}
+      </div>
 
-          <CheckCircle2 className="w-5 h-5 text-amg-turquoise-2 shrink-0" />
+      {/* Heading */}
+      <h1 className="heading-display text-[54px] sm:text-[64px] lg:text-[76px] leading-[0.95] text-amg-teal max-w-4xl">
+        Raise Capital With
+        <br />
+        Strategic Clarity.
+      </h1>
 
-        </div>
-      ))}
-
-    </div>
-
-    {/* Bottom Note */}
-    <div className="mt-10 rounded-2xl bg-[#fafbfd] border border-amg-line p-5 md:p-6">
-
-      <p className="text-[14px] md:text-[15px] text-amg-teal/68 leading-relaxed">
-
-        Most founders do not fail fundraising because of weak ideas.
-        They fail because investors lack conviction in the narrative,
-        assumptions, positioning, or preparedness.
-
+      {/* Subheading */}
+      <p className="mt-8 text-[18px] lg:text-[20px] leading-relaxed text-amg-teal/75 max-w-2xl">
+        We help North American tech founders prepare their narrative,
+        financials, valuation logic, and fundraising strategy before
+        investor conversations begin.
       </p>
 
-    </div>
+      {/* CTA Buttons */}
+      <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
+        <Link to="/contact" className="btn-yellow">
+          Assess Your Readiness
+          <ArrowRight className="w-4 h-4" />
+        </Link>
 
-  </div>
-
-</div>
+        <Link to="/founder-services" className="btn-outline">
+          Explore Founder Services
+        </Link>
+      </div>
 
     </div>
   </div>

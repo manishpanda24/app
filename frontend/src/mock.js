@@ -217,8 +217,8 @@ export const SERVICES = [
   },
   {
     slug: 'pitch-deck-creation',
-    introTitle: 'Investor Narrative & Positioning',
-    title: 'Investor Narrative & Positioning',
+    introTitle: 'Investor Narrative & Deck Creation',
+    title: 'Investor Narrative & Deck Creation',
     tagline: 'Craft a sharper investor story with clarity, structure, and fundraising alignment.',
     accent: 'turquoise',
     why: 'We build investor-grade pitch decks from the ground up — crafting the narrative architecture, structuring each slide for maximum impact, and delivering a polished presentation that opens doors and moves investors to act.',

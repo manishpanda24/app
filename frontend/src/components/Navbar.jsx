@@ -17,7 +17,7 @@ const founderServices = [
     to: "/services/pitch-deck-review",
   },
   {
-    label: "Investor Narrative & Positioning",
+    label: "Investor Narrative & Deck Creation",
     to: "/services/pitch-deck-creation",
   },
   {

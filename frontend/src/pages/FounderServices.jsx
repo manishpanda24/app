@@ -1,14 +1,7 @@
 import { Link } from 'react-router-dom';
 import {
-  ArrowUpRight,
-  FileText,
-  Sparkles,
-  Calculator,
-  TrendingUp,
-  Users,
-  ShieldCheck,
-  MessageCircle,
-  Briefcase,
+  ArrowRight,
+  Check,
 } from 'lucide-react';
 
 import Navbar from '../components/Navbar';
@@ -18,18 +11,7 @@ import CTASection from '../components/CTASection';
 import {
   SERVICES,
   FOUNDER_SERVICES_INTRO,
-  
 } from '../mock';
-
-const ICONS = {
-  'pitch-deck-review': FileText,
-  'pitch-deck-creation': Sparkles,
-  'financial-model': Calculator,
-  'valuation': TrendingUp,
-  'investor-outreach': Users,
-  'investment-readiness': ShieldCheck,
-  'ama-sessions': MessageCircle,
-};
 
 export default function FounderServices() {
   return (
@@ -38,35 +20,22 @@ export default function FounderServices() {
 
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-amg-line bg-[#fafbfd]">
-
         <div className="absolute inset-0 grid-paper pointer-events-none" />
 
         <div className="max-w-[1280px] mx-auto px-6 lg:px-10 pt-32 pb-16 relative">
-
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-[13px] text-amg-teal/55 mb-10">
-
-            <Link
-              to="/"
-              className="hover:text-amg-teal transition-colors"
-            >
+            <Link to="/" className="hover:text-amg-teal transition-colors">
               Home
             </Link>
-
             <span>/</span>
-
-            <span className="text-amg-teal font-medium">
-              Founder Services
-            </span>
-
+            <span className="text-amg-teal font-medium">Founder Services</span>
           </nav>
 
           {/* Main Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-
+          <div className="grid grid-c ols-1 lg:grid-cols-12 gap-10 items-end">
             {/* Left */}
             <div className="lg:col-span-7">
-
               <div className="eyebrow mb-5">
                 {FOUNDER_SERVICES_INTRO.eyebrow}
               </div>
@@ -77,14 +46,7 @@ export default function FounderServices() {
 
               {/* Trust Strip */}
               <div className="flex flex-wrap gap-3 mt-10">
-
-                {[
-                  'Pre-Seed',
-                  'Seed',
-                  'Series A',
-                  'North America',
-                  'Europe',
-                ].map((item) => (
+                {['Pre-Seed', 'Seed', 'Series A'].map((item) => (
                   <div
                     key={item}
                     className="px-4 py-2 rounded-full border border-amg-line bg-white text-[13px] text-amg-teal/72"
@@ -92,130 +54,103 @@ export default function FounderServices() {
                     {item}
                   </div>
                 ))}
-
               </div>
-
             </div>
 
             {/* Right */}
             <div className="lg:col-span-5">
-
               <p className="text-[17px] text-amg-teal/72 leading-relaxed">
                 {FOUNDER_SERVICES_INTRO.description}
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
-      {/* SERVICES */}
-      <section className="py-20 px-6 lg:px-10 bg-white">
-
+      {/* SERVICES — List Layout */}
+      <section className="py-20 px-6 lg:px-10 bg-[#faf9f6]">
         <div className="max-w-[1280px] mx-auto">
+          {SERVICES.map((s, i) => {
+              const topItems = (s.whatsIncluded || []).slice(0, 4);
+            const hasMore = (s.whatsIncluded || []).length > 4;
+            return (
+            <div
+              key={s.slug}
+              className="group border-b border-amg-line first:border-t"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 py-14 lg:py-16 items-start">
+                
+                {/* Number + Title + Description */}
+                <div className="lg:col-span-5 relative">
+                  {/* Large background number */}
+                  <span className="absolute -top-4 -left-2 text-[120px] font-serif leading-none text-amg-teal/[0.06] select-none pointer-events-none">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            {SERVICES.map((s, i) => {
-
-              const Icon = ICONS[s.slug] || Briefcase;
-
-              const accent =
-                s.accent === 'yellow'
-                  ? {
-                      border: 'border-amg-yellow',
-                      iconBg: 'bg-amg-yellow-bg',
-                      dot: 'bg-amg-yellow',
-                    }
-                  : s.accent === 'turquoise'
-                  ? {
-                      border: 'border-amg-turquoise',
-                      iconBg: 'bg-amg-turquoise-bg',
-                      dot: 'bg-amg-turquoise',
-                    }
-                  : {
-                      border: 'border-amg-dodgerblue',
-                      iconBg: 'bg-amg-teal-bg',
-                      dot: 'bg-amg-teal',
-                    };
-
-              return (
-                <Link
-                  key={s.slug}
-                  to={`/services/${s.slug}`}
-                  className={`group rounded-[28px] border border-amg-line border-t-[4px] ${accent.border} bg-[#fafbfd] min-h-[320px] shadow-soft-sm hover:shadow-[0_20px_60px_rgba(15,23,42,0.08)] hover:-translate-y-1 transition-all block overflow-hidden`}
-                >
-
-                  <div className="p-8 h-full flex flex-col">
-
-                    {/* Top */}
-                    <div className="flex items-center justify-between mb-8">
-
-                      <div
-                        className={`w-14 h-14 rounded-2xl ${accent.iconBg} flex items-center justify-center`}
-                      >
-                        <Icon className="w-6 h-6 text-amg-teal" />
-                      </div>
-
-                      <div className="flex items-center gap-2">
-
-                        <span
-                          className={`w-2.5 h-2.5 rounded-full ${accent.dot}`}
-                        />
-
-                        <span className="text-[12px] tracking-[0.18em] uppercase font-semibold text-amg-teal/55">
-                          0{i + 1}
-                        </span>
-
-                      </div>
-
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1">
-
-                      <h3 className="font-serif text-[28px] text-amg-teal leading-[1.12] max-w-[320px]">
-                        { s.title}
-                      </h3>
-
-                      <p className="mt-4 text-[15px] text-amg-teal/68 leading-relaxed max-w-[340px]">
+                  <div className="relative z-10">
+                    <h3 className="font-serif text-[32px] md:text-[36px] text-amg-teal leading-[1.15]">
+                      {s.title}
+                    </h3>
+                    
+                    {s.tagline && (
+                      <p className="mt-3 text-[16px] italic text-amg-teal/60 leading-relaxed">
                         {s.tagline}
                       </p>
-
-                    </div>
-
-                    {/* Bottom */}
-                    <div className="border-t border-amg-line mt-8 pt-7">
-
-                      <div className="flex items-center justify-between">
-
-                        <span className="text-[13px] font-semibold text-amg-turquoise-2">
-                          View Service
-                        </span>
-
-                        <ArrowUpRight className="w-4 h-4 text-amg-turquoise-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-
-                      </div>
-
-                    </div>
-
+                    )}
+                    
+                    {s.description && (
+                      <p className="mt-4 text-[15px] text-amg-teal/68 leading-relaxed max-w-[420px]">
+                        {s.description}
+                      </p>
+                    )}
                   </div>
+                </div>
 
-                </Link>
-              );
-            })}
+                {/* What's Included */}
+                <div className="lg:col-span-4">
+                  <h4 className="text-[11px] tracking-[0.2em] uppercase font-semibold text-amg-teal/40 mb-5">
+                    What's Included
+                  </h4>
+                  
+                  <ul className="space-y-3">
+                    {(topItems || []).map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <Check className="w-4 h-4 text-amg-turquoise mt-0.5 shrink-0" strokeWidth={2.5} />
+                        <span className="text-[15px] text-amg-teal/75 leading-relaxed">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                   {hasMore && (
+                      <Link
+                        // to={`/services/${s.slug}`}
+                        className="inline-flex items-center gap-1.5 mt-4 text-[14px] font-medium text-amg-turquoise hover:text-amg-teal transition-colors"
+                      >
+                        and more
+                        {/* <ArrowRight className="w-3.5 h-3.5" /> */}
+                      </Link>
+                    )}
+                </div>
 
-          </div>
+                {/* Learn More Button */}
+                <div className="lg:col-span-3 flex lg:justify-end">
+                  <Link
+                    to={`/services/${s.slug}`}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-amg-line bg-white text-[14px] font-medium text-amg-teal hover:border-amg-teal hover:bg-amg-teal hover:text-white transition-all duration-300 group/btn"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
+                  </Link>
+                </div>
 
+              </div>
+            </div>)
+          })}
         </div>
-
       </section>
 
       <CTASection />
-
       <Footer />
     </>
   );
