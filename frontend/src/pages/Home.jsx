@@ -166,10 +166,10 @@ export default function Home() {
      {/* WHY FOUNDERS FAIL FUNDRAISING */}
 <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
-  <div className="max-w-[1280px] mx-auto">
+  <div className="max-w-8xl mx-auto">
 
     {/* Top Content */}
-    <div className="max-w-3xl">
+    <div className="text-center max-w-4xl  mx-auto">
 
       <div className="tag-pill inline-flex mb-5">
         <span className="dot bg-amg-yellow" />
@@ -180,7 +180,7 @@ export default function Home() {
         Most startups don’t fail fundraising because of bad products.
       </h2>
 
-      <p className="mt-7 text-[14px] md:text-[15px] text-amg-teal/70 leading-relaxed max-w-2xl">
+      <p className="mt-7 text-[16px] md:text-[17px] text-black/70 leading-relaxed ">
         Investors lose confidence when the narrative lacks clarity,
         financial assumptions feel weak, or founders enter the market
         before they are truly investor-ready.
@@ -267,7 +267,7 @@ export default function Home() {
 {/* HOW INVESTORS THINK */}
 <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
-  <div className="max-w-[1180px] mx-auto">
+  <div className="max-w-8xl mx-auto">
 
     {/* Heading */}
     <div className="text-center max-w-4xl mx-auto">
@@ -277,13 +277,12 @@ export default function Home() {
         Investor Psychology
       </div>
 
-      <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+      <h2 className="heading-display text-[34px] md:text-[52px] text-amg-teal leading-[1.03]">
         Investors are not evaluating slides.
-        <br />
         They are evaluating judgment.
       </h2>
 
-      <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/70 leading-relaxed max-w-3xl mx-auto">
+      <p className="mt-7 text-[16px] md:text-[17px] text-black/70 leading-relaxed  mx-auto">
         Your deck, financial model, valuation, and investor materials are
         simply evidence supporting founder clarity, market understanding,
         scalability, and execution maturity.
@@ -523,41 +522,46 @@ export default function Home() {
 
 </section>
 {/* INDUSTRIES WE SERVE */}
+{/* INDUSTRIES WE SERVE */}
 <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
   <div className="max-w-[1280px] mx-auto">
 
     {/* Heading */}
-    <div className="max-w-3xl">
+  {/* Heading */}
+<div className="text-center max-w-5xl mx-auto mb-20">
 
-      <div className="tag-pill inline-flex mb-5">
-        <span className="dot bg-amg-yellow" />
-        Industry Focus
-      </div>
+  <div className="tag-pill inline-flex mb-5">
+    <span className="dot bg-amg-yellow" />
+    Industry Focus
+  </div>
 
-      <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
-        Built for ambitious
-        <br />
-        technology founders.
-      </h2>
+  <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
+    Built for ambitious
+    <br />
+    technology founders.
+  </h2>
 
-      <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/70 leading-relaxed max-w-2xl">
-        We support venture-scale startups across sectors where investor
-        expectations, business models, and fundraising dynamics require
-        strategic clarity and institutional-grade preparation.
-      </p>
+  <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
+    We support venture-scale startups across sectors where investor
+    expectations, business models, and fundraising dynamics require
+    strategic clarity and institutional-grade preparation.
+  </p>
 
-    </div>
+</div>
 
     {/* Industries Grid */}
-     <section className="py-6 px-15 lg:px-20 bg-white-50">
-           <IndustriesGrid 
-              title="Industries"
-              highlight="We Serve"
-              highlightColor="text-amg-turquoise"
-                showHeader={false}
-            />
-            </section>
+    <section className="pt-2 bg-white">
+
+      <IndustriesGrid
+        title="Industries"
+        highlight="We Serve"
+        highlightColor="text-amg-turquoise"
+        showHeader={false}
+      />
+
+    </section>
+
   </div>
 
 </section>
@@ -567,34 +571,27 @@ export default function Home() {
   <div className="max-w-[1280px] mx-auto">
 
     {/* Heading */}
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+  {/* Heading */}
+<div className="text-center max-w-5xl mx-auto mb-20">
 
-      <div className="lg:col-span-7">
+  <div className="tag-pill inline-flex mb-5">
+    <span className="dot bg-amg-yellow" />
+    Strategic Fundraising Support
+  </div>
 
-        <div className="eyebrow mb-4">
-          Strategic Fundraising Support
-        </div>
+  <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
+    Strategic fundraising support
+    <br />
+    built for investor readiness.
+  </h2>
 
-        <h2 className="heading-display text-[40px] md:text-[60px] text-amg-teal leading-[1.03]">
-          Strategic fundraising support
-          <br />
-          built for investor readiness.
-        </h2>
+  <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
+    Founder support designed around how investors actually evaluate
+    startups — from investor narrative and financial clarity to
+    valuation strategy and fundraising preparation.
+  </p>
 
-      </div>
-
-      <div className="lg:col-span-5 flex lg:items-end">
-
-        <p className="text-[15.5px] text-amg-teal/75 leading-relaxed">
-          Founder support designed around how investors actually evaluate
-          startups — from investor narrative and financial clarity to
-          valuation strategy and fundraising preparation.
-        </p>
-
-      </div>
-
-    </div>
-
+</div>
     {/* Cards */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -697,34 +694,27 @@ export default function Home() {
   <div className="max-w-[1280px] mx-auto">
 
     {/* Heading */}
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+  {/* Heading */}
+<div className="text-center max-w-5xl mx-auto mb-20">
 
-      <div className="lg:col-span-7">
+  <div className="tag-pill inline-flex mb-5">
+    <span className="dot bg-amg-yellow" />
+    Process
+  </div>
 
-        <div className="tag-pill inline-flex mb-5">
-          <span className="dot bg-amg-yellow" />
-          Process
-        </div>
+  <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
+    How we prepare founders
+    <br />
+    for investor conversations.
+  </h2>
 
-        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
-          How we prepare founders
-          <br />
-          for investor conversations.
-        </h2>
+  <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
+    A structured process designed to identify fundraising gaps,
+    strengthen investor positioning, and improve fundraising readiness
+    before outreach begins.
+  </p>
 
-      </div>
-
-      <div className="lg:col-span-5 flex lg:items-end">
-
-        <p className="text-[16px] md:text-[17px] text-amg-teal/70 leading-relaxed">
-          A structured process designed to identify fundraising gaps,
-          strengthen investor positioning, and improve fundraising readiness
-          before outreach begins.
-        </p>
-
-      </div>
-
-    </div>
+</div>
 
     {/* Process Grid */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -801,35 +791,27 @@ export default function Home() {
   <div className="max-w-[1280px] mx-auto">
 
     {/* Heading */}
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+  {/* Heading */}
+<div className="text-center max-w-5xl mx-auto mb-20">
 
-      <div className="lg:col-span-7">
+  <div className="tag-pill inline-flex mb-5">
+    <span className="dot bg-amg-turquoise" />
+    Ecosystem & Partnerships
+  </div>
 
-        <div className="tag-pill inline-flex mb-5">
-          <span className="dot bg-amg-turquoise" />
-          Ecosystem & Partnerships
-        </div>
+  <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
+    Supporting founders across
+    <br />
+    accelerators and startup ecosystems.
+  </h2>
 
-        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
-          Supporting founders across
-          <br />
-          accelerators and startup ecosystems.
-        </h2>
+  <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
+    We collaborate with accelerators, incubators, founder communities,
+    and startup ecosystems to help founders improve investment readiness
+    and fundraising preparation.
+  </p>
 
-      </div>
-
-      <div className="lg:col-span-5 flex lg:items-end">
-
-        <p className="text-[16px] md:text-[17px] text-amg-teal/70 leading-relaxed">
-          We collaborate with accelerators, incubators, founder communities,
-          and startup ecosystems to help founders improve investment readiness
-          and fundraising preparation.
-        </p>
-
-      </div>
-
-    </div>
-
+</div>
     {/* Grid */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
