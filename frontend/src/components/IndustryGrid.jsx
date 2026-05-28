@@ -92,11 +92,13 @@ export default function IndustriesGrid({
   className = "",
   showHeader = true 
 }) {
+  const marqueeItems = [...industries, ...industries];
+
   return (
-    <div className={className}>
+    <div className={`industry-marquee ${className}`}>
       {/* Header */}
       {showHeader && (
-        <div className="text-center mb-14">
+        <div className="text-center mb-8">
           <h2 className="font-serif text-[34px] font-semibold text-amg-teal">
             {title} <span className={highlightColor}>{highlight}</span>
           </h2>
@@ -108,30 +110,27 @@ export default function IndustriesGrid({
         </div>
       )}
 
-      {/* Grid - 4 columns on md and up */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {industries.map((item, i) => {
+      <div className="industry-marquee-shell">
+        <div className="industry-marquee-window">
+          <div className="industry-marquee-track">
+        {marqueeItems.map((item, i) => {
           const IconComponent = item.icon;
           return (
             <div
               key={i}
-              className={`group relative flex flex-col items-center justify-center p-6 rounded-2xl border-2 transition-all duration-300 cursor-pointer hover:shadow-lg hover:-translate-y-1 ${item.bg} ${item.border}`}
+              className={`industry-marquee-item industry-marquee-item-${i % industries.length}`}
             >
-              {/* Icon */}
-              <div className={`mb-3 transition-all duration-300 group-hover:scale-110 ${item.text} ${item.hoverText}`}>
-                <IconComponent className="w-8 h-8" />
+              <div className="industry-marquee-icon">
+                <IconComponent className="w-4 h-4" />
               </div>
-              
-              {/* Name */}
-              <p className={`text-xs font-semibold text-center leading-tight transition-colors duration-300 ${item.text} ${item.hoverText}`}>
+              <p className="industry-marquee-name">
                 {item.name}
               </p>
-
-              {/* Hover overlay */}
-              <div className={`absolute inset-0 rounded-2xl transition-all duration-300 opacity-0 group-hover:opacity-100 -z-10 ${item.hoverBg}`} />
             </div>
           );
         })}
+          </div>
+        </div>
       </div>
     </div>
   );

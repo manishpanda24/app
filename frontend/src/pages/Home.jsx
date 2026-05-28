@@ -93,8 +93,8 @@ export default function Home() {
 
     {/* HERO SECTION */}
 {/* HERO SECTION */}
-<section className="relative overflow-hidden border-b border-amg-line bg-white">
-  <div className="max-w-[1280px] mx-auto px-6 lg:px-10 pt-9 lg:pt-12 pb-20 relative">
+<section className="hero-visual-bg relative overflow-hidden border-b border-amg-line bg-white">
+  <div className=" mx-auto px-6 lg:px-10 pt-9 lg:pt-12 pb-20 relative">
     <div className="flex flex-col items-center text-center">
 
       {/* Tags */}
@@ -116,10 +116,8 @@ export default function Home() {
       </div>
 
       {/* Heading */}
-      <h1 className="heading-display text-[54px] sm:text-[64px] lg:text-[76px] leading-[0.95] text-amg-teal max-w-4xl">
-        Raise Capital With
-        <br />
-        Strategic Clarity.
+      <h1 className="heading-display text-[54px] sm:text-[64px] lg:text-[76px] leading-[0.95] text-amg-teal ">
+        Raise Capital With Strategic Clarity.
       </h1>
 
       {/* Subheading */}
@@ -145,18 +143,18 @@ export default function Home() {
   </div>
 </section>
    
- <section className="py-6 px-6 lg:px-10 border-t border-amg-line bg-white-50">
+ <section className="py-7 px-6 lg:px-10 border-t border-amg-line bg-white-50">
         {/* Stats strip */}
-          <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 border border-amg-line rounded-2xl overflow-hidden bg-white shadow-soft">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
             {STATS.map((s, i) => (
               <div
                 key={i}
-                className={`px-8 py-10 text-center ${i < STATS.length - 1 ? 'border-r border-amg-line' : ''}`}
+                className="bg-white border border-amg-line rounded-lg px-7 py-7 text-center shadow-[0_2px_10px_rgba(13,31,30,0.06)] hover:border-amg-teal hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(13,31,30,0.10)] transition-all duration-200 ease-out"
               >
                 <div className={`font-serif text-[25px] md:text-[30px] font-medium leading-none ${s.color}`}>
                   {s.value}
                 </div>
-                <div className="mt-2.5 text-[13px] text-amg-teal/60 font-bold">{s.label}</div>
+                <div className="mt-3 text-[13px] leading-snug text-amg-teal/75 font-medium">{s.label}</div>
               </div>
             ))}
           </div>
@@ -525,11 +523,11 @@ export default function Home() {
 {/* INDUSTRIES WE SERVE */}
 <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
-  <div className="max-w-[1280px] mx-auto">
+  <div className="mx-auto">
 
     {/* Heading */}
   {/* Heading */}
-<div className="text-center max-w-5xl mx-auto mb-20">
+<div className="text-center  mx-auto mb-20">
 
   <div className="tag-pill inline-flex mb-5">
     <span className="dot bg-amg-yellow" />
@@ -538,7 +536,7 @@ export default function Home() {
 
   <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
     Built for ambitious
-    <br />
+  
     technology founders.
   </h2>
 
@@ -691,11 +689,11 @@ export default function Home() {
 {/* HOW WE WORK */}
 <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
-  <div className="max-w-[1280px] mx-auto">
+  <div className=" mx-auto">
 
     {/* Heading */}
   {/* Heading */}
-<div className="text-center max-w-5xl mx-auto mb-20">
+<div className="text-center  mx-auto mb-20">
 
   <div className="tag-pill inline-flex mb-5">
     <span className="dot bg-amg-yellow" />
