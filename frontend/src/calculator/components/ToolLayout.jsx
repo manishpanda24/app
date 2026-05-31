@@ -40,7 +40,7 @@ const ToolLayout = ({ children, number, title, category, categoryColor, descript
           {children}
 
           <p className="text-xs text-teal/40 max-w-3xl mt-16 mb-16 leading-relaxed">
-            This tool is for informational purposes only and does not constitute legal, financial, or investment advice. Results are estimates based on the inputs provided
+            This tool is for informational purposes only and does not constitute legal, financial, or investment advice. Results are estimates based on the inputs provided.
           </p>
         </div>
       </div>

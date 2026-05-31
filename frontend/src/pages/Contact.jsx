@@ -119,7 +119,7 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
       !form.location
     ) {
       showSnackbar(
-        'Please fill in all required fields',
+        'Please fill in all required fields.',
         'error'
       );
       return;
@@ -240,7 +240,7 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
       }
 
       showSnackbar(
-        "Thanks! We'll be in touch shortly",
+        "Thanks! We'll be in touch shortly.",
         'success'
       );
 
@@ -279,7 +279,7 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
     } catch (error) {
       showSnackbar(
         error.message ||
-          'Unable to send your message',
+          'Unable to send your message.',
         'error'
       );
     } finally {
@@ -330,7 +330,7 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
         <h1 className="heading-display text-[52px] md:text-[82px] text-amg-teal leading-[0.96] max-w-5xl">
           Discuss your
           <br />
-          fundraising readiness
+          fundraising readiness.
         </h1>
 
         {/* Trust Strip */}
@@ -360,7 +360,7 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
         <p className="text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-xl">
 
           Strategic fundraising support for founders, accelerators,
-          and startup ecosystems preparing for investor scrutiny
+          and startup ecosystems preparing for investor scrutiny.
 
         </p>
 
@@ -411,11 +411,11 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
               Founder inquiry
             </div>
 <p className="text-[15px] text-amg-teal/65 leading-relaxed mb-8">
-  Share a few details about your startup and fundraising goals
-  We’ll use this to understand where strategic support may be most valuable
+  Share a few details about your startup and fundraising goals.
+  We’ll use this to understand where strategic support may be most valuable.
 </p>
             {/* <h2 className="font-serif text-[28px] font-medium text-amg-ink mb-7">
-              Tell us about your raise
+              Tell us about your raise.
             </h2> */}
 
             {/* ROW 1 */}
@@ -879,7 +879,7 @@ Areas where you need strategic support *
               <ShieldCheck className="w-3.5 h-3.5" />
 
               All inquiries protected under
-              mutual NDA on request
+              mutual NDA on request.
             </div>
           </form>
 
@@ -898,7 +898,7 @@ Areas where you need strategic support *
                   !acceleratorForm.email
                 ) {
                   showSnackbar(
-                    'Please fill in all required accelerator fields',
+                    'Please fill in all required accelerator fields.',
                     'error'
                   );
                   return;
@@ -975,7 +975,7 @@ setIsAcceleratorSubmitting(true);
                   }
 
                   showSnackbar(
-                    'Accelerator inquiry submitted successfully',
+                    'Accelerator inquiry submitted successfully.',
                     'success'
                   );
 
@@ -989,7 +989,7 @@ setIsAcceleratorSubmitting(true);
                 } catch (error) {
                   showSnackbar(
                     error.message ||
-                      'Unable to submit inquiry',
+                      'Unable to submit inquiry.',
                     'error'
                   );
                 } finally {
@@ -1004,7 +1004,7 @@ setIsAcceleratorSubmitting(true);
 
               <h3 className="font-serif text-[28px] leading-tight text-amg-ink mb-6">
                 Partner with us for your
-                cohort
+                cohort.
               </h3>
 
               <div className="space-y-4">

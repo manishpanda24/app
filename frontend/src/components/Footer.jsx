@@ -48,7 +48,7 @@
 </Link>
 
               <p className="text-[14.5px] text-amg-cream/65 leading-relaxed max-w-sm mt-7">
-                Empowering founders across North America &amp; Europe to raise capital with clarity and conviction
+                Empowering founders across North America &amp; Europe to raise capital with clarity and conviction.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 mt-7">
@@ -98,7 +98,7 @@
           {/* Bottom bar */}
           <div className="mt-14 pt-7 border-t border-amg-cream/15 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
             <div className="text-[12.5px] text-amg-cream/55">
-              &copy; 2026 AMG Venture Partners. All rights reserved
+              &copy; 2026 AMG Venture Partners. All rights reserved.
             </div>
             <div className="flex flex-wrap items-center gap-6 text-[12.5px]">
               <a href="#" className="text-amg-cream/55 hover:text-amg-yellow link-under">Privacy</a>
