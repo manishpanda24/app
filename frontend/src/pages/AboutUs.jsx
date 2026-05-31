@@ -66,17 +66,17 @@ export default function AboutUs() {
               across the North American and European markets. We partner with incubators, accelerators,
               and founders (pre-seed to Series A) globally to deliver high-quality investment-readiness
               content and fundraising services to tech startup CEOs. We also partner directly with startup
-              CEOs on everything fundraising.
+              CEOs on everything fundraising
             </p>
             <p>
               AMG stands for Gaurav's family, where A, M, and G are the initials for the names of his
-              father, mother, and himself.
+              father, mother, and himself
             </p>
             <p>
               His parents' support and motivation have played a key role in his journey from being born
               in a small tier 3 town in India, pursuing education, working for 10+ years in corporates
               and Family office VC funds, and then taking the uncertain, risky entrepreneurial route to
-              founding AMG Venture Partners.
+              founding AMG Venture Partners
             </p>
           </div>
 
@@ -95,11 +95,11 @@ export default function AboutUs() {
                   'Prepare startups for fundraising rounds and pitching on Demo Days to angels & VCs',
                   'Workshops on all topics on "Investment Readiness" - cohort-based',
                   'Review technical grant applications for startups',
-                  'Stakeholder Partnerships - CEOs, Investors, etc.',
+                  'Stakeholder Partnerships - CEOs, Investors, etc',
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 text-[14.5px] text-amg-teal/75">
                     <span className="shrink-0 font-medium text-amg-turquoise-2 w-5">
-                      {String.fromCharCode(97 + i)}.
+                      {String.fromCharCode(97 + i)}
                     </span>
                     <span>{item}</span>
                   </div>
@@ -129,7 +129,7 @@ export default function AboutUs() {
         className="flex items-start gap-3 text-[14.5px] text-amg-teal/75"
       >
         <span className="shrink-0 font-medium text-amg-turquoise-2 w-5">
-          {String.fromCharCode(97 + i)}.
+          {String.fromCharCode(97 + i)}
         </span>
 
         <span>{item}</span>
@@ -142,7 +142,7 @@ export default function AboutUs() {
     investor-ready materials, financial strategy, valuation
     guidance, and structured investor outreach support. Our
     goal is to help founders communicate their business with
-    clarity, confidence, and institutional-level preparation.
+    clarity, confidence, and institutional-level preparation
   </p>
 </div>
 
@@ -158,7 +158,7 @@ export default function AboutUs() {
     founder-focused fundraising program designed to help
     startups become investor-ready through strategic
     guidance, financial clarity, fundraising preparation,
-    and institutional-quality investor materials.
+    and institutional-quality investor materials
   </p>
 
   <div className="mt-5 ml-6 space-y-2">
@@ -172,7 +172,7 @@ export default function AboutUs() {
         className="flex items-start gap-3 text-[14.5px] text-amg-teal/75"
       >
         <span className="shrink-0 font-medium text-amg-turquoise-2 w-5">
-          {String.fromCharCode(97 + i)}.
+          {String.fromCharCode(97 + i)}
         </span>
 
         <span>{item}</span>
@@ -220,7 +220,7 @@ export default function AboutUs() {
               investment readiness & fundraising. Additionally, Gaurav serves as an Expert in Residence
               and Mentor across startup programs in North America, Europe, and LATAM, and specializes in
               investment readiness, AI/ML strategy, and global expansion. Gaurav is also an anonymous
-              Evaluator for various Government grant programs in North America and Europe.
+              Evaluator for various Government grant programs in North America and Europe
             </p>
           </div>
         </section>
@@ -234,9 +234,9 @@ export default function AboutUs() {
 
           <div className="space-y-4">
             {[
-              'We have worked with 15+ accelerators in the US, Canada, LATAM, and EU markets, and delivered over 120 programs/workshops on topics in the fields of Artificial Intelligence, Venture Capital, and Angel Investing.',
-              'We have worked with 125+ CEOs (building AI/ML tech products across fintech, supply chain, robotics, medical devices, digitalhealth, insurtech, semiconductors, etc.), on their investment readiness & fundraising aspects.',
-              "All the above successes have been through the founders' own network and word-of-mouth expansion (through the founder's LinkedIn (17k followers)). Our new website is under construction, and we are working on a proper social media strategy.",
+              'We have worked with 15+ accelerators in the US, Canada, LATAM, and EU markets, and delivered over 120 programs/workshops on topics in the fields of Artificial Intelligence, Venture Capital, and Angel Investing',
+              'We have worked with 125+ CEOs (building AI/ML tech products across fintech, supply chain, robotics, medical devices, digitalhealth, insurtech, semiconductors, etc.), on their investment readiness & fundraising aspects',
+              "All the above successes have been through the founders' own network and word-of-mouth expansion (through the founder's LinkedIn (17k followers)). Our new website is under construction, and we are working on a proper social media strategy",
             ].map((text, i) => (
               <div key={i} className="flex items-start gap-3 text-[14.5px] text-amg-teal/80 leading-relaxed">
                 <span className="mt-2 w-2 h-2 rounded-full bg-amg-teal shrink-0" />

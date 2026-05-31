@@ -24,12 +24,12 @@ const ToolsHome = () => {
             Precision tools for
             <br />
             <span className="italic bg-gradient-to-r from-indigo-300 via-violet-300 to-pink-300 text-transparent bg-clip-text">
-              serious founders.
+              serious founders
             </span>
           </h1>
 
           <p className="mt-8 text-[17px] leading-relaxed text-white/60 max-w-xl mx-auto">
-            Three hand-built calculators for runway, revenue, and SAFE dilution. Replace your fragile spreadsheets &mdash; and the blind spots that quietly kill deals.
+            Three hand-built calculators for runway, revenue, and SAFE dilution. Replace your fragile spreadsheets &mdash; and the blind spots that quietly kill deals
           </p>
 
           <div className="mt-10">

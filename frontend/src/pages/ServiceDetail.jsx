@@ -130,7 +130,7 @@ export default function ServiceDetail() {
       <p className="text-sm text-amg-ink/70 mt-3 max-w-[700px] mx-auto">
         Worked with startups globally across sectors / business models including AI, SaaS,
         Medical devices, Life Sciences, Fintech, Proptech, Hardware / Robotics, Supply Chain,
-        ClimateTech, Marketplaces, E-Commerce, and many more.
+        ClimateTech, Marketplaces, E-Commerce, and many more
       </p>
 
       {/* Logos row */}
@@ -163,7 +163,7 @@ export default function ServiceDetail() {
         </h2>
 
         <p className="text-sm text-amg-ink/70 mt-2 mb-6">
-          Supported 250+ founders so far and counting...
+          Supported 250+ founders so far and counting
         </p>
 
         <div className="space-y-5">
@@ -171,19 +171,19 @@ export default function ServiceDetail() {
           {[
             {
               title: 'Ex-VC, Ex-Angel, Ex-Investment Banker',
-              text: 'Engaged 35+ VC investments (mostly AI), made 50+ angel investments, closed US $2Bn+ funding deals, and worked as a technology consultant (AI).'
+              text: 'Engaged 35+ VC investments (mostly AI), made 50+ angel investments, closed US $2Bn+ funding deals, and worked as a technology consultant (AI)'
             },
             {
               title: 'Trusted Partner',
-              text: 'Supported 250+ founders raising $300Mn+ so far. Also mentor / Screening Committee member in top startup programs globally.'
+              text: 'Supported 250+ founders raising $300Mn+ so far. Also mentor / Screening Committee member in top startup programs globally'
             },
             {
               title: 'VC-quality Feedback',
-              text: 'Reviewed 11,000+ decks providing insights rooted in concrete slide-by-slide feedback and corrective action plan.'
+              text: 'Reviewed 11,000+ decks providing insights rooted in concrete slide-by-slide feedback and corrective action plan'
             },
             {
               title: 'Sector, Stage, Business Model',
-              text: 'No one-size-fits-all approach. You receive tailored guidance based on your sector, fundraising stage, and revenue model.'
+              text: 'No one-size-fits-all approach. You receive tailored guidance based on your sector, fundraising stage, and revenue model'
             }
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-3">
@@ -373,15 +373,15 @@ export default function ServiceDetail() {
       {[
         {
           title: "Bootstrapped Startups",
-          desc: "We work with bootstrapped founders who have never raised capital by mapping a solid business plan and capital structure..."
+          desc: "We work with bootstrapped founders who have never raised capital by mapping a solid business plan and capital structure.."
         },
         {
           title: "VC-Backed Startups",
-          desc: "We work with startups who have raised their F&F or angel/pre-seed round and want to raise their next round..."
+          desc: "We work with startups who have raised their F&F or angel/pre-seed round and want to raise their next round.."
         },
         {
           title: "Boards / Key Stakeholders",
-          desc: "We work with founders at seed to Series A who want to map out their business plan in numbers..."
+          desc: "We work with founders at seed to Series A who want to map out their business plan in numbers.."
         }
       ].map((item, i) => (
         <div key={i} className="card-pro p-6">
@@ -421,15 +421,15 @@ export default function ServiceDetail() {
       {[
         {
           title: "Bootstrapped Startups",
-          desc: "We work with bootstrapped founders who have never raised capital by mapping a solid business plan and capital structure..."
+          desc: "We work with bootstrapped founders who have never raised capital by mapping a solid business plan and capital structure.."
         },
         {
           title: "VC-Backed Startups",
-          desc: "We work with startups who have raised their F&F or angel/pre-seed round and want to raise their next round..."
+          desc: "We work with startups who have raised their F&F or angel/pre-seed round and want to raise their next round.."
         },
         {
           title: "Boards / Key Stakeholders",
-          desc: "We work with founders at seed to Series A who want to map out their business plan in numbers..."
+          desc: "We work with founders at seed to Series A who want to map out their business plan in numbers.."
         }
       ].map((item, i) => (
         <div key={i} className="card-pro p-6">
@@ -488,12 +488,12 @@ export default function ServiceDetail() {
       {slug=== "financial-model" ? (
         <p className="text-[15px] text-white/70 leading-relaxed mb-8">
           Financial model engagements are tailored based on business complexity,
-          forecasting depth, operating model, and turnaround requirements.
+          forecasting depth, operating model, and turnaround requirements
         </p>
       ) : <p className="text-[15px] text-white/70 leading-relaxed mb-8">
   Investor outreach engagements are tailored based on fundraising stage,
   target investor profile, outreach scope, campaign complexity, and level
-  of ongoing support required.
+  of ongoing support required
 </p>}
       
       <Link

@@ -305,7 +305,7 @@ const SafeDilution = () => {
           </div>
 
           <p className="text-xs text-muted-foreground px-1">
-            * SAFEs do not issue shares at signing - shares are assumed based on current details. A priced round would trigger conversion of all SAFEs, issuing shares at that point and further diluting ownership.
+            * SAFEs do not issue shares at signing - shares are assumed based on current details. A priced round would trigger conversion of all SAFEs, issuing shares at that point and further diluting ownership
           </p>
 
           <div className="bg-card border border-border rounded-xl p-5">
@@ -368,7 +368,7 @@ const SafeDilution = () => {
           <div className="bg-muted/40 border border-border rounded-xl p-5">
             <h4 className="text-sm font-medium mb-2">How to read this</h4>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Post-money SAFEs give investors a fixed ownership percentage (amount &divide; cap), regardless of other SAFEs. Pre-money SAFEs convert based on your current cap table only - the investor&rsquo;s ownership dilutes alongside yours as more SAFEs convert. Stacking multiple post-money SAFEs compounds dilution fast.
+              Post-money SAFEs give investors a fixed ownership percentage (amount &divide; cap), regardless of other SAFEs. Pre-money SAFEs convert based on your current cap table only - the investor&rsquo;s ownership dilutes alongside yours as more SAFEs convert. Stacking multiple post-money SAFEs compounds dilution fast
             </p>
           </div>
         </div>

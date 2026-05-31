@@ -22,28 +22,28 @@ const ECOSYSTEM_FEATURES = [
     iconBg: 'bg-amg-turquoise-bg',
     iconColor: 'text-amg-turquoise-2',
     title: 'Portfolio Assessment',
-    desc: 'Evaluate investment readiness across your entire portfolio cohort with structured diagnostics.',
+    desc: 'Evaluate investment readiness across your entire portfolio cohort with structured diagnostics',
   },
   {
     icon: Users,
     iconBg: 'bg-amg-turquoise-bg',
     iconColor: 'text-amg-turquoise-2',
     title: 'Workshop Programs',
-    desc: 'Interactive fundraising and investor readiness workshops tailored for your cohort.',
+    desc: 'Interactive fundraising and investor readiness workshops tailored for your cohort',
   },
   {
     icon: TrendingUp,
     iconBg: 'bg-amg-yellow-bg',
     iconColor: 'text-amg-teal',
     title: 'Demo Day Preparation',
-    desc: 'End-to-end preparation support to ensure your founders shine in front of investors.',
+    desc: 'End-to-end preparation support to ensure your founders shine in front of investors',
   },
   {
     icon: Globe,
     iconBg: 'bg-amg-teal-bg',
     iconColor: 'text-amg-teal',
     title: 'Investor Network Access',
-    desc: 'Leverage our curated investor network to facilitate warm introductions for your portfolio.',
+    desc: 'Leverage our curated investor network to facilitate warm introductions for your portfolio',
   },
 ];
 
@@ -63,25 +63,25 @@ const HOW_WE_WORK_STEPS = [
   {
     step: 'Intake & Context Setting',
     day: 'Day 1',
-    text: 'You share your deck along with context: your stage, target investors, geography, fundraising goal, and any specific areas of concern.',
+    text: 'You share your deck along with context: your stage, target investors, geography, fundraising goal, and any specific areas of concern',
     output: 'Context brief reviewed by our team',
   },
   {
     step: 'Deep Deck Analysis',
     day: 'Day 2–4',
-    text: 'We conduct a thorough review of your deck using a structured investor evaluation framework — narrative, market, traction, team, financials, and ask.',
+    text: 'We conduct a thorough review of your deck using a structured investor evaluation framework — narrative, market, traction, team, financials, and ask',
     output: 'Internal scoring and annotation across all slides',
   },
   {
     step: 'Written Feedback Report',
     day: 'Day 5',
-    text: 'You receive a detailed written report: slide-by-slide annotations, an executive summary of key strengths and critical gaps, and prioritized improvement recommendations.',
+    text: 'You receive a detailed written report: slide-by-slide annotations, an executive summary of key strengths and critical gaps, and prioritized improvement recommendations',
     output: 'Written feedback report (PDF)',
   },
   {
     step: 'Live Debrief Session',
     day: 'Day 6',
-    text: 'We walk through the report together in a 60-minute call — discussing each finding, answering your questions, and mapping a revision roadmap.',
+    text: 'We walk through the report together in a 60-minute call — discussing each finding, answering your questions, and mapping a revision roadmap',
     output: 'Clear prioritized action plan for your revision',
   },
 ];
@@ -117,14 +117,14 @@ export default function Home() {
 
       {/* Heading */}
       <h1 className="heading-display text-[54px] sm:text-[64px] lg:text-[76px] leading-[0.95] text-amg-teal ">
-        Raise Capital With Strategic Clarity.
+        Raise Capital With Strategic Clarity
       </h1>
 
       {/* Subheading */}
       <p className="mt-8 text-[18px] lg:text-[20px] leading-relaxed text-amg-teal/75 max-w-2xl">
         We help North American tech founders prepare their narrative,
         financials, valuation logic, and fundraising strategy before
-        investor conversations begin.
+        investor conversations begin
       </p>
 
       {/* CTA Buttons */}
@@ -175,13 +175,13 @@ export default function Home() {
       </div>
 
       <h2 className="heading-display text-[34px] md:text-[52px] text-amg-teal leading-[1.03]">
-        Most startups don’t fail fundraising because of bad products.
+        Most startups don’t fail fundraising because of bad products
       </h2>
 
       <p className="mt-7 text-[16px] md:text-[17px] text-black/70 leading-relaxed ">
         Investors lose confidence when the narrative lacks clarity,
         financial assumptions feel weak, or founders enter the market
-        before they are truly investor-ready.
+        before they are truly investor-ready
       </p>
 
     </div>
@@ -192,27 +192,27 @@ export default function Home() {
       {[
         {
           title: 'Weak Investor Narrative',
-          text: 'The story sounds interesting internally but fails to create conviction externally.',
+          text: 'The story sounds interesting internally but fails to create conviction externally',
         },
         {
           title: 'Unrealistic Valuation Expectations',
-          text: 'Founders lose credibility when pricing is disconnected from stage, traction, or market reality.',
+          text: 'Founders lose credibility when pricing is disconnected from stage, traction, or market reality',
         },
         {
           title: 'Poor Fundraising Timing',
-          text: 'Many startups approach investors before metrics, positioning, or traction are ready.',
+          text: 'Many startups approach investors before metrics, positioning, or traction are ready',
         },
         {
           title: 'Confusing Business Models',
-          text: 'If investors cannot quickly understand how the company makes money, momentum disappears.',
+          text: 'If investors cannot quickly understand how the company makes money, momentum disappears',
         },
         {
           title: 'Incomplete Investor Materials',
-          text: 'Missing data, weak decks, or inconsistent financials create immediate investor friction.',
+          text: 'Missing data, weak decks, or inconsistent financials create immediate investor friction',
         },
         {
           title: 'Lack of Financial Clarity',
-          text: 'Weak assumptions and unclear runway planning reduce investor confidence quickly.',
+          text: 'Weak assumptions and unclear runway planning reduce investor confidence quickly',
         },
       ].map((item, i) => (
         <div
@@ -276,14 +276,14 @@ export default function Home() {
       </div>
 
       <h2 className="heading-display text-[34px] md:text-[52px] text-amg-teal leading-[1.03]">
-        Investors are not evaluating slides.
-        They are evaluating judgment.
+        Investors are not evaluating slides
+        They are evaluating judgment
       </h2>
 
       <p className="mt-7 text-[16px] md:text-[17px] text-black/70 leading-relaxed  mx-auto">
         Your deck, financial model, valuation, and investor materials are
         simply evidence supporting founder clarity, market understanding,
-        scalability, and execution maturity.
+        scalability, and execution maturity
       </p>
 
     </div>
@@ -311,11 +311,29 @@ export default function Home() {
       ].map((item, i) => (
         <div
           key={i}
-          className="rounded-2xl border border-amg-line bg-[#fafbfd] p-7 shadow-soft-sm hover-lift"
+          className={`rounded-2xl border p-7 shadow-soft-sm hover-lift ${
+            i === 3
+              ? 'bg-gradient-yellow border-gradient-yellow'
+              : i % 3 === 0
+              ? 'bg-gradient-teal border-gradient-teal'
+              : i % 3 === 1
+              ? 'bg-gradient-yellow border-gradient-yellow'
+              : 'bg-gradient-turquoise border-gradient-turquoise'
+          }`}
         >
 
-          <div className="w-11 h-11 rounded-full bg-amg-turquoise-bg flex items-center justify-center mb-6">
-            <Target className="w-5 h-5 text-amg-turquoise-2" />
+          <div className={`w-11 h-11 rounded-full flex items-center justify-center mb-6 ${
+            i === 3
+              ? 'bg-amg-yellow-bg'
+              : i % 3 === 0
+              ? 'bg-amg-teal-soft'
+              : i % 3 === 1
+              ? 'bg-amg-yellow-bg'
+              : 'bg-amg-turquoise-bg'
+          }`}>
+            <Target className={`w-5 h-5 ${
+              i === 3 || i % 3 === 1 ? 'text-amg-yellow' : 'text-amg-turquoise-2'
+            }`} />
           </div>
 
           <h3 className="font-serif text-[22px] text-amg-teal leading-snug">
@@ -352,7 +370,7 @@ export default function Home() {
         <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
           We are not a
           <br />
-          pitch deck agency.
+          pitch deck agency
         </h2>
 
       </div>
@@ -363,13 +381,13 @@ export default function Home() {
         <p className="text-[17px] md:text-[18px] text-amg-teal/75 leading-relaxed">
           AMG Venture Partners helps North American tech founders prepare
           for investor scrutiny with strategic fundraising support designed
-          around how venture investors actually evaluate startups.
+          around how venture investors actually evaluate startups
         </p>
 
         <p className="mt-6 text-[17px] md:text-[18px] text-amg-teal/75 leading-relaxed">
           We work across investor narrative, fundraising readiness,
           financial clarity, valuation logic, and investor preparation —
-          helping founders avoid the mistakes that quietly kill rounds.
+          helping founders avoid the mistakes that quietly kill rounds
         </p>
 
         {/* What We Challenge */}
@@ -460,15 +478,15 @@ export default function Home() {
         </div>
 
         <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
-          Investor-side experience.
+          Investor-side experience
           <br />
-          Founder-side execution.
+          Founder-side execution
         </h2>
 
         <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/75 leading-relaxed max-w-3xl">
           AMG Venture Partners was founded by Gaurav Bansal — a VC,
           investor, and operator with deep experience across venture capital,
-          startup investing, fundraising strategy, and institutional dealmaking.
+          startup investing, fundraising strategy, and institutional dealmaking
         </p>
 
         {/* Metrics */}
@@ -537,13 +555,13 @@ export default function Home() {
   <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
     Built for ambitious
   
-    technology founders.
+    technology founders
   </h2>
 
   <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
     We support venture-scale startups across sectors where investor
     expectations, business models, and fundraising dynamics require
-    strategic clarity and institutional-grade preparation.
+    strategic clarity and institutional-grade preparation
   </p>
 
 </div>
@@ -566,32 +584,30 @@ export default function Home() {
     {/* FOUNDER SERVICES */}
       {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
       <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-white">
-  <div className="max-w-[1280px] mx-auto">
+  <div className=" mx-auto">
 
     {/* Heading */}
   {/* Heading */}
-<div className="text-center max-w-5xl mx-auto mb-20">
+<div className="text-center mx-auto mb-20">
 
   <div className="tag-pill inline-flex mb-5">
     <span className="dot bg-amg-yellow" />
     Strategic Fundraising Support
   </div>
 
-  <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
-    Strategic fundraising support
-    <br />
-    built for investor readiness.
+  <h2 className="heading-display text-[38px] md:text-[48px] leading-[1.03] text-amg-teal">
+    Strategic fundraising support built for investor readiness
   </h2>
 
   <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
     Founder support designed around how investors actually evaluate
     startups — from investor narrative and financial clarity to
-    valuation strategy and fundraising preparation.
+    valuation strategy and fundraising preparation
   </p>
 
 </div>
     {/* Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
       {SERVICES.map((s, i) => {
 
@@ -620,25 +636,25 @@ export default function Home() {
           <Link
             key={s.slug}
             to={`/services/${s.slug}`}
-            className={`group rounded-[28px] border border-amg-line border-t-[4px] ${accent.border} bg-white shadow-soft-sm hover-lift block overflow-hidden transition-all`}
+            className={`group rounded-[20px] border border-amg-line border-t-[3px] ${accent.border} bg-white shadow-soft-sm hover-lift block overflow-hidden transition-all`}
           >
 
-            <div className="p-8">
+            <div className="px-6 pt-6 pb-4">
 
               {/* Top */}
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center justify-between mb-5">
 
                 <div
-                  className={`w-14 h-14 rounded-2xl ${accent.iconBg} flex items-center justify-center`}
+                  className={`w-11 h-11 rounded-xl ${accent.iconBg} flex items-center justify-center`}
                 >
-                  <Icon className="w-6 h-6 text-amg-teal" />
+                  <Icon className="w-5 h-5 text-amg-teal" />
                 </div>
 
                 <div className="flex items-center gap-2">
 
-                  <span className={`w-2.5 h-2.5 rounded-full ${accent.dot}`} />
+                  <span className={`w-2 h-2 rounded-full ${accent.dot}`} />
 
-                  <span className="text-[12px] tracking-[0.18em] uppercase font-semibold text-amg-teal/55">
+                  <span className="text-[11px] tracking-[0.16em] uppercase font-semibold text-amg-teal/55">
                     0{i + 1}
                   </span>
 
@@ -647,19 +663,19 @@ export default function Home() {
               </div>
 
               {/* Title */}
-              <h3 className="font-serif text-[28px] text-amg-teal leading-[1.12] max-w-[320px]">
+              <h3 className="font-serif text-[23px] text-amg-teal leading-[1.1] max-w-[300px]">
                 { s.title}
               </h3>
 
               {/* Description */}
-              <p className="mt-4 text-[15px] text-amg-teal/68 leading-relaxed max-w-[340px]">
+              <p className="mt-3 text-[14px] text-amg-teal/68 leading-[1.6] max-w-[340px]">
 
                 {s.tagline}
 
               </p>
 
               {/* Divider */}
-              <div className="border-t border-amg-line mt-8 pt-7">
+              <div className="border-t border-amg-line mt-4 pt-3">
 
                 <div className="flex items-center justify-between">
 
@@ -700,46 +716,44 @@ export default function Home() {
     Process
   </div>
 
-  <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
-    How we prepare founders
-    <br />
-    for investor conversations.
+  <h2 className="heading-display text-[42px] md:text-[48px] leading-[1.03] text-amg-teal">
+    How we prepare founders for investor conversations
   </h2>
 
   <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
     A structured process designed to identify fundraising gaps,
     strengthen investor positioning, and improve fundraising readiness
-    before outreach begins.
+    before outreach begins
   </p>
 
 </div>
 
     {/* Process Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
       {[
         {
           step: '01',
           title: 'Assessment',
-          text: 'We evaluate your narrative, financials, positioning, and fundraising readiness.',
+          text: 'We evaluate your narrative, financials, positioning, and fundraising readiness',
           icon: Search,
         },
         {
           step: '02',
           title: 'Strategic Positioning',
-          text: 'We sharpen your investor story, fundraising strategy, and market positioning.',
+          text: 'We sharpen your investor story, fundraising strategy, and market positioning',
           icon: Compass,
         },
         {
           step: '03',
           title: 'Investor Preparation',
-          text: 'We prepare your materials, valuation logic, and investor-facing communication.',
+          text: 'We prepare your materials, valuation logic, and investor-facing communication',
           icon: ShieldCheck,
         },
         {
           step: '04',
           title: 'Fundraising Support',
-          text: 'We help founders navigate investor conversations with clarity and confidence.',
+          text: 'We help founders navigate investor conversations with clarity and confidence',
           icon: Rocket,
         },
       ].map((item, i) => {
@@ -749,28 +763,42 @@ export default function Home() {
         return (
           <div
             key={i}
-            className="group rounded-[28px] border border-amg-line bg-white p-8 shadow-soft-sm hover-lift transition-all"
+            className={`group rounded-[20px] border p-6 shadow-soft-sm hover-lift transition-all ${
+              i % 3 === 0
+                ? 'bg-gradient-teal border-gradient-teal'
+                : i % 3 === 1
+                ? 'bg-gradient-yellow border-gradient-yellow'
+                : 'bg-gradient-turquoise border-gradient-turquoise'
+            }`}
           >
 
             {/* Top */}
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center justify-between mb-5">
 
-              <div className="w-14 h-14 rounded-2xl bg-amg-yellow-bg flex items-center justify-center">
-                <Icon className="w-6 h-6 text-amg-teal" />
+              <div className={`w-11 h-11 rounded-full flex items-center justify-center ${
+                i % 3 === 0
+                  ? 'bg-amg-teal-soft'
+                  : i % 3 === 1
+                  ? 'bg-amg-yellow-bg'
+                  : 'bg-amg-turquoise-bg'
+              }`}>
+                <Icon className={`w-5 h-5 ${
+                  i % 3 === 1 ? 'text-amg-yellow' : 'text-amg-turquoise-2'
+                }`} />
               </div>
 
-              <span className="text-[14px] tracking-[0.18em] uppercase font-semibold text-amg-teal/45">
+              <span className="text-[12px] tracking-[0.16em] uppercase font-semibold text-amg-teal/45">
                 {item.step}
               </span>
 
             </div>
 
             {/* Content */}
-            <h3 className="font-serif text-[28px] text-amg-teal leading-[1.1]">
+            <h3 className="font-serif text-[23px] text-amg-teal leading-[1.1]">
               {item.title}
             </h3>
 
-            <p className="mt-4 text-[15px] text-amg-teal/68 leading-relaxed">
+            <p className="mt-3 text-[14px] text-amg-teal/68 leading-[1.6]">
               {item.text}
             </p>
 
@@ -790,23 +818,21 @@ export default function Home() {
 
     {/* Heading */}
   {/* Heading */}
-<div className="text-center max-w-5xl mx-auto mb-20">
+<div className="text-center  mx-auto mb-20">  
 
   <div className="tag-pill inline-flex mb-5">
     <span className="dot bg-amg-turquoise" />
     Ecosystem & Partnerships
   </div>
 
-  <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
-    Supporting founders across
-    <br />
-    accelerators and startup ecosystems.
+  <h2 className="heading-display text-[42px] md:text-[48px] leading-[1.03] text-amg-teal">
+    Supporting Founders Across Ecosystems
   </h2>
 
   <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
     We collaborate with accelerators, incubators, founder communities,
     and startup ecosystems to help founders improve investment readiness
-    and fundraising preparation.
+    and fundraising preparation
   </p>
 
 </div>
@@ -816,17 +842,17 @@ export default function Home() {
       {[
         {
           title: 'Accelerator Partnerships',
-          text: 'Investment readiness diagnostics, fundraising workshops, and founder preparation support for accelerator cohorts.',
+          text: 'Investment readiness diagnostics, fundraising workshops, and founder preparation support for accelerator cohorts',
           icon: Rocket,
         },
         {
           title: 'Incubator Programs',
-          text: 'Strategic fundraising guidance and investor-readiness support for early-stage startup communities.',
+          text: 'Strategic fundraising guidance and investor-readiness support for early-stage startup communities',
           icon: Building2,
         },
         {
           title: 'Founder Communities',
-          text: 'Educational sessions, AMA discussions, and fundraising insights tailored for founder ecosystems.',
+          text: 'Educational sessions, AMA discussions, and fundraising insights tailored for founder ecosystems',
           icon: Users,
         },
       ].map((item, i) => {
@@ -880,14 +906,14 @@ export default function Home() {
         <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
           A structured fundraising
           <br />
-          preparation program for founders.
+          preparation program for founders
         </h2>
 
         <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-3xl">
           The Investment Readiness Program (IRP) is designed for founders
           preparing for institutional fundraising — combining strategic
           guidance, investor readiness diagnostics, fundraising education,
-          and founder support in one structured experience.
+          and founder support in one structured experience
         </p>
 
         {/* Features */}
@@ -1040,7 +1066,7 @@ export default function Home() {
         <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
           From unclear narratives
           <br />
-          to investor-ready positioning.
+          to investor-ready positioning
         </h2>
 
       </div>
@@ -1049,7 +1075,7 @@ export default function Home() {
 
         <p className="text-[16px] md:text-[17px] text-amg-teal/70 leading-relaxed">
           We help founders improve fundraising clarity, investor confidence,
-          and strategic positioning before entering high-stakes investor conversations.
+          and strategic positioning before entering high-stakes investor conversations
         </p>
 
       </div>
@@ -1190,26 +1216,24 @@ export default function Home() {
           AI vs Strategic Judgment
         </div>
 
-        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
-          AI can generate slides.
-          <br />
-          It cannot replace strategic judgment.
+        <h2 className="heading-display text-[42px] md:text-[48px] text-amg-teal leading-[1.03]">
+      AI accelerates execution Strategic judgment drives growth
         </h2>
 
         <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-3xl">
-          AI tools can help founders generate decks, models, and content faster.
+          AI tools can help founders generate decks, models, and content faster
           But fundraising outcomes are still determined by strategic clarity,
-          investor psychology, timing, positioning, and founder judgment.
+          investor psychology, timing, positioning, and founder judgment
         </p>
 
         {/* Points */}
         <div className="space-y-5 mt-10">
 
           {[
-            'AI cannot pressure-test weak investor narratives.',
-            'AI cannot challenge unrealistic valuation assumptions.',
-            'AI cannot prepare founders for real investor scrutiny.',
-            'AI cannot replace fundraising judgment and strategic thinking.',
+            'AI cannot pressure-test weak investor narratives',
+            'AI cannot challenge unrealistic valuation assumptions',
+            'AI cannot prepare founders for real investor scrutiny',
+            'AI cannot replace fundraising judgment and strategic thinking',
           ].map((item, i) => (
             <div
               key={i}
@@ -1261,7 +1285,7 @@ export default function Home() {
 
             <p className="text-[15px] text-amg-teal/68 leading-relaxed">
               Strategic fundraising still requires experience, pattern recognition,
-              investor understanding, and founder judgment.
+              investor understanding, and founder judgment
             </p>
 
           </div>
