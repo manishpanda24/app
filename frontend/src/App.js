@@ -31,11 +31,8 @@ function App() {
           <Route path="/resources/revenueprojector" element={<RevenueProjector />} />
           <Route path="/resources/safedilution" element={<SafeDilution />} />
           <Route path="/about" element={<AboutUs />} />
-<<<<<<< HEAD
-=======
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
->>>>>>> b3bbda97e0e0436979538f4a48268938f84b340d
         </Routes>
         <Toaster position="top-right" richColors />
       </BrowserRouter>
