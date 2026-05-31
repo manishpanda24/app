@@ -4,18 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
 
-const TABS = [
-  { id: 'about',    label: 'About Us' },
-  { id: 'founder',  label: 'Founder Background' },
-  { id: 'clients',  label: 'Clients' },
-];
-
 export default function AboutUs() {
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
   return (
     <>
       <Navbar />
@@ -37,27 +26,11 @@ export default function AboutUs() {
       </section>
 
       {/* ── STICKY TAB NAV ───────────────────────────────────────────── */}
-      <div className="sticky top-[68px] z-40 bg-white/95 backdrop-blur-sm border-b border-amg-line">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
-          <div className="flex items-center overflow-x-auto scrollbar-none">
-            {TABS.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => scrollTo(tab.id)}
-                className="shrink-0 px-5 py-4 text-[13px] font-medium text-amg-teal/65 hover:text-amg-teal border-b-2 border-transparent hover:border-amg-turquoise transition-all whitespace-nowrap"
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* ── CONTENT ──────────────────────────────────────────────────── */}
       <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-16 lg:py-20">
 
         {/* ── ABOUT US ─────────────────────────────────────────────── */}
-        <section id="about" className="scroll-mt-36 max-w-3xl">
+        <section id="about" className="scroll-mt-36 max-w-6xl">
           <div className="eyebrow mb-6">About us:</div>
 
           <div className="space-y-5 text-[15px] text-amg-teal/80 leading-relaxed">
@@ -197,7 +170,7 @@ export default function AboutUs() {
         <div className="hr-thin my-14" />
 
         {/* ── FOUNDER BACKGROUND ───────────────────────────────────── */}
-        <section id="founder" className="scroll-mt-36 max-w-3xl">
+        <section id="founder" className="scroll-mt-36 max-w-6xl">
           <div className="eyebrow mb-6">
             Founder background —{' '}
             <a
@@ -229,7 +202,7 @@ export default function AboutUs() {
         <div className="hr-thin my-14" />
 
         {/* ── CLIENTS ──────────────────────────────────────────────── */}
-        <section id="clients" className="scroll-mt-36 max-w-3xl">
+        <section id="clients" className="scroll-mt-36 max-w-6xl">
           <div className="eyebrow mb-6">Clients in the last 2 years:</div>
 
           <div className="space-y-4">
