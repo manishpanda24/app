@@ -33,14 +33,37 @@ export default function Contact() {
     valuation: '',
     valuationOther: '',
 
-    investorKit: '',
-    investorKitOther: '',
+    // investorKit: '',
+    // investorKitOther: '',
 
     supportNeeded: '',
     supportNeededOther: '',
 
     serviceLookingFor: '',
     serviceLookingForOther: '',
+
+    hasPitchDeck: '',
+    hasPitchDeckOther: '',
+
+    hasFinancialModel: '',
+    hasFinancialModelOther: '',
+
+    warmIntroTargets: '',
+    warmIntroTargetsOther: '',
+
+    budgetForAdvisory: '',
+    budgetForAdvisoryOther: '',
+
+    mainChallenge: '',
+
+    targetCloseTimeline: '',
+    targetCloseTimelineOther: '',
+
+    currentRevenue: '',
+    investorsInConversation: '',
+
+    targetInvestorGeography: '',
+    targetInvestorGeographyOther: '',
 
     message: '',
   });
@@ -187,12 +210,12 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
           : form.valuation
       );
 
-      formData.append(
-        'Investor Kit',
-        form.investorKit === 'Others'
-          ? form.investorKitOther
-          : form.investorKit
-      );
+      // formData.append(
+      //   'Investor Kit',
+      //   form.investorKit === 'Others'
+      //     ? form.investorKitOther
+      //     : form.investorKit
+      // );
 
       formData.append(
         'Support Needed',
@@ -207,6 +230,63 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
           'Others'
           ? form.serviceLookingForOther
           : form.serviceLookingFor
+      );
+
+      formData.append(
+        'Pitch Deck Ready',
+        form.hasPitchDeck === 'Others'
+          ? form.hasPitchDeckOther
+          : form.hasPitchDeck
+      );
+
+      formData.append(
+        'Financial Model Ready',
+        form.hasFinancialModel === 'Others'
+          ? form.hasFinancialModelOther
+          : form.hasFinancialModel
+      );
+
+      formData.append(
+        'Warm-Intro Targets Identified',
+        form.warmIntroTargets === 'Others'
+          ? form.warmIntroTargetsOther
+          : form.warmIntroTargets
+      );
+
+      formData.append(
+        'Budget for Advisory / Execution',
+        form.budgetForAdvisory === 'Others'
+          ? form.budgetForAdvisoryOther
+          : form.budgetForAdvisory
+      );
+
+      formData.append(
+        'Main Fundraising Challenge',
+        form.mainChallenge || '-'
+      );
+
+      formData.append(
+        'Target Close Timeline',
+        form.targetCloseTimeline === 'Others'
+          ? form.targetCloseTimelineOther
+          : form.targetCloseTimeline
+      );
+
+      formData.append(
+        'Current Monthly Revenue / Traction',
+        form.currentRevenue || '-'
+      );
+
+      formData.append(
+        'Investors in Conversation',
+        form.investorsInConversation || '-'
+      );
+
+      formData.append(
+        'Target Investor Geography',
+        form.targetInvestorGeography === 'Others'
+          ? form.targetInvestorGeographyOther
+          : form.targetInvestorGeography
       );
 
       formData.append(
@@ -265,14 +345,37 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
         valuation: '',
         valuationOther: '',
 
-        investorKit: '',
-        investorKitOther: '',
+        // investorKit: '',
+        // investorKitOther: '',
 
         supportNeeded: '',
         supportNeededOther: '',
 
         serviceLookingFor: '',
         serviceLookingForOther: '',
+
+        hasPitchDeck: '',
+        hasPitchDeckOther: '',
+
+        hasFinancialModel: '',
+        hasFinancialModelOther: '',
+
+        warmIntroTargets: '',
+        warmIntroTargetsOther: '',
+
+        budgetForAdvisory: '',
+        budgetForAdvisoryOther: '',
+
+        mainChallenge: '',
+
+        targetCloseTimeline: '',
+        targetCloseTimelineOther: '',
+
+        currentRevenue: '',
+        investorsInConversation: '',
+
+        targetInvestorGeography: '',
+        targetInvestorGeographyOther: '',
 
         message: '',
       });
@@ -682,7 +785,7 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
 {/* ─────────────────────────────
     INVESTOR KIT
 ───────────────────────────── */}
-<div className="mt-5">
+{/* <div className="mt-5">
   <Label>
     Which of these investor kit items are ready to go? *
   </Label>
@@ -727,7 +830,7 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
       }
     />
   )}
-</div>
+</div> */}
 
 {/* ─────────────────────────────
     SUPPORT NEEDED
@@ -845,6 +948,213 @@ Areas where you need strategic support *
     />
   )}
 </div>
+
+{/* ─────────────────────────────
+    READINESS CHECK
+───────────────────────────── */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+  <div>
+    <Label>Do you have a pitch deck?</Label>
+
+    <SelectField
+      value={form.hasPitchDeck}
+      onChange={e =>
+        update('hasPitchDeck', e.target.value)
+      }
+    >
+      <option value="">Select option</option>
+      <option>Yes</option>
+      <option>No</option>
+      <option>In progress</option>
+      <option>Others</option>
+    </SelectField>
+
+    {form.hasPitchDeck === 'Others' && (
+      <OtherInput
+        value={form.hasPitchDeckOther}
+        onChange={e =>
+          update('hasPitchDeckOther', e.target.value)
+        }
+      />
+    )}
+  </div>
+
+  <div>
+    <Label>Do you have a financial model?</Label>
+
+    <SelectField
+      value={form.hasFinancialModel}
+      onChange={e =>
+        update('hasFinancialModel', e.target.value)
+      }
+    >
+      <option value="">Select option</option>
+      <option>Yes</option>
+      <option>No</option>
+      <option>In progress</option>
+      <option>Others</option>
+    </SelectField>
+
+    {form.hasFinancialModel === 'Others' && (
+      <OtherInput
+        value={form.hasFinancialModelOther}
+        onChange={e =>
+          update('hasFinancialModelOther', e.target.value)
+        }
+      />
+    )}
+  </div>
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+  <div>
+    <Label>Warm-intro targets already identified?</Label>
+
+    <SelectField
+      value={form.warmIntroTargets}
+      onChange={e =>
+        update('warmIntroTargets', e.target.value)
+      }
+    >
+      <option value="">Select option</option>
+      <option>Yes</option>
+      <option>No</option>
+      <option>Some</option>
+      <option>Others</option>
+    </SelectField>
+
+    {form.warmIntroTargets === 'Others' && (
+      <OtherInput
+        value={form.warmIntroTargetsOther}
+        onChange={e =>
+          update('warmIntroTargetsOther', e.target.value)
+        }
+      />
+    )}
+  </div>
+
+  <div>
+    <Label>Budget for advisory / execution</Label>
+
+    <SelectField
+      value={form.budgetForAdvisory}
+      onChange={e =>
+        update('budgetForAdvisory', e.target.value)
+      }
+    >
+      <option value="">Select option</option>
+      <option>Less than $5K</option>
+      <option>$5K – $15K</option>
+      <option>$15K – $30K</option>
+      <option>Greater than $30K</option>
+      <option>Not Sure</option>
+      <option>Others</option>
+    </SelectField>
+
+    {form.budgetForAdvisory === 'Others' && (
+      <OtherInput
+        value={form.budgetForAdvisoryOther}
+        onChange={e =>
+          update('budgetForAdvisoryOther', e.target.value)
+        }
+      />
+    )}
+  </div>
+</div>
+
+<div className="mt-5">
+  <Label>Main fundraising challenge *</Label>
+
+  <textarea
+    rows={3}
+    value={form.mainChallenge}
+    onChange={e =>
+      update('mainChallenge', e.target.value)
+    }
+    placeholder="What's the single hardest part of this raise for you right now?"
+    className="w-full bg-white border border-amg-line rounded-md px-3.5 py-3 text-[14px] resize-none focus:border-amg-teal"
+  />
+</div>
+
+{/* ─────────────────────────────
+    TIMELINE & TRACTION
+───────────────────────────── */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+  <div>
+    <Label>Target close timeline *</Label>
+
+    <SelectField
+      value={form.targetCloseTimeline}
+      onChange={e =>
+        update('targetCloseTimeline', e.target.value)
+      }
+    >
+      <option value="">Select option</option>
+      <option>Less than 1 month</option>
+      <option>1–3 months</option>
+      <option>3–6 months</option>
+      <option>6+ months</option>
+      <option>Not Sure</option>
+      <option>Others</option>
+    </SelectField>
+
+    {form.targetCloseTimeline === 'Others' && (
+      <OtherInput
+        value={form.targetCloseTimelineOther}
+        onChange={e =>
+          update('targetCloseTimelineOther', e.target.value)
+        }
+      />
+    )}
+  </div>
+
+  <Field
+    label="Current monthly revenue / traction"
+    value={form.currentRevenue}
+    onChange={v => update('currentRevenue', v)}
+    placeholder="e.g. $30k MRR, 20% MoM"
+  />
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+  <Field
+    label="Investors in conversation"
+    value={form.investorsInConversation}
+    onChange={v =>
+      update('investorsInConversation', v)
+    }
+    placeholder="e.g. 5 introduced, 2 in diligence"
+  />
+
+  <div>
+    <Label>Target investor geography *</Label>
+
+    <SelectField
+      value={form.targetInvestorGeography}
+      onChange={e =>
+        update('targetInvestorGeography', e.target.value)
+      }
+    >
+      <option value="">Select option</option>
+      <option>United States</option>
+      <option>Canada</option>
+      <option>United Kingdom</option>
+      <option>Asia</option>
+      <option>Europe</option>
+      <option>Others</option>
+    </SelectField>
+
+    {form.targetInvestorGeography === 'Others' && (
+      <OtherInput
+        value={form.targetInvestorGeographyOther}
+        onChange={e =>
+          update('targetInvestorGeographyOther', e.target.value)
+        }
+      />
+    )}
+  </div>
+</div>
+
             {/* MESSAGE */}
             <div className="mt-5">
               <Label>Message</Label>
