@@ -65,7 +65,7 @@
             </div>
 
             {/* Services */}
-            <div className="md:col-span-4">
+            {/* <div className="md:col-span-4">
               <div className="text-[10.5px] tracking-[0.22em] uppercase text-amg-yellow font-semibold mb-5">Services</div>
               <ul className="space-y-3">
                 {SERVICES.map(s => (
@@ -77,10 +77,10 @@
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Company */}
-            <div className="md:col-span-3">
+            {/* <div className="md:col-span-3">
               <div className="text-[10.5px] tracking-[0.22em] uppercase text-amg-yellow font-semibold mb-5">Company</div>
               <ul className="space-y-3">
                 {COMPANY_LINKS.map(l => (
@@ -92,7 +92,7 @@
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
 
           {/* Bottom bar */}

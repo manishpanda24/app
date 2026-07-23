@@ -12,7 +12,7 @@ export default function AboutUs() {
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden border-b border-amg-line">
         <div className="absolute inset-0 grid-paper pointer-events-none" />
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 lg:py-28 relative">
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-8 lg:py-10 relative">
           <nav className="flex items-center gap-2 text-[12px] text-amg-mute mb-8">
             <Link to="/" className="hover:text-amg-teal transition-colors">Home</Link>
             <span>/</span>
@@ -27,7 +27,7 @@ export default function AboutUs() {
 
       {/* ── STICKY TAB NAV ───────────────────────────────────────────── */}
       {/* ── CONTENT ──────────────────────────────────────────────────── */}
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-16 lg:py-20">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-10 lg:py-12">
 
         {/* ── ABOUT US ─────────────────────────────────────────────── */}
         <section id="about" className="scroll-mt-36 max-w-6xl">
@@ -56,7 +56,7 @@ export default function AboutUs() {
           {/* Numbered list */}
           <div className="mt-8 space-y-6">
             {/* 1 */}
-            <div>
+            {/* <div>
               <p className="text-[15px] font-semibold text-amg-teal mb-3">
                 1. Partner with government / corporate-funded tech startup incubators/accelerators for:
               </p>
@@ -78,11 +78,11 @@ export default function AboutUs() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* 2 & 3 */}
            {/* 2 */}
-<div>
+{/* <div>
   <p className="text-[15px] font-semibold text-amg-teal mb-3">
     2. Founder Services:
   </p>
@@ -117,11 +117,11 @@ export default function AboutUs() {
     goal is to help founders communicate their business with
     clarity, confidence, and institutional-level preparation.
   </p>
-</div>
+</div> */}
 
 {/* 3 */}
 {/* 3 */}
-<div>
+{/* <div>
   <p className="text-[15px] font-semibold text-amg-teal mb-3">
     3. Investment Readiness Program (IRP):
   </p>
@@ -162,12 +162,12 @@ export default function AboutUs() {
     Explore the Investment Readiness Program
     <ArrowRight className="w-4 h-4" />
   </a>
-</div>
+</div> */}
           </div>
         </section>
 
         {/* Divider */}
-        <div className="hr-thin my-14" />
+        {/* <div className="hr-thin my-14" /> */}
 
         {/* ── FOUNDER BACKGROUND ───────────────────────────────────── */}
         <section id="founder" className="scroll-mt-36 max-w-6xl">
@@ -199,10 +199,10 @@ export default function AboutUs() {
         </section>
 
         {/* Divider */}
-        <div className="hr-thin my-14" />
+        {/* <div className="hr-thin my-14" /> */}
 
         {/* ── CLIENTS ──────────────────────────────────────────────── */}
-        <section id="clients" className="scroll-mt-36 max-w-6xl">
+        {/* <section id="clients" className="scroll-mt-36 max-w-6xl">
           <div className="eyebrow mb-6">Clients in the last 2 years:</div>
 
           <div className="space-y-4">
@@ -217,7 +217,7 @@ export default function AboutUs() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
       </div>
 

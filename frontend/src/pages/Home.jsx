@@ -151,9 +151,8 @@ export default function Home() {
       </h1>
 
       {/* Subheading */}
-      <p className="mt-8 text-[18px] lg:text-[20px] leading-relaxed text-amg-teal/75 max-w-2xl">
-        We help tech founders sharpen their pitch, financials,
-        valuation, and fundraising plan before meeting investors
+      <p className="mt-8 text-[18px] lg:text-[20px] leading-relaxed text-amg-teal/75 max-w-5xl">
+AMG helps founders become investor-ready, identify the right Canada, US, and European investors, map warm-intro paths, and execute sharper fundraising campaigns
       </p>
 
       {/* CTA Buttons */}
@@ -191,12 +190,12 @@ export default function Home() {
      </section>
 
      {/* WHY FOUNDERS FAIL FUNDRAISING */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+{/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
-  <div className="max-w-8xl mx-auto">
+  <div className="max-w-8xl mx-auto"> */}
 
     {/* Top Content */}
-    <div className="text-center max-w-4xl  mx-auto">
+    {/* <div className="text-center max-w-4xl  mx-auto">
 
       <div className="tag-pill inline-flex mb-5">
         <span className="dot bg-amg-yellow" />
@@ -211,10 +210,10 @@ export default function Home() {
         Investors hesitate when the story, numbers, or timing do not hold up
       </p>
 
-    </div>
+    </div> */}
 
     {/* Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
+    {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4">
 
       {[
         {
@@ -284,18 +283,18 @@ export default function Home() {
         </div>
       ))}
 
-    </div>
+    </div> */}
 
-  </div>
+  {/* </div>
 
-</section>
+</section> */}
 {/* HOW INVESTORS THINK */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+{/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
-  <div className="max-w-8xl mx-auto">
+  <div className="max-w-8xl mx-auto"> */}
 
     {/* Heading */}
-    <div className="text-center max-w-4xl mx-auto">
+    {/* <div className="text-center max-w-4xl mx-auto">
 
       <div className="tag-pill inline-flex mb-5">
         <span className="dot bg-amg-turquoise" />
@@ -311,10 +310,10 @@ export default function Home() {
         market understanding, and a realistic path to growth
       </p>
 
-    </div>
+    </div> */}
 
     {/* Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+    {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
 
       {[
         {
@@ -372,20 +371,20 @@ export default function Home() {
         </div>
       ))}
 
-    </div>
+    </div> */}
 
-  </div>
+  {/* </div>
 
-</section>
+</section> */}
 {/* WHY AMG */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+{/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
   <div className="max-w-[1280px] mx-auto">
 
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-start">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-start"> */}
 
       {/* LEFT */}
-      <div className="lg:col-span-5">
+      {/* <div className="lg:col-span-5">
 
         <div className="tag-pill inline-flex mb-5">
           <span className="dot bg-amg-teal" />
@@ -396,10 +395,10 @@ export default function Home() {
           More Than a Pitch Deck
         </h2>
 
-      </div>
+      </div> */}
 
       {/* RIGHT */}
-      <div className="lg:col-span-7">
+      {/* <div className="lg:col-span-7">
 
         <p className="text-[17px] md:text-[18px] text-amg-teal/75 leading-relaxed">
           AMG Venture Partners helps North American tech founders prepare
@@ -412,7 +411,7 @@ export default function Home() {
         </p>
 
         {/* What We Challenge */}
-        <div className="mt-10 rounded-3xl border border-amg-line bg-white p-8 shadow-soft">
+        {/* <div className="mt-10 rounded-3xl border border-amg-line bg-white p-8 shadow-soft">
 
           <div className="text-[13px] uppercase tracking-[0.18em] text-amg-teal/50 font-semibold mb-7">
             What We Challenge
@@ -448,9 +447,288 @@ export default function Home() {
 
         </div>
 
+      </div> */}
+
+   {/* </div> */}
+
+{/* //   </div>
+
+// </section> */}
+
+
+
+{/* THE PROBLEM */}
+<section className="problem-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+  <div className="max-w-[1280px] mx-auto">
+    <div className="text-center max-w-8xl mx-auto">
+      <div className="tag-pill inline-flex mb-5">
+        <span className="dot bg-amg-yellow" />
+        The Problem
       </div>
 
+      <h2 className="problem-heading text-amg-ink">
+        Most founders don’t need <span className="problem-strike">more investor names</span>
+      </h2>
+
+      <p className="mt-7 text-[17px] md:text-[24px] text-amg-teal/72 leading-relaxed max-w-6xl mx-auto">
+        They need to know which investors are actually relevant, whether the company
+        is truly ready, which path can credibly open the door, and what message will
+        create conviction
+      </p>
+
+      <p className="mt-5 text-[15.5px] md:text-[20px] leading-relaxed text-amg-teal/60 max-w-6xl mx-auto">
+        AMG combines fundraising judgment, verified investor intelligence, and AI-assisted
+        execution to help founders run a more disciplined raise — not another data subscription,
+        not another mentoring hour
+      </p>
     </div>
+  </div>
+</section>
+
+{/* HOW AMG HELPS */}
+<section className="amg-help-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+  <div className="max-w-[1280px] mx-auto">
+    <div className="text-center max-w-5xl mx-auto mb-14">
+      <div className="tag-pill inline-flex mb-5">
+        <span className="dot bg-amg-turquoise" />
+        How AMG Helps
+      </div>
+
+      <h2 className="amg-help-heading text-amg-ink">
+        Two ways in. Both premium. Both by <span>application</span>.
+      </h2>
+    </div>
+
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 max-w-[1120px] mx-auto">
+      <div className="amg-help-card bg-white border border-amg-line rounded-[20px] p-6 md:p-7 shadow-soft-sm flex flex-col">
+        <div className="text-[12px] tracking-[0.16em] uppercase text-amg-mute mb-5">
+          01 / Diagnostic
+        </div>
+
+        <h3 className="font-serif text-[24px] md:text-[28px] leading-tight text-amg-ink">
+          Investor Readiness Diagnostic
+        </h3>
+
+        <p className="mt-4 text-[14.5px] leading-relaxed text-amg-teal/70">
+          A focused paid review of your deck, financial model, valuation logic,
+          raise amount, milestones, GTM assumptions, and investor narrative —
+          with a clear verdict on whether you are ready to raise
+        </p>
+
+        <ul className="mt-7 space-y-3 text-[14.5px] text-amg-ink/85">
+          {[
+            'Investor readiness score',
+            'Deck & narrative gap analysis',
+            'Financial model & raise logic review',
+            'Valuation & dilution sanity check',
+            'Investor objection map',
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-turquoise-2 shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <Link
+          to="/contact"
+          className="mt-auto inline-flex w-full items-center justify-center gap-3 rounded-md bg-amg-ink px-6 py-3.5 text-[14px] font-semibold text-white hover:bg-amg-teal transition-all"
+        >
+          Request Diagnostic <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+
+      <div className="amg-help-card amg-help-card-dark border border-amg-teal rounded-[20px] p-6 md:p-7 shadow-soft-lg relative overflow-hidden flex flex-col">
+        <div className="absolute top-6 right-6 rounded-full bg-amg-yellow px-4 py-2 text-[11px] font-semibold uppercase text-amg-ink">
+          Flagship
+        </div>
+
+        <div className="text-[12px] tracking-[0.16em] uppercase text-amg-yellow mb-5">
+          02 / Flagship
+        </div>
+
+        <h3 className="font-serif text-[24px] md:text-[28px] leading-tight text-white">
+          Fundraising Execution Sprint
+        </h3>
+
+        <p className="mt-4 text-[14.5px] leading-relaxed text-white/80">
+          Diagnostic + full fundraising prep and execution. Narrative, model
+          and valuation fixes, verified target list across local and cross-border
+          investors, warm-intro paths, outreach, investor Q&A, diligence and close support
+        </p>
+
+        <ul className="mt-7 space-y-3 text-[14.5px] text-white/90">
+          {[
+            'Everything in the Diagnostic',
+            'Investment readiness rebuild (deck, model, valuation, Q&A)',
+            'Local + cross-border investor access strategy (Canada · US · Europe)',
+            'Verified target list + warm-intro path mapping',
+            'AI-assisted outreach & investor meetings',
+            'Diligence, negotiation & close support',
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-turquoise shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <Link
+          to="/contact"
+          className="mt-auto inline-flex w-full items-center justify-center gap-3 rounded-md bg-amg-yellow px-6 py-3.5 text-[14px] font-semibold text-amg-ink hover:bg-amg-yellow-2 transition-all"
+        >
+          Apply for Sprint <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* HOW WE WORK */}
+{/* HOW WE WORK */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+
+  <div className=" mx-auto">
+
+    {/* Heading */}
+  {/* Heading */}
+<div className="text-center  mx-auto mb-20">
+
+  <div className="tag-pill inline-flex mb-5">
+    <span className="dot bg-amg-yellow" />
+    Process
+  </div>
+
+  <h2 className="heading-display text-[42px] md:text-[48px] leading-[1.03] text-amg-teal">
+  Four disciplines behind every disciplined raise
+  </h2>
+
+  <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
+  We combine what the best fundraising advisors do — judgment, network, targeting — with what technology now makes possible: verified data, path analysis, and AI-accelerated execution
+  </p>
+
+</div>
+
+    {/* Process Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+      {[
+        {
+          step: '01',
+          title: 'Investor Diagnostic Review',
+          text: 'A term-sheet-grade pressure test of deck, model, valuation, raise logic, milestones, and investor narrative — the way a lead investor would read it',
+          icon: Search,
+        },
+        {
+          step: '02',
+          title: 'Investment Readiness',
+          text: 'Fixing the gaps the diagnostic surfaces. Narrative sharpening, financials rebuild, valuation defence, and full investor Q&A preparation until the company is genuinely fundable',
+          icon: Compass,
+        },
+        {
+          step: '03',
+          title: 'Verified Investor Intelligence & Network',
+          text: 'Curated, current, geography-aware target lists plus warm-intro path mapping and investor meetings — powered end-to-end by AI-assisted execution',
+          icon: ShieldCheck,
+        },
+        {
+          step: '04',
+          title: 'Diligence & Close',
+          text: 'Dataroom build, diligence support, meeting debriefs, term-sheet review, and negotiation guidance through to close',
+          icon: Rocket,
+        },
+      ].map((item, i) => {
+
+        const Icon = item.icon;
+
+        return (
+          <div
+            key={i}
+            className={`group rounded-[20px] border p-6 shadow-soft-sm hover-lift transition-all ${
+              i % 3 === 0
+                ? 'bg-gradient-teal border-gradient-teal'
+                : i % 3 === 1
+                ? 'bg-gradient-yellow border-gradient-yellow'
+                : 'bg-gradient-turquoise border-gradient-turquoise'
+            }`}
+          >
+
+            {/* Top */}
+            <div className="flex items-center justify-between mb-5">
+
+              <div className={`w-11 h-11 rounded-full flex items-center justify-center ${
+                i % 3 === 0
+                  ? 'bg-amg-teal-soft'
+                  : i % 3 === 1
+                  ? 'bg-amg-yellow-bg'
+                  : 'bg-amg-turquoise-bg'
+              }`}>
+                <Icon className={`w-5 h-5 ${
+                  i % 3 === 1 ? 'text-amg-yellow' : 'text-amg-turquoise-2'
+                }`} />
+              </div>
+
+              <span className="text-[12px] tracking-[0.16em] uppercase font-semibold text-amg-teal/45">
+                {item.step}
+              </span>
+
+            </div>
+
+            {/* Content */}
+            <h3 className="font-serif text-[23px] text-amg-teal leading-[1.1]">
+              {item.title}
+            </h3>
+
+            <p className="mt-3 text-[14px] text-amg-teal/68 leading-[1.6]">
+              {item.text}
+            </p>
+
+          </div>
+        );
+      })}
+
+    </div>
+
+  </div>
+
+</section>
+
+{/* INDUSTRIES WE SERVE */}
+<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+
+  <div className="mx-auto">
+
+    {/* Heading */}
+  {/* Heading */}
+<div className="text-center  mx-auto mb-20">
+
+  <div className="tag-pill inline-flex mb-5">
+    <span className="dot bg-amg-yellow" />
+    Industry Focus
+  </div>
+
+  <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
+    Built for Tech Founders
+  </h2>
+
+  <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-5xl mx-auto">
+    We support startups across sectors where clarity, strong numbers,
+    and investor-ready materials matter
+  </p>
+
+</div>
+
+    {/* Industries Grid */}
+    <section className="pt-2 bg-white">
+
+      <IndustriesGrid
+        title="Industries"
+        highlight="We Serve"
+        highlightColor="text-amg-turquoise"
+        showHeader={false}
+      />
+
+    </section>
 
   </div>
 
@@ -556,54 +834,15 @@ export default function Home() {
 
 </section>
 {/* INDUSTRIES WE SERVE */}
-{/* INDUSTRIES WE SERVE */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
-  <div className="mx-auto">
-
-    {/* Heading */}
-  {/* Heading */}
-<div className="text-center  mx-auto mb-20">
-
-  <div className="tag-pill inline-flex mb-5">
-    <span className="dot bg-amg-yellow" />
-    Industry Focus
-  </div>
-
-  <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
-    Built for Tech Founders
-  </h2>
-
-  <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
-    We support startups across sectors where clarity, strong numbers,
-    and investor-ready materials matter
-  </p>
-
-</div>
-
-    {/* Industries Grid */}
-    <section className="pt-2 bg-white">
-
-      <IndustriesGrid
-        title="Industries"
-        highlight="We Serve"
-        highlightColor="text-amg-turquoise"
-        showHeader={false}
-      />
-
-    </section>
-
-  </div>
-
-</section>
     {/* FOUNDER SERVICES */}
       {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
-      <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-white">
-  <div className=" mx-auto">
+      {/* <section className="py-24 px-6 lg:px-10 border-t border-gray-100 bg-white">
+  <div className=" mx-auto"> */}
 
     {/* Heading */}
   {/* Heading */}
-<div className="text-center mx-auto mb-20">
+{/* <div className="text-center mx-auto mb-20">
 
   <div className="tag-pill inline-flex mb-5">
     <span className="dot bg-amg-yellow" />
@@ -619,9 +858,9 @@ export default function Home() {
     investor outreach, and fundraising readiness
   </p>
 
-</div>
+</div> */}
     {/* Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
       {SERVICES.map((s, i) => {
 
@@ -657,7 +896,7 @@ export default function Home() {
             <div className="px-6 pt-6 pb-4">
 
               {/* Top */}
-              <div className="flex items-center justify-between mb-5">
+              {/* <div className="flex items-center justify-between mb-5">
 
                 <div
                   className={`w-11 h-11 rounded-xl ${accent.iconBg} flex items-center justify-center`}
@@ -675,22 +914,22 @@ export default function Home() {
 
                 </div>
 
-              </div>
+              </div> */}
 
               {/* Title */}
-              <h3 className="font-serif text-[23px] text-amg-teal leading-[1.1] max-w-[300px]">
+              {/* <h3 className="font-serif text-[23px] text-amg-teal leading-[1.1] max-w-[300px]">
                 {homeCopy.title}
-              </h3>
+              </h3> */}
 
               {/* Description */}
-              <p className="mt-3 text-[14px] text-amg-teal/68 leading-[1.6] max-w-[340px]">
+              {/* <p className="mt-3 text-[14px] text-amg-teal/68 leading-[1.6] max-w-[340px]">
 
                 {homeCopy.tagline}
 
-              </p>
+              </p> */}
 
               {/* Divider */}
-              <div className="border-t border-amg-line mt-4 pt-3">
+              {/* <div className="border-t border-amg-line mt-4 pt-3">
 
                 <div className="flex items-center justify-between">
 
@@ -702,137 +941,29 @@ export default function Home() {
 
                 </div>
 
-              </div>
+              </div> */}
 
-            </div>
+            {/* </div>
 
           </Link>
         );
-      })}
+      })} 
 
-    </div>
+    </div> */}
 
-  </div>
-</section>
+  {/* </div>
+</section> */}
 
 
-{/* HOW WE WORK */}
-{/* HOW WE WORK */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
-  <div className=" mx-auto">
-
-    {/* Heading */}
-  {/* Heading */}
-<div className="text-center  mx-auto mb-20">
-
-  <div className="tag-pill inline-flex mb-5">
-    <span className="dot bg-amg-yellow" />
-    Process
-  </div>
-
-  <h2 className="heading-display text-[42px] md:text-[48px] leading-[1.03] text-amg-teal">
-    How We Prepare You for Investors
-  </h2>
-
-  <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
-    A focused process to find gaps, strengthen your pitch,
-    and prepare for outreach
-  </p>
-
-</div>
-
-    {/* Process Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-
-      {[
-        {
-          step: '01',
-          title: 'Review Your Startup',
-          text: 'We review your story, numbers, and readiness',
-          icon: Search,
-        },
-        {
-          step: '02',
-          title: 'Improve Your Pitch',
-          text: 'We sharpen your pitch and fundraising plan',
-          icon: Compass,
-        },
-        {
-          step: '03',
-          title: 'Prepare for Investors',
-          text: 'We prepare your materials, valuation, and answers',
-          icon: ShieldCheck,
-        },
-        {
-          step: '04',
-          title: 'Get Fundraising Support',
-          text: 'We support you through investor conversations',
-          icon: Rocket,
-        },
-      ].map((item, i) => {
-
-        const Icon = item.icon;
-
-        return (
-          <div
-            key={i}
-            className={`group rounded-[20px] border p-6 shadow-soft-sm hover-lift transition-all ${
-              i % 3 === 0
-                ? 'bg-gradient-teal border-gradient-teal'
-                : i % 3 === 1
-                ? 'bg-gradient-yellow border-gradient-yellow'
-                : 'bg-gradient-turquoise border-gradient-turquoise'
-            }`}
-          >
-
-            {/* Top */}
-            <div className="flex items-center justify-between mb-5">
-
-              <div className={`w-11 h-11 rounded-full flex items-center justify-center ${
-                i % 3 === 0
-                  ? 'bg-amg-teal-soft'
-                  : i % 3 === 1
-                  ? 'bg-amg-yellow-bg'
-                  : 'bg-amg-turquoise-bg'
-              }`}>
-                <Icon className={`w-5 h-5 ${
-                  i % 3 === 1 ? 'text-amg-yellow' : 'text-amg-turquoise-2'
-                }`} />
-              </div>
-
-              <span className="text-[12px] tracking-[0.16em] uppercase font-semibold text-amg-teal/45">
-                {item.step}
-              </span>
-
-            </div>
-
-            {/* Content */}
-            <h3 className="font-serif text-[23px] text-amg-teal leading-[1.1]">
-              {item.title}
-            </h3>
-
-            <p className="mt-3 text-[14px] text-amg-teal/68 leading-[1.6]">
-              {item.text}
-            </p>
-
-          </div>
-        );
-      })}
-
-    </div>
-
-  </div>
-
-</section>
 {/* ECOSYSTEM & PARTNERS */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+{/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
-  <div className="max-w-[1280px] mx-auto">
+  <div className="max-w-[1280px] mx-auto"> */}
 
     {/* Heading */}
   {/* Heading */}
-<div className="text-center  mx-auto mb-20">  
+{/* <div className="text-center  mx-auto mb-20">  
 
   <div className="tag-pill inline-flex mb-5">
     <span className="dot bg-amg-turquoise" />
@@ -848,9 +979,9 @@ export default function Home() {
     to improve fundraising readiness
   </p>
 
-</div>
+</div> */}
     {/* Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
       {[
         {
@@ -879,12 +1010,12 @@ export default function Home() {
           >
 
             {/* Icon */}
-            <div className="w-14 h-14 rounded-2xl bg-amg-turquoise-bg flex items-center justify-center mb-7">
+            {/* <div className="w-14 h-14 rounded-2xl bg-amg-turquoise-bg flex items-center justify-center mb-7">
               <Icon className="w-6 h-6 text-amg-teal" />
             </div>
 
             {/* Content */}
-            <h3 className="font-serif text-[28px] text-amg-teal leading-[1.12]">
+            {/* <h3 className="font-serif text-[28px] text-amg-teal leading-[1.12]"> 
               {item.title}
             </h3>
 
@@ -900,7 +1031,7 @@ export default function Home() {
 
   </div>
 
-</section>
+</section>  */}
 {/* INVESTMENT READINESS PROGRAM */}
 <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white overflow-hidden">
 
@@ -916,13 +1047,12 @@ export default function Home() {
           Investment Readiness Program
         </div>
 
-        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
-          A Practical Fundraising Readiness Program
+        <h2 className="heading-display text-[36px] md:text-[54px] text-amg-teal leading-[1.03]">
+         Not yet ready for a full sprint?
         </h2>
 
         <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-3xl">
-          IRP helps founders strengthen their pitch, numbers,
-          and preparation before investor outreach
+         For founders earlier in the journey, AMG offers structured investor-readiness programming to clarify narrative, financials, valuation, and fundraising strategy
         </p>
 
         {/* Features */}
@@ -1058,12 +1188,12 @@ export default function Home() {
 
 </section>
 {/* CASE STUDIES / TRANSFORMATIONS */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+{/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 
-  <div className="max-w-[1280px] mx-auto">
+  <div className="max-w-[1280px] mx-auto"> */}
 
     {/* Heading */}
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+    {/* <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
 
       <div className="lg:col-span-7">
 
@@ -1087,13 +1217,13 @@ export default function Home() {
 
       </div>
 
-    </div>
+    </div> */}
 
     {/* Case Study Grid */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6"> */}
 
       {/* BEFORE */}
-      <div className="rounded-[30px] border border-amg-line bg-[#fafbfd] p-9 shadow-soft-sm">
+      {/* <div className="rounded-[30px] border border-amg-line bg-[#fafbfd] p-9 shadow-soft-sm">
 
         <div className="flex items-center gap-3 mb-8">
 
@@ -1142,13 +1272,13 @@ export default function Home() {
 
         </div>
 
-      </div>
+      </div> */}
 
       {/* AFTER */}
-      <div className="rounded-[30px] border border-amg-teal bg-amg-teal p-9 shadow-soft-sm text-white relative overflow-hidden">
+      {/* <div className="rounded-[30px] border border-amg-teal bg-amg-teal p-9 shadow-soft-sm text-white relative overflow-hidden"> */}
 
         {/* Glow */}
-        <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-3xl" />
+        {/* <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-3xl" />
 
         <div className="relative z-10">
 
@@ -1207,16 +1337,16 @@ export default function Home() {
 
   </div>
 
-</section>
+</section> */}
 {/* AI VS STRATEGIC ADVISORY */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white overflow-hidden">
+{/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white overflow-hidden">
 
   <div className="max-w-[1280px] mx-auto">
 
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center"> */}
 
       {/* LEFT CONTENT */}
-      <div className="lg:col-span-7">
+      {/* <div className="lg:col-span-7">
 
         <div className="tag-pill inline-flex mb-5">
           <span className="dot bg-amg-turquoise" />
@@ -1230,10 +1360,10 @@ export default function Home() {
         <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-3xl">
           AI speeds up the work, but a successful raise still depends
           on clarity, timing, positioning, and experience
-        </p>
+        </p> */}
 
         {/* Points */}
-        <div className="space-y-5 mt-10">
+        {/* <div className="space-y-5 mt-10">
 
           {[
             'AI cannot test whether your startup story will convince investors',
@@ -1259,15 +1389,15 @@ export default function Home() {
 
         </div>
 
-      </div>
+      </div> */}
 
       {/* RIGHT VISUAL */}
-      <div className="lg:col-span-5 relative">
+      {/* <div className="lg:col-span-5 relative">
 
-        <div className="rounded-[32px] border border-amg-line bg-white shadow-soft-lg overflow-hidden">
+        <div className="rounded-[32px] border border-amg-line bg-white shadow-soft-lg overflow-hidden"> */}
 
           {/* Top */}
-          <div className="p-8 border-b border-amg-line">
+          {/* <div className="p-8 border-b border-amg-line">
 
             <div className="flex items-center justify-between mb-7">
 
@@ -1294,10 +1424,10 @@ export default function Home() {
               investor understanding, and founder judgment
             </p>
 
-          </div>
+          </div> */}
 
           {/* Comparison */}
-          <div className="p-8 space-y-5">
+          {/* <div className="p-8 space-y-5">
 
             {[
               {
@@ -1345,7 +1475,7 @@ export default function Home() {
 
   </div>
 
-</section>
+</section> */}
     
       <CTASection />
       <Footer />

@@ -957,3 +957,89 @@ select:focus, input:focus, textarea:focus {
   }
 }
 
+
+/* Problem statement section */
+.problem-section .tag-pill {
+  background: #ffffff;
+  border-color: rgba(14, 76, 92, 0.12);
+  box-shadow: 0 8px 20px rgba(14, 76, 92, 0.06);
+  color: #001b22;
+}
+
+.problem-heading {
+  max-width: 860px;
+  margin-inline: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(38px, 4.4vw, 58px);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.problem-strike {
+  position: relative;
+  display: inline;
+  color: rgba(14, 76, 92, 0.72);
+  font-style: italic;
+  white-space: normal;
+}
+
+.problem-strike::after {
+  content: '';
+  position: absolute;
+  left: 0.02em;
+  right: -0.02em;
+  top: 55%;
+  height: 4px;
+  background: #f5c518;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .problem-heading {
+    font-size: clamp(34px, 10vw, 50px);
+    line-height: 1.05;
+  }
+
+  .problem-strike::after {
+    height: 4px;
+  }
+}
+
+/* How AMG helps cards */
+.amg-help-heading {
+  max-width: 860px;
+  margin-inline: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(38px, 4.4vw, 58px);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.amg-help-heading span {
+  color: #0a7a6e;
+  font-style: italic;
+}
+
+.amg-help-card {
+  min-height: 500px;
+}
+
+.amg-help-card-dark {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(0, 188, 212, 0.12), transparent 38%),
+    var(--amg-teal);
+}
+
+@media (max-width: 768px) {
+  .amg-help-heading {
+    font-size: clamp(36px, 11vw, 52px);
+  }
+
+  .amg-help-card {
+    min-height: auto;
+  }
+}
