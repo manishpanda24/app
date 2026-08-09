@@ -11,6 +11,8 @@ import BurnRunway from "./calculator/pages/BurnRunway";
 import RevenueProjector from "./calculator/pages/RevenueProjector";
 import SafeDilution from "./calculator/pages/SafeDilution";
 import AboutUs from "./pages/AboutUs";
+import BlogList from "./pages/BlogList";
+import BlogPost from "./pages/BlogPost";
 import { Toaster } from "./components/ui/sonner";
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
           <Route path="/resources/revenueprojector" element={<RevenueProjector />} />
           <Route path="/resources/safedilution" element={<SafeDilution />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
         <Toaster position="top-right" richColors />
       </BrowserRouter>
