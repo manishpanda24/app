@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight,Rocket,Compass,Search, FileText, Sparkles, Calculator,Brain, X,Check,AlertTriangle,Building2,TrendingUp, Users, ShieldCheck, MessageCircle, Briefcase, CheckCircle2, Target, Globe, Linkedin, BadgeCheck } from 'lucide-react';
+import { ArrowRight, ArrowUpRight,Rocket,Compass,Search, FileText, Sparkles, Calculator,Brain, X,Check,AlertTriangle,Building2,TrendingUp, Users, ShieldCheck, MessageCircle, Briefcase, CheckCircle2, Target, Globe, Linkedin, BadgeCheck, Laptop, HeartPulse, CreditCard, Leaf, Factory, ShoppingCart, ClipboardCheck, BarChart3, Award, Landmark, Handshake, Presentation } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
 import GauravImage from '../images/GauravImage.jpg';
 import { HERO, SERVICE_PILLARS, SERVICES, FOUNDER_SERVICES_INTRO, WHO_WE_ARE } from '../mock';
-import IndustriesGrid from '../components/IndustryGrid';
 const ICONS = {
   'pitch-deck-review': FileText,
   'pitch-deck-creation': Sparkles,
@@ -146,19 +145,31 @@ export default function Home() {
       </div>
 
       {/* Heading */}
-      <h1 className="heading-display text-[54px] sm:text-[64px] lg:text-[76px] leading-[0.95] text-amg-teal ">
-        Raise Capital With Confidence
+      <h1 className="heading-display text-[52px] sm:text-[64px] lg:text-[76px] leading-[0.95] text-amg-teal max-w-6xl">
+        From Pitch Deck to Closing the Round: Raise Capital with Confidence
       </h1>
 
+      <div className="mt-7 text-[28px] md:text-[36px] leading-tight font-medium text-amg-teal">
+        ACE Fundability Framework™
+      </div>
+
       {/* Subheading */}
-      <p className="mt-8 text-[18px] lg:text-[20px] leading-relaxed text-amg-teal/75 max-w-5xl">
-AMG helps founders become investor-ready, identify the right Canada, US, and European investors, map warm-intro paths, and execute sharper fundraising campaigns
+      <p className="mt-5 text-[18px] lg:text-[22px] leading-relaxed text-amg-teal/85 max-w-6xl font-medium">
+        Assess Fundability Gaps · Create the Investor Kit & Become Investor-Ready · Execute a Structured, Targeted Fundraising Process
+      </p>
+
+      <p className="mt-8 text-[17px] lg:text-[20px] leading-relaxed text-amg-teal/80 max-w-6xl font-medium">
+        AMG helps Pre-Seed to Series A founders diagnose fundability gaps, build a compelling investment case and investor kit, identify the right investors globally, and execute the fundraising process from outreach through diligence and close.
+      </p>
+
+      <p className="mt-5 text-[16px] lg:text-[18px] leading-relaxed text-amg-teal/75 max-w-5xl font-medium">
+        Every engagement is tailored to your stage, sector, business model, and target investor markets.
       </p>
 
       {/* CTA Buttons */}
       <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
         <Link to="/contact" className="btn-yellow">
-          Assess Your Readiness
+          Assess Your Fundability
           <ArrowRight className="w-4 h-4" />
         </Link>
 
@@ -463,111 +474,153 @@ AMG helps founders become investor-ready, identify the right Canada, US, and Eur
     <div className="text-center max-w-8xl mx-auto">
       <div className="tag-pill inline-flex mb-5">
         <span className="dot bg-amg-yellow" />
-        The Problem
+        Why Founders Work With AMG
       </div>
 
       <h2 className="problem-heading text-amg-ink">
-        Most founders don’t need <span className="problem-strike">more investor names</span>
+        Most founders don’t need more <span className="problem-strike">generic fundraising advice or investor lists</span>
       </h2>
 
       <p className="mt-7 text-[17px] md:text-[24px] text-amg-teal/72 leading-relaxed max-w-6xl mx-auto">
-        They need to know which investors are actually relevant, whether the company
-        is truly ready, which path can credibly open the door, and what message will
-        create conviction
+        They need a realistic fundability-gap analysis, investor-readiness from an investor lens, and a targeted path to the right active investors globally.
       </p>
 
       <p className="mt-5 text-[15.5px] md:text-[20px] leading-relaxed text-amg-teal/60 max-w-6xl mx-auto">
-        AMG combines fundraising judgment, verified investor intelligence, and AI-assisted
-        execution to help founders run a more disciplined raise — not another data subscription,
-        not another mentoring hour
+        AMG helps founders assess what could block the raise, strengthen the investment case, map relevant investors, run disciplined outreach and meetings, and support negotiations, diligence, and closing.
       </p>
+
+      <div className="problem-path-row mt-9">
+        {[
+          'Fundability Gaps',
+          'Investor Readiness',
+          'Target Investors',
+          'Outreach & Meetings',
+          'Negotiation to Close',
+        ].map((item) => (
+          <span key={item}>{item}</span>
+        ))}
+      </div>
     </div>
   </div>
 </section>
-
 {/* HOW AMG HELPS */}
 <section className="amg-help-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
   <div className="max-w-[1280px] mx-auto">
-    <div className="text-center max-w-5xl mx-auto mb-14">
-      <div className="tag-pill inline-flex mb-5">
-        <span className="dot bg-amg-turquoise" />
-        How AMG Helps
-      </div>
-
+    <div className="text-center max-w-5xl mx-auto mb-10">
       <h2 className="amg-help-heading text-amg-ink">
-        Two ways in. Both premium. Both by <span>application</span>.
+        Two ways to work with AMG
       </h2>
+      <p className="mt-4 text-[17px] md:text-[20px] leading-relaxed text-amg-teal/75">
+        Start with the Diagnostic. Step into full execution when you are ready.
+      </p>
     </div>
 
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 max-w-[1120px] mx-auto">
-      <div className="amg-help-card bg-white border border-amg-line rounded-[20px] p-6 md:p-7 shadow-soft-sm flex flex-col">
-        <div className="text-[12px] tracking-[0.16em] uppercase text-amg-mute mb-5">
-          01 / Diagnostic
+    <div className="grid grid-cols-1 lg:grid-cols-[1.45fr_1fr] gap-6 max-w-[1180px] mx-auto items-stretch">
+      <div className="amg-help-card bg-white border border-amg-line rounded-[20px] p-7 md:p-9 shadow-soft-sm flex flex-col">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-full bg-amg-teal-soft flex items-center justify-center">
+              <Search className="w-7 h-7 text-amg-teal" />
+            </div>
+            <div className="text-[13px] tracking-[0.16em] uppercase text-amg-teal font-semibold">
+              01 / Diagnostic Review
+            </div>
+          </div>
+          <span className="rounded-full bg-amg-teal-soft px-4 py-2 text-[12px] font-semibold uppercase text-amg-teal">
+            Best Place to Start
+          </span>
         </div>
 
-        <h3 className="font-serif text-[24px] md:text-[28px] leading-tight text-amg-ink">
+        <h3 className="font-serif text-[32px] md:text-[42px] leading-tight text-amg-ink">
           Investor Readiness Diagnostic
         </h3>
 
-        <p className="mt-4 text-[14.5px] leading-relaxed text-amg-teal/70">
-          A focused paid review of your deck, financial model, valuation logic,
-          raise amount, milestones, GTM assumptions, and investor narrative —
-          with a clear verdict on whether you are ready to raise
+        <p className="mt-5 text-[16px] md:text-[18px] leading-relaxed text-amg-ink/75 max-w-3xl">
+          A focused paid review for founders who want an investor's honest view before fundraising. We assess fundability gaps, pressure-test the investment case, and show exactly what needs to be fixed before investor outreach begins.
         </p>
 
-        <ul className="mt-7 space-y-3 text-[14.5px] text-amg-ink/85">
-          {[
-            'Investor readiness score',
-            'Deck & narrative gap analysis',
-            'Financial model & raise logic review',
-            'Valuation & dilution sanity check',
-            'Investor objection map',
-          ].map((item) => (
-            <li key={item} className="flex items-start gap-3">
-              <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-turquoise-2 shrink-0" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="mt-7 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-amg-line pt-7">
+          <div>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 rounded-full bg-amg-teal flex items-center justify-center">
+                <ClipboardCheck className="w-5 h-5 text-white" />
+              </div>
+              <h4 className="font-serif text-[22px] text-amg-teal">What we review</h4>
+            </div>
+            <ul className="space-y-3 text-[15px] text-amg-ink/85">
+              {[
+                'Deck, narrative & positioning',
+                'Financial model, raise logic & milestones',
+                'Valuation, dilution & investor objections',
+                'Sector-, stage- & business-model-specific fundability gaps',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-teal shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:border-l md:border-amg-line md:pl-8">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 rounded-full bg-amg-teal flex items-center justify-center">
+                <Briefcase className="w-5 h-5 text-white" />
+              </div>
+              <h4 className="font-serif text-[22px] text-amg-teal">What you get</h4>
+            </div>
+            <ul className="space-y-3 text-[15px] text-amg-ink/85">
+              {[
+                'Investment Readiness Review Report',
+                'Gap Analysis Scorecard',
+                'Priority Fix List',
+                'Personalized Fundraising Roadmap',
+                '3x 1:1 Expert Sessions',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-teal shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
         <Link
           to="/contact"
-          className="mt-auto inline-flex w-full items-center justify-center gap-3 rounded-md bg-amg-ink px-6 py-3.5 text-[14px] font-semibold text-white hover:bg-amg-teal transition-all"
+          className="mt-auto inline-flex w-full items-center justify-center gap-3 rounded-md bg-amg-ink px-6 py-4 text-[16px] font-semibold text-white hover:bg-amg-teal transition-all"
         >
-          Request Diagnostic <ArrowRight className="w-4 h-4" />
+          Request Diagnostic <ArrowRight className="w-5 h-5" />
         </Link>
       </div>
 
-      <div className="amg-help-card amg-help-card-dark border border-amg-teal rounded-[20px] p-6 md:p-7 shadow-soft-lg relative overflow-hidden flex flex-col">
-        <div className="absolute top-6 right-6 rounded-full bg-amg-yellow px-4 py-2 text-[11px] font-semibold uppercase text-amg-ink">
+      <div className="amg-help-card amg-help-card-dark border border-amg-teal rounded-[20px] p-7 md:p-9 shadow-soft-lg relative overflow-hidden flex flex-col">
+        <div className="absolute top-7 right-7 rounded-full bg-amg-yellow px-5 py-2 text-[12px] font-semibold uppercase text-amg-ink">
           Flagship
         </div>
 
-        <div className="text-[12px] tracking-[0.16em] uppercase text-amg-yellow mb-5">
-          02 / Flagship
+        <div className="text-[13px] tracking-[0.16em] uppercase text-amg-turquoise mb-9 font-semibold">
+          02 / Full Fundraising Support
         </div>
 
-        <h3 className="font-serif text-[24px] md:text-[28px] leading-tight text-white">
+        <h3 className="font-serif text-[30px] md:text-[38px] leading-tight text-white">
           Fundraising Execution Sprint
         </h3>
 
-        <p className="mt-4 text-[14.5px] leading-relaxed text-white/80">
-          Diagnostic + full fundraising prep and execution. Narrative, model
-          and valuation fixes, verified target list across local and cross-border
-          investors, warm-intro paths, outreach, investor Q&A, diligence and close support
+        <p className="mt-5 text-[16px] leading-relaxed text-white/80">
+          For founders who need support beyond diagnosis - from investor-ready materials to targeted fundraising execution and close support.
         </p>
 
-        <ul className="mt-7 space-y-3 text-[14.5px] text-white/90">
+        <ul className="mt-8 space-y-5 text-[16px] text-white/90">
           {[
             'Everything in the Diagnostic',
-            'Investment readiness rebuild (deck, model, valuation, Q&A)',
-            'Local + cross-border investor access strategy (Canada · US · Europe)',
-            'Verified target list + warm-intro path mapping',
-            'AI-assisted outreach & investor meetings',
+            'Deck, model, valuation & Q&A rebuild',
+            'Verified investor targeting across Canada, US & Europe',
+            'Warm-intro paths, outreach & investor meetings',
             'Diligence, negotiation & close support',
           ].map((item) => (
-            <li key={item} className="flex items-start gap-3">
-              <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-turquoise shrink-0" />
+            <li key={item} className="flex items-start gap-4">
+              <CheckCircle2 className="w-5 h-5 mt-0.5 text-amg-turquoise shrink-0" />
               <span>{item}</span>
             </li>
           ))}
@@ -575,76 +628,66 @@ AMG helps founders become investor-ready, identify the right Canada, US, and Eur
 
         <Link
           to="/contact"
-          className="mt-auto inline-flex w-full items-center justify-center gap-3 rounded-md bg-amg-yellow px-6 py-3.5 text-[14px] font-semibold text-amg-ink hover:bg-amg-yellow-2 transition-all"
+          className="mt-auto inline-flex w-full items-center justify-center gap-3 rounded-md bg-amg-yellow px-6 py-4 text-[18px] font-semibold text-amg-ink hover:bg-amg-yellow-2 transition-all"
         >
-          Apply for Sprint <ArrowRight className="w-4 h-4" />
+          Explore Sprint <ArrowRight className="w-5 h-5" />
         </Link>
       </div>
     </div>
   </div>
 </section>
-
-{/* HOW WE WORK */}
 {/* HOW WE WORK */}
 <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+  <div className="max-w-[1280px] mx-auto">
+    <div className="text-center mx-auto mb-16">
+      <div className="tag-pill inline-flex mb-5">
+        <span className="dot bg-amg-teal" />
+        Process
+      </div>
 
-  <div className=" mx-auto">
+      <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
+        A disciplined raise runs on four core disciplines
+      </h2>
 
-    {/* Heading */}
-  {/* Heading */}
-<div className="text-center  mx-auto mb-20">
+      <p className="mt-8 text-[17px] md:text-[20px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
+        We combine investor judgment, fundraising strategy, targeted investor access,
+        and disciplined execution to help founders move from preparation to close.
+      </p>
+    </div>
 
-  <div className="tag-pill inline-flex mb-5">
-    <span className="dot bg-amg-yellow" />
-    Process
-  </div>
-
-  <h2 className="heading-display text-[42px] md:text-[48px] leading-[1.03] text-amg-teal">
-  Four disciplines behind every disciplined raise
-  </h2>
-
-  <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-4xl mx-auto">
-  We combine what the best fundraising advisors do — judgment, network, targeting — with what technology now makes possible: verified data, path analysis, and AI-accelerated execution
-  </p>
-
-</div>
-
-    {/* Process Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
       {[
         {
           step: '01',
           title: 'Investor Diagnostic Review',
-          text: 'A term-sheet-grade pressure test of deck, model, valuation, raise logic, milestones, and investor narrative — the way a lead investor would read it',
+          text: 'An investor-lens pressure test of your deck, model, valuation, raise strategy, milestones, and narrative - so you know what could block the round before outreach begins.',
           icon: Search,
         },
         {
           step: '02',
           title: 'Investment Readiness',
-          text: 'Fixing the gaps the diagnostic surfaces. Narrative sharpening, financials rebuild, valuation defence, and full investor Q&A preparation until the company is genuinely fundable',
+          text: 'We fix the gaps the diagnostic surfaces: sharper narrative, stronger deck and model, valuation support, and investor Q&A preparation until the company is genuinely ready to raise.',
           icon: Compass,
         },
         {
           step: '03',
-          title: 'Verified Investor Intelligence & Network',
-          text: 'Curated, current, geography-aware target lists plus warm-intro path mapping and investor meetings — powered end-to-end by AI-assisted execution',
-          icon: ShieldCheck,
+          title: 'Target Investors & Outreach',
+          text: 'Relevant, active investor targeting across geographies, warm-intro path mapping, and disciplined outreach designed to start the right investor conversations.',
+          icon: Users,
         },
         {
           step: '04',
-          title: 'Diligence & Close',
-          text: 'Dataroom build, diligence support, meeting debriefs, term-sheet review, and negotiation guidance through to close',
-          icon: Rocket,
+          title: 'Diligence, Negotiation & Close',
+          text: 'Data room readiness, diligence support, meeting follow-ups, investor management, and negotiation guidance through term sheet and close.',
+          icon: FileText,
         },
       ].map((item, i) => {
-
         const Icon = item.icon;
 
         return (
           <div
             key={i}
-            className={`group rounded-[20px] border p-6 shadow-soft-sm hover-lift transition-all ${
+            className={`group min-h-[285px] rounded-[20px] border p-7 shadow-soft-sm hover-lift transition-all ${
               i % 3 === 0
                 ? 'bg-gradient-teal border-gradient-teal'
                 : i % 3 === 1
@@ -652,188 +695,286 @@ AMG helps founders become investor-ready, identify the right Canada, US, and Eur
                 : 'bg-gradient-turquoise border-gradient-turquoise'
             }`}
           >
-
-            {/* Top */}
-            <div className="flex items-center justify-between mb-5">
-
-              <div className={`w-11 h-11 rounded-full flex items-center justify-center ${
+            <div className="flex items-center justify-between mb-8">
+              <div className={`w-14 h-14 rounded-full flex items-center justify-center ${
                 i % 3 === 0
                   ? 'bg-amg-teal-soft'
                   : i % 3 === 1
                   ? 'bg-amg-yellow-bg'
                   : 'bg-amg-turquoise-bg'
               }`}>
-                <Icon className={`w-5 h-5 ${
+                <Icon className={`w-7 h-7 ${
                   i % 3 === 1 ? 'text-amg-yellow' : 'text-amg-turquoise-2'
                 }`} />
               </div>
 
-              <span className="text-[12px] tracking-[0.16em] uppercase font-semibold text-amg-teal/45">
+              <span className={`text-[24px] font-medium ${i % 3 === 1 ? 'text-amg-yellow' : 'text-amg-teal/70'}`}>
                 {item.step}
               </span>
-
             </div>
 
-            {/* Content */}
-            <h3 className="font-serif text-[23px] text-amg-teal leading-[1.1]">
+            <h3 className="font-serif text-[24px] text-amg-teal leading-[1.12]">
               {item.title}
             </h3>
 
-            <p className="mt-3 text-[14px] text-amg-teal/68 leading-[1.6]">
+            <p className="mt-4 text-[16px] text-amg-ink/78 leading-relaxed">
               {item.text}
             </p>
-
           </div>
         );
       })}
+    </div>
+  </div>
+</section>
+{/* INDUSTRIES WE SERVE */}
+<section className="sector-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+  <div className="max-w-[1280px] mx-auto">
+    <div className="text-center mx-auto mb-14">
+      <div className="tag-pill inline-flex mb-5">
+        <span className="dot bg-amg-yellow" />
+        Sector Experience
+      </div>
 
+      <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
+        Built for founders across sectors
+      </h2>
+
+      <p className="mt-8 text-[17px] md:text-[20px] text-amg-ink/80 leading-relaxed max-w-5xl mx-auto">
+        We work with companies across technology, healthcare, financial services, climate, industrial,
+        consumer, and other sectors where a clear investment case and disciplined fundraising matter.
+      </p>
+
+      <p className="mt-5 text-[15.5px] md:text-[18px] text-amg-teal/60 leading-relaxed max-w-4xl mx-auto">
+        The fundability lens is tailored to your sector, stage, business model, and capital path - not built around a one-size-fits-all playbook.
+      </p>
     </div>
 
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+      {[
+        { title: 'SaaS / AI / Software', icon: Laptop, tone: 'turquoise' },
+        { title: 'Life Sciences / Healthcare / Medical Devices', icon: HeartPulse, tone: 'turquoise' },
+        { title: 'Fintech / Payments / Insurtech', icon: CreditCard, tone: 'yellow' },
+        { title: 'Climate / Energy / Sustainability', icon: Leaf, tone: 'green' },
+        { title: 'Industrial / Robotics / Advanced Manufacturing', icon: Factory, tone: 'teal' },
+        { title: 'Consumer / Marketplace / Commerce', icon: ShoppingCart, tone: 'yellow' },
+      ].map((item) => {
+        const Icon = item.icon;
+        const toneClass =
+          item.tone === 'yellow'
+            ? 'sector-card-yellow'
+            : item.tone === 'green'
+            ? 'sector-card-green'
+            : item.tone === 'teal'
+            ? 'sector-card-teal'
+            : 'sector-card-turquoise';
+
+        return (
+          <div key={item.title} className={`sector-card ${toneClass}`}>
+            <div className="sector-icon">
+              <Icon className="w-8 h-8" />
+            </div>
+            <h3 className="font-serif text-[23px] md:text-[26px] leading-tight text-amg-teal">
+              {item.title}
+            </h3>
+          </div>
+        );
+      })}
+    </div>
+
+    <p className="mt-12 text-center text-[16px] md:text-[18px] text-amg-teal/60">
+      And other sectors where clarity, credible numbers, and investor-ready materials matter.
+    </p>
   </div>
-
-</section>
-
-{/* INDUSTRIES WE SERVE */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
-
-  <div className="mx-auto">
-
-    {/* Heading */}
-  {/* Heading */}
-<div className="text-center  mx-auto mb-20">
-
-  <div className="tag-pill inline-flex mb-5">
-    <span className="dot bg-amg-yellow" />
-    Industry Focus
-  </div>
-
-  <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
-    Built for Tech Founders
-  </h2>
-
-  <p className="mt-8 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-5xl mx-auto">
-    We support startups across sectors where clarity, strong numbers,
-    and investor-ready materials matter
-  </p>
-
-</div>
-
-    {/* Industries Grid */}
-    <section className="pt-2 bg-white">
-
-      <IndustriesGrid
-        title="Industries"
-        highlight="We Serve"
-        highlightColor="text-amg-turquoise"
-        showHeader={false}
-      />
-
-    </section>
-
-  </div>
-
 </section>
 {/* MEET THE FOUNDER */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
-
-  <div className="max-w-[1280px] mx-auto">
-
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-center">
-
-      {/* LEFT IMAGE */}
-      <div className="lg:col-span-5 relative">
-
-        <div className="relative rounded-[28px] overflow-hidden aspect-[4/5] shadow-soft-lg border border-amg-line">
-
+<section className="founder-proof-section py-20 px-6 lg:px-10 border-t border-amg-line bg-white">
+  <div className="max-w-[1320px] mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+      <div className="lg:col-span-4">
+        <div className="founder-photo-card">
           <img
             src={GauravImage}
             alt="Gaurav Bansal"
             className="w-full h-full object-cover object-top"
           />
 
-          {/* Floating Badge */}
-          <div className="absolute top-5 left-5 bg-white/90 backdrop-blur rounded-full px-4 py-2 shadow-soft border border-amg-line">
-
-            <div className="flex items-center gap-2">
-              <BadgeCheck className="w-4 h-4 text-amg-yellow" />
-
-              <span className="text-[12px] font-semibold text-amg-teal">
-                VC Turned Founder
-              </span>
-            </div>
-
+          <div className="founder-photo-badge">
+            <Award className="w-5 h-5 text-amg-yellow" />
+            <span>From the Investor Side of the Table</span>
           </div>
 
+          <div className="founder-quote-card">
+            <div className="text-amg-yellow text-[34px] leading-none">&ldquo;</div>
+            <p>
+              I've sat on the other side of the table - as an investor, operator, and dealmaker.
+              Now I help founders get investor-ready before they fundraise.
+            </p>
+          </div>
         </div>
-
       </div>
 
-      {/* RIGHT CONTENT */}
-      <div className="lg:col-span-7">
-
-        <div className="tag-pill inline-flex mb-5">
-          <span className="dot bg-amg-turquoise" />
-          Meet The Founder
+      <div className="lg:col-span-8">
+        <div className="text-[14px] tracking-[0.08em] uppercase text-amg-turquoise-2 font-semibold">
+          Meet the Founder
         </div>
 
-        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
-          Investor Experience for Founders
+        <h2 className="founder-proof-heading mt-3">
+          Built by an Investor.
+          <span> Now on the Founder's Side.</span>
         </h2>
 
-        <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/75 leading-relaxed max-w-3xl">
-          Founded by Gaurav Bansal — a VC, investor, and operator with
-          experience in startup investing and fundraising strategy
+        <div className="yellow-scribble" />
+
+        <p className="mt-5 text-[16px] md:text-[18px] leading-relaxed text-amg-ink/86 max-w-4xl font-medium">
+          Gaurav Bansal brings 14+ years across venture capital, angel investing,
+          investment banking and consulting - helping founders see their companies
+          the way investors do before they enter the fundraising market.
         </p>
 
-        {/* Metrics */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
-
+        <div className="founder-stats-grid mt-6">
           {[
-            '14+ years across VC, investment banking & consulting',
-            '50+ startup investments',
-            '20k+ pitch decks reviewed',
-            '$2Bn+ investment banking deal exposure',
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="flex items-start gap-4 rounded-2xl border border-amg-line bg-[#fafbfd] p-5"
-            >
+            {
+              icon: Users,
+              value: '50+ Angel 35+ VC',
+              label: 'Investments across stages, sectors & geographies',
+            },
+            {
+              icon: ClipboardCheck,
+              value: '20,000+',
+              label: 'Pitch decks & financial models reviewed',
+            },
+            {
+              icon: Search,
+              value: '100+',
+              label: 'Due diligences completed',
+            },
+            {
+              icon: Landmark,
+              value: '$2B+',
+              label: 'Investment banking transactions',
+            },
+          ].map((item) => {
+            const Icon = item.icon;
 
-              <div className="w-10 h-10 rounded-full bg-amg-turquoise-bg flex items-center justify-center shrink-0">
-                <CheckCircle2 className="w-4 h-4 text-amg-turquoise-2" />
+            return (
+              <div key={item.label} className="founder-stat-card">
+                <div className="founder-stat-icon">
+                  <Icon className="w-6 h-6" />
+                </div>
+                <div className="founder-stat-value">{item.value}</div>
+                <div className="founder-stat-line" />
+                <p>{item.label}</p>
               </div>
-
-              <span className="text-[15px] text-amg-teal/75 leading-relaxed">
-                {item}
-              </span>
-
-            </div>
-          ))}
-
+            );
+          })}
         </div>
 
-        {/* CTA */}
-        <a
-          href="https://www.linkedin.com/in/gauravbansalventurecapital/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-10 inline-flex items-center gap-3 bg-amg-teal hover:bg-amg-turquoise-2 text-white px-7 py-3 rounded-full text-[14px] font-semibold transition-colors"
-        >
+        <div className="founder-role-row mt-5">
+          {['Ex-VC', 'Angel Investor', 'Ex-Investment Banker', 'Portfolio Operator', 'Founder'].map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
 
-          <Linkedin className="w-4 h-4" />
-
-          View LinkedIn Profile
-
-        </a>
-
+        <div className="founder-proof-actions mt-6">
+          <p>
+            That experience now sits behind every AMG engagement - from identifying fundability gaps and
+            strengthening the investment case to investor targeting, diligence, negotiation and close.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/about" className="founder-dark-btn">
+              Learn More About Gaurav <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a
+              href="https://www.linkedin.com/in/gauravbansalventurecapital/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="founder-linkedin-btn"
+            >
+              <Linkedin className="w-4 h-4" />
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
       </div>
-
     </div>
 
-  </div>
+    <div className="ecosystem-proof mt-8">
+      <div className="ecosystem-proof-copy">
+        <div className="text-[13px] tracking-[0.08em] uppercase text-amg-teal font-semibold">
+          Trusted on Both Sides of the Table
+        </div>
+        <h3>Selected by Leading Startup Ecosystems</h3>
+        <div className="yellow-scribble" />
+        <p>
+          Leading accelerators, innovation programs, and founder ecosystems trust Gaurav to evaluate startups,
+          mentor founders, and assess investment readiness.
+        </p>
+        <div className="ecosystem-note">
+          <Handshake className="w-6 h-6" />
+          <span>
+            Beyond founder advisory, Gaurav also partners with accelerators, incubators, and innovation ecosystems
+            as a Growth Coach, Speaker, Workshop Leader, Evaluator, and EIR-style expert.
+          </span>
+        </div>
+      </div>
 
-</section>
-{/* INDUSTRIES WE SERVE */}
+      <div className="ecosystem-proof-main">
+        <div className="ecosystem-logo-grid">
+          {[
+            'NATO DIANA',
+            'MEDTECH INNOVATOR',
+            'MASSCHALLENGE',
+            'ventureLAB',
+            'COMMUNITECH',
+            'MIX',
+            'EIT RawMaterials',
+            'EIT Health',
+            'SCALE AI',
+          ].map((logo) => (
+            <div key={logo} className="ecosystem-logo-tile">{logo}</div>
+          ))}
+        </div>
+
+        <div className="ecosystem-metrics">
+          {[
+            { icon: Globe, value: '5,000+', label: 'Startups screened across 95 countries' },
+            { icon: Users, value: '2,000+', label: 'Applications reviewed for global investor & accelerator programs' },
+            { icon: Presentation, value: '130+', label: 'Founder workshops, mentorship & speaker sessions' },
+          ].map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div key={item.value} className="ecosystem-metric">
+                <div className="founder-stat-icon">
+                  <Icon className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="ecosystem-metric-value">{item.value}</div>
+                  <p>{item.label}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+
+    <div className="founder-proof-band">
+      <div className="flex items-center gap-3 text-white font-semibold">
+        <Users className="w-5 h-5 text-white" />
+        <span>Let's work together to help more founders succeed.</span>
+      </div>
+      <div className="flex flex-wrap gap-3">
+        <Link to="/founder-services" className="btn-yellow">
+          Explore Founder Services <ArrowRight className="w-4 h-4" />
+        </Link>
+        <Link to="/contact" className="founder-band-outline">
+          Partner with Gaurav <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>{/* INDUSTRIES WE SERVE */}
 
     {/* FOUNDER SERVICES */}
       {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
@@ -1033,159 +1174,140 @@ AMG helps founders become investor-ready, identify the right Canada, US, and Eur
 
 </section>  */}
 {/* INVESTMENT READINESS PROGRAM */}
-<section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white overflow-hidden">
-
+<section className="irp-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white overflow-hidden">
   <div className="max-w-[1280px] mx-auto">
-
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
-
-      {/* LEFT */}
-      <div className="lg:col-span-7">
-
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div className="lg:col-span-6">
         <div className="tag-pill inline-flex mb-5">
           <span className="dot bg-amg-yellow" />
           Investment Readiness Program
         </div>
 
-        <h2 className="heading-display text-[36px] md:text-[54px] text-amg-teal leading-[1.03]">
-         Not yet ready for a full sprint?
+        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
+          Earlier in Your Fundraising Journey? Start Here.
         </h2>
 
-        <p className="mt-7 text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-3xl">
-         For founders earlier in the journey, AMG offers structured investor-readiness programming to clarify narrative, financials, valuation, and fundraising strategy
+        <div className="yellow-scribble" />
+
+        <p className="mt-6 text-[17px] md:text-[19px] text-amg-ink/78 leading-relaxed max-w-3xl">
+          For first-time founders and companies preparing ahead of a raise, the Investment Readiness Program gives you the frameworks, tools, and expert guidance to understand what investors expect and build the foundations for a successful fundraise.
         </p>
 
-        {/* Features */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
           {[
-            'Fundraising readiness diagnostics',
-            'Investor narrative refinement',
-            'Financial clarity workshops',
-            'Mock investor Q&A sessions',
-            'Valuation & fundraising strategy',
-            'Founder mentoring & guidance',
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="flex items-start gap-4 rounded-2xl border border-amg-line bg-white p-5 shadow-soft-sm"
-            >
-
-              <div className="w-10 h-10 rounded-full bg-amg-yellow-bg flex items-center justify-center shrink-0">
-                <CheckCircle2 className="w-4 h-4 text-amg-teal" />
+            'Understand How Investors Evaluate Your Company',
+            'Identify Your Fundability Gaps',
+            'Build Your Investor Narrative & Pitch',
+            'Strengthen Financials, Valuation & Raise Strategy',
+            'Prepare for Investor Q&A & Due Diligence',
+            'Leave With a Personalized Fundraising Roadmap',
+          ].map((item) => (
+            <div key={item} className="irp-mini-card">
+              <div className="w-11 h-11 rounded-full bg-amg-yellow-bg flex items-center justify-center shrink-0">
+                <CheckCircle2 className="w-5 h-5 text-amg-teal" />
               </div>
-
-              <span className="text-[15px] text-amg-teal/75 leading-relaxed">
-                {item}
-              </span>
-
+              <span>{item}</span>
             </div>
           ))}
-
         </div>
 
-        {/* CTA */}
-        <div className="flex flex-wrap items-center gap-4 mt-10">
-
+        <div className="flex flex-wrap items-center gap-5 mt-8">
           <a
             href="https://investorreadinessprogram.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-yellow"
           >
-            Explore IRP
+            Explore the Investment Readiness Program
             <ArrowRight className="w-4 h-4" />
           </a>
 
-          <Link
-            to="/contact"
-            className="btn-outline"
-          >
-            Partner With Us
+          <Link to="/contact" className="btn-ghost">
+            See IRP Details
+            <ArrowRight className="w-4 h-4" />
           </Link>
-
         </div>
-
       </div>
 
-      {/* RIGHT */}
-      <div className="lg:col-span-5 relative">
+      <div className="lg:col-span-6">
+        <div className="irp-detail-card rounded-[28px] border border-amg-line bg-white shadow-soft-lg overflow-hidden">
+          <div className="p-8 md:p-10">
+            <div className="text-[13px] uppercase tracking-[0.22em] text-amg-teal/45 font-semibold mb-7">
+              Investment Readiness Program
+            </div>
 
-        {/* Main Card */}
-        <div className="rounded-[32px] border border-amg-line bg-white p-8 shadow-soft-lg relative z-10">
+            <h3 className="font-serif text-[34px] md:text-[44px] leading-[1.08] text-amg-teal">
+              Learn the Fundraising Game Before You Enter It
+            </h3>
 
-          <div className="flex items-center justify-between mb-8">
+            <div className="mt-8 space-y-8">
+              <div className="grid grid-cols-[48px_1fr] gap-5">
+                <div className="w-11 h-11 rounded-full bg-amg-yellow-bg flex items-center justify-center">
+                  <Users className="w-5 h-5 text-amg-teal" />
+                </div>
+                <div>
+                  <h4 className="font-serif text-[24px] text-amg-teal mb-4">Built for</h4>
+                  <ul className="space-y-3 text-[15px] text-amg-ink/82">
+                    {[
+                      'First-time fundraisers',
+                      'Founders 6-12+ months from raising',
+                      'Founders building their investor toolkit',
+                      'Founders who want structured guidance before execution',
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-teal shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
 
+              <div className="h-px bg-amg-line" />
+
+              <div className="grid grid-cols-[48px_1fr] gap-5">
+                <div className="w-11 h-11 rounded-full bg-amg-yellow-bg flex items-center justify-center">
+                  <BarChart3 className="w-5 h-5 text-amg-teal" />
+                </div>
+                <div>
+                  <h4 className="font-serif text-[24px] text-amg-teal mb-4">What you’ll build</h4>
+                  <ul className="space-y-3 text-[15px] text-amg-ink/82">
+                    {[
+                      'Investment readiness framework',
+                      'Investor narrative',
+                      'Financial & valuation foundations',
+                      'Fundraising strategy',
+                      'Investor Q&A readiness',
+                      'Action roadmap',
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-teal shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="irp-card-footer px-8 md:px-10 py-7 flex items-center gap-5">
+            <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+              <Rocket className="w-7 h-7 text-white" />
+            </div>
             <div>
-              <div className="text-[12px] uppercase tracking-[0.18em] text-amg-teal/45 font-semibold">
-                Founder Readiness
+              <div className="font-serif text-[24px] md:text-[28px] text-white leading-tight">
+                Learn → Build → Become Investor-Ready
               </div>
-
-              <div className="text-[42px] font-serif text-amg-teal mt-2">
-                IRP
-              </div>
+              <p className="text-[15px] text-white/75 mt-1">
+                A structured starting point for earlier-stage founders.
+              </p>
             </div>
-
-            <div className="w-16 h-16 rounded-2xl bg-amg-yellow-bg flex items-center justify-center">
-              <Rocket className="w-7 h-7 text-amg-teal" />
-            </div>
-
           </div>
-
-          <div className="space-y-5">
-
-            {[
-              'Structured fundraising curriculum',
-              'Investor readiness frameworks',
-              'Live founder workshops',
-              'Practical fundraising guidance',
-              'Founder accountability support',
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-between border-b border-amg-line pb-4"
-              >
-
-                <span className="text-[15px] text-amg-teal/72">
-                  {item}
-                </span>
-
-                <CheckCircle2 className="w-4 h-4 text-amg-turquoise-2" />
-
-              </div>
-            ))}
-
-          </div>
-
         </div>
-
-        {/* Floating Badge */}
-        <div className="hidden lg:flex mt-6 bg-amg-teal text-white rounded-2xl shadow-soft-lg px-6 py-5 items-center gap-4 w-fit">
-
-          <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-            <Users className="w-5 h-5" />
-          </div>
-
-          <div>
-
-            <div className="text-[28px] font-serif leading-none">
-              Founder-Led
-            </div>
-
-            <div className="text-[13px] text-white/70 mt-1">
-              Built for early-stage founders
-            </div>
-
-          </div>
-
-        </div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
 {/* CASE STUDIES / TRANSFORMATIONS */}
 {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
