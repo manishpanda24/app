@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   ShieldCheck,
+  CheckCircle2,
+  BarChart3,
+  Search,
+  Users,
 } from 'lucide-react';
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -394,16 +397,38 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
     <>
       <Navbar />
 
-      {/* HERO */}
-    {/* HERO */}
+   {/* =========================================================
+    CONTACT HERO
+    ========================================================= */}
+
 <section className="relative overflow-hidden border-b border-amg-line bg-[#fafbfd]">
 
+  {/* Technical grid background */}
   <div className="absolute inset-0 grid-paper pointer-events-none" />
 
-  <div className="max-w-[1280px] mx-auto px-6 lg:px-10 pt-32 pb-20 relative">
 
-    {/* Breadcrumb */}
-    <nav className="flex items-center gap-2 text-[13px] text-amg-teal/55 mb-10">
+  {/* Soft decorative glow */}
+  <div
+    className="absolute pointer-events-none"
+    style={{
+      width: '520px',
+      height: '520px',
+      right: '-180px',
+      top: '-180px',
+      borderRadius: '50%',
+      background:
+        'radial-gradient(circle, rgba(8,127,136,0.07) 0%, rgba(8,127,136,0) 70%)',
+    }}
+  />
+
+
+  <div className="max-w-[1280px] mx-auto px-6 lg:px-10 pt-8 pb-14 md:pt-10 md:pb-16 relative">
+
+    {/* =====================================================
+        BREADCRUMB
+    ===================================================== */}
+
+    <nav className="flex items-center gap-2 text-[13px] md:text-[14px] text-amg-teal/55 mb-9">
 
       <Link
         to="/"
@@ -412,7 +437,9 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
         Home
       </Link>
 
-      <span>/</span>
+      <span className="text-amg-teal/35">
+        /
+      </span>
 
       <span className="text-amg-teal font-medium">
         Contact
@@ -420,78 +447,175 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
 
     </nav>
 
-    {/* Main Grid */}
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
 
-      {/* Left */}
-      <div className="lg:col-span-7">
+    {/* =====================================================
+        EYEBROW
+    ===================================================== */}
 
-        <div className="eyebrow mb-5">
-          Strategic Fundraising Support
-        </div>
+    <div className="eyebrow mb-5">
+      FUNDRAISING FIT CALL
+    </div>
 
-        <h1 className="heading-display text-[52px] md:text-[82px] text-amg-teal leading-[0.96] max-w-5xl">
-          Discuss your
-          <br />
-          fundraising readiness.
-        </h1>
 
-        {/* Trust Strip */}
-        <div className="flex flex-wrap gap-3 mt-10">
+    {/* =====================================================
+        MAIN HEADING
+    ===================================================== */}
 
-          {[
-            '30-Min Intro Call',
-            'Founder Confidential',
-            'Pre-Seed to Series A',
-            // 'North America Focused',
-          ].map((item) => (
-            <div
-              key={item}
-              className="px-4 py-2 rounded-full border border-amg-line bg-white text-[13px] text-amg-teal/72"
-            >
-              {item}
-            </div>
-          ))}
+    <h1
+      className="
+        heading-display
+        text-amg-teal
+        leading-[0.94]
+        tracking-[-0.035em]
+        text-[52px]
+        md:text-[72px]
+        lg:text-[78px]
+        max-w-[1050px]
+        mb-6
+      "
+    >
+      Start With a
+      <br />
+      Fundraising Fit Call
+    </h1>
 
-        </div>
 
+    {/* =====================================================
+        DESCRIPTION
+    ===================================================== */}
+
+    <p
+      className="
+        text-amg-teal/65
+        text-[16px]
+        md:text-[17px]
+        leading-[1.6]
+        max-w-[760px]
+        mb-7
+      "
+    >
+      Tell us where you are, what you're raising, and what support
+      you need. We'll determine whether the Investment Readiness
+      Program, Investor Readiness Diagnostic, or Full Fundraising
+      Support is the right next step.
+    </p>
+
+
+    {/* =====================================================
+        TRUST / FIT PILLS
+    ===================================================== */}
+
+    <div className="flex flex-wrap gap-3">
+
+      {/* 30-minute intro */}
+
+      <div
+        className="
+          inline-flex
+          items-center
+          gap-2
+          px-4
+          py-2.5
+          rounded-full
+          border
+          border-amg-line
+          bg-white
+          text-amg-teal/75
+          text-[13px]
+          md:text-[14px]
+          font-medium
+          shadow-[0_2px_8px_rgba(6,63,72,0.03)]
+        "
+      >
+        <span className="text-[15px]">
+          ◷
+        </span>
+
+        30-minute intro
       </div>
 
-      {/* Right */}
-      <div className="lg:col-span-5">
 
-        <p className="text-[17px] md:text-[18px] text-amg-teal/72 leading-relaxed max-w-xl">
+      {/* Confidential */}
 
-          Strategic fundraising support for founders, accelerators,
-          and startup ecosystems preparing for investor scrutiny.
+      <div
+        className="
+          inline-flex
+          items-center
+          gap-2
+          px-4
+          py-2.5
+          rounded-full
+          border
+          border-amg-line
+          bg-white
+          text-amg-teal/75
+          text-[13px]
+          md:text-[14px]
+          font-medium
+          shadow-[0_2px_8px_rgba(6,63,72,0.03)]
+        "
+      >
+        <span className="text-[15px]">
+          ♙
+        </span>
 
-        </p>
+        Founder confidential
+      </div>
 
-        {/* Pain Points */}
-        <div className="mt-8 space-y-4">
 
-          {[
-            'Investor narrative feels unclear',
-            'Fundraising strategy lacks structure',
-            'Financial assumptions need pressure-testing',
-            'Preparing for investor conversations',
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-3"
-            >
+      {/* Stage */}
 
-              <div className="w-2 h-2 rounded-full bg-amg-yellow" />
+      <div
+        className="
+          inline-flex
+          items-center
+          gap-2
+          px-4
+          py-2.5
+          rounded-full
+          border
+          border-amg-line
+          bg-white
+          text-amg-teal/75
+          text-[13px]
+          md:text-[14px]
+          font-medium
+          shadow-[0_2px_8px_rgba(6,63,72,0.03)]
+        "
+      >
+        <span className="text-[15px]">
+          ↗
+        </span>
 
-              <span className="text-[15px] text-amg-teal/70">
-                {item}
-              </span>
+        Pre-Seed to Series A
+      </div>
 
-            </div>
-          ))}
 
-        </div>
+      {/* No obligation */}
 
+      <div
+        className="
+          inline-flex
+          items-center
+          gap-2
+          px-4
+          py-2.5
+          rounded-full
+          border
+          border-amg-line
+          bg-white
+          text-amg-teal/75
+          text-[13px]
+          md:text-[14px]
+          font-medium
+          shadow-[0_2px_8px_rgba(6,63,72,0.03)]
+        "
+      >
+        <span className="text-[15px]">
+          ✓
+        </span>
+
+        No obligation
       </div>
 
     </div>
@@ -1197,9 +1321,278 @@ Areas where you need strategic support *
               RIGHT SIDEBAR
           ───────────────────────────── */}
           <aside className="lg:col-span-5 space-y-5">
-            {/* ACCELERATOR FORM */}
-            <form
-              onSubmit={async e => {
+
+  {/* =========================================================
+      WHAT TO EXPECT
+  ========================================================= */}
+
+  <div className="card-pro shadow-soft-lg p-7">
+
+    <h3 className="font-serif text-[28px] leading-tight text-amg-ink mb-6">
+      What to expect
+    </h3>
+
+    <div className="space-y-5">
+
+      {[
+        '30 minutes',
+        'Right-fit guidance',
+        'No obligation',
+        'Next-step clarity',
+      ].map((item) => (
+        <div
+          key={item}
+          className="flex items-center gap-3"
+        >
+
+          <CheckCircle2
+            className="w-5 h-5 flex-shrink-0"
+            style={{
+              color: '#f2c200',
+              fill: '#f2c200',
+            }}
+          />
+
+          <span className="text-[15px] text-amg-teal/70">
+            {item}
+          </span>
+
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+
+
+  {/* =========================================================
+      POSSIBLE NEXT STEPS
+  ========================================================= */}
+
+  <div className="card-pro shadow-soft-lg p-7">
+
+    <h3 className="font-serif text-[28px] leading-tight text-amg-ink mb-5">
+      Possible next steps
+    </h3>
+
+
+    <div className="space-y-3">
+
+
+      {/* =====================================================
+          INVESTMENT READINESS PROGRAM
+      ===================================================== */}
+
+      <div
+        className="
+          group
+          flex
+          items-center
+          gap-4
+          rounded-lg
+          border
+          border-amg-line
+          bg-white
+          p-4
+          transition-all
+          duration-200
+          hover:shadow-soft-lg
+        "
+      >
+
+        <div
+          className="
+            w-12
+            h-12
+            rounded-full
+            flex
+            items-center
+            justify-center
+            flex-shrink-0
+          "
+          style={{
+            background: '#063f48',
+            color: '#ffffff',
+          }}
+        >
+          <BarChart3 className="w-6 h-6" />
+        </div>
+
+
+        <div className="flex-1 min-w-0">
+
+          <h4 className="font-serif text-[17px] font-semibold text-amg-ink leading-tight">
+            Investment Readiness Program
+          </h4>
+
+          <p className="text-[13px] text-amg-teal/65 leading-relaxed mt-1">
+            Build your fundraising foundation.
+          </p>
+
+        </div>
+
+
+        <ArrowRight
+          className="
+            w-5
+            h-5
+            flex-shrink-0
+            text-amg-teal
+            transition-transform
+            duration-200
+            group-hover:translate-x-1
+          "
+        />
+
+      </div>
+
+
+      {/* =====================================================
+          DIAGNOSTIC REVIEW
+      ===================================================== */}
+
+      <div
+        className="
+          group
+          flex
+          items-center
+          gap-4
+          rounded-lg
+          border
+          border-amg-line
+          bg-white
+          p-4
+          transition-all
+          duration-200
+          hover:shadow-soft-lg
+        "
+      >
+
+        <div
+          className="
+            w-12
+            h-12
+            rounded-full
+            flex
+            items-center
+            justify-center
+            flex-shrink-0
+          "
+          style={{
+            background: '#6c9ba3',
+            color: '#ffffff',
+          }}
+        >
+          <Search className="w-6 h-6" />
+        </div>
+
+
+        <div className="flex-1 min-w-0">
+
+          <h4 className="font-serif text-[17px] font-semibold text-amg-ink leading-tight">
+            Diagnostic Review
+          </h4>
+
+          <p className="text-[13px] text-amg-teal/65 leading-relaxed mt-1">
+            Get an investor-readiness assessment.
+          </p>
+
+        </div>
+
+
+        <ArrowRight
+          className="
+            w-5
+            h-5
+            flex-shrink-0
+            text-amg-teal
+            transition-transform
+            duration-200
+            group-hover:translate-x-1
+          "
+        />
+
+      </div>
+
+
+      {/* =====================================================
+          FULL FUNDRAISING SUPPORT
+      ===================================================== */}
+
+      <div
+        className="
+          group
+          flex
+          items-center
+          gap-4
+          rounded-lg
+          border
+          border-amg-line
+          bg-white
+          p-4
+          transition-all
+          duration-200
+          hover:shadow-soft-lg
+        "
+      >
+
+        <div
+          className="
+            w-12
+            h-12
+            rounded-full
+            flex
+            items-center
+            justify-center
+            flex-shrink-0
+          "
+          style={{
+            background: '#6c9ba3',
+            color: '#ffffff',
+          }}
+        >
+          <Users className="w-6 h-6" />
+        </div>
+
+
+        <div className="flex-1 min-w-0">
+
+          <h4 className="font-serif text-[17px] font-semibold text-amg-ink leading-tight">
+            Full Fundraising Support
+          </h4>
+
+          <p className="text-[13px] text-amg-teal/65 leading-relaxed mt-1">
+            End-to-end support through your raise.
+          </p>
+
+        </div>
+
+
+        <ArrowRight
+          className="
+            w-5
+            h-5
+            flex-shrink-0
+            text-amg-teal
+            transition-transform
+            duration-200
+            group-hover:translate-x-1
+          "
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  {/* =========================================================
+      ACCELERATOR FORM
+  ========================================================= */}
+
+  <form
+    onSubmit={async e => {
                 e.preventDefault();
 
                 if (
