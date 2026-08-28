@@ -1023,7 +1023,290 @@ select:focus, input:focus, textarea:focus {
   color: #0a7a6e;
   font-style: italic;
 }
+/* =========================================================
+   ECOSYSTEM LOGO STRIP
+   ========================================================= */
 
+.ecosystem-logo-strip {
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   ROW
+   ========================================================= */
+
+.ecosystem-logo-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOP ROW
+   ========================================================= */
+
+.ecosystem-logo-row-top {
+  height: 92px;
+}
+
+
+/* =========================================================
+   BOTTOM ROW
+   ========================================================= */
+
+.ecosystem-logo-row-bottom {
+  height: 82px;
+}
+
+
+/* =========================================================
+   LOGO ITEM
+   ========================================================= */
+
+.ecosystem-logo-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TOP ROW WIDTHS
+   ========================================================= */
+
+.logo-nato {
+  width: 17%;
+}
+
+.logo-medtech {
+  width: 21%;
+}
+
+.logo-mass {
+  width: 21%;
+}
+
+.logo-venture {
+  width: 19%;
+}
+
+.logo-communitech {
+  width: 22%;
+}
+
+
+/* =========================================================
+   BOTTOM ROW WIDTHS
+   ========================================================= */
+
+.logo-mix {
+  width: 23%;
+}
+
+.logo-rawmaterials {
+  width: 29%;
+}
+
+.logo-health {
+  width: 23%;
+}
+
+.logo-scale {
+  width: 25%;
+}
+
+
+/* =========================================================
+   SEPARATORS
+   ========================================================= */
+
+.ecosystem-logo-separator {
+  width: 1px;
+  height: 46px;
+  background: #dce3e5;
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGO IMAGES
+   ========================================================= */
+
+.ecosystem-logo-item img {
+  display: block;
+  width: auto;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   INDIVIDUAL LOGO SIZES
+   ========================================================= */
+
+/* NATO DIANA */
+.logo-nato img {
+  width: 140px;
+  height: 58px;
+}
+
+/* MedTech Innovator */
+.logo-medtech img {
+  width: 145px;
+  height: 58px;
+}
+
+/* MassChallenge */
+.logo-mass img {
+  width: 158px;
+  height: 52px;
+}
+
+/* ventureLAB */
+.logo-venture img {
+  width: 160px;
+  height: 50px;
+}
+
+/* Communitech */
+.logo-communitech img {
+  width: 175px;
+  height: 48px;
+}
+
+
+/* =========================================================
+   BOTTOM LOGO SIZES
+   ========================================================= */
+
+/* MIX */
+.logo-mix img {
+  width: 76px;
+  height: 42px;
+}
+
+/* EIT RawMaterials */
+.logo-rawmaterials img {
+  width: 190px;
+  height: 58px;
+}
+
+/* EIT Health */
+.logo-health img {
+  width: 145px;
+  height: 58px;
+}
+
+/* Scale AI */
+.logo-scale img {
+  width: 190px;
+  height: 52px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .ecosystem-logo-row-top {
+    height: 82px;
+  }
+
+  .ecosystem-logo-row-bottom {
+    height: 75px;
+  }
+
+  .ecosystem-logo-separator {
+    height: 40px;
+  }
+
+  .logo-nato img {
+    width: 120px;
+  }
+
+  .logo-medtech img {
+    width: 125px;
+  }
+
+  .logo-mass img {
+    width: 135px;
+  }
+
+  .logo-venture img {
+    width: 140px;
+  }
+
+  .logo-communitech img {
+    width: 145px;
+  }
+
+  .logo-mix img {
+    width: 65px;
+  }
+
+  .logo-rawmaterials img {
+    width: 155px;
+  }
+
+  .logo-health img {
+    width: 125px;
+  }
+
+  .logo-scale img {
+    width: 155px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .ecosystem-logo-strip {
+    padding: 0;
+  }
+
+  .ecosystem-logo-row {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .ecosystem-logo-row-top {
+    padding: 10px 0;
+  }
+
+  .ecosystem-logo-row-bottom {
+    padding: 10px 0;
+  }
+
+  .ecosystem-logo-item {
+    width: 50% !important;
+    height: 70px;
+  }
+
+  .ecosystem-logo-separator {
+    display: none;
+  }
+
+  .ecosystem-logo-item img {
+    max-width: 85%;
+    max-height: 45px;
+    width: auto;
+    height: auto;
+  }
+
+}
 .amg-help-card {
   min-height: 500px;
 }
@@ -1501,17 +1784,30 @@ select:focus, input:focus, textarea:focus {
 .founder-stats-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  gap: 14px;
+  margin-top: 16px !important;
+  align-items: start;
 }
 
 .founder-stat-card {
-  min-height: 150px;
-  padding: 18px;
-  border: 1px solid rgba(14, 76, 92, 0.12);
-  border-radius: 8px;
+  min-width: 0;
+  height: 154px;
+  min-height: 154px;
+
+  padding: 14px 16px;
+
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  column-gap: 10px;
+  align-content: start;
+  align-items: center;
+
+  border: 1px solid #dce5e6;
+  border-radius: 9px;
+
   background: #ffffff;
-  box-shadow: 0 12px 34px rgba(14, 76, 92, 0.07);
-  transition: all 0.15s ease;
+
+  box-sizing: border-box;
 }
 
 .founder-stat-card:hover {
@@ -1520,39 +1816,76 @@ select:focus, input:focus, textarea:focus {
 }
 
 .founder-stat-icon {
-  width: 46px;
-  height: 46px;
-  display: inline-flex;
+  width: 42px;
+  height: 42px;
+
+  display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
-  color: #0a7a6e;
-  background: #d0f0eb;
+
+  border-radius: 50%;
+
+  background: #d2f1ed;
+  color: #087a73;
+
+  margin: 0;
+
+  grid-column: 1;
+  grid-row: 1;
 }
 
+.founder-stat-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.founder-stat-icon svg {
+  width: 20px;
+  height: 20px;
+}
 .founder-stat-value {
-  margin-top: 10px;
-  color: #0d1f1e;
-  font-family: 'Fraunces', serif;
-  font-size: 26px;
+  grid-column: 2;
+  grid-row: 1;
+
+  margin: 0;
+
+  color: #073b3e;
+
+  font-family: 'Fraunces', Georgia, serif;
+
+  font-size: 23px;
   font-weight: 700;
-  line-height: 1.08;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.02em;
 }
 
 .founder-stat-line {
+  grid-column: 1 / -1;
+  grid-row: 2;
+
   width: 100%;
   height: 2px;
-  margin: 14px 0 12px;
+
+  margin-top: 10px;
+  margin-bottom: 9px;
+
   background: #00bcd4;
 }
-
 .founder-stat-card p {
-  color: rgba(13, 31, 30, 0.78);
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.45;
-}
+  grid-column: 1 / -1;
+  grid-row: 3;
 
+  margin: 0;
+
+  color: #073b3e;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1.35;
+}
 .founder-role-row {
   display: flex;
   flex-wrap: wrap;
@@ -1582,17 +1915,27 @@ select:focus, input:focus, textarea:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 22px;
+
+  gap: 20px;
+
+  width: 100%;
+  margin-top: 12px !important;
 }
 
 .founder-proof-actions p {
-  max-width: 720px;
-  color: rgba(13, 31, 30, 0.78);
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.55;
-}
+  flex: 1;
 
+  max-width: 680px;
+
+  margin: 0;
+
+  color: rgba(13, 31, 30, 0.78);
+
+  font-size: 12px !important;
+  font-weight: 500;
+
+  line-height: 1.4 !important;
+}
 .founder-dark-btn,
 .founder-linkedin-btn,
 .founder-band-outline {
@@ -2000,10 +2343,10 @@ select:focus, input:focus, textarea:focus {
   }
 }
 
-/* Global 25% visual compaction */
+/* Global 15% visual compaction */
 @supports (zoom: 1) {
   #root {
-    zoom: 0.75;
+    zoom: 0.85;
   }
 }
 

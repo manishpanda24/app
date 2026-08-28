@@ -4,6 +4,15 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
 import GauravImage from '../images/GauravImage.jpg';
+import NatoDianaLogo from '../images/NatoDianaLogo.png';
+import MedtechInnovatorLogo from '../images/MedtechInnovatorLogo.png';
+import MassChallengeLogo from '../images/MassChallengeLogo.png';
+import VentureLabLogo from '../images/VentureLabLogo.png';
+import CommunitechLogo from '../images/CommunitechLogo.png';
+import MixLogo from '../images/MixLogo.png';
+import EitRawMaterialsLogo from '../images/EitRawMaterialsLogo.png';
+import EitHealthLogo from '../images/EitHealthLogo.png';
+import ScaleAiLogo from '../images/ScaleAiLogo.png';
 import { HERO, SERVICE_PILLARS, SERVICES, FOUNDER_SERVICES_INTRO, WHO_WE_ARE } from '../mock';
 const ICONS = {
   'pitch-deck-review': FileText,
@@ -173,7 +182,7 @@ export default function Home() {
           <ArrowRight className="w-4 h-4" />
         </Link>
 
-        <Link to="/founder-services" className="btn-outline">
+        <Link to="/contact" className="btn-outline">
           Explore Founder Services
         </Link>
       </div>
@@ -835,7 +844,7 @@ export default function Home() {
           {[
             {
               icon: Users,
-              value: '50+ Angel 35+ VC',
+              value: <>    50+ Angel    <br />    35+ VC  </>,
               label: 'Investments across stages, sectors & geographies',
             },
             {
@@ -919,21 +928,98 @@ export default function Home() {
       </div>
 
       <div className="ecosystem-proof-main">
-        <div className="ecosystem-logo-grid">
-          {[
-            'NATO DIANA',
-            'MEDTECH INNOVATOR',
-            'MASSCHALLENGE',
-            'ventureLAB',
-            'COMMUNITECH',
-            'MIX',
-            'EIT RawMaterials',
-            'EIT Health',
-            'SCALE AI',
-          ].map((logo) => (
-            <div key={logo} className="ecosystem-logo-tile">{logo}</div>
-          ))}
-        </div>
+        <div className="ecosystem-logo-strip">
+
+  {/* TOP ROW */}
+  <div className="ecosystem-logo-row ecosystem-logo-row-top">
+
+    <div className="ecosystem-logo-item logo-nato">
+      <img
+        src={NatoDianaLogo}
+        alt="NATO DIANA"
+      />
+    </div>
+
+    <div className="ecosystem-logo-separator" />
+
+    <div className="ecosystem-logo-item logo-medtech">
+      <img
+        src={MedtechInnovatorLogo}
+        alt="MedTech Innovator"
+      />
+    </div>
+
+    <div className="ecosystem-logo-separator" />
+
+    <div className="ecosystem-logo-item logo-mass">
+      <img
+        src={MassChallengeLogo}
+        alt="MassChallenge"
+      />
+    </div>
+
+    <div className="ecosystem-logo-separator" />
+
+    <div className="ecosystem-logo-item logo-venture">
+      <img
+        src={VentureLabLogo}
+        alt="ventureLAB"
+      />
+    </div>
+
+    <div className="ecosystem-logo-separator" />
+
+    <div className="ecosystem-logo-item logo-communitech">
+      <img
+        src={CommunitechLogo}
+        alt="Communitech"
+      />
+    </div>
+
+  </div>
+
+
+  {/* BOTTOM ROW */}
+  <div className="ecosystem-logo-row ecosystem-logo-row-bottom">
+
+    <div className="ecosystem-logo-item logo-mix">
+      <img
+        src={MixLogo}
+        alt="MIX"
+      />
+    </div>
+
+    <div className="ecosystem-logo-separator" />
+
+    <div className="ecosystem-logo-item logo-rawmaterials">
+      <img
+        src={EitRawMaterialsLogo}
+        alt="EIT RawMaterials"
+      />
+    </div>
+
+    <div className="ecosystem-logo-separator" />
+
+    <div className="ecosystem-logo-item logo-health">
+      <img
+        src={EitHealthLogo}
+        alt="EIT Health"
+      />
+    </div>
+
+    <div className="ecosystem-logo-separator" />
+
+    <div className="ecosystem-logo-item logo-scale">
+      <img
+        src={ScaleAiLogo}
+        alt="Scale AI Trusted Reviewer"
+      />
+    </div>
+
+  </div>
+
+</div>
+
 
         <div className="ecosystem-metrics">
           {[

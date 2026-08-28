@@ -6,17 +6,17 @@ const footerGroups = [
   {
     title: 'Services',
     links: [
-      { label: 'Investment Readiness Program', to: '/pricing' },
+      { label: 'Investment Readiness Program', to: 'https://investorreadinessprogram.vercel.app/' },
       { label: 'Diagnostic Review', to: '/contact' },
-      { label: 'Fundraising Execution', to: '/founder-services' },
+      { label: 'Fundraising Execution', to: '/contact' },
     ],
   },
   {
     title: 'Who We Work With',
     links: [
-      { label: 'Founders', to: '/founder-services' },
+      { label: 'Founders', to: '/contact' },
       { label: 'Accelerators & Ecosystems', to: '/contact' },
-      { label: 'Pre-Seed to Series A', to: '/pricing' },
+      { label: 'Pre-Seed to Series A', to: '/contact' },
       { label: 'North America & Europe', to: '/about' },
     ],
   },
