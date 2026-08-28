@@ -94,14 +94,7 @@ export default function Footer() {
             <span>&copy; 2026 AMG Venture Partners. All rights reserved.</span>
           </div>
 
-          <div className="footer-legal">
-            <a href="mailto:info@amgventurepartners.com">
-              <span className="footer-mail-icon"><Mail className="w-5 h-5" /></span>
-              info@amgventurepartners.com
-            </a>
-            <Link to="/">Privacy</Link>
-            <Link to="/">Terms</Link>
-          </div>
+      
         </div>
       </div>
     </footer>
