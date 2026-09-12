@@ -13,6 +13,7 @@ import MixLogo from '../images/MixLogo.png';
 import EitRawMaterialsLogo from '../images/EitRawMaterialsLogo.png';
 import EitHealthLogo from '../images/EitHealthLogo.png';
 import ScaleAiLogo from '../images/ScaleAiLogo.png';
+import   {GraduationCap, DollarSign, Globe2,Cpu} from 'lucide-react';
 import { HERO, SERVICE_PILLARS, SERVICES, FOUNDER_SERVICES_INTRO, WHO_WE_ARE } from '../mock';
 const ICONS = {
   'pitch-deck-review': FileText,
@@ -154,7 +155,7 @@ export default function Home() {
       </div>
 
       {/* Heading */}
-      <h1 className="heading-display text-[52px] sm:text-[64px] lg:text-[76px] leading-[0.95] text-amg-teal max-w-6xl">
+      <h1 className="heading-display text-[52px] sm:text-[64px] lg:text-[76px] leading-[0.95] text-amg-teal max-w-7xl">
         From Pitch Deck to Closing the Round: Raise Capital with Confidence
       </h1>
 
@@ -163,18 +164,28 @@ export default function Home() {
       </div>
 
       {/* Subheading */}
-      <p className="mt-5 text-[18px] lg:text-[22px] leading-relaxed text-amg-teal/85 max-w-6xl font-medium">
+      {/* <p className="mt-5 text-[18px] lg:text-[22px] leading-relaxed text-amg-teal/85 max-w-7xl font-medium">
         Assess Fundability Gaps · Create the Investor Kit & Become Investor-Ready · Execute a Structured, Targeted Fundraising Process
-      </p>
+      </p> */}
 
-      <p className="mt-8 text-[17px] lg:text-[20px] leading-relaxed text-amg-teal/80 max-w-6xl font-medium">
+      <p className="mt-8 text-[17px] lg:text-[20px] leading-relaxed text-amg-teal/80 max-w-7xl font-medium">
         AMG helps Pre-Seed to Series A founders diagnose fundability gaps, build a compelling investment case and investor kit, identify the right investors globally, and execute the fundraising process from outreach through diligence and close.
       </p>
 
       <p className="mt-5 text-[16px] lg:text-[18px] leading-relaxed text-amg-teal/75 max-w-5xl font-medium">
         Every engagement is tailored to your stage, sector, business model, and target investor markets.
       </p>
-
+       <div className="problem-path-row mt-9">
+        {[
+          'Fundability Gaps',
+          'Investor Readiness',
+          'Target Investors',
+          'Outreach & Meetings',
+          'Negotiation to Close',
+        ].map((item) => (
+          <span key={item}>{item}</span>
+        ))}
+      </div>
       {/* CTA Buttons */}
       <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
         <Link to="/contact" className="btn-yellow">
@@ -191,23 +202,106 @@ export default function Home() {
   </div>
 </section>
    
- <section className="py-7 px-6 lg:px-10 border-t border-amg-line bg-white-50">
+ {/* <section className="py-7 px-6 lg:px-10 border-t border-amg-line bg-white-50"> */}
         {/* Stats strip */}
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
-            {STATS.map((s, i) => (
-              <div
-                key={i}
-                className="bg-white border border-amg-line rounded-lg px-7 py-7 text-center shadow-[0_2px_10px_rgba(13,31,30,0.06)] hover:border-amg-teal hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(13,31,30,0.10)] transition-all duration-200 ease-out"
-              >
-                <div className={`font-serif text-[25px] md:text-[30px] font-medium leading-none ${s.color}`}>
-                  {s.value}
-                </div>
-                <div className="mt-3 text-[13px] leading-snug text-amg-teal/75 font-medium">{s.label}</div>
-              </div>
-            ))}
+           <section className="about-metrics-band">
+
+        <div className="about-container">
+
+          <div className="about-metrics-heading">
+            EXPERIENCE THAT CHANGES HOW WE LOOK AT A RAISE
           </div>
+
+          <div className="about-metrics-grid">
+
+            {[
+              {
+                icon: GraduationCap,
+                value: '14+',
+                label: 'Years',
+                sub: 'VC, investment banking & consulting',
+              },
+              {
+                icon: Users,
+                value: '50+',
+                label: 'Angel',
+                sub: 'Investments',
+              },
+               {
+                icon: Users,
+                value: '300+',
+                label: 'Angel',
+                sub: 'Syndicates',
+              },
+              {
+                icon: Building2,
+                value: '35+',
+                label: 'VC Portfolio',
+                sub: 'Investments',
+              },
+              {
+                icon: FileText,
+                value: '20,000+',
+                label: 'Decks & Financial',
+                sub: 'Models Reviewed',
+              },
+              {
+                icon: Search,
+                value: '100+',
+                label: 'Due',
+                sub: 'Diligences',
+              },
+              {
+                icon: DollarSign,
+                value: '$2B+',
+                label: 'IPO, PE &',
+                sub: 'Investment Banking Transactions',
+              },
+              {
+                icon: Globe2,
+                value: '200+',
+                label: 'Founders',
+                sub: 'Mentored Globally',
+              },
+              {
+                icon: Users,
+                value: '130+',
+                label: 'Hours',
+                sub: 'Workshops',
+              },
+            ].map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <div className="about-metric" key={item.value}>
+
+                  <Icon className="about-metric-icon" />
+
+                  <strong>{item.value}</strong>
+
+                  <span>{item.label}</span>
+
+                  <small>{item.sub}</small>
+
+                </div>
+              );
+            })}
+
+          </div>
+
+          <div className="about-metric-bottom">
+            <span>130+</span> Workshops
+            <b>•</b>
+            <span>150–200+</span> Founders Mentored
+            <b>•</b>
+            <span>300+</span> Angel Syndicates
+          </div>
+
+        </div>
+
+      </section>
           
-     </section>
+     {/* </section> */}
 
      {/* WHY FOUNDERS FAIL FUNDRAISING */}
 {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
@@ -478,7 +572,7 @@ export default function Home() {
 
 
 {/* THE PROBLEM */}
-<section className="problem-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+{/* <section className="problem-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
   <div className="max-w-[1280px] mx-auto">
     <div className="text-center max-w-8xl mx-auto">
       <div className="tag-pill inline-flex mb-5">
@@ -490,32 +584,22 @@ export default function Home() {
         Most founders don’t need more <span className="problem-strike">generic fundraising advice or investor lists</span>
       </h2>
 
-      <p className="mt-7 text-[17px] md:text-[24px] text-amg-teal/72 leading-relaxed max-w-6xl mx-auto">
+      <p className="mt-7 text-[17px] md:text-[24px] text-amg-teal/72 leading-relaxed max-w-7xl mx-auto">
         They need a realistic fundability-gap analysis, investor-readiness from an investor lens, and a targeted path to the right active investors globally.
       </p>
 
-      <p className="mt-5 text-[15.5px] md:text-[20px] leading-relaxed text-amg-teal/60 max-w-6xl mx-auto">
+      <p className="mt-5 text-[15.5px] md:text-[20px] leading-relaxed text-amg-teal/60 max-w-7xl mx-auto">
         AMG helps founders assess what could block the raise, strengthen the investment case, map relevant investors, run disciplined outreach and meetings, and support negotiations, diligence, and closing.
       </p>
 
-      <div className="problem-path-row mt-9">
-        {[
-          'Fundability Gaps',
-          'Investor Readiness',
-          'Target Investors',
-          'Outreach & Meetings',
-          'Negotiation to Close',
-        ].map((item) => (
-          <span key={item}>{item}</span>
-        ))}
-      </div>
+   
     </div>
   </div>
-</section>
+</section> */}
 {/* HOW AMG HELPS */}
 <section className="amg-help-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
-  <div className="max-w-[1280px] mx-auto">
-    <div className="text-center max-w-5xl mx-auto mb-10">
+  <div className="max-w-[1300px] mx-auto">
+    <div className="text-center max-w-6xl mx-auto mb-10">
       <h2 className="amg-help-heading text-amg-ink">
         Two ways to work with AMG
       </h2>
@@ -524,7 +608,7 @@ export default function Home() {
       </p>
     </div>
 
-    <div className="grid grid-cols-1 lg:grid-cols-[1.45fr_1fr] gap-6 max-w-[1180px] mx-auto items-stretch">
+    <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] gap-6 max-w-[1300px] mx-auto items-stretch">
       <div className="amg-help-card bg-white border border-amg-line rounded-[20px] p-7 md:p-9 shadow-soft-sm flex flex-col">
         <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
           <div className="flex items-center gap-4">
@@ -645,6 +729,142 @@ export default function Home() {
     </div>
   </div>
 </section>
+{/* INVESTMENT READINESS PROGRAM */}
+<section className="irp-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white overflow-hidden">
+  <div className="max-w-[1280px] mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div className="lg:col-span-6">
+        <div className="tag-pill inline-flex mb-5">
+          <span className="dot bg-amg-yellow" />
+          Investment Readiness Program
+        </div>
+
+        <h3 className="heading-display text-[30px] md:text-[48px] text-amg-teal leading-[1.03]">
+          Earlier in Your Fundraising Journey? Start Here.
+        </h3>
+
+        <div className="yellow-scribble" />
+
+        <p className="mt-6 text-[17px] md:text-[19px] text-amg-ink/78 leading-relaxed max-w-3xl">
+          For first-time founders and companies preparing ahead of a raise, the Investment Readiness Program gives you the frameworks, tools, and expert guidance to understand what investors expect and build the foundations for a successful fundraise.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+          {[
+            'Understand How Investors Evaluate Your Company',
+            'Identify Your Fundability Gaps',
+            'Build Your Investor Narrative & Pitch',
+            'Strengthen Financials, Valuation & Raise Strategy',
+            'Prepare for Investor Q&A & Due Diligence',
+            'Leave With a Personalized Fundraising Roadmap',
+          ].map((item) => (
+            <div key={item} className="irp-mini-card">
+              <div className="w-11 h-11 rounded-full bg-amg-yellow-bg flex items-center justify-center shrink-0">
+                <CheckCircle2 className="w-5 h-5 text-amg-teal" />
+              </div>
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap items-center gap-5 mt-8">
+          <a
+            href="https://investorreadinessprogram.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-yellow"
+          >
+            Explore the Investment Readiness Program
+            <ArrowRight className="w-4 h-4" />
+          </a>
+
+          <Link to="/contact" className="btn-ghost">
+            See IRP Details
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+
+      <div className="lg:col-span-6">
+        <div className="irp-detail-card rounded-[28px] border border-amg-line bg-white shadow-soft-lg overflow-hidden">
+          <div className="p-8 md:p-10">
+            <div className="text-[13px] uppercase tracking-[0.22em] text-amg-teal/45 font-semibold mb-7">
+              Investment Readiness Program
+            </div>
+
+            <h3 className="font-serif text-[34px] md:text-[44px] leading-[1.08] text-amg-teal">
+              Learn the Fundraising Game Before You Enter It
+            </h3>
+
+            <div className="mt-8 space-y-8">
+              <div className="grid grid-cols-[48px_1fr] gap-5">
+                <div className="w-11 h-11 rounded-full bg-amg-yellow-bg flex items-center justify-center">
+                  <Users className="w-5 h-5 text-amg-teal" />
+                </div>
+                <div>
+                  <h4 className="font-serif text-[24px] text-amg-teal mb-4">Built for</h4>
+                  <ul className="space-y-3 text-[15px] text-amg-ink/82">
+                    {[
+                      'First-time fundraisers',
+                      'Founders 6-12+ months from raising',
+                      'Founders building their investor toolkit',
+                      'Founders who want structured guidance before execution',
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-teal shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="h-px bg-amg-line" />
+
+              <div className="grid grid-cols-[48px_1fr] gap-5">
+                <div className="w-11 h-11 rounded-full bg-amg-yellow-bg flex items-center justify-center">
+                  <BarChart3 className="w-5 h-5 text-amg-teal" />
+                </div>
+                <div>
+                  <h4 className="font-serif text-[24px] text-amg-teal mb-4">What you’ll build</h4>
+                  <ul className="space-y-3 text-[15px] text-amg-ink/82">
+                    {[
+                      'Investment readiness framework',
+                      'Investor narrative',
+                      'Financial & valuation foundations',
+                      'Fundraising strategy',
+                      'Investor Q&A readiness',
+                      'Action roadmap',
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-teal shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="irp-card-footer px-8 md:px-10 py-7 flex items-center gap-5">
+            <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+              <Rocket className="w-7 h-7 text-white" />
+            </div>
+            <div>
+              <div className="font-serif text-[24px] md:text-[22px] text-white leading-tight">
+                Learn → Build → Become Investor-Ready
+              </div>
+              <p className="text-[15px] text-white/75 mt-1">
+                A structured starting point for earlier-stage founders.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {/* HOW WE WORK */}
 <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
   <div className="max-w-[1280px] mx-auto">
@@ -654,7 +874,7 @@ export default function Home() {
         Process
       </div>
 
-      <h2 className="heading-display text-[42px] md:text-[64px] leading-[1.03] text-amg-teal">
+      <h2 className="heading-display text-[38px] md:text-[48px] leading-[1.03] text-amg-teal">
         A disciplined raise runs on four core disciplines
       </h2>
 
@@ -758,37 +978,25 @@ export default function Home() {
       </p>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
-      {[
-        { title: 'SaaS / AI / Software', icon: Laptop, tone: 'turquoise' },
-        { title: 'Life Sciences / Healthcare / Medical Devices', icon: HeartPulse, tone: 'turquoise' },
-        { title: 'Fintech / Payments / Insurtech', icon: CreditCard, tone: 'yellow' },
-        { title: 'Climate / Energy / Sustainability', icon: Leaf, tone: 'green' },
-        { title: 'Industrial / Robotics / Advanced Manufacturing', icon: Factory, tone: 'teal' },
-        { title: 'Consumer / Marketplace / Commerce', icon: ShoppingCart, tone: 'yellow' },
-      ].map((item) => {
-        const Icon = item.icon;
-        const toneClass =
-          item.tone === 'yellow'
-            ? 'sector-card-yellow'
-            : item.tone === 'green'
-            ? 'sector-card-green'
-            : item.tone === 'teal'
-            ? 'sector-card-teal'
-            : 'sector-card-turquoise';
+     <div className="about-sector-grid1">
 
-        return (
-          <div key={item.title} className={`sector-card ${toneClass}`}>
-            <div className="sector-icon">
-              <Icon className="w-8 h-8" />
-            </div>
-            <h3 className="font-serif text-[23px] md:text-[26px] leading-tight text-amg-teal">
-              {item.title}
-            </h3>
-          </div>
-        );
-      })}
+              {[
+                ['SaaS / AI / Software', Cpu],
+                ['Life Sciences / Healthcare / Med Devices', HeartPulse],
+                ['Fintech / Payments / Insurtech', CreditCard],
+                ['Climate / Energy / Sustainability', Leaf],
+                ['Industrial / Robotics / Advanced Manufacturing', Building2],
+                ['Consumer / Marketplace / Commerce', ShoppingCart],
+              ].map(([label, Icon]) => (
+                <div key={label}>
+                  <Icon />
+                  <span>{label}</span>
+                </div>
+              ))}
+
+            
     </div>
+
 
     <p className="mt-12 text-center text-[16px] md:text-[18px] text-amg-teal/60">
       And other sectors where clarity, credible numbers, and investor-ready materials matter.
@@ -1020,7 +1228,7 @@ export default function Home() {
 
 </div>
 
-
+{/* 
         <div className="ecosystem-metrics">
           {[
             { icon: Globe, value: '5,000+', label: 'Startups screened across 95 countries' },
@@ -1041,7 +1249,7 @@ export default function Home() {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </div>
 
@@ -1259,142 +1467,7 @@ export default function Home() {
   </div>
 
 </section>  */}
-{/* INVESTMENT READINESS PROGRAM */}
-<section className="irp-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white overflow-hidden">
-  <div className="max-w-[1280px] mx-auto">
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-      <div className="lg:col-span-6">
-        <div className="tag-pill inline-flex mb-5">
-          <span className="dot bg-amg-yellow" />
-          Investment Readiness Program
-        </div>
 
-        <h2 className="heading-display text-[42px] md:text-[64px] text-amg-teal leading-[1.03]">
-          Earlier in Your Fundraising Journey? Start Here.
-        </h2>
-
-        <div className="yellow-scribble" />
-
-        <p className="mt-6 text-[17px] md:text-[19px] text-amg-ink/78 leading-relaxed max-w-3xl">
-          For first-time founders and companies preparing ahead of a raise, the Investment Readiness Program gives you the frameworks, tools, and expert guidance to understand what investors expect and build the foundations for a successful fundraise.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-          {[
-            'Understand How Investors Evaluate Your Company',
-            'Identify Your Fundability Gaps',
-            'Build Your Investor Narrative & Pitch',
-            'Strengthen Financials, Valuation & Raise Strategy',
-            'Prepare for Investor Q&A & Due Diligence',
-            'Leave With a Personalized Fundraising Roadmap',
-          ].map((item) => (
-            <div key={item} className="irp-mini-card">
-              <div className="w-11 h-11 rounded-full bg-amg-yellow-bg flex items-center justify-center shrink-0">
-                <CheckCircle2 className="w-5 h-5 text-amg-teal" />
-              </div>
-              <span>{item}</span>
-            </div>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap items-center gap-5 mt-8">
-          <a
-            href="https://investorreadinessprogram.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-yellow"
-          >
-            Explore the Investment Readiness Program
-            <ArrowRight className="w-4 h-4" />
-          </a>
-
-          <Link to="/contact" className="btn-ghost">
-            See IRP Details
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </div>
-
-      <div className="lg:col-span-6">
-        <div className="irp-detail-card rounded-[28px] border border-amg-line bg-white shadow-soft-lg overflow-hidden">
-          <div className="p-8 md:p-10">
-            <div className="text-[13px] uppercase tracking-[0.22em] text-amg-teal/45 font-semibold mb-7">
-              Investment Readiness Program
-            </div>
-
-            <h3 className="font-serif text-[34px] md:text-[44px] leading-[1.08] text-amg-teal">
-              Learn the Fundraising Game Before You Enter It
-            </h3>
-
-            <div className="mt-8 space-y-8">
-              <div className="grid grid-cols-[48px_1fr] gap-5">
-                <div className="w-11 h-11 rounded-full bg-amg-yellow-bg flex items-center justify-center">
-                  <Users className="w-5 h-5 text-amg-teal" />
-                </div>
-                <div>
-                  <h4 className="font-serif text-[24px] text-amg-teal mb-4">Built for</h4>
-                  <ul className="space-y-3 text-[15px] text-amg-ink/82">
-                    {[
-                      'First-time fundraisers',
-                      'Founders 6-12+ months from raising',
-                      'Founders building their investor toolkit',
-                      'Founders who want structured guidance before execution',
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-teal shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="h-px bg-amg-line" />
-
-              <div className="grid grid-cols-[48px_1fr] gap-5">
-                <div className="w-11 h-11 rounded-full bg-amg-yellow-bg flex items-center justify-center">
-                  <BarChart3 className="w-5 h-5 text-amg-teal" />
-                </div>
-                <div>
-                  <h4 className="font-serif text-[24px] text-amg-teal mb-4">What you’ll build</h4>
-                  <ul className="space-y-3 text-[15px] text-amg-ink/82">
-                    {[
-                      'Investment readiness framework',
-                      'Investor narrative',
-                      'Financial & valuation foundations',
-                      'Fundraising strategy',
-                      'Investor Q&A readiness',
-                      'Action roadmap',
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-4 h-4 mt-0.5 text-amg-teal shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="irp-card-footer px-8 md:px-10 py-7 flex items-center gap-5">
-            <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-              <Rocket className="w-7 h-7 text-white" />
-            </div>
-            <div>
-              <div className="font-serif text-[24px] md:text-[28px] text-white leading-tight">
-                Learn → Build → Become Investor-Ready
-              </div>
-              <p className="text-[15px] text-white/75 mt-1">
-                A structured starting point for earlier-stage founders.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 {/* CASE STUDIES / TRANSFORMATIONS */}
 {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
 

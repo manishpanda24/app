@@ -557,96 +557,7 @@ export default function AboutUs() {
           DARK METRICS BAR
       ========================================================= */}
 
-      <section className="about-metrics-band">
-
-        <div className="about-container">
-
-          <div className="about-metrics-heading">
-            EXPERIENCE THAT CHANGES HOW WE LOOK AT A RAISE
-          </div>
-
-          <div className="about-metrics-grid">
-
-            {[
-              {
-                icon: GraduationCap,
-                value: '14+',
-                label: 'Years',
-                sub: 'VC, investment banking & consulting',
-              },
-              {
-                icon: Users,
-                value: '50+',
-                label: 'Angel',
-                sub: 'Investments',
-              },
-              {
-                icon: Building2,
-                value: '35+',
-                label: 'VC Portfolio',
-                sub: 'Investments',
-              },
-              {
-                icon: FileText,
-                value: '20,000+',
-                label: 'Decks & Financial',
-                sub: 'Models Reviewed',
-              },
-              {
-                icon: Search,
-                value: '100+',
-                label: 'Due',
-                sub: 'Diligences',
-              },
-              {
-                icon: DollarSign,
-                value: '$2B+',
-                label: 'IPO, PE &',
-                sub: 'Investment Banking Transactions',
-              },
-              {
-                icon: Globe2,
-                value: '5,000+',
-                label: 'Startups',
-                sub: 'Screened Across 95 Countries',
-              },
-              {
-                icon: Users,
-                value: '3,000+',
-                label: 'Hours',
-                sub: 'Founder Mentoring',
-              },
-            ].map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div className="about-metric" key={item.value}>
-
-                  <Icon className="about-metric-icon" />
-
-                  <strong>{item.value}</strong>
-
-                  <span>{item.label}</span>
-
-                  <small>{item.sub}</small>
-
-                </div>
-              );
-            })}
-
-          </div>
-
-          <div className="about-metric-bottom">
-            <span>130+</span> Workshops
-            <b>•</b>
-            <span>150–200+</span> Founders Mentored
-            <b>•</b>
-            <span>300+</span> Angel Syndicates
-          </div>
-
-        </div>
-
-      </section>
+          
 
 
       {/* =========================================================
@@ -758,237 +669,11 @@ export default function AboutUs() {
           WHY AMG
       ========================================================= */}
 
-      <section className="about-section about-why-section">
-
-        <div className="about-container">
-
-          <div className="about-why-heading">
-
-            <div className="about-eyebrow">
-              WHY AMG IS DIFFERENT
-            </div>
-
-            <h2>
-              Beyond Advice.
-              <br />
-              Built on Investor Judgment.
-            </h2>
-
-            <div className="about-crossed-list">
-              <span>Generic fundraising advice</span>
-              <span>Investor databases</span>
-              <span>One-size-fits-all templates</span>
-            </div>
-
-          </div>
-
-
-          <div className="about-process-grid">
-
-            {[
-              {
-                number: '01',
-                icon: Search,
-                title: 'Investor-Lens Fundability',
-                text: 'We assess your company the way investors do—narrative, market, traction, financials, valuation, raise logic, milestones and potential objections.',
-              },
-              {
-                number: '02',
-                icon: Target,
-                title: 'Company-Specific Readiness',
-                text: 'Recommendations are calibrated to your sector, stage, business model, traction and fundraising geography—not a generic checklist.',
-              },
-              {
-                number: '03',
-                icon: Users,
-                title: 'Global Investor Targeting',
-                text: 'Relevant active investors are mapped around stage, sector, geography, cheque size and strategic fit, with warm-introduction paths where possible.',
-              },
-              {
-                number: '04',
-                icon: TrendingUp,
-                title: 'Execution Through the Round',
-                text: 'Support can extend beyond preparation into outreach, investor meetings, Q&A, diligence, negotiation and close.',
-              },
-            ].map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div className="about-process-card" key={item.number}>
-
-                  <div className="about-process-icon">
-                    <Icon />
-                  </div>
-
-                  <div className="about-process-number">
-                    {item.number}.
-                  </div>
-
-                  <h3>{item.title}</h3>
-
-                  <p>{item.text}</p>
-
-                </div>
-              );
-            })}
-
-          </div>
-
-        </div>
-
-      </section>
 
 
       {/* =========================================================
           ECOSYSTEM
       ========================================================= */}
-
-      <section className="about-section about-ecosystem-section">
-
-        <div className="about-container about-ecosystem-grid">
-
-          <div className="about-ecosystem-copy">
-
-            <div className="about-eyebrow">
-              SELECTED TO EVALUATE & ADVISE STARTUPS GLOBALLY
-            </div>
-
-            <p>
-              Leading innovation programs, accelerators and startup
-              ecosystems have selected Gaurav as an evaluator, EIR,
-              mentor, reviewer and speaker.
-            </p>
-
-          </div>
-
-
-          <div className="about-ecosystem-main">
-
-            <div className="about-logo-grid">
-
-              {/* ROW 1 — 5 LOGOS */}
-
-              <div className="about-logo-item">
-                <img
-                  src={NatoDianaLogo}
-                  alt="NATO DIANA"
-                />
-              </div>
-
-              <div className="about-logo-item">
-                <img
-                  src={MedtechInnovatorLogo}
-                  alt="MedTech Innovator"
-                />
-              </div>
-
-              <div className="about-logo-item">
-                <img
-                  src={MassChallengeLogo}
-                  alt="MassChallenge"
-                />
-              </div>
-
-              <div className="about-logo-item">
-                <img
-                  src={VentureLabLogo}
-                  alt="ventureLAB"
-                />
-              </div>
-
-              <div className="about-logo-item">
-                <img
-                  src={CommunitechLogo}
-                  alt="Communitech"
-                />
-              </div>
-
-
-              {/* ROW 2 — 6 LOGOS (incl. placeholders) */}
-
-              <div className="about-logo-item">
-                <img
-                  src={EitRawMaterialsLogo}
-                  alt="EIT RawMaterials"
-                />
-              </div>
-
-              <div className="about-logo-item">
-                <img
-                  src={ScaleAiLogo}
-                  alt="Scale AI"
-                />
-              </div>
-
-              <div className="about-logo-item">
-                <img
-                  src={MixLogo}
-                  alt="MIX"
-                />
-              </div>
-
-              {/* Placeholder — awaiting logo asset */}
-              <div className="about-logo-item about-logo-placeholder">
-                <span>Foresight Canada</span>
-              </div>
-
-              <div className="about-logo-item">
-                <img
-                  src={EitHealthLogo}
-                  alt="EIT Health"
-                />
-              </div>
-
-              {/* Placeholder — awaiting logo asset */}
-              <div className="about-logo-item about-logo-placeholder">
-                <span>EIT HEI Initiative</span>
-              </div>
-
-            </div>
-
-
-            <div className="about-ecosystem-stats">
-
-              <div>
-                <FileText />
-                <div>
-                  <strong>2,000+</strong>
-                  <span>
-                    Applications Reviewed
-                    <br />
-                    Global evaluator & review panels
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <Globe2 />
-                <div>
-                  <strong>5,000+</strong>
-                  <span>
-                    Startups Screened Across 95 Countries
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <GraduationCap />
-                <div>
-                  <strong>130+</strong>
-                  <span>
-                    Workshops Delivered
-                    <br />
-                    Founder education & mentoring
-                  </span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </section>
 
 
       {/* =========================================================
@@ -999,37 +684,27 @@ export default function AboutUs() {
 
         <div className="about-container about-two-column">
 
-          <div className="about-panel">
+       <div className="about-story-panel">
 
             <div className="about-eyebrow">
-              CROSS-SECTOR EXPERIENCE
+              THE AMG STORY
             </div>
 
-            <h2>Company-Specific Judgment.</h2>
+            <h2>Why "AMG"?</h2>
 
-            <div className="about-sector-grid">
-
-              {[
-                ['SaaS / AI / Software', Cpu],
-                ['Life Sciences / Healthcare / Med Devices', HeartPulse],
-                ['Fintech / Payments / Insurtech', CreditCard],
-                ['Climate / Energy / Sustainability', Leaf],
-                ['Industrial / Robotics / Advanced Manufacturing', Building2],
-                ['Consumer / Marketplace / Commerce', ShoppingCart],
-              ].map(([label, Icon]) => (
-                <div key={label}>
-                  <Icon />
-                  <span>{label}</span>
-                </div>
-              ))}
-
-            </div>
-
-            <p className="about-panel-footer">
-              The fundability lens changes by sector, business model and
-              stage. AMG's role is to apply the right lens, not the same
-              playbook.
+            <p>
+              AMG carries the initials of Gaurav's father, mother and
+              himself. The name reflects the family support behind his
+              journey from a small town in India through education,
+              corporate and venture capital experiences to building
+              AMG Venture Partners.
             </p>
+
+            <img
+              src={GauravImage2}
+              alt="AMG family"
+              
+            />
 
           </div>
 
@@ -1414,138 +1089,12 @@ export default function AboutUs() {
     CAREER TIMELINE
 ========================================================= */}
 
-<section className="about-section about-timeline-section">
-
-  <div className="about-container">
-
-    {/* TITLE */}
-    <div className="about-timeline-title">
-      14+ YEARS ACROSS CAPITAL, TECHNOLOGY & STARTUPS
-    </div>
-
-
-    {/* TIMELINE */}
-    <div className="about-timeline">
-
-      {[
-        {
-          icon: Users,
-          title: 'Technology Consulting',
-          line1: 'IBM',
-          line2: 'SAP BI, SHELL',
-          era: 'Early Career',
-        },
-        {
-          icon: Landmark,
-          title: 'Investment Banking',
-          line1: 'Nomura',
-          line2: 'Axis Capital, IIFL Wealth',
-          era: '2009 – 2014',
-        },
-        {
-          icon: Building2,
-          title: 'Venture Capital',
-          line1: 'Holt Xchange',
-          line2: 'Pentathlon Ventures',
-          era: '2014 – 2021',
-        },
-        {
-          icon: Leaf,
-          title: 'Angel Investing & Startup Ecosystems',
-          line1: '50+ angel investments',
-          line2: 'EIR, mentor, evaluator',
-          era: '2016 – Present',
-        },
-        {
-          icon: TrendingUp,
-          title: 'AMG Venture Partners',
-          line1: 'Founder & CEO',
-          line2:
-            'Helping founders become fundable and raise capital with confidence',
-          era: '2023 – Present',
-        },
-      ].map((item, index, array) => {
-
-        const Icon = item.icon;
-
-        return (
-          <React.Fragment key={item.title}>
-
-            {/* =================================================
-                TIMELINE ITEM
-            ================================================= */}
-
-            <div className="about-timeline-item">
-
-              {/* ICON */}
-
-              <div className="about-timeline-icon">
-
-                <Icon />
-
-              </div>
-
-
-              {/* TITLE */}
-
-              <h3>
-                {item.title}
-              </h3>
-
-
-              {/* COMPANY / PRIMARY LINE */}
-
-              <strong>
-                {item.line1}
-              </strong>
-
-
-              {/* SECONDARY LINE */}
-
-              <span>
-                {item.line2}
-              </span>
-
-
-              {/* ERA */}
-
-              <em className="about-timeline-era">
-                {item.era}
-              </em>
-
-            </div>
-
-
-            {/* =================================================
-                ARROW
-            ================================================= */}
-
-            {index < array.length - 1 && (
-
-              <div
-                className="about-timeline-arrow"
-                aria-hidden="true"
-              >
-                →
-              </div>
-
-            )}
-
-          </React.Fragment>
-        );
-      })}
-
-    </div>
-
-  </div>
-
-</section>
 
       {/* =========================================================
           STORY + PARTNERSHIPS
       ========================================================= */}
 
-      <section className="about-section">
+      {/* <section className="about-section">
 
         <div className="about-container about-two-column">
 
@@ -1613,10 +1162,10 @@ export default function AboutUs() {
 
         </div>
 
-      </section>
+      </section> */}
 
 
-      <CTASection />
+      {/* <CTASection /> */}
 
       <Footer />
     </>

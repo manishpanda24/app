@@ -1881,7 +1881,7 @@ select:focus, input:focus, textarea:focus {
 
   color: #073b3e;
 
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 500;
 
   line-height: 1.35;
@@ -2393,7 +2393,7 @@ section {
 
 .sector-section .heading-display,
 .irp-section .heading-display {
-  font-size: clamp(36px, 4vw, 54px) !important;
+  font-size: clamp(36px, 4vw, 48px) !important;
 }
 
 .amg-help-card {
