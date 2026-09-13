@@ -1846,8 +1846,8 @@ body {
   right: 14px;
   top: 14px;
 
-  width: 30%;
-  height: 200px;
+  width: 45%;
+  height: 450px;
 
   object-fit: cover;
 
@@ -2311,7 +2311,7 @@ body {
 
 /* Hero */
 .about-eyebrow {
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 
 .about-hero-title {
@@ -2479,7 +2479,7 @@ body {
 
 /* Story */
 .about-story-panel p {
-  font-size: 11.25px;
+  font-size: 15.25px;
 }
 
 
@@ -3191,4 +3191,876 @@ body {
 
 .about-hero-tags {
   display: none;
+}
+/* =========================================================
+   GLOBAL PERSPECTIVE — PREMIUM VERSION
+   ========================================================= */
+
+.about-map-panel.about-global-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 34px 34px 28px;
+
+  border: 1px solid #dce9ea;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(112, 203, 210, 0.10),
+      transparent 35%
+    ),
+    #ffffff;
+
+  box-shadow: 0 14px 40px rgba(17, 65, 72, 0.055);
+}
+
+
+/* =========================================================
+   TOP HEADER
+   ========================================================= */
+
+.about-map-panel .about-global-header {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 8px;
+}
+
+
+/* LEFT HEADER */
+
+.about-map-panel .about-global-copy {
+  max-width: 560px;
+}
+
+.about-map-panel .about-global-copy .about-eyebrow {
+  margin-bottom: 12px;
+
+  color: #008c98;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  line-height: 1.4;
+}
+
+
+.about-map-panel .about-global-copy h2 {
+  margin: 0;
+
+  color: #123f46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 37px;
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -1.3px;
+}
+
+
+.about-map-panel .about-global-copy h2 span {
+  color: #69c2c9;
+}
+
+
+/* SMALL ACCENT */
+
+.about-global-accent {
+  width: 42px;
+  height: 2px;
+
+  margin-top: 15px;
+
+  border-radius: 10px;
+
+  background: #67c3ca;
+}
+
+
+/* DESCRIPTION */
+
+.about-map-panel .about-global-copy p {
+  max-width: 430px;
+
+  margin: 13px 0 0;
+
+  color: #527076;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.about-global-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 1px;
+
+  padding: 8px 12px;
+
+  border: 1px solid #d8e9ea;
+  border-radius: 100px;
+
+  background: #fbfefe;
+
+  color: #5b7a7f;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  white-space: nowrap;
+}
+
+
+.about-global-badge svg {
+  width: 16px;
+  height: 16px;
+
+  color: #58bbc3;
+}
+
+
+/* =========================================================
+   MAP
+   ========================================================= */
+
+.about-map-panel .about-global-map-wrap {
+  position: relative;
+
+  margin: 18px -8px 12px;
+}
+
+
+.about-map-panel .about-map {
+  position: relative;
+
+  width: 100%;
+  height: 190px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(243, 251, 251, 0.72),
+      rgba(255, 255, 255, 0.15)
+    );
+}
+
+
+/* WORLD MAP */
+
+.about-map-panel .about-map > svg:first-child {
+  position: absolute !important;
+
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+  height: 190px !important;
+
+  opacity: 0.48 !important;
+}
+
+
+/* =========================================================
+   ROUTE
+   ========================================================= */
+
+.about-map-panel .about-map .about-map-line {
+  position: absolute;
+
+  top: 58px;
+
+  left: 0;
+
+  width: 100%;
+  height: 105px;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+.about-map-panel .about-map .about-map-line path {
+  fill: none;
+
+  stroke: #67c4cb;
+
+  stroke-width: 1.4;
+
+  stroke-dasharray: 5 6;
+
+  opacity: 0.75;
+}
+
+
+/* =========================================================
+   LOCATION MARKERS
+   ========================================================= */
+
+.about-map-panel .about-map .about-map-point {
+  z-index: 4;
+}
+
+
+.about-map-panel .about-map .about-map-dot {
+  width: 9px;
+  height: 9px;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+
+  background: #5bbdc5;
+
+  box-shadow:
+    0 0 0 4px rgba(91, 189, 197, 0.13),
+    0 3px 9px rgba(30, 100, 108, 0.18);
+}
+
+
+.about-map-panel .about-map .about-map-label {
+  margin-top: 6px;
+
+  color: #42676c;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  white-space: nowrap;
+}
+
+
+/* POSITION MARKERS */
+
+/* =========================================================
+   CORRECT MAP LOCATIONS
+   Coordinates aligned to the 700 x 180 world map
+   ========================================================= */
+
+/* CANADA */
+.about-map-panel .about-map .about-map-point:nth-of-type(1) {
+  left: 18% !important;
+  top: 43px !important;
+}
+
+
+/* UNITED STATES */
+.about-map-panel .about-map .about-map-point:nth-of-type(2) {
+  left: 15% !important;
+  top: 100px !important;
+}
+
+
+/* EUROPE */
+.about-map-panel .about-map .about-map-point:nth-of-type(3) {
+  left: 51% !important;
+  top: 48px !important;
+}
+
+
+/* UNITED KINGDOM */
+.about-map-panel .about-map .about-map-point:nth-of-type(4) {
+  left: 48.5% !important;
+  top: 32px !important;
+}
+
+/* =========================================================
+   MARKET STRIP
+   ========================================================= */
+
+.about-market-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 5px;
+
+  border-top: 1px solid #dfeaec;
+  border-bottom: 1px solid #dfeaec;
+}
+
+
+.about-market-item {
+  display: flex;
+  align-items: center;
+
+  min-height: 62px;
+
+  padding: 10px 13px;
+
+  gap: 9px;
+
+  background: transparent;
+
+  transition: background 0.2s ease;
+}
+
+
+.about-market-item + .about-market-item {
+  border-left: 1px solid #e4edef;
+}
+
+
+.about-market-item:hover {
+  background: #f7fbfb;
+}
+
+
+/* =========================================================
+   MARKET ICON
+   ========================================================= */
+
+.about-market-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #d4e8e9;
+
+  border-radius: 7px;
+
+  background: #f6fbfb;
+
+  color: #5abac2;
+}
+
+
+.about-market-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+
+/* MARKET TEXT */
+
+.about-market-item strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #31565c;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+
+.about-market-item span {
+  display: block;
+
+  color: #84999c;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 7.5px;
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   REMOVE EXTRA PARAGRAPH SPACING
+   ========================================================= */
+
+.about-map-panel.about-global-card > p {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .about-map-panel.about-global-card {
+    padding: 28px 26px 24px;
+  }
+
+  .about-map-panel .about-global-copy h2 {
+    font-size: 34px;
+  }
+
+  .about-global-badge {
+    font-size: 7.5px;
+  }
+
+  .about-market-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-market-item:nth-child(3) {
+    border-left: none;
+  }
+
+  .about-market-item:nth-child(n + 3) {
+    border-top: 1px solid #e4edef;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .about-map-panel.about-global-card {
+    padding: 24px 20px 20px;
+
+    border-radius: 15px;
+  }
+
+
+  .about-map-panel .about-global-header {
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+
+  .about-map-panel .about-global-copy h2 {
+    font-size: 32px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .about-map-panel .about-global-copy p {
+    font-size: 10px;
+
+    max-width: 100%;
+  }
+
+
+  .about-global-badge {
+    align-self: flex-start;
+  }
+
+
+  .about-map-panel .about-map {
+    height: 160px;
+  }
+
+
+  .about-map-panel .about-map > svg:first-child {
+    height: 160px !important;
+  }
+
+/* =========================================================
+   CORRECT INVESTOR ROUTE
+   ========================================================= */
+
+.about-map-panel .about-map .about-map-line {
+  position: absolute;
+
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+  height: 190px !important;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+.about-map-panel .about-map .about-map-line path {
+  fill: none;
+
+  stroke: #67c4cb;
+
+  stroke-width: 2;
+
+  stroke-dasharray: 6 7;
+
+  stroke-linecap: round;
+
+  opacity: 0.75;
+}
+
+
+  .about-map-panel .about-map .about-map-label {
+    font-size: 7px;
+  }
+
+
+  .about-market-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-market-item {
+    min-height: 55px;
+  }
+
+
+  .about-market-item + .about-market-item {
+    border-left: none;
+
+    border-top: 1px solid #e4edef;
+  }
+
+}
+/* =========================================================
+   AMG GLOBAL ECOSYSTEM / LOGO SECTION
+   ========================================================= */
+
+.amg-ecosystem-section {
+  width: 100%;
+  padding: 80px 0 0;
+  background: #ffffff;
+  border-top: 1px solid #dce8e9;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.amg-ecosystem-header {
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 48px;
+}
+
+
+.amg-ecosystem-header .about-eyebrow {
+  margin-bottom: 14px;
+
+  color: #087d86;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+.amg-ecosystem-header h2 {
+  margin: 0;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 700;
+
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+}
+
+
+.amg-ecosystem-header p {
+  max-width: 760px;
+
+  margin: 22px auto 0;
+
+  color: #38565c;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LOGO GRID
+   ========================================================= */
+
+.amg-ecosystem-logo-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+
+  border-top: 1px solid #dce5e7;
+  border-left: 1px solid #dce5e7;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   INDIVIDUAL LOGO CELL
+   ========================================================= */
+
+.amg-ecosystem-logo {
+  position: relative;
+
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 18px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-right: 1px solid #dce5e7;
+  border-bottom: 1px solid #dce5e7;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.amg-ecosystem-logo:hover {
+  background: #f4fbfb;
+}
+
+
+/* =========================================================
+   LOGO IMAGE
+   ========================================================= */
+
+.amg-ecosystem-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 82%;
+  max-height: 62px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   SPECIAL LOGO SIZES
+   ========================================================= */
+
+.amg-ecosystem-logo:nth-child(1) img {
+  max-width: 105px;
+}
+
+.amg-ecosystem-logo:nth-child(2) img {
+  max-width: 105px;
+}
+
+.amg-ecosystem-logo:nth-child(3) img {
+  max-width: 125px;
+}
+
+.amg-ecosystem-logo:nth-child(4) img {
+  max-width: 120px;
+}
+
+.amg-ecosystem-logo:nth-child(5) img {
+  max-width: 135px;
+}
+
+.amg-ecosystem-logo:nth-child(6) img {
+  max-width: 135px;
+}
+
+.amg-ecosystem-logo:nth-child(7) img {
+  max-width: 125px;
+}
+
+.amg-ecosystem-logo:nth-child(8) img {
+  max-width: 130px;
+}
+
+.amg-ecosystem-logo:nth-child(9) img {
+  max-width: 125px;
+}
+
+.amg-ecosystem-logo:nth-child(10) img {
+  max-width: 130px;
+}
+
+.amg-ecosystem-logo:nth-child(11) img {
+  max-width: 140px;
+}
+
+.amg-ecosystem-logo:nth-child(12) img {
+  max-width: 120px;
+}
+
+.amg-ecosystem-logo:nth-child(13) img {
+  max-width: 110px;
+}
+
+.amg-ecosystem-logo:nth-child(14) img {
+  max-width: 130px;
+}
+
+.amg-ecosystem-logo:nth-child(15) img {
+  max-width: 130px;
+}
+
+.amg-ecosystem-logo:nth-child(16) img {
+  max-width: 125px;
+}
+
+.amg-ecosystem-logo:nth-child(17) img {
+  max-width: 135px;
+}
+
+.amg-ecosystem-logo:nth-child(18) img {
+  max-width: 140px;
+}
+
+.amg-ecosystem-logo:nth-child(19) img {
+  max-width: 135px;
+}
+
+.amg-ecosystem-logo:nth-child(20) img {
+  max-width: 125px;
+}
+
+.amg-ecosystem-logo:nth-child(21) img {
+  max-width: 115px;
+}
+
+.amg-ecosystem-logo:nth-child(22) img {
+  max-width: 140px;
+}
+
+.amg-ecosystem-logo:nth-child(23) img {
+  max-width: 115px;
+}
+
+.amg-ecosystem-logo:nth-child(24) img {
+  max-width: 140px;
+}
+
+.amg-ecosystem-logo:nth-child(25) img {
+  max-width: 135px;
+}
+
+.amg-ecosystem-logo:nth-child(26) img {
+  max-width: 140px;
+}
+
+.amg-ecosystem-logo:nth-child(27) img {
+  max-width: 110px;
+}
+
+.amg-ecosystem-logo:nth-child(28) img {
+  max-width: 140px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .amg-ecosystem-section {
+    padding-top: 65px;
+  }
+
+  .amg-ecosystem-logo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .amg-ecosystem-logo {
+    min-height: 105px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .amg-ecosystem-section {
+    padding-top: 55px;
+  }
+
+  .amg-ecosystem-header {
+    width: calc(100% - 36px);
+    padding-bottom: 35px;
+  }
+
+  .amg-ecosystem-header h2 {
+    font-size: 34px;
+  }
+
+  .amg-ecosystem-header p {
+    font-size: 15px;
+  }
+
+  .amg-ecosystem-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .amg-ecosystem-logo {
+    min-height: 95px;
+    padding: 16px 10px;
+  }
+
+  .amg-ecosystem-logo img {
+    max-width: 85%;
+    max-height: 48px;
+  }
+
 }

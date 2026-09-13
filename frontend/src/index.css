@@ -2754,3 +2754,1170 @@ section {
   }
 
 }
+/* =========================================================
+   MODERN FOUNDER SECTION
+   Image Left + Experience Timeline Right
+   ========================================================= */
+
+.founder-modern-grid {
+  display: grid;
+  grid-template-columns: 36% 64%;
+  gap: 42px;
+  align-items: center;
+}
+
+
+/* =========================================================
+   LEFT IMAGE
+   ========================================================= */
+
+.founder-modern-image-wrap {
+  width: 100%;
+}
+
+.founder-modern-image {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 0 0 16px 16px;
+  background: #eaf7f7;
+}
+
+.founder-modern-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
+
+/* =========================================================
+   QUOTE CARD
+   ========================================================= */
+
+.founder-modern-quote {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+
+  padding: 20px 22px;
+
+  background: #073d46;
+  color: white;
+
+  border-radius: 14px;
+
+  box-shadow: 0 12px 30px rgba(7, 61, 70, 0.20);
+}
+
+.founder-quote-mark {
+  color: #f4c400;
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 0.8;
+  margin-bottom: 8px;
+}
+
+.founder-modern-quote p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+   ========================================================= */
+
+.founder-modern-content {
+  min-width: 0;
+}
+
+.founder-modern-eyebrow {
+  margin-bottom: 10px;
+
+  color: #079aa5;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+.founder-modern-heading {
+  margin: 0;
+
+  color: #082f38;
+
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(42px, 4vw, 62px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.founder-modern-heading span {
+  display: block;
+  color: #079ca5;
+}
+
+
+/* =========================================================
+   YELLOW UNDERLINE
+   ========================================================= */
+
+.founder-modern-scribble {
+  width: 105px;
+  height: 5px;
+
+  margin-top: 15px;
+  margin-bottom: 18px;
+
+  background: #f4c400;
+
+  border-radius: 100px;
+
+  transform: rotate(-3deg);
+}
+
+
+.founder-modern-intro {
+  max-width: 850px;
+
+  margin: 0 0 20px;
+
+  color: #173f47;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   EXPERIENCE POINTERS
+   ========================================================= */
+
+.founder-experience-list {
+  position: relative;
+
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+
+/* vertical timeline line */
+
+.founder-experience-list::before {
+  content: "";
+
+  position: absolute;
+
+  left: 22px;
+  top: 22px;
+  bottom: 22px;
+
+  width: 1px;
+
+  background: #b8e2e4;
+}
+
+
+.founder-experience-item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 48px 1fr;
+
+  column-gap: 16px;
+
+  padding: 10px 0;
+}
+
+
+.founder-experience-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e4f7f7;
+
+  color: #073d46;
+
+  border: 1px solid #d0eeee;
+}
+
+
+.founder-experience-content {
+  padding-top: 1px;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #e1ebec;
+}
+
+
+.founder-experience-item:last-child
+.founder-experience-content {
+  border-bottom: none;
+}
+
+
+.founder-experience-content h3 {
+  margin: 0 0 3px;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+
+.founder-experience-content p {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #526f75;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.38;
+}
+
+
+/* =========================================================
+   ROLE TAGS
+   ========================================================= */
+
+.founder-modern-role-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 7px 13px;
+
+  margin-top: 12px;
+  margin-bottom: 14px;
+}
+
+
+.founder-modern-role-row span {
+  position: relative;
+
+  color: #073d46;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+
+.founder-modern-role-row span:not(:last-child)::after {
+  content: "•";
+
+  margin-left: 13px;
+
+  color: #08a9b5;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   BOTTOM COPY + BUTTONS
+   ========================================================= */
+
+.founder-modern-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 8px;
+}
+
+
+.founder-modern-actions > p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #52666b;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+.founder-modern-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+.founder-modern-primary-btn,
+.founder-modern-linkedin-btn {
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 18px;
+
+  border-radius: 7px;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.founder-modern-primary-btn {
+  background: #073d46;
+  color: white;
+}
+
+
+.founder-modern-primary-btn:hover {
+  background: #0a515c;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(7, 61, 70, 0.16);
+}
+
+
+.founder-modern-linkedin-btn {
+  border: 1px solid #08a9b5;
+
+  background: white;
+  color: #087d86;
+}
+
+
+.founder-modern-linkedin-btn:hover {
+  background: #eefafa;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   REMOVE OLD SIGNATURE / BADGE
+   ========================================================= */
+
+/* In case old CSS still tries to display it */
+
+.founder-photo-badge {
+  display: none !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .founder-modern-grid {
+    grid-template-columns: 40% 60%;
+    gap: 30px;
+  }
+
+  .founder-modern-image {
+    height: 600px;
+  }
+
+  .founder-modern-heading {
+    font-size: 48px;
+  }
+
+  .founder-experience-content p {
+    font-size: 13px;
+  }
+
+  .founder-modern-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-modern-buttons {
+    margin-top: 5px;
+  }
+}
+
+
+@media (max-width: 900px) {
+
+  .founder-modern-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .founder-modern-image {
+    height: 600px;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .founder-modern-content {
+    width: 100%;
+  }
+
+  .founder-modern-heading {
+    font-size: 48px;
+  }
+}
+
+
+@media (max-width: 640px) {
+
+  .founder-modern-image {
+    height: 500px;
+  }
+
+  .founder-modern-quote {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    padding: 17px;
+  }
+
+  .founder-modern-quote p {
+    font-size: 13px;
+  }
+
+  .founder-modern-heading {
+    font-size: 40px;
+  }
+
+  .founder-modern-intro {
+    font-size: 15px;
+  }
+
+  .founder-experience-item {
+    grid-template-columns: 42px 1fr;
+    column-gap: 12px;
+  }
+
+  .founder-experience-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .founder-experience-list::before {
+    left: 20px;
+  }
+
+  .founder-experience-content h3 {
+    font-size: 18px;
+  }
+
+  .founder-experience-content p {
+    font-size: 12.5px;
+  }
+
+  .founder-modern-role-row {
+    gap: 6px 9px;
+  }
+
+  .founder-modern-role-row span {
+    font-size: 12px;
+  }
+
+  .founder-modern-buttons {
+    width: 100%;
+  }
+
+  .founder-modern-primary-btn,
+  .founder-modern-linkedin-btn {
+    width: 100%;
+  }
+}
+/* =========================================================
+   FOUNDER + ECOSYSTEM TWO COLUMN LAYOUT
+   ========================================================= */
+
+.founder-modern-grid {
+  display: grid;
+  grid-template-columns: 36% 64%;
+  gap: 42px;
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT COLUMN
+   ========================================================= */
+
+.founder-modern-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+
+/* =========================================================
+   GAURAV IMAGE
+   ========================================================= */
+
+.founder-modern-image-wrap {
+  width: 100%;
+}
+
+.founder-modern-image {
+  position: relative;
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+
+  border-radius: 0 0 16px 16px;
+
+  background: #eaf7f7;
+}
+
+.founder-modern-photo {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: top center;
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.founder-modern-quote {
+  position: absolute;
+
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+
+  padding: 20px 22px;
+
+  background: #073d46;
+  color: #fff;
+
+  border-radius: 14px;
+
+  box-shadow: 0 12px 30px rgba(7, 61, 70, 0.20);
+}
+
+.founder-quote-mark {
+  color: #f4c400;
+
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 0.8;
+
+  margin-bottom: 8px;
+}
+
+.founder-modern-quote p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.94);
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   ECOSYSTEM CARD BELOW IMAGE
+   ========================================================= */
+
+.ecosystem-side-card {
+  width: 100%;
+
+  margin-top: 0;
+
+  padding: 28px 28px 30px;
+
+  background: #f1fbfb;
+
+  border-radius: 0 0 12px 12px;
+}
+
+
+.ecosystem-side-eyebrow {
+  margin-bottom: 12px;
+
+  color: #087d86;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.10em;
+
+  text-transform: uppercase;
+}
+
+
+.ecosystem-side-card h3 {
+  margin: 0;
+
+  color: #062f38;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.03;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* yellow line */
+
+.ecosystem-side-scribble {
+  width: 130px;
+  height: 5px;
+
+  margin-top: 14px;
+  margin-bottom: 20px;
+
+  background: #f4c400;
+
+  border-radius: 100px;
+
+  transform: rotate(-3deg);
+}
+
+
+.ecosystem-side-description {
+  margin: 0;
+
+  color: #173f47;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   TURQUOISE INFORMATION BOX
+   ========================================================= */
+
+.ecosystem-side-note {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 22px;
+
+  padding: 17px 18px;
+
+  background: #dff7f6;
+
+  border-radius: 10px;
+
+  color: #00858e;
+}
+
+
+.ecosystem-side-note-icon {
+  flex-shrink: 0;
+
+  width: 18px;
+  height: 18px;
+
+  margin-top: 2px;
+
+  color: #00858e;
+}
+
+
+.ecosystem-side-note span {
+  color: #00858e;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.42;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.founder-modern-content {
+  min-width: 0;
+  padding-top: 0;
+}
+
+
+/* =========================================================
+   DESKTOP HEIGHT ALIGNMENT
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+  .founder-modern-left {
+    align-self: start;
+  }
+
+  .founder-modern-content {
+    align-self: start;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .founder-modern-grid {
+    grid-template-columns: 38% 62%;
+    gap: 28px;
+  }
+
+  .founder-modern-image {
+    height: 600px;
+  }
+
+  .ecosystem-side-card {
+    padding: 24px 22px 25px;
+  }
+
+  .ecosystem-side-card h3 {
+    font-size: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .founder-modern-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .founder-modern-image {
+    height: 600px;
+  }
+
+  .ecosystem-side-card {
+    margin-top: 0;
+  }
+
+}
+
+
+@media (max-width: 640px) {
+
+  .founder-modern-image {
+    height: 500px;
+  }
+
+  .founder-modern-quote {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+
+    padding: 17px;
+  }
+
+  .ecosystem-side-card {
+    padding: 24px 20px 25px;
+  }
+
+  .ecosystem-side-card h3 {
+    font-size: 30px;
+  }
+
+  .ecosystem-side-description {
+    font-size: 13.5px;
+  }
+
+  .ecosystem-side-note {
+    padding: 15px;
+  }
+
+  .ecosystem-side-note span {
+    font-size: 12.5px;
+  }
+
+}
+/* =========================================================
+   TRUSTED ECOSYSTEMS + COMPANY LOGOS
+   ========================================================= */
+
+.amg-company-ecosystem {
+  width: 75%;
+  max-width: 1400px;
+  margin: 55px auto 0;
+
+  display: grid;
+  grid-template-columns: 0.82fr 2.18fr;
+
+  background: #ffffff;
+
+  border-top: 1px solid rgba(14, 76, 92, 0.10);
+  border-bottom: 1px solid rgba(14, 76, 92, 0.10);
+}
+
+
+/* LEFT */
+
+.amg-company-copy {
+  padding: 42px 20px;
+
+  background: #eefafa;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.amg-company-eyebrow {
+  margin-bottom: 13px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+
+  color: #0e4c5c;
+}
+
+.amg-company-copy h2 {
+  margin: 0;
+
+  font-size: clamp(28px, 2.7vw, 39px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+
+  color: #0e4c5c;
+}
+
+.amg-company-underline {
+  width: 90px;
+  height: 5px;
+
+  margin: 17px 0 19px;
+
+  background: #f5c84c;
+  border-radius: 100%;
+
+  transform: rotate(-2deg);
+}
+
+.amg-company-copy p {
+  max-width: 360px;
+
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.65;
+
+  color: #46636b;
+}
+
+
+/* RIGHT — LOGOS */
+
+.amg-company-logos {
+  width: 100%;
+  background: #ffffff;
+}
+
+.amg-company-logo-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.amg-company-logo {
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+width: 10.5rem;
+  border-right: 1px solid rgba(14, 76, 92, 0.11);
+  border-bottom: 1px solid rgba(14, 76, 92, 0.10);
+
+  background: #ffffff;
+
+  transition: background 0.2s ease;
+}
+
+.amg-company-logo img {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+
+  transition: transform 0.2s ease;
+}
+
+.amg-company-logo:hover {
+  background: #fbfdfd;
+}
+
+.amg-company-logo:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .amg-company-ecosystem {
+    grid-template-columns: 1fr;
+  }
+
+  .amg-company-copy {
+    padding: 35px;
+  }
+
+  .amg-company-logo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .amg-company-ecosystem {
+    width: 94%;
+    margin-top: 40px;
+  }
+
+  .amg-company-copy {
+    padding: 30px 24px;
+  }
+
+  .amg-company-copy h2 {
+    font-size: 29px;
+  }
+
+  .amg-company-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .amg-company-logo {
+    height: 82px;
+  }
+
+  .amg-company-logo img {
+    max-height: 45px;
+  }
+
+}
+/* =========================================================
+   WHAT WE DON'T DO
+   ALIGNED WITH THE 4 PROCESS CARDS
+   ========================================================= */
+
+.amg-not-do-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  margin-top: 18px;
+
+  border: 1px solid rgba(14, 76, 92, 0.12);
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  background: #f7fbfb;
+}
+
+/* LEFT INTRO */
+
+.amg-not-do-intro {
+  padding: 24px 26px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 125px;
+}
+
+.amg-not-do-intro > span {
+  margin-bottom: 8px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  color: #0e4c5c;
+}
+
+.amg-not-do-intro h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 23px;
+  line-height: 1.12;
+  font-weight: 600;
+
+  color: #0e4c5c;
+}
+
+
+/* EXCLUSION ITEMS */
+
+.amg-not-do-item {
+  min-height: 125px;
+
+  padding: 24px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  border-left: 1px solid rgba(14, 76, 92, 0.10);
+}
+
+.amg-not-do-x {
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1.5px solid rgba(14, 76, 92, 0.45);
+  border-radius: 50%;
+
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 1;
+
+  color: #0e7180;
+}
+
+.amg-not-do-item h4 {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 600;
+
+  color: #123f4b;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .amg-not-do-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .amg-not-do-item:nth-child(3) {
+    border-left: none;
+    border-top: 1px solid rgba(14, 76, 92, 0.10);
+  }
+
+  .amg-not-do-item:nth-child(4) {
+    border-top: 1px solid rgba(14, 76, 92, 0.10);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .amg-not-do-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amg-not-do-intro {
+    min-height: auto;
+  }
+
+  .amg-not-do-item {
+    min-height: 90px;
+    font-size: 1.14rem;
+    border-left: none;
+    border-top: 1px solid rgba(14, 76, 92, 0.10);
+  }
+
+}

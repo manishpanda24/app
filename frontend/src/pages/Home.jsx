@@ -3,18 +3,18 @@ import { ArrowRight, ArrowUpRight,Rocket,Compass,Search, FileText, Sparkles, Cal
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
-import GauravImage from '../images/GauravImage.jpg';
+import GauravImage from '../images/Gaurav-hero.png';
 
 // AMG Logos
 import MtLabLogo from '../images/amg_logos_jpgs/01_mt_lab.jpg';
 import TechstarsLogo from '../images/amg_logos_jpgs/01_techstars.jpg';
-
+import RichmondHillInnovationCentreLogo from '../images/amg_logos_jpgs/17_richmond_hill.jpg';
 import MedTechInnovatorLogo from '../images/amg_logos_jpgs/02_medtech_innovator.jpg';
 import YorkULogo from '../images/amg_logos_jpgs/02_york_u.jpg';
-
+import boundlessLogo from '../images/amg_logos_jpgs/19_boundless_accelerator.jpg';
 import BlackEntrepreneurshipAllianceLogo from '../images/amg_logos_jpgs/03_black_entrepreneurship_alliance.jpg';
 import EdmontonUnlimitedLogo from '../images/amg_logos_jpgs/03_edmonton_unlimited.jpg';
-
+import SparkCentreLogo from '../images/amg_logos_jpgs/11_spark_centre.jpg';
 import MassChallengeLogo from '../images/amg_logos_jpgs/04_masschallenge.jpg';
 import MississaugaDEALogo from '../images/amg_logos_jpgs/04_mississauga_dea.jpg';
 
@@ -24,11 +24,10 @@ import TechNordicGlobalTechAdvocatesLogo from '../images/amg_logos_jpgs/05_tech_
 import VentureLabLogo from '../images/amg_logos_jpgs/06_venturelab.jpg';
 import ElevateLogo from '../images/amg_logos_jpgs/06_elevate.jpg';
 
-import EITEuropeanInstituteLogo from '../images/amg_logos_jpgs/07_eit_european_institute_of_innovation.jpg';
+import EITEuropeanInstituteLogo from '../images/amg_logos_jpgs/07_eit_european_institute_of_innovation.png';
 import TechAllianceLogo from '../images/amg_logos_jpgs/07_techalliance.jpg';
 
 import FintechCadenceLogo from '../images/amg_logos_jpgs/08_fintech_cadence.jpg';
-import FundedByEuropeanUnionLogo from '../images/amg_logos_jpgs/08_funded_by_european_union.jpg';
 
 import InnovationClusterLogo from '../images/amg_logos_jpgs/09_innovation_cluster.jpg';
 import InvestNovaScotiaLogo from '../images/amg_logos_jpgs/09_invest_nova_scotia.jpg';
@@ -49,11 +48,9 @@ import MarkhamBoardOfTradeLogo from '../images/amg_logos_jpgs/15_markham_board_o
 
 import CatalystLogo from '../images/amg_logos_jpgs/16_catalyst.jpg';
 
-import RichmondHillLogo from '../images/amg_logos_jpgs/17_richmond_hill.jpg';
 
 import BramptonVentureZoneLogo from '../images/amg_logos_jpgs/18_brampton_venture_zone.jpg';
 
-import BoundlessAcceleratorLogo from '../images/amg_logos_jpgs/19_boundless_accelerator.jpg';
 import   {GraduationCap, DollarSign, Globe2,Cpu} from 'lucide-react';
 import { HERO, SERVICE_PILLARS, SERVICES, FOUNDER_SERVICES_INTRO, WHO_WE_ARE } from '../mock';
 const ICONS = {
@@ -992,8 +989,52 @@ export default function Home() {
             </p>
           </div>
         );
-      })}
+          })}
     </div>
+
+    {/* WHAT WE DON'T DO */}
+    <div className="amg-not-do-grid">
+
+      {/* COLUMN 1 */}
+      <div className="amg-not-do-intro">
+        <span>WHAT WE DON'T DO</span>
+
+        <h3>
+          No shortcuts.
+          <br />
+          No generic playbooks.
+        </h3>
+      </div>
+
+      {/* COLUMN 2 */}
+      <div className="amg-not-do-item">
+        <div className="amg-not-do-x">×</div>
+
+        <div>
+          <h1>Generic fundraising advice</h1>
+        </div>
+      </div>
+
+      {/* COLUMN 3 */}
+      <div className="amg-not-do-item">
+        <div className="amg-not-do-x">×</div>
+
+        <div>
+          <h2>Investor directory lists</h2>
+        </div>
+      </div>
+
+      {/* COLUMN 4 */}
+      <div className="amg-not-do-item">
+        <div className="amg-not-do-x">×</div>
+
+        <div>
+          <h3>One-size-fits-all templates</h3>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
 {/* INDUSTRIES WE SERVE */}
@@ -1139,313 +1180,497 @@ export default function Home() {
 
 </section>
 {/* MEET THE FOUNDER */}
+{/* MEET THE FOUNDER */}
 <section className="founder-proof-section py-20 px-6 lg:px-10 border-t border-amg-line bg-white">
   <div className="max-w-[1320px] mx-auto">
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-      <div className="lg:col-span-4">
-        <div className="founder-photo-card">
-          <img
-            src={GauravImage}
-            alt="Gaurav Bansal"
-            className="w-full h-full object-cover object-top"
-          />
 
-          <div className="founder-photo-badge">
-            <Award className="w-5 h-5 text-amg-yellow" />
-            <span>From the Investor Side of the Table</span>
-          </div>
+    {/* TOP FOUNDER SECTION */}
+    <div className="founder-modern-grid">
 
-          <div className="founder-quote-card">
-            <div className="text-amg-yellow text-[34px] leading-none">&ldquo;</div>
-            <p>
-              I've sat on the other side of the table - as an investor, operator, and dealmaker.
-              Now I help founders get investor-ready before they fundraise.
-            </p>
-          </div>
+      {/* ================= LEFT : GAURAV IMAGE ================= */}
+    {/* ================= LEFT COLUMN ================= */}
+<div className="founder-modern-left">
+
+  {/* GAURAV IMAGE */}
+  <div className="founder-modern-image-wrap">
+    <div className="founder-modern-image">
+
+      <img
+        src={GauravImage}
+        style={{ transform: "scaleX(-1)" }}
+        alt="Gaurav Bansal"
+        className="founder-modern-photo"
+      />
+
+      <div className="founder-modern-quote">
+        <div className="founder-quote-mark">
+          &ldquo;
         </div>
+
+        <p>
+          I've sat on the other side of the table - as an investor,
+          operator, and dealmaker. Now I help founders get investor-ready
+          before they fundraise.
+        </p>
       </div>
 
-      <div className="lg:col-span-8">
-        <div className="text-[14px] tracking-[0.08em] uppercase text-amg-turquoise-2 font-semibold">
-          Meet the Founder
+    </div>
+  </div>
+
+
+  {/* =====================================================
+      TRUSTED ON BOTH SIDES OF THE TABLE
+      THIS NOW SITS DIRECTLY BELOW THE IMAGE
+      ===================================================== */}
+
+  <div className="ecosystem-side-card">
+
+    <div className="ecosystem-side-eyebrow">
+      TRUSTED ON BOTH SIDES OF THE TABLE
+    </div>
+
+    <h3>
+      Selected by Leading
+      <br />
+      Startup Ecosystems
+    </h3>
+
+    <div className="ecosystem-side-scribble" />
+
+    <p className="ecosystem-side-description">
+      Leading accelerators, innovation programs, and founder
+      ecosystems trust Gaurav to evaluate startups, mentor
+      founders, and assess investment readiness.
+    </p>
+
+    <div className="ecosystem-side-note">
+      <Handshake className="ecosystem-side-note-icon" />
+
+      <span>
+        Beyond founder advisory, Gaurav also partners with
+        accelerators, incubators, and innovation ecosystems
+        as a Growth Coach, Speaker, Workshop Leader,
+        Evaluator, and EIR-style expert.
+      </span>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+      {/* ================= RIGHT : FOUNDER CONTENT ================= */}
+      <div className="founder-modern-content">
+
+        <div className="founder-modern-eyebrow">
+          MEET THE FOUNDER
         </div>
 
-        <h2 className="founder-proof-heading mt-3">
+        <h2 className="founder-modern-heading">
           Built by an Investor.
-          <span> Now on the Founder's Side.</span>
+          <span>Now on the Founder's Side.</span>
         </h2>
 
-        <div className="yellow-scribble" />
+        <div className="founder-modern-scribble" />
 
-        <p className="mt-5 text-[16px] md:text-[18px] leading-relaxed text-amg-ink/86 max-w-4xl font-medium">
-          Gaurav Bansal brings 14+ years across venture capital, angel investing,
-          investment banking and consulting - helping founders see their companies
-          the way investors do before they enter the fundraising market.
+        <p className="founder-modern-intro">
+          Gaurav Bansal brings 14+ years across venture capital, angel
+          investing, investment banking and consulting - helping founders
+          see their companies the way investors do before they enter the
+          fundraising market.
         </p>
 
-        <div className="founder-stats-grid mt-6">
-          {[
-            {
-              icon: Users,
-              value: <>    50+ Angel    <br />    35+ VC  </>,
-              label: 'Investments across stages, sectors & geographies',
-            },
-            {
-              icon: ClipboardCheck,
-              value: '20,000+',
-              label: 'Pitch decks & financial models reviewed',
-            },
-            {
-              icon: Search,
-              value: '100+',
-              label: 'Due diligences completed',
-            },
-            {
-              icon: Landmark,
-              value: '$2B+',
-              label: 'Investment banking transactions',
-            },
-          ].map((item) => {
-            const Icon = item.icon;
 
-            return (
-              <div key={item.label} className="founder-stat-card">
-                <div className="founder-stat-icon">
-                  <Icon className="w-6 h-6" />
-                </div>
-                <div className="founder-stat-value">{item.value}</div>
-                <div className="founder-stat-line" />
-                <p>{item.label}</p>
-              </div>
-            );
-          })}
+        {/* ================= EXPERIENCE POINTERS ================= */}
+        <div className="founder-experience-list">
+
+          {/* 01 */}
+          <div className="founder-experience-item">
+
+            <div className="founder-experience-icon">
+              <Briefcase className="w-6 h-6" />
+            </div>
+
+            <div className="founder-experience-content">
+              <h3>14+ Years</h3>
+
+              <p>
+                Across venture capital, angel investing, investment banking,
+                technology consulting and startup advisory, with a strong
+                focus on commercialization, investment readiness and growth
+                financing.
+              </p>
+            </div>
+
+          </div>
+
+
+          {/* 02 */}
+          <div className="founder-experience-item">
+
+            <div className="founder-experience-icon">
+              <Users className="w-6 h-6" />
+            </div>
+
+            <div className="founder-experience-content">
+              <h3>50+ Angel Investments</h3>
+
+              <p>
+                50+ personal angel investments, membership in 300+ angel
+                syndicates globally, and VC portfolio experience across
+                30+ startups in 10 countries.
+              </p>
+            </div>
+
+          </div>
+
+
+          {/* 03 */}
+          <div className="founder-experience-item">
+
+            <div className="founder-experience-icon">
+              <Landmark className="w-6 h-6" />
+            </div>
+
+            <div className="founder-experience-content">
+              <h3>US$2B+ Transactions</h3>
+
+              <p>
+                Investment-banking transactions, including IPO, private-equity
+                and strategic transaction experience, giving me a strong
+                grounding in financial analysis, valuation, capital structuring
+                and investment decision-making.
+              </p>
+            </div>
+
+          </div>
+
+
+          {/* 04 */}
+          <div className="founder-experience-item">
+
+            <div className="founder-experience-icon">
+              <ClipboardCheck className="w-6 h-6" />
+            </div>
+
+            <div className="founder-experience-content">
+              <h3>250+ Evaluations</h3>
+
+              <p>
+                250+ formal startup and innovation evaluations, 100+ detailed
+                due diligences, and review of 20,000+ pitch decks and financial
+                models across multiple technology sectors.
+              </p>
+            </div>
+
+          </div>
+
+
+          {/* 05 */}
+          <div className="founder-experience-item">
+
+            <div className="founder-experience-icon">
+              <GraduationCap className="w-6 h-6" />
+            </div>
+
+            <div className="founder-experience-content">
+              <h3>3,000+ Founder Mentoring Hours</h3>
+
+              <p>
+                With 200+ founders and 150+ workshops and programs covering
+                fundraising, financial modelling, valuation, investor readiness,
+                business models, GTM and investment strategy.
+              </p>
+            </div>
+
+          </div>
+
         </div>
 
-        <div className="founder-role-row mt-5">
-          {['Ex-VC', 'Angel Investor', 'Ex-Investment Banker', 'Portfolio Operator', 'Founder'].map((item) => (
+
+        {/* ================= ROLE TAGS ================= */}
+        <div className="founder-modern-role-row">
+          {[
+            'Ex-VC',
+            'Angel Investor',
+            'Ex-Investment Banker',
+            'Portfolio Operator',
+            'Founder'
+          ].map((item) => (
             <span key={item}>{item}</span>
           ))}
         </div>
 
-        <div className="founder-proof-actions mt-6">
+
+        {/* ================= BOTTOM COPY + BUTTONS ================= */}
+        <div className="founder-modern-actions">
+
           <p>
-            That experience now sits behind every AMG engagement - from identifying fundability gaps and
-            strengthening the investment case to investor targeting, diligence, negotiation and close.
+            That experience now sits behind every AMG engagement - from
+            identifying fundability gaps and strengthening the investment
+            case to investor targeting, diligence, negotiation and close.
           </p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/about" className="founder-dark-btn">
-              Learn More About Gaurav <ArrowRight className="w-4 h-4" />
+
+          <div className="founder-modern-buttons">
+
+            <Link
+              to="/about"
+              className="founder-modern-primary-btn"
+            >
+              Learn More About Gaurav
+              <ArrowRight className="w-4 h-4" />
             </Link>
+
             <a
               href="https://www.linkedin.com/in/gauravbansalventurecapital/"
               target="_blank"
               rel="noopener noreferrer"
-              className="founder-linkedin-btn"
+              className="founder-modern-linkedin-btn"
             >
               <Linkedin className="w-4 h-4" />
               LinkedIn Profile
             </a>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+</div>
+</section>
 
-    <div className="ecosystem-proof mt-8">
-      <div className="ecosystem-proof-copy">
-        <div className="text-[13px] tracking-[0.08em] uppercase text-amg-teal font-semibold">
-          Trusted on Both Sides of the Table
-        </div>
-        <h3>Selected by Leading Startup Ecosystems</h3>
-        <div className="yellow-scribble" />
-        <p>
-          Leading accelerators, innovation programs, and founder ecosystems trust Gaurav to evaluate startups,
-          mentor founders, and assess investment readiness.
-        </p>
-        <div className="ecosystem-note">
-          <Handshake className="w-6 h-6" />
-          <span>
-            Beyond founder advisory, Gaurav also partners with accelerators, incubators, and innovation ecosystems
-            as a Growth Coach, Speaker, Workshop Leader, Evaluator, and EIR-style expert.
-          </span>
-        </div>
-      </div>
+    {/* =========================================================
+        KEEP YOUR EXISTING ECOSYSTEM SECTION HERE
+       ========================================================= */}
+{/* TRUSTED ECOSYSTEMS + COMPANY LOGOS */}
 
-      <div className="ecosystem-proof-main">
+<div className="amg-company-ecosystem">
+
+  {/* LEFT CONTENT */}
+  <div className="amg-company-copy">
+
+    <span className="amg-company-eyebrow">
+      TRUSTED ACROSS THE ECOSYSTEM
+    </span>
+
+    <h2>
+      Trusted by Leading
+      <br />
+      Startup Ecosystems
+    </h2>
+
+    <div className="amg-company-underline"></div>
+
+    <p>
+      Helping leading innovation networks evaluate, mentor,
+      and support ambitious founders.
+    </p>
+
+  </div>
+
+
+  {/* RIGHT — COMPANY LOGOS */}
+  <div className="amg-company-logos">
+
+    <div className="amg-company-logo-grid">
+
       {/* ROW 1 */}
-<div className="ecosystem-logo-row">
 
-  <div className="ecosystem-logo-item">
-    <img src={MtLabLogo} alt="MT Lab" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={TechstarsLogo} alt="Techstars" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={MedTechInnovatorLogo} alt="MedTech Innovator" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={YorkULogo} alt="York University" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={BlackEntrepreneurshipAllianceLogo} alt="Black Entrepreneurship Alliance" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={EdmontonUnlimitedLogo} alt="Edmonton Unlimited" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={MassChallengeLogo} alt="MassChallenge" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={MississaugaDEALogo} alt="Mississauga DEA" />
-  </div>
-
-</div>
-
-
-{/* ROW 2 */}
-<div className="ecosystem-logo-row">
-
-  <div className="ecosystem-logo-item">
-    <img src={TechNordicGlobalTechAdvocatesLogo} alt="Tech Nordic / Global Tech Advocates" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={ElevateLogo} alt="Elevate" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={EITEuropeanInstituteLogo} alt="EIT" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={FundedByEuropeanUnionLogo} alt="European Union" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={InnovationClusterLogo} alt="Innovation Cluster" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={EITHigherEducationLogo} alt="EIT Higher Education" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={ForesightCanadaLogo} alt="Foresight Canada" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={D2XcelLogo} alt="D²XCEL" />
-  </div>
-
-</div>
-
-
-{/* ROW 3 */}
-<div className="ecosystem-logo-row">
-
-  <div className="ecosystem-logo-item">
-    <img src={MedicalInnovationXchangeLogo} alt="Medical Innovation Xchange" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={VoltaLogo} alt="Volta" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={WesternMorissetteInstituteLogo} alt="Western Morissette Institute" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={EITRawMaterialsLogo} alt="EIT RawMaterials" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={MarkhamBoardOfTradeLogo} alt="Markham Board of Trade" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={CatalystLogo} alt="Catalyst" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={RichmondHillLogo} alt="Richmond Hill" />
-  </div>
-  <div className="ecosystem-logo-separator" />
-
-  <div className="ecosystem-logo-item">
-    <img src={BramptonVentureZoneLogo} alt="Brampton Venture Zone" />
-  </div>
-
-</div>
-
-{/* 
-        <div className="ecosystem-metrics">
-          {[
-            { icon: Globe, value: '5,000+', label: 'Startups screened across 95 countries' },
-            { icon: Users, value: '2,000+', label: 'Applications reviewed for global investor & accelerator programs' },
-            { icon: Presentation, value: '130+', label: 'Founder workshops, mentorship & speaker sessions' },
-          ].map((item) => {
-            const Icon = item.icon;
-
-            return (
-              <div key={item.value} className="ecosystem-metric">
-                <div className="founder-stat-icon">
-                  <Icon className="w-6 h-6" />
-                </div>
-                <div>
-                  <div className="ecosystem-metric-value">{item.value}</div>
-                  <p>{item.label}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div> */}
+      <div className="amg-company-logo">
+        <img src={MtLabLogo} alt="MT Lab" />
       </div>
+
+      <div className="amg-company-logo">
+        <img src={TechstarsLogo} alt="Techstars" />
+      </div>
+
+      <div className="amg-company-logo">
+        <img src={MedTechInnovatorLogo} alt="MedTech Innovator" />
+      </div>
+
+      <div className="amg-company-logo">
+        <img src={YorkULogo} alt="York University" />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={BlackEntrepreneurshipAllianceLogo}
+          alt="Black Entrepreneurship Alliance"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={EdmontonUnlimitedLogo}
+          alt="Edmonton Unlimited"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={MassChallengeLogo}
+          alt="MassChallenge"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={MississaugaDEALogo}
+          alt="IDEA Mississauga"
+        />
+      </div>
+
+
+      {/* ROW 2 */}
+
+      <div className="amg-company-logo">
+        <img
+          src={TechNordicGlobalTechAdvocatesLogo}
+          alt="Tech Nordic Global Tech Advocates"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={CommunitechLogo}
+          alt="Communitech"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={ElevateLogo}
+          alt="Elevate"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={VentureLabLogo}
+          alt="ventureLAB"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={EITEuropeanInstituteLogo}
+          alt="EIT Higher Education Initiative"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={InnovationClusterLogo}
+          alt="Innovation Cluster"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={ForesightCanadaLogo}
+          alt="Foresight Canada"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={D2XcelLogo}
+          alt="D2XCEL"
+        />
+      </div>
+
+
+      {/* ROW 3 */}
+
+      <div className="amg-company-logo">
+        <img
+          src={InvestNovaScotiaLogo}
+          alt="Invest Nova Scotia"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={VoltaLogo}
+          alt="Volta"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={FintechCadenceLogo}
+          alt="Fintech Cadence"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={EITRawMaterialsLogo}
+          alt="EIT RawMaterials"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={TechAllianceLogo}
+          alt="TechAlliance"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={CatalystLogo}
+          alt="Catalyst"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={SparkCentreLogo}
+          alt="Spark Centre"
+        />
+      </div>
+
+      <div className="amg-company-logo">
+        <img
+          src={BramptonVentureZoneLogo}
+          alt="Brampton Venture Zone"
+        />
+      </div>
+          <div className="amg-company-logo">
+        <img
+          src={WesternMorissetteInstituteLogo}
+          alt="Western Morissette Institute"
+        />
+      </div>    <div className="amg-company-logo">
+        <img
+          src={MarkhamBoardOfTradeLogo}
+          alt="Markham Board of Trade"
+        />
+      </div>    <div className="amg-company-logo">
+        <img
+          src={RichmondHillInnovationCentreLogo}
+          alt="Richmond Hill Innovation Centre"
+        />
+      </div>    <div className="amg-company-logo">
+        <img
+          src={boundlessLogo}
+          alt="Boundless Accelerator"
+        />
+      </div>
+
     </div>
 
-    <div className="founder-proof-band">
-      <div className="flex items-center gap-3 text-white font-semibold">
-        <Users className="w-5 h-5 text-white" />
-        <span>Let's work together to help more founders succeed.</span>
-      </div>
-      <div className="flex flex-wrap gap-3">
-        <Link to="/founder-services" className="btn-yellow">
-          Explore Founder Services <ArrowRight className="w-4 h-4" />
-        </Link>
-        <Link to="/contact" className="founder-band-outline">
-          Partner with Gaurav <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
   </div>
-</section>{/* INDUSTRIES WE SERVE */}
+
+</div>    
+
+      {/* KEEP EVERYTHING YOU CURRENTLY HAVE INSIDE
+          ecosystem-proof EXACTLY AS IT IS */}
+{/* INDUSTRIES WE SERVE */}
 
     {/* FOUNDER SERVICES */}
       {/* <section className="py-24 px-6 lg:px-10 border-t border-amg-line bg-amg-cream-2/40"> */}
