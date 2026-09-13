@@ -821,7 +821,164 @@ body {
 .about-ecosystem-main {
   padding: 8px 15px;
 }
+/* =========================================================
+   GLOBAL PERSPECTIVE — RIGHT PANEL
+   ========================================================= */
 
+.about-map-panel {
+  position: relative;
+  overflow: hidden;
+
+  padding: 30px 28px 26px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid #dce8e9;
+  border-radius: 14px;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.about-map-panel .about-eyebrow {
+  margin-bottom: 8px;
+}
+
+.global-map-title {
+  margin: 0;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 40px;
+  line-height: 1.02;
+
+  font-weight: 700;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   MAP AREA
+   ========================================================= */
+
+.global-map-area {
+  position: relative;
+
+  width: 100%;
+  height: 175px;
+
+  margin-top: 5px;
+
+  overflow: hidden;
+}
+
+.global-world-map {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+
+/* =========================================================
+   LOCATION MARKERS
+   ========================================================= */
+
+.global-location {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #073d46;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.global-location-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #087f88;
+
+  border: 3px solid #d9f2f3;
+
+  box-shadow:
+    0 0 0 2px rgba(8, 127, 136, 0.12);
+}
+
+
+/* Canada */
+
+.global-location-canada {
+  left: 7%;
+  top: 42%;
+}
+
+
+/* United States */
+
+.global-location-usa {
+  left: 31%;
+  top: 66%;
+}
+
+
+/* Europe */
+
+.global-location-europe {
+  left: 68%;
+  top: 43%;
+}
+
+
+/* United Kingdom */
+
+.global-location-uk {
+  right: 4%;
+  top: 48%;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.global-map-description {
+  margin: 3px 0 0;
+
+  color: #294c53;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.55;
+}
 
 /* =========================================================
    LOGOS — 5 TOP + 6 BOTTOM
@@ -1260,7 +1417,7 @@ body {
 
   font-family: "Fraunces", Georgia, serif;
 
-  font-size: 28px;
+  font-size: 19px;
   font-weight: 700;
 
   line-height: 1.02;

@@ -7,7 +7,7 @@ export const NAV_LINKS = [
   // { label: 'Resources', to: '/resources' },
   { label: 'Blog', to: '/blog' },
   { label: 'Contact', to: '/contact' },
-  {label:'Why AMG', to: '/about'},
+  {label:'About Us', to: '/about'},
   // {label:'Investment Readiness Program', to: '/investment-readiness-program'},
 ];
 
