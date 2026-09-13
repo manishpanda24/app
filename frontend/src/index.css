@@ -1035,32 +1035,20 @@ select:focus, input:focus, textarea:focus {
 
 
 /* =========================================================
-   ROW
+   EACH ROW = EXACTLY 8 LOGOS
    ========================================================= */
 
 .ecosystem-logo-row {
-  width: 100%;
-  display: flex;
+  width: 100% !important;
+
+  display: flex !important;
+  flex-wrap: nowrap !important;
+
   align-items: center;
+
+  min-height: 125px;
+
   box-sizing: border-box;
-}
-
-
-/* =========================================================
-   TOP ROW
-   ========================================================= */
-
-.ecosystem-logo-row-top {
-  height: 92px;
-}
-
-
-/* =========================================================
-   BOTTOM ROW
-   ========================================================= */
-
-.ecosystem-logo-row-bottom {
-  height: 82px;
 }
 
 
@@ -1069,58 +1057,40 @@ select:focus, input:focus, textarea:focus {
    ========================================================= */
 
 .ecosystem-logo-item {
-  height: 100%;
+  flex: 1 1 0 !important;
+
+  width: auto !important;
+  height: 125px;
+
+  min-width: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
+/* 
+  padding: 12px 14px; */
+
   box-sizing: border-box;
-  flex-shrink: 0;
+
+  overflow: hidden;
 }
 
 
 /* =========================================================
-   TOP ROW WIDTHS
+   LOGO IMAGE
    ========================================================= */
 
-.logo-nato {
-  width: 17%;
-}
+.ecosystem-logo-item img {
+  display: block;
 
-.logo-medtech {
-  width: 21%;
-}
+  width: auto !important;
+  height: auto !important;
 
-.logo-mass {
-  width: 21%;
-}
+  max-width: 100%;
+  max-height: 82px;
 
-.logo-venture {
-  width: 19%;
-}
-
-.logo-communitech {
-  width: 22%;
-}
-
-
-/* =========================================================
-   BOTTOM ROW WIDTHS
-   ========================================================= */
-
-.logo-mix {
-  width: 23%;
-}
-
-.logo-rawmaterials {
-  width: 29%;
-}
-
-.logo-health {
-  width: 23%;
-}
-
-.logo-scale {
-  width: 25%;
+  object-fit: contain;
+  object-position: center;
 }
 
 
@@ -1129,88 +1099,24 @@ select:focus, input:focus, textarea:focus {
    ========================================================= */
 
 .ecosystem-logo-separator {
-  width: 1px;
-  height: 46px;
+  width: 1px !important;
+  min-width: 1px !important;
+
+  height: 65px;
+
   background: #dce3e5;
+
   flex-shrink: 0;
 }
 
 
 /* =========================================================
-   LOGO IMAGES
+   ROW SPACING
    ========================================================= */
 
-.ecosystem-logo-item img {
-  display: block;
-  width: auto;
-  object-fit: contain;
+.ecosystem-logo-row + .ecosystem-logo-row {
+  border-top: 1px solid #f0f3f4;
 }
-
-
-/* =========================================================
-   INDIVIDUAL LOGO SIZES
-   ========================================================= */
-
-/* NATO DIANA */
-.logo-nato img {
-  width: 140px;
-  height: 58px;
-}
-
-/* MedTech Innovator */
-.logo-medtech img {
-  width: 145px;
-  height: 58px;
-}
-
-/* MassChallenge */
-.logo-mass img {
-  width: 158px;
-  height: 52px;
-}
-
-/* ventureLAB */
-.logo-venture img {
-  width: 160px;
-  height: 50px;
-}
-
-/* Communitech */
-.logo-communitech img {
-  width: 175px;
-  height: 48px;
-}
-
-
-/* =========================================================
-   BOTTOM LOGO SIZES
-   ========================================================= */
-
-/* MIX */
-.logo-mix img {
-  width: 76px;
-  height: 42px;
-}
-
-/* EIT RawMaterials */
-.logo-rawmaterials img {
-  width: 190px;
-  height: 58px;
-}
-
-/* EIT Health */
-.logo-health img {
-  width: 145px;
-  height: 58px;
-}
-
-/* Scale AI */
-.logo-scale img {
-  width: 190px;
-  height: 52px;
-}
-
-
 /* =========================================================
    TABLET
    ========================================================= */
@@ -2522,4 +2428,187 @@ section {
 .footer-mail-icon {
   width: 42px;
   height: 42px;
+}
+/* =========================================================
+   SECTORS
+   ========================================================= */
+
+.about-sectors-section {
+  padding: 85px 0 90px;
+  background: #f8fbfb;
+}
+
+.about-sectors-section .about-eyebrow {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.about-sectors-title {
+  margin: 0 auto 42px;
+  text-align: center;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.about-sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.about-sector-card {
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 22px 26px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce8e9;
+  border-radius: 14px;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.about-sector-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #b9dfe1;
+
+  box-shadow: 0 10px 28px rgba(7, 61, 70, 0.07);
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.about-sector-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 18px;
+
+  border-radius: 12px;
+
+  background: #e9f8f8;
+
+  color: #087f88;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.about-sector-content h3 {
+  margin: 0 0 5px;
+
+  color: #073d46;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.about-sector-content p {
+  margin: 0;
+
+  color: #668087;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   FOOTER LINE
+   ========================================================= */
+
+.about-sectors-footer {
+  max-width: 850px;
+
+  margin: 30px auto 0;
+
+  text-align: center;
+
+  color: #5d7e86;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+  .about-sectors-section {
+    padding: 65px 0;
+  }
+
+  .about-sectors-title {
+    font-size: 34px;
+  }
+
+  .about-sectors-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .about-sector-card {
+    padding: 18px;
+  }
+
+  .about-sector-content h3 {
+    font-size: 15px;
+  }
+
+  .about-sector-content p {
+    font-size: 12px;
+  }
+
 }

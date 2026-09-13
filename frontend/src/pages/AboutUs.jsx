@@ -4,6 +4,7 @@ import {
   ArrowRight,
   Linkedin,
   Users,
+  Clock,
   FileText,
   Search,
   DollarSign,
@@ -69,7 +70,7 @@ export default function AboutUs() {
       position: 'absolute',
       top: 0,
       right: 0,
-      width: '72%',
+      width: '60%',
       height: '100%',
       zIndex: 1,
       pointerEvents: 'none',
@@ -478,41 +479,42 @@ export default function AboutUs() {
         LEFT — HERO COPY
     ===================================================== */}
 
-    <div className="about-hero-copy">
+{/* =====================================================
+    LEFT — HERO COPY
+===================================================== */}
 
-      <div className="about-eyebrow">
-        WHY AMG
-      </div>
+{/* =====================================================
+    LEFT — HERO COPY
+===================================================== */}
 
-      <h1 className="about-hero-title">
-        Built on the
-        <br />
-        Investor Side.
-        <br />
-        <span>Now Working</span>
-        <br />
-        <span>for Founders.</span>
-      </h1>
+<div className="about-hero-copy">
 
-      <p className="about-hero-description">
-        AMG combines venture investing, angel investing, investment
-        banking, startup evaluation and hands-on founder advisory to
-        help Pre-Seed to Series A companies become fundable and
-        navigate the fundraising process with greater discipline.
-      </p>
+  <div className="about-eyebrow">
+    ABOUT AMG
+  </div>
 
-      <div className="about-hero-tags">
-        <span>Ex-VC</span>
-        <span>Angel Investor</span>
-        <span>Ex-Investment Banker</span>
-        <span>EIR</span>
-        <span>Global Startup Evaluator</span>
-        <span>Founder</span>
-      </div>
+  <h1 className="about-hero-title">
+    Built on the
+  
+    Investor Side.
+    <br />
+    <span>Now Working for Founders.</span>
+  </h1>
 
-    </div>
+  <p className="about-hero-description">
+    AMG Venture Partners helps Pre-Seed to Series A founders
+    diagnose fundability gaps, become investor-ready, identify the right
+    investors globally, and execute a sharper fundraising process
+    through diligence and close.
+  </p>
 
+  <p className="about-hero-description about-hero-description-second">
+    We work with founders, accelerators, and startup ecosystems across
+    North America and Europe through diagnostics, fundraising execution,
+    and investment-readiness programming.
+  </p>
 
+</div>
     {/* =====================================================
         RIGHT — GAURAV + QUOTE
     ===================================================== */}
@@ -553,116 +555,307 @@ export default function AboutUs() {
 
 </section>
 
-      {/* =========================================================
-          DARK METRICS BAR
-      ========================================================= */}
 
-          
+{/* =========================================================
+    INVESTOR READINESS / FUNDRAISING SERVICES
+========================================================= */}
+
+<section className="investor-readiness-section">
+
+  <div className="investor-readiness-container">
+
+    <div className="readiness-cards">
+
+      {/* CARD 1 */}
+      <div className="readiness-card readiness-card-teal">
+
+        <div className="readiness-icon">
+          <FileText size={38} />
+        </div>
+
+        <h3>
+          Investor Readiness
+          <br />
+          Diagnostic
+        </h3>
+
+        <div className="readiness-divider" />
+
+        <ul>
+          <li>Investment readiness review report</li>
+          <li>Gap analysis scorecard</li>
+          <li>Priority fix list</li>
+          <li>Personalized fundraising roadmap</li>
+        </ul>
+
+      </div>
 
 
-      {/* =========================================================
-          MEET GAURAV
-      ========================================================= */}
+      {/* CARD 2 */}
+      <div className="readiness-card">
 
-      <section className="about-section about-founder-section">
+        <div className="readiness-icon">
+          <Users size={38} />
+        </div>
 
-        <div className="about-container about-founder-grid">
+        <h3>
+          Full Fundraising
+          <br />
+          Support
+        </h3>
 
-          <div className="about-founder-copy">
+        <div className="readiness-divider" />
 
-            <div className="about-eyebrow">
-              MEET GAURAV BANSAL
-            </div>
+        <ul>
+          <li>Investor kit & investment case</li>
+          <li>Target investor mapping</li>
+          <li>Warm-intro paths & outreach</li>
+          <li>Due diligence, negotiation & close support</li>
+        </ul>
 
-            <h2>
-              You Get the Investor Lens
-              <br />
-              Before You Face Investors.
-            </h2>
+      </div>
 
-            <p>
-              Gaurav has spent his career looking at companies from multiple
-              sides of the capital table—advising on transactions as an
-              investment banker, evaluating companies as a VC, investing
-              personally as an angel, managing portfolio companies, and
-              assessing startups for global innovation programs.
-            </p>
 
-            <p>
-              Today, that experience sits behind every AMG engagement.
-              The objective is not simply to make a deck look better. It is
-              to identify what investors are likely to question, strengthen
-              the underlying investment case, and help founders run a more
-              credible fundraising process.
-            </p>
+      {/* CARD 3 */}
+      <div className="readiness-card readiness-card-teal">
 
-            <a
-              href="https://www.linkedin.com/in/gauravbansalventurecapital/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="about-button"
-            >
-              View Gaurav's LinkedIn
-              <Linkedin size={15} />
-            </a>
+        <div className="readiness-icon">
+          <TrendingUp size={38} />
+        </div>
 
+        <h3>
+          Investment
+          <br />
+          Readiness Program
+        </h3>
+
+        <div className="readiness-divider" />
+
+        <ul>
+          <li>Fundraising curriculum</li>
+          <li>Founder workshops</li>
+          <li>Practical guidance</li>
+          <li>Accountability & readiness</li>
+        </ul>
+
+      </div>
+
+
+      {/* CARD 4 */}
+      <div className="readiness-card">
+
+        <div className="readiness-icon">
+          <Handshake size={38} />
+        </div>
+
+        <h3>
+          Ecosystem
+          <br />
+          Partnerships
+        </h3>
+
+        <div className="readiness-divider" />
+
+        <ul>
+          <li>Growth coaching</li>
+          <li>Speaker sessions</li>
+          <li>Startup evaluation</li>
+          <li>EIR-style support</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    {/* TAGLINE */}
+
+    <div className="readiness-tagline">
+
+      <span></span>
+
+      <p>
+        Built around your stage, sector, business model, and target investor markets —
+        <br />
+        not a generic fundraising playbook.
+      </p>
+
+      <span></span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+{/* =========================================================
+    MEET GAURAV
+========================================================= */}
+
+{/* =========================================================
+    MEET GAURAV
+========================================================= */}
+
+<section className="about-section about-founder-section">
+
+  <div className="about-container about-founder-grid">
+
+    {/* =====================================================
+        LEFT — FOUNDER CONTENT
+    ===================================================== */}
+
+    <div className="about-founder-copy">
+
+      <div className="about-eyebrow">
+        MEET GAURAV BANSAL
+      </div>
+
+      <h2>
+        You Get the Investor Lens
+        
+        Before You Face Investors.
+      </h2>
+
+      <p>
+        Gaurav has spent his career looking at companies from multiple
+        sides of the capital table—advising on transactions as an
+        investment banker, evaluating companies as a VC, investing
+        personally as an angel, managing portfolio companies, and
+        assessing startups for global innovation programs.
+      </p>
+
+      <p>
+        Today, that experience sits behind every AMG engagement.
+        The objective is not simply to make a deck look better. It is
+        to identify what investors are likely to question, strengthen
+        the underlying investment case, and help founders run a more
+        credible fundraising process.
+      </p>
+<div className="about-founder-tags">
+
+  <span>
+    <DollarSign size={18} />
+    Ex-VC
+  </span>
+
+  <span>
+    <Users size={18} />
+    Angel Investor
+  </span>
+
+  <span>
+    <Landmark size={18} />
+    Ex-Investment Banker
+  </span>
+
+  <span>
+    <Leaf size={18} />
+    Founder Growth Coach
+  </span>
+
+
+  
+
+</div>
+      <a
+        href="https://www.linkedin.com/in/gauravbansalventurecapital/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="about-button"
+      >
+        View Gaurav's LinkedIn
+        <Linkedin size={15} />
+      </a>
+
+    </div>
+
+
+    {/* =====================================================
+        RIGHT — INVESTOR EXPERIENCE METRICS
+    ===================================================== */}
+
+    <div className="about-metrics-section">
+
+      <div className="about-metrics-cards">
+
+        {/* 14+ YEARS */}
+
+        <div className="about-metric-card about-metric-card-teal">
+
+          <div className="about-metric-icon">
+            <Clock size={32} strokeWidth={1.8} />
           </div>
 
+          <strong>14+</strong>
 
-          <div className="about-founder-cards">
-
-            {[
-              {
-                icon: Users,
-                title: '50+ Angel +',
-                subtitle: '35+ VC Investments',
-                text: 'Actual investment decision-making across sectors and stages.',
-              },
-              {
-                icon: FileText,
-                title: '20,000+ Decks &',
-                subtitle: 'Models Reviewed',
-                text: 'Pattern recognition that helps highlight what investors care about.',
-              },
-              {
-                icon: Search,
-                title: '100+ Due Diligences',
-                subtitle: '',
-                text: 'Understanding what happens after the pitch and what derails deals.',
-              },
-              {
-                icon: DollarSign,
-                title: '$2B+ Transactions',
-                subtitle: '',
-                text: 'Deal execution, valuation discipline and financial structure expertise.',
-              },
-            ].map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div className="about-founder-card" key={item.title}>
-
-                  <Icon />
-
-                  <div>
-                    <h3>{item.title}</h3>
-
-                    {item.subtitle && (
-                      <h3>{item.subtitle}</h3>
-                    )}
-
-                    <p>{item.text}</p>
-                  </div>
-
-                </div>
-              );
-            })}
-
-          </div>
+          <span>
+            Years of investor &<br />
+            operator experience
+          </span>
 
         </div>
 
-      </section>
+
+        {/* 50+ ANGEL */}
+
+        <div className="about-metric-card">
+
+          <div className="about-metric-icon">
+            <Users size={32} strokeWidth={1.8} />
+          </div>
+
+          <strong>50+</strong>
+
+          <span>
+            Angel investments
+          </span>
+
+        </div>
+
+
+        {/* 20,000+ DECKS */}
+
+        <div className="about-metric-card">
+
+          <div className="about-metric-icon">
+            <FileText size={32} strokeWidth={1.8} />
+          </div>
+
+          <strong>20,000+</strong>
+
+          <span>
+            Decks & financial<br />
+            models reviewed
+          </span>
+
+        </div>
+
+
+        {/* $2B+ TRANSACTIONS */}
+
+        <div className="about-metric-card about-metric-card-teal">
+
+          <div className="about-metric-icon">
+            <DollarSign size={34} strokeWidth={1.8} />
+          </div>
+
+          <strong>$2B+</strong>
+
+          <span>
+            Transactions<br />
+            exposure
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
       {/* =========================================================

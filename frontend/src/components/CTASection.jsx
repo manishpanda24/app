@@ -59,9 +59,9 @@ export default function CTASection() {
               </div>
               <div className="mt-4 h-[3px] w-10 rounded-full bg-amg-yellow" />
 
-              <h2 className="mt-6 font-serif text-[42px] md:text-[60px] lg:text-[68px] leading-[1.02] text-white">
+              <h1 className="mt-6 font-serif text-[36px] md:text-[60px] lg:text-[68px] leading-[1.02] text-white">
                 Start With a Fundraising Fit Call
-              </h2>
+              </h1>
 
               <p className="mt-7 max-w-3xl text-[17px] md:text-[20px] leading-relaxed text-white/84 font-medium">
                 Tell us where you are, what you're raising, and what support you need.

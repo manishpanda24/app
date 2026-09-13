@@ -46,31 +46,22 @@ body {
 /* =========================================================
    HERO
    ========================================================= */
-
 .about-hero {
   position: relative;
-
   width: 100%;
-  height: 455px;
-
+  height: 33rem;
   overflow: hidden;
-
   background: #ffffff;
-
   border-bottom: 1px solid #dce8e9;
 }
-
 .about-hero-inner {
   position: relative;
-
   width: min(1400px, calc(100% - 72px));
-  height: 455px;
-
+  min-height: 570px;
+  height: auto;
   margin: 0 auto;
-
   display: grid;
-  grid-template-columns: 43% 57%;
-
+  grid-template-columns: 56% 47%;
   align-items: stretch;
 }
 
@@ -106,14 +97,12 @@ body {
 
 .about-hero-copy {
   position: relative;
-
   z-index: 5;
-
   padding-top: 38px;
   padding-left: 2px;
   padding-right: 25px;
+  padding-bottom: 35px;
 }
-
 .about-eyebrow {
   color: #087f88;
 
@@ -512,7 +501,7 @@ body {
 .about-founder-grid {
   display: grid;
 
-  grid-template-columns: 37% 63%;
+  grid-template-columns: 62% 38%;
 
   gap: 28px;
 
@@ -524,7 +513,7 @@ body {
 }
 
 .about-founder-copy h2 {
-  max-width: 520px;
+ 
 
   margin: 5px 0 11px;
 
@@ -541,7 +530,7 @@ body {
 }
 
 .about-founder-copy p {
-  max-width: 510px;
+  
 
   margin: 0 0 9px;
 
@@ -1193,7 +1182,264 @@ body {
 
   line-height: 1.2;
 }
+/* =========================================================
+   INVESTOR READINESS / FUNDRAISING SERVICES
+   ========================================================= */
 
+.investor-readiness-section {
+  width: 100%;
+  padding: 38px 0 32px;
+  background: #ffffff;
+}
+
+.investor-readiness-container {
+  width: min(1400px, calc(100% - 72px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   FOUR SERVICE CARDS
+   ========================================================= */
+
+.readiness-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.readiness-card {
+  min-height: 310px;
+
+  padding: 18px 24px 20px;
+
+  border: 1px solid #dce8e9;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 25px rgba(7, 61, 70, 0.05);
+}
+
+.readiness-card-teal {
+  background: #e9f8f8;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.readiness-icon {
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  border: 1px solid #d6ebed;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  color: #073d46;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.readiness-card h3 {
+  margin: 0;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.readiness-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 17px 0 13px;
+
+  background: #cbdfe1;
+}
+
+
+/* =========================================================
+   CHECKLIST
+   ========================================================= */
+
+.readiness-card ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.readiness-card li {
+  position: relative;
+
+  margin-bottom: 10px;
+
+  padding-left: 36px;
+
+  color: #45636a;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 1.25;
+}
+
+.readiness-card li::before {
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+  top: -1px;
+
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #279eaa;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   BOTTOM TAGLINE
+   ========================================================= */
+
+.readiness-tagline {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 44px;
+
+  margin-top: 30px;
+}
+
+.readiness-tagline span {
+  flex: 0 0 160px;
+
+  height: 2px;
+
+  background: #8bc6cc;
+}
+
+.readiness-tagline p {
+  margin: 0;
+
+  color: #244b52;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 23px;
+  font-weight: 500;
+
+  line-height: 1.25;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .readiness-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .readiness-tagline span {
+    flex: 0 0 100px;
+  }
+
+  .readiness-tagline p {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .investor-readiness-container {
+    width: calc(100% - 24px);
+  }
+
+  .investor-readiness-section {
+    padding: 28px 0;
+  }
+
+  .readiness-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .readiness-card {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .readiness-card h3 {
+    font-size: 25px;
+  }
+
+  .readiness-card li {
+    font-size: 13px;
+  }
+
+  .readiness-tagline {
+    gap: 15px;
+  }
+
+  .readiness-tagline span {
+    display: none;
+  }
+
+  .readiness-tagline p {
+    font-size: 17px;
+  }
+}
 /* =========================================================
    GEOGRAPHY MAP CONNECTOR
    ---------------------------------------------------------
@@ -1912,7 +2158,7 @@ body {
 }
 
 .about-hero-title {
-  font-size: 72.5px;
+  font-size: 58px;
 }
 
 .about-hero-description {
@@ -1962,7 +2208,7 @@ body {
 
 /* Meet Gaurav */
 .about-founder-copy h2 {
-  font-size: 43.75px;
+  font-size: 36px;
 }
 
 .about-founder-copy p {
@@ -2423,4 +2669,369 @@ body {
     margin-top: 7px;
   }
 
+}
+
+
+
+
+
+.about-metric-card-teal {
+  background: #e9f8f8;
+}
+
+/* ICON */
+.about-metric-card .about-metric-icon {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  color: #073d46;
+}
+
+.about-metric-card .about-metric-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* NUMBER */
+.about-metric-card strong {
+  margin: 0 0 5px;
+  font-size: 42px;
+  line-height: 0.95;
+}
+
+/* DESCRIPTION */
+.about-metric-card span {
+  font-size: 16px;
+  line-height: 1.25;
+}
+/* =========================================================
+   METRIC CARDS — FINAL FIX
+   ========================================================= */
+
+/* =========================================================
+   INVESTOR EXPERIENCE METRICS
+   RIGHT SIDE OF MEET GAURAV
+   ========================================================= */
+
+.about-metrics-section {
+  width: 100%;
+  padding: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+/* =========================================================
+   2 × 2 GRID
+   ========================================================= */
+
+.about-metrics-cards {
+  display: grid;
+
+  grid-template-columns: repeat(2, 240px);
+
+  gap: 14px;
+
+  width: fit-content;
+
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.about-metric-card {
+  width: 240px;
+  height: 185px;
+
+  padding: 20px 26px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  border: 1px solid #dce8e9;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 18px rgba(7, 61, 70, 0.04);
+}
+
+
+.about-metric-card-teal {
+  background: #e9f8f8;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.about-metric-card .about-metric-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 8px;
+
+  color: #073d46;
+}
+
+.about-metric-card .about-metric-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.about-metric-card strong {
+  display: block;
+
+  width: 100%;
+
+  margin: 0 0 5px;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 42px;
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.about-metric-card span {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+
+  color: #294c53;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 1.25;
+}
+/* =========================================================
+   FOUNDER EXPERIENCE TAGS
+   ========================================================= */
+
+.about-founder-tags {
+  display: flex;
+  /* flex-wrap: wrap; */
+
+  gap: 10px 12px;
+
+  max-width: 600px;
+
+  margin: 14px 0 14px;
+}
+
+
+.about-founder-tags span {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 18px;
+
+  border: 1px solid #cfe4e6;
+  border-radius: 22px;
+
+  background: #eef9f9;
+
+  color: #315b63;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+.about-founder-tags span svg {
+  flex-shrink: 0;
+
+  color: #087f88;
+}
+
+/* CARD */
+
+
+
+/* ICON */
+
+.about-metric-card .about-metric-icon {
+  width: 40px !important;
+  height: 40px !important;
+
+  margin-bottom: 8px !important;
+
+  display: flex !important;
+  align-items: center;
+}
+
+.about-metric-card .about-metric-icon svg {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+
+/* NUMBER */
+
+.about-metric-card strong {
+  display: block !important;
+
+  width: 100% !important;
+
+  margin: 0 0 4px !important;
+
+  font-size: 40px !important;
+  line-height: 1 !important;
+
+  color: #073d46;
+}
+
+
+/* DESCRIPTION */
+
+.about-metric-card span {
+  display: block !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+
+  color: #45636a;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .about-metrics-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-metric-card {
+    min-height: 160px !important;
+    padding: 18px 22px !important;
+  }
+
+  .about-metric-card strong {
+    font-size: 36px !important;
+  }
+
+  .about-metric-card span {
+    font-size: 15px !important;
+  }
+}
+/* =========================================================
+   HERO — ABOUT AMG CONTENT
+   ========================================================= */
+
+.about-hero-copy .about-eyebrow {
+  margin-bottom: 14px;
+}
+
+
+/* MAIN HEADING */
+
+.about-hero-copy .about-hero-title {
+  max-width: 760px;
+
+  margin: 0 0 28px;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 62px;
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* "Now Working for Founders." */
+
+.about-hero-copy .about-hero-title span {
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-weight: 400;
+}
+
+
+/* BODY COPY */
+
+.about-hero-copy .about-hero-description {
+  max-width: 700px;
+
+  margin: 0 0 22px;
+
+  color: #294c53;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  line-height: 1.45;
+}
+
+
+/* SECOND PARAGRAPH */
+
+.about-hero-copy .about-hero-description-second {
+  color: #668087;
+
+  margin-top: 4px;
+}
+
+
+/* =========================================================
+   REMOVE HERO TAGS
+   ========================================================= */
+
+.about-hero-tags {
+  display: none;
 }

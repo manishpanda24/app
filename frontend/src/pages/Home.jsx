@@ -4,15 +4,56 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTASection from '../components/CTASection';
 import GauravImage from '../images/GauravImage.jpg';
-import NatoDianaLogo from '../images/NatoDianaLogo.png';
-import MedtechInnovatorLogo from '../images/MedtechInnovatorLogo.png';
-import MassChallengeLogo from '../images/MassChallengeLogo.png';
-import VentureLabLogo from '../images/VentureLabLogo.png';
-import CommunitechLogo from '../images/CommunitechLogo.png';
-import MixLogo from '../images/MixLogo.png';
-import EitRawMaterialsLogo from '../images/EitRawMaterialsLogo.png';
-import EitHealthLogo from '../images/EitHealthLogo.png';
-import ScaleAiLogo from '../images/ScaleAiLogo.png';
+
+// AMG Logos
+import MtLabLogo from '../images/amg_logos_jpgs/01_mt_lab.jpg';
+import TechstarsLogo from '../images/amg_logos_jpgs/01_techstars.jpg';
+
+import MedTechInnovatorLogo from '../images/amg_logos_jpgs/02_medtech_innovator.jpg';
+import YorkULogo from '../images/amg_logos_jpgs/02_york_u.jpg';
+
+import BlackEntrepreneurshipAllianceLogo from '../images/amg_logos_jpgs/03_black_entrepreneurship_alliance.jpg';
+import EdmontonUnlimitedLogo from '../images/amg_logos_jpgs/03_edmonton_unlimited.jpg';
+
+import MassChallengeLogo from '../images/amg_logos_jpgs/04_masschallenge.jpg';
+import MississaugaDEALogo from '../images/amg_logos_jpgs/04_mississauga_dea.jpg';
+
+import CommunitechLogo from '../images/amg_logos_jpgs/05_communitech.jpg';
+import TechNordicGlobalTechAdvocatesLogo from '../images/amg_logos_jpgs/05_tech_nordic_global_tech_advocates.jpg';
+
+import VentureLabLogo from '../images/amg_logos_jpgs/06_venturelab.jpg';
+import ElevateLogo from '../images/amg_logos_jpgs/06_elevate.jpg';
+
+import EITEuropeanInstituteLogo from '../images/amg_logos_jpgs/07_eit_european_institute_of_innovation.jpg';
+import TechAllianceLogo from '../images/amg_logos_jpgs/07_techalliance.jpg';
+
+import FintechCadenceLogo from '../images/amg_logos_jpgs/08_fintech_cadence.jpg';
+import FundedByEuropeanUnionLogo from '../images/amg_logos_jpgs/08_funded_by_european_union.jpg';
+
+import InnovationClusterLogo from '../images/amg_logos_jpgs/09_innovation_cluster.jpg';
+import InvestNovaScotiaLogo from '../images/amg_logos_jpgs/09_invest_nova_scotia.jpg';
+
+import EITHigherEducationLogo from '../images/amg_logos_jpgs/10_eit_higher_education_initiative.jpg';
+import ForesightCanadaLogo from '../images/amg_logos_jpgs/10_foresight_canada.jpg';
+
+import D2XcelLogo from '../images/amg_logos_jpgs/11_d2xcel.jpg';
+
+import MedicalInnovationXchangeLogo from '../images/amg_logos_jpgs/12_medical_innovation_xchange.jpg';
+import VoltaLogo from '../images/amg_logos_jpgs/12_volta.jpg';
+
+import WesternMorissetteInstituteLogo from '../images/amg_logos_jpgs/13_western_morissette_institute.jpg';
+
+import EITRawMaterialsLogo from '../images/amg_logos_jpgs/14_eit_rawmaterials.jpg';
+
+import MarkhamBoardOfTradeLogo from '../images/amg_logos_jpgs/15_markham_board_of_trade.jpg';
+
+import CatalystLogo from '../images/amg_logos_jpgs/16_catalyst.jpg';
+
+import RichmondHillLogo from '../images/amg_logos_jpgs/17_richmond_hill.jpg';
+
+import BramptonVentureZoneLogo from '../images/amg_logos_jpgs/18_brampton_venture_zone.jpg';
+
+import BoundlessAcceleratorLogo from '../images/amg_logos_jpgs/19_boundless_accelerator.jpg';
 import   {GraduationCap, DollarSign, Globe2,Cpu} from 'lucide-react';
 import { HERO, SERVICE_PILLARS, SERVICES, FOUNDER_SERVICES_INTRO, WHO_WE_ARE } from '../mock';
 const ICONS = {
@@ -156,7 +197,7 @@ export default function Home() {
 
       {/* Heading */}
       <h1 className="heading-display text-[52px] sm:text-[64px] lg:text-[76px] leading-[0.95] text-amg-teal max-w-7xl">
-        From Pitch Deck to Closing the Round: Raise Capital with Confidence
+        From Pitch Deck to Closing the Round Raise Capital with Confidence
       </h1>
 
       <div className="mt-7 text-[28px] md:text-[36px] leading-tight font-medium text-amg-teal">
@@ -288,14 +329,14 @@ export default function Home() {
             })}
 
           </div>
-
+{/* 
           <div className="about-metric-bottom">
             <span>130+</span> Workshops
             <b>•</b>
             <span>150–200+</span> Founders Mentored
             <b>•</b>
             <span>300+</span> Angel Syndicates
-          </div>
+          </div> */}
 
         </div>
 
@@ -601,7 +642,7 @@ export default function Home() {
   <div className="max-w-[1300px] mx-auto">
     <div className="text-center max-w-6xl mx-auto mb-10">
       <h2 className="amg-help-heading text-amg-ink">
-        Two ways to work with AMG
+        Three ways to work with AMG
       </h2>
       <p className="mt-4 text-[17px] md:text-[20px] leading-relaxed text-amg-teal/75">
         Start with the Diagnostic. Step into full execution when you are ready.
@@ -736,7 +777,7 @@ export default function Home() {
       <div className="lg:col-span-6">
         <div className="tag-pill inline-flex mb-5">
           <span className="dot bg-amg-yellow" />
-          Investment Readiness Program
+          03/Investment Readiness Program
         </div>
 
         <h3 className="heading-display text-[30px] md:text-[48px] text-amg-teal leading-[1.03]">
@@ -956,7 +997,7 @@ export default function Home() {
   </div>
 </section>
 {/* INDUSTRIES WE SERVE */}
-<section className="sector-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
+{/* <section className="sector-section py-24 px-6 lg:px-10 border-t border-amg-line bg-white">
   <div className="max-w-[1280px] mx-auto">
     <div className="text-center mx-auto mb-14">
       <div className="tag-pill inline-flex mb-5">
@@ -1002,6 +1043,100 @@ export default function Home() {
       And other sectors where clarity, credible numbers, and investor-ready materials matter.
     </p>
   </div>
+</section> */}
+
+<section className="about-sectors-section">
+
+  <div className="about-container">
+
+    <div className="about-eyebrow">
+      SECTORS WE WORK WITH
+    </div>
+
+    <h2 className="about-sectors-title">
+      Built for ambitious companies
+    
+      across high-growth sectors.
+    </h2>
+ <p className="mt-8 text-[17px] md:text-[20px] text-amg-ink/80 leading-relaxed max-w-5xl mx-auto">
+        We work with companies across technology, healthcare, financial services, climate, industrial,
+        consumer, and other sectors where a clear investment case and disciplined fundraising matter.
+      </p>
+
+      <p className="mt-5 text-[15.5px] md:text-[18px] text-amg-teal/60 leading-relaxed max-w-4xl mx-auto">
+        The fundability lens is tailored to your sector, stage, business model, and capital path - not built around a one-size-fits-all playbook.
+      </p>
+    <div className="about-sectors-grid">
+
+      <div className="about-sector-card">
+        <div className="about-sector-icon">
+          <Cpu size={22} strokeWidth={1.7} />
+        </div>
+        <div className="about-sector-content">
+          <h3>SaaS / AI / Software</h3>
+          <p>Technology businesses building scalable products.</p>
+        </div>
+      </div>
+
+      <div className="about-sector-card">
+        <div className="about-sector-icon">
+          <HeartPulse size={22} strokeWidth={1.7} />
+        </div>
+        <div className="about-sector-content">
+          <h3>Life Sciences / Healthcare</h3>
+          <p>Healthcare, medtech and life sciences ventures.</p>
+        </div>
+      </div>
+
+      <div className="about-sector-card">
+        <div className="about-sector-icon">
+          <CreditCard size={22} strokeWidth={1.7} />
+        </div>
+        <div className="about-sector-content">
+          <h3>Fintech / Payments / Insurtech</h3>
+          <p>Financial technology and insurance innovation.</p>
+        </div>
+      </div>
+
+      <div className="about-sector-card">
+        <div className="about-sector-icon">
+          <Leaf size={22} strokeWidth={1.7} />
+        </div>
+        <div className="about-sector-content">
+          <h3>Climate / Energy / Sustainability</h3>
+          <p>Businesses solving energy and sustainability challenges.</p>
+        </div>
+      </div>
+
+      <div className="about-sector-card">
+        <div className="about-sector-icon">
+          <Factory size={22} strokeWidth={1.7} />
+        </div>
+        <div className="about-sector-content">
+          <h3>Industrial / Robotics / Advanced Manufacturing</h3>
+          <p>Industrial technology and next-generation manufacturing.</p>
+        </div>
+      </div>
+
+      <div className="about-sector-card">
+        <div className="about-sector-icon">
+          <ShoppingCart size={22} strokeWidth={1.7} />
+        </div>
+        <div className="about-sector-content">
+          <h3>Consumer / Marketplace / Commerce</h3>
+          <p>Consumer brands, platforms and commerce businesses.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p className="about-sectors-footer">
+      And other sectors where clarity, credible numbers, and investor-ready
+      materials matter.
+    </p>
+
+  </div>
+
 </section>
 {/* MEET THE FOUNDER */}
 <section className="founder-proof-section py-20 px-6 lg:px-10 border-t border-amg-line bg-white">
@@ -1136,94 +1271,136 @@ export default function Home() {
       </div>
 
       <div className="ecosystem-proof-main">
-        <div className="ecosystem-logo-strip">
+      {/* ROW 1 */}
+<div className="ecosystem-logo-row">
 
-  {/* TOP ROW */}
-  <div className="ecosystem-logo-row ecosystem-logo-row-top">
+  <div className="ecosystem-logo-item">
+    <img src={MtLabLogo} alt="MT Lab" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-item logo-nato">
-      <img
-        src={NatoDianaLogo}
-        alt="NATO DIANA"
-      />
-    </div>
+  <div className="ecosystem-logo-item">
+    <img src={TechstarsLogo} alt="Techstars" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-separator" />
+  <div className="ecosystem-logo-item">
+    <img src={MedTechInnovatorLogo} alt="MedTech Innovator" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-item logo-medtech">
-      <img
-        src={MedtechInnovatorLogo}
-        alt="MedTech Innovator"
-      />
-    </div>
+  <div className="ecosystem-logo-item">
+    <img src={YorkULogo} alt="York University" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-separator" />
+  <div className="ecosystem-logo-item">
+    <img src={BlackEntrepreneurshipAllianceLogo} alt="Black Entrepreneurship Alliance" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-item logo-mass">
-      <img
-        src={MassChallengeLogo}
-        alt="MassChallenge"
-      />
-    </div>
+  <div className="ecosystem-logo-item">
+    <img src={EdmontonUnlimitedLogo} alt="Edmonton Unlimited" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-separator" />
+  <div className="ecosystem-logo-item">
+    <img src={MassChallengeLogo} alt="MassChallenge" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-item logo-venture">
-      <img
-        src={VentureLabLogo}
-        alt="ventureLAB"
-      />
-    </div>
-
-    <div className="ecosystem-logo-separator" />
-
-    <div className="ecosystem-logo-item logo-communitech">
-      <img
-        src={CommunitechLogo}
-        alt="Communitech"
-      />
-    </div>
-
+  <div className="ecosystem-logo-item">
+    <img src={MississaugaDEALogo} alt="Mississauga DEA" />
   </div>
 
+</div>
 
-  {/* BOTTOM ROW */}
-  <div className="ecosystem-logo-row ecosystem-logo-row-bottom">
 
-    <div className="ecosystem-logo-item logo-mix">
-      <img
-        src={MixLogo}
-        alt="MIX"
-      />
-    </div>
+{/* ROW 2 */}
+<div className="ecosystem-logo-row">
 
-    <div className="ecosystem-logo-separator" />
+  <div className="ecosystem-logo-item">
+    <img src={TechNordicGlobalTechAdvocatesLogo} alt="Tech Nordic / Global Tech Advocates" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-item logo-rawmaterials">
-      <img
-        src={EitRawMaterialsLogo}
-        alt="EIT RawMaterials"
-      />
-    </div>
+  <div className="ecosystem-logo-item">
+    <img src={ElevateLogo} alt="Elevate" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-separator" />
+  <div className="ecosystem-logo-item">
+    <img src={EITEuropeanInstituteLogo} alt="EIT" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-item logo-health">
-      <img
-        src={EitHealthLogo}
-        alt="EIT Health"
-      />
-    </div>
+  <div className="ecosystem-logo-item">
+    <img src={FundedByEuropeanUnionLogo} alt="European Union" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-separator" />
+  <div className="ecosystem-logo-item">
+    <img src={InnovationClusterLogo} alt="Innovation Cluster" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
-    <div className="ecosystem-logo-item logo-scale">
-      <img
-        src={ScaleAiLogo}
-        alt="Scale AI Trusted Reviewer"
-      />
-    </div>
+  <div className="ecosystem-logo-item">
+    <img src={EITHigherEducationLogo} alt="EIT Higher Education" />
+  </div>
+  <div className="ecosystem-logo-separator" />
 
+  <div className="ecosystem-logo-item">
+    <img src={ForesightCanadaLogo} alt="Foresight Canada" />
+  </div>
+  <div className="ecosystem-logo-separator" />
+
+  <div className="ecosystem-logo-item">
+    <img src={D2XcelLogo} alt="D²XCEL" />
+  </div>
+
+</div>
+
+
+{/* ROW 3 */}
+<div className="ecosystem-logo-row">
+
+  <div className="ecosystem-logo-item">
+    <img src={MedicalInnovationXchangeLogo} alt="Medical Innovation Xchange" />
+  </div>
+  <div className="ecosystem-logo-separator" />
+
+  <div className="ecosystem-logo-item">
+    <img src={VoltaLogo} alt="Volta" />
+  </div>
+  <div className="ecosystem-logo-separator" />
+
+  <div className="ecosystem-logo-item">
+    <img src={WesternMorissetteInstituteLogo} alt="Western Morissette Institute" />
+  </div>
+  <div className="ecosystem-logo-separator" />
+
+  <div className="ecosystem-logo-item">
+    <img src={EITRawMaterialsLogo} alt="EIT RawMaterials" />
+  </div>
+  <div className="ecosystem-logo-separator" />
+
+  <div className="ecosystem-logo-item">
+    <img src={MarkhamBoardOfTradeLogo} alt="Markham Board of Trade" />
+  </div>
+  <div className="ecosystem-logo-separator" />
+
+  <div className="ecosystem-logo-item">
+    <img src={CatalystLogo} alt="Catalyst" />
+  </div>
+  <div className="ecosystem-logo-separator" />
+
+  <div className="ecosystem-logo-item">
+    <img src={RichmondHillLogo} alt="Richmond Hill" />
+  </div>
+  <div className="ecosystem-logo-separator" />
+
+  <div className="ecosystem-logo-item">
+    <img src={BramptonVentureZoneLogo} alt="Brampton Venture Zone" />
   </div>
 
 </div>
