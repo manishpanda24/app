@@ -2369,7 +2369,7 @@ body {
 }
 
 .about-founder-copy p {
-  font-size: 13.75px;
+  font-size: 15.75px;
 }
 
 .about-founder-card h3 {
@@ -3179,7 +3179,7 @@ body {
 /* SECOND PARAGRAPH */
 
 .about-hero-copy .about-hero-description-second {
-  color: #668087;
+  color: #294c53;
 
   margin-top: 4px;
 }
@@ -3298,7 +3298,7 @@ body {
 
   font-family: Inter, sans-serif;
 
-  font-size: 11px;
+  font-size: 15.25px;
   font-weight: 500;
 
   line-height: 1.65;
@@ -3351,7 +3351,7 @@ body {
 .about-map-panel .about-global-map-wrap {
   position: relative;
 
-  margin: 18px -8px 12px;
+  margin: -9px  51px 12px;
 }
 
 
@@ -3675,7 +3675,7 @@ body {
 
 
   .about-map-panel .about-global-copy p {
-    font-size: 10px;
+    font-size: 15.25px;
 
     max-width: 100%;
   }
@@ -4063,4 +4063,32 @@ body {
     max-height: 48px;
   }
 
+}
+/* =========================================================
+   GLOBAL PERSPECTIVE — WIDER DESCRIPTION
+   ========================================================= */
+
+.about-map-panel .about-global-header {
+  position: relative;
+  display: block;
+}
+
+.about-map-panel .about-global-copy {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+.about-map-panel .about-global-copy p {
+  max-width: 700px !important;
+  width: 100% !important;
+
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+
+/* Keep badge in the top-right */
+.about-map-panel .about-global-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

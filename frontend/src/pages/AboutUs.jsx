@@ -25,6 +25,7 @@ import {
 import './AboutUs.css';
 import GauravImage from '../images/Gaurav-hero.png';
 import GauravImage2 from '../images/GauravFam.jpg';
+import worldMap  from '../images/WorldMap.png';
 import NatoDianaLogo from '../images/NatoDianaLogo.png';
 import MedtechInnovatorLogo from '../images/MedtechInnovatorLogo.png';
 import MassChallengeLogo from '../images/MassChallengeLogo.png';
@@ -938,344 +939,25 @@ Growing up in a town in India Gauravs life moved from engineering and technology
 
     <div className="about-global-badge">
       <Globe2 size={18} />
-      <span>4 MARKETS · GLOBAL INVESTOR NETWORK</span>
+      <span>5 MARKETS · GLOBAL INVESTOR NETWORK</span>
     </div>
 
   </div>
 
 
   {/* WORLD MAP */}
-  <div className="about-global-map-wrap">
-
-    <div className="about-map">
-
-      {/* KEEP YOUR EXISTING WORLD MAP SVG HERE */}
-
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 700 180"
-        preserveAspectRatio="xMidYMid meet"
-        style={{
-          position: 'absolute',
-          left: '0',
-          top: '-25px',
-          width: '100%',
-          height: '180px',
-          zIndex: 0,
-          pointerEvents: 'none',
-          opacity: 0.55,
-        }}
-      >
-
-        <defs>
-
-          <pattern
-            id="mapDots"
-            width="5"
-            height="5"
-            patternUnits="userSpaceOnUse"
-          >
-            <circle
-              cx="2"
-              cy="2"
-              r="0.9"
-              fill="#70cbd2"
-            />
-          </pattern>
-
-          <mask id="worldMapMask">
-
-            <g fill="white">
-
-              {/* NORTH AMERICA */}
-              <path d="
-                M35 42
-                L52 27
-                L78 21
-                L105 25
-                L127 18
-                L151 29
-                L166 43
-                L158 55
-                L140 59
-                L128 71
-                L108 72
-                L101 88
-                L83 84
-                L72 73
-                L54 72
-                L42 62
-                Z
-              " />
-
-              {/* Canada */}
-              <path d="
-                M47 30
-                L65 16
-                L92 12
-                L118 17
-                L139 25
-                L125 34
-                L95 33
-                L70 39
-                Z
-              " />
-
-              {/* Greenland */}
-              <path d="
-                M168 10
-                L191 3
-                L215 10
-                L220 23
-                L203 32
-                L181 29
-                L169 20
-                Z
-              " />
-
-              {/* Central America */}
-              <path d="
-                M101 85
-                L113 91
-                L117 102
-                L108 111
-                L99 102
-                L96 92
-                Z
-              " />
-
-              {/* South America */}
-              <path d="
-                M156 104
-                L176 110
-                L185 128
-                L182 145
-                L173 161
-                L162 174
-                L150 165
-                L146 149
-                L149 134
-                L141 120
-                L146 110
-                Z
-              " />
-
-              {/* Europe */}
-              <path d="
-                M334 48
-                L349 38
-                L368 39
-                L382 47
-                L376 57
-                L360 61
-                L344 57
-                Z
-              " />
-
-              {/* Scandinavia */}
-              <path d="
-                M351 31
-                L364 20
-                L379 23
-                L384 36
-                L373 43
-                L359 40
-                Z
-              " />
-
-              {/* Asia */}
-              <path d="
-                M380 47
-                L405 33
-                L438 29
-                L468 35
-                L500 31
-                L532 38
-                L558 49
-                L579 61
-                L570 74
-                L548 77
-                L529 87
-                L505 83
-                L482 91
-                L456 83
-                L435 88
-                L414 78
-                L394 73
-                L381 62
-                Z
-              " />
-
-              {/* India */}
-              <path d="
-                M477 86
-                L495 91
-                L493 106
-                L481 120
-                L469 111
-                L471 97
-                Z
-              " />
-
-              {/* Africa */}
-              <path d="
-                M356 78
-                L379 74
-                L398 86
-                L404 107
-                L398 128
-                L387 147
-                L374 163
-                L359 151
-                L353 130
-                L347 111
-                L351 91
-                Z
-              " />
-
-              {/* Australia */}
-              <path d="
-                M552 134
-                L576 125
-                L602 130
-                L620 143
-                L617 158
-                L599 168
-                L575 166
-                L557 156
-                L547 146
-                Z
-              " />
-
-              {/* Japan */}
-              <path d="
-                M592 69
-                L600 62
-                L605 72
-                L600 83
-                L594 87
-                L590 78
-                Z
-              " />
-
-            </g>
-
-          </mask>
-
-          <linearGradient
-            id="mapFade"
-            x1="0"
-            y1="0"
-            x2="1"
-            y2="0"
-          >
-            <stop
-              offset="0%"
-              stopColor="#ffffff"
-              stopOpacity="0"
-            />
-
-            <stop
-              offset="25%"
-              stopColor="#ffffff"
-              stopOpacity="0.75"
-            />
-
-            <stop
-              offset="65%"
-              stopColor="#ffffff"
-              stopOpacity="1"
-            />
-
-            <stop
-              offset="100%"
-              stopColor="#ffffff"
-              stopOpacity="0.25"
-            />
-          </linearGradient>
-
-        </defs>
-
-        <rect
-          x="15"
-          y="5"
-          width="610"
-          height="175"
-          fill="url(#mapDots)"
-          mask="url(#worldMapMask)"
-        />
-
-        <rect
-          x="15"
-          y="5"
-          width="610"
-          height="175"
-          fill="url(#mapFade)"
-          mask="url(#worldMapMask)"
-          opacity="0.35"
-        />
-
-      </svg>
-
-
-      {/* INVESTOR ROUTE */}
-
-      <svg
-        className="about-map-line"
-        viewBox="0 0 700 180"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-        style={{
-          zIndex: 2,
-        }}
-      >
-
-        <path
-          d="M125 60 C210 48 285 48 365 48"
-        />
-
-        <path
-          d="M125 60 C118 72 110 86 105 100"
-        />
-
-      </svg>
-
-
-      {/* LOCATION MARKERS */}
-
-      {[
-        ['Canada', 'top'],
-        ['United States', 'bottom'],
-        ['Europe', 'top'],
-        ['United Kingdom', 'top'],
-      ].map(([label, pos]) => (
-
-        <div
-          className={`about-map-point about-map-point-${pos}`}
-          key={label}
-          style={{
-            zIndex: 3,
-          }}
-        >
-
-          <span className="about-map-dot" />
-
-          <span className="about-map-label">
-            {label}
-          </span>
-
-        </div>
-
-      ))}
-
-    </div>
-
-  </div>
-
+  {/* WORLD MAP IMAGE */}
+<div className="about-global-map-wrap">
+  <img
+    src={worldMap}
+    alt="AMG global investor network"
+    className="about-global-map-image"
+  />
+</div>
 
   {/* MARKET CARDS */}
 
-  <div className="about-market-grid">
+  {/* <div className="about-market-grid">
 
     <div className="about-market-item">
       <div className="about-market-icon">
@@ -1324,7 +1006,7 @@ Growing up in a town in India Gauravs life moved from engineering and technology
       </div>
     </div>
 
-  </div>
+  </div> */}
 
 </div>
         </div>
