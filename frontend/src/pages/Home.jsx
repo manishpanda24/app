@@ -1355,7 +1355,7 @@ export default function Home() {
             </div>
 
             <div className="founder-experience-content">
-              <h3>250+ Evaluations</h3>
+              <h3>20,000+ Startups Reviewed</h3>
 
               <p>
                 250+ formal startup and innovation evaluations, 100+ detailed

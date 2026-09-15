@@ -887,22 +887,25 @@ export default function AboutUs() {
           
 
            <p>
-  AMG contains the initials of Gauravs father, mother and Gaurav himself. The name shows where the journey started. With family, values and a belief in making something
+  AMG contains the initials of Gaurav's father, mother, and Gaurav himself. The name shows where the journey started. The name AMG reflects the family's values and their belief in creating something meaningful.
 
 </p>
 <br></br>
 <p>
-Growing up in a town in India Gauravs life moved from engineering and technology to finance, investing and finally to the world of startups.
+Growing up in a town in India, Gaurav's journey moved from engineering and technology to finance, investing, and finally to the world of startups.
+
 </p>
 <br></br>
 <p>
-  Along the way Gaurav felt a pull to work closely with founders. To understand their challenges share the knowledge Gaurav has gained and help them navigate the path of building a company.
+ Gaurav's journey led him to work closely with founders, where he could understand their challenges, share his knowledge, and assist them in navigating the path of building a company.
+
 </p>
 <br></br>
 <p>
   <strong>
-   AMG emerged from that journey: a bond, to family shaped by many years of experience and built to help founders move forward.
-  </strong>
+   
+
+AMG emerged from that journey: a bond to family shaped by many years of experience and built to help founders move forward.  </strong>
 </p>
 
             <img
