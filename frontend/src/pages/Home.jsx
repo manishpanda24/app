@@ -816,8 +816,8 @@ export default function Home() {
             <ArrowRight className="w-4 h-4" />
           </a> */}
 
-          <Link to="/contact" className="btn-ghost">
-            See IRP Details
+          <Link to="/contact"  className="btn-yellow">
+           Book a 1:1 Consultation
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

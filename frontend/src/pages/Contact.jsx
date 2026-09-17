@@ -33,7 +33,7 @@ export default function Contact() {
     targetCloseTimelineOther: '',
     mainChallenge: '',
   });
-
+const [showEmailNotice, setShowEmailNotice] = useState(false);
   /* ─────────────────────────────────────────────
      ACCELERATOR FORM
   ───────────────────────────────────────────── */
@@ -828,27 +828,28 @@ const webhookUrl ="https://script.google.com/macros/s/AKfycbwR-X0sAeAdi6qR12Uzk3
                 <p className="text-[13px] text-amg-teal/65 leading-[1.55] mb-5 max-w-[330px]">
                   Looking for workshops, mentor support, evaluation, or EIR-style partnership?
                 </p>
+  <div>
+  <a
+    href="mailto:gaurav@amgvp.com?subject=Partnership%20with%20AMG"
+    className="btn-primary inline-flex"
+    onClick={() => setShowEmailNotice(true)}
+  >
+    Partner with AMG
+    <ArrowRight className="w-4 h-4" />
+  </a>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    const founderForm = document.querySelector(
-                      'form.card-pro'
-                    );
-
-                    if (founderForm) {
-                      founderForm.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center',
-                      });
-                    }
-                  }}
-                  className="btn-primary"
-                >
-                  Partner with AMG
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-
+  {showEmailNotice && (
+    <p className="mt-3 text-[11px] text-amg-mute leading-[1.45]">
+      If your email app doesn’t open, email us directly at{" "}
+      <a
+        href="mailto:gaurav@amgvp.com"
+        className="text-amg-teal font-semibold hover:underline"
+      >
+        gaurav@amgvp.com
+      </a>
+    </p>
+  )}
+</div>
               </div>
 
             </aside>
