@@ -225,15 +225,15 @@ export default function Home() {
         ))}
       </div>
       {/* CTA Buttons */}
-      <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
-        <Link to="/contact" className="btn-yellow">
+      <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
+        <Link to="/contact" className="btn-yellow" style={{ fontSize: '20px', padding: '0.5rem 1.5rem' }}>
           Assess Your Fundability
           <ArrowRight className="w-4 h-4" />
         </Link>
 
-        <Link to="/contact" className="btn-outline">
+        {/* <Link to="/contact" className="btn-outline">
           Explore Founder Services
-        </Link>
+        </Link> */}
       </div>
 
     </div>
@@ -805,7 +805,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="flex flex-wrap items-center gap-5 mt-8">
+        <div className="flex flex-wrap items-center gap-5 mt-3" style={{display:"contents"}}>
           {/* <a
             href="https://investorreadinessprogram.vercel.app/"
             target="_blank"
@@ -816,7 +816,7 @@ export default function Home() {
             <ArrowRight className="w-4 h-4" />
           </a> */}
 
-          <Link to="/contact"  className="btn-yellow">
+          <Link to="/contact"  className="btn-yellow" style={{ fontSize: '20px', padding: '0.5rem 1.5rem' ,width:"50%" }}>
            Book a 1:1 Consultation
             <ArrowRight className="w-4 h-4" />
           </Link>
