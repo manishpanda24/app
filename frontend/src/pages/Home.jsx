@@ -806,7 +806,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-wrap items-center gap-5 mt-8">
-          <a
+          {/* <a
             href="https://investorreadinessprogram.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
@@ -814,7 +814,7 @@ export default function Home() {
           >
             Explore the Investment Readiness Program
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </a> */}
 
           <Link to="/contact" className="btn-ghost">
             See IRP Details
