@@ -1,0 +1,4094 @@
+/* =========================================================
+   AMG VENTURE PARTNERS — ABOUT PAGE
+   CLEAN FINAL CSS
+   ---------------------------------------------------------
+   IMPORTANT:
+   1. This file intentionally contains ONE definition for each
+      major About-page selector.
+   2. Gaurav uses Gaurav-hero.png with explicit width + height.
+   3. Do not add another .gaurav-hero-image rule elsewhere.
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+
+  background: #ffffff;
+  color: #062f38;
+}
+
+.about-container {
+  width: min(1400px, calc(100% - 72px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 33rem;
+  overflow: hidden;
+  background: #ffffff;
+  border-bottom: 1px solid #dce8e9;
+}
+.about-hero-inner {
+  position: relative;
+  width: min(1400px, calc(100% - 72px));
+  min-height: 570px;
+  height: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 56% 47%;
+  align-items: stretch;
+}
+
+/* subtle technical grid */
+.about-hero-inner::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(10, 122, 110, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(10, 122, 110, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+}
+
+
+/* =========================================================
+   HERO LEFT
+   ========================================================= */
+
+.about-hero-copy {
+  position: relative;
+  z-index: 5;
+  padding-top: 38px;
+  padding-left: 2px;
+  padding-right: 25px;
+  padding-bottom: 35px;
+}
+.about-eyebrow {
+  color: #087f88;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+}
+
+.about-hero-copy .about-eyebrow {
+  margin-bottom: 9px;
+}
+
+.about-hero-title {
+  max-width: 570px;
+
+  margin: 0 0 14px;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 58px;
+  font-weight: 700;
+
+  line-height: 0.97;
+
+  letter-spacing: -0.038em;
+}
+
+.about-hero-title span {
+  color: #078894;
+}
+
+.about-hero-description {
+  max-width: 540px;
+
+  margin: 0;
+
+  color: #163d45;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1.45;
+}
+
+.about-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 5px;
+
+  margin-top: 11px;
+}
+
+.about-hero-tags span {
+  display: inline-flex;
+  align-items: center;
+
+  height: 21px;
+
+  padding: 0 8px;
+
+  border: 1px solid #c9dfe1;
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #174750;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   HERO RIGHT / GAURAV
+   ========================================================= */
+
+.about-hero-founder {
+  position: relative;
+
+  width: 100%;
+  height: 455px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+
+/* teal circle — gradient + dotted "globe" texture to match reference image */
+.about-hero-founder::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 1;
+
+  width: 360px;
+  height: 360px;
+
+  right: 70px;
+  bottom: 20px;
+
+  border-radius: 50%;
+
+  background-color: #078c95;
+
+  background-image:
+    radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.22) 0%, transparent 45%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.55) 1px, transparent 1.5px),
+    linear-gradient(150deg, #12a3aa 0%, #078c95 45%, #053b44 100%);
+
+  background-position: 0 0, 0 0, 0 0;
+  background-size: 100% 100%, 8px 8px, 100% 100%;
+  background-repeat: no-repeat, repeat, no-repeat;
+
+  box-shadow: 0 25px 60px rgba(5, 59, 68, 0.35);
+}
+
+
+/* cyan arc */
+.about-hero-founder::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: 1;
+
+  width: 430px;
+  height: 320px;
+
+  right: 20px;
+  top: 22px;
+
+  border: 1.5px solid #63d5de;
+
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   GAURAV-HERO.PNG
+   ---------------------------------------------------------
+   Explicit dimensions.
+   DO NOT use height:auto here.
+   ========================================================= */
+
+.gaurav-hero-image {
+  position: absolute !important;
+  z-index: 3 !important;
+
+  width: 390px !important;
+  height: 430px !important;
+
+  min-width: 390px !important;
+  max-width: 390px !important;
+
+  min-height: 430px !important;
+  max-height: 430px !important;
+
+  right: 135px !important;
+  bottom: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+
+  object-fit: contain !important;
+  object-position: center bottom !important;
+
+  transform: none !important;
+}
+
+
+/* =========================================================
+   HERO QUOTE
+   ========================================================= */
+
+.about-hero-quote {
+  position: absolute;
+
+  z-index: 8;
+
+  right: 28px;
+  top: 128px;
+
+  width: 235px;
+
+  padding: 17px 18px;
+
+  border-radius: 9px;
+
+  background: #053b44;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+
+  color: #ffffff;
+}
+
+.about-hero-quote .quote-mark {
+  margin-bottom: 3px;
+
+  color: #f2c200;
+
+  font-family: Georgia, serif;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.about-hero-quote p {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.45;
+}
+
+.about-hero-quote strong {
+  display: block;
+
+  color: #f2c200;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.about-hero-quote small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   EXPERIENCE / METRICS
+   ========================================================= */
+
+.about-metrics-band {
+  width: 100%;
+
+  padding: 16px 0 11px;
+
+  background: #043f48;
+
+  color: #ffffff;
+}
+
+.about-metrics-heading {
+  margin: 0 0 13px;
+
+  color: #ffffff;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+
+  text-align: center;
+}
+
+.about-metrics-grid {
+  display: grid;
+
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.about-metric {
+  min-height: 87px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 7px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.32);
+
+  text-align: center;
+}
+
+.about-metric:last-child {
+  border-right: none;
+}
+
+.about-metric-icon {
+  width: 22px;
+  height: 22px;
+
+  margin-bottom: 5px;
+
+  color: #ffffff;
+}
+
+.about-metric strong {
+  color: #ffffff;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 23px;
+
+  line-height: 1;
+}
+
+.about-metric span {
+  margin-top: 4px;
+
+  color: #ffffff;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+.about-metric small {
+  max-width: 115px;
+
+  margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1.2;
+}
+
+.about-metric-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 7px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.about-metric-bottom span,
+.about-metric-bottom b {
+  color: #f2c200;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   MEET GAURAV
+   ========================================================= */
+
+.about-founder-section {
+  width: 100%;
+
+  padding: 29px 0 27px;
+
+  background: #ffffff;
+}
+
+.about-founder-grid {
+  display: grid;
+
+  grid-template-columns: 62% 38%;
+
+  gap: 28px;
+
+  align-items: center;
+}
+
+.about-founder-copy .about-eyebrow {
+  margin-bottom: 6px;
+}
+
+.about-founder-copy h2 {
+ 
+
+  margin: 5px 0 11px;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 35px;
+  font-weight: 700;
+
+  line-height: 1.01;
+
+  letter-spacing: -0.03em;
+}
+
+.about-founder-copy p {
+  
+
+  margin: 0 0 9px;
+
+  color: #294c53;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.42;
+}
+
+
+/* =========================================================
+   FOUNDER CARDS
+   ========================================================= */
+
+.about-founder-cards {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 9px;
+}
+
+.about-founder-card {
+  min-height: 105px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  padding: 13px;
+
+  border: 1px solid #d9e5e6;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 16px rgba(14, 76, 92, 0.055);
+}
+
+.about-founder-card > svg {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  color: #135c65;
+}
+
+.about-founder-card h3 {
+  margin: 0;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  line-height: 1.04;
+}
+
+.about-founder-card p {
+  margin: 6px 0 0;
+
+  color: #38565c;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 5px;
+
+  padding: 9px 13px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #063f48;
+  color: #ffffff;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   WHY AMG
+   ========================================================= */
+
+.about-why-section {
+  width: 100%;
+
+  padding: 27px 0;
+
+  border-top: 1px solid #e2eaeb;
+
+  background: #ffffff;
+}
+
+.about-why-section .about-container {
+  display: grid;
+
+  grid-template-columns: 25% 75%;
+
+  gap: 24px;
+}
+
+.about-why-heading .about-eyebrow {
+  margin-bottom: 5px;
+}
+
+.about-why-heading h2 {
+  margin: 5px 0 13px;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 28px;
+
+  line-height: 1.03;
+}
+
+.about-crossed-list {
+  width: 190px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  padding: 11px;
+
+  border: 1px solid #e0e8e9;
+  border-radius: 7px;
+
+  background: #f8fbfa;
+}
+
+.about-crossed-list span {
+  color: #3f5c61;
+
+  font-size: 9px;
+
+  text-decoration: line-through;
+}
+
+.about-process-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+}
+
+.about-process-card {
+  position: relative;
+}
+
+.about-process-card:not(:last-child)::after {
+  content: "→";
+
+  position: absolute;
+
+  right: -18px;
+  top: 25px;
+
+  color: #b7c9cb;
+
+  font-size: 21px;
+}
+
+.about-process-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 6px;
+
+  border-radius: 50%;
+
+  background: #087f88;
+
+  color: #ffffff;
+}
+
+.about-process-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.about-process-number {
+  color: #087f88;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.about-process-card h3 {
+  margin: 4px 0 6px;
+
+  color: #073d46;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.about-process-card p {
+  margin: 0;
+
+  color: #38565c;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   ECOSYSTEM
+   ========================================================= */
+
+.about-ecosystem-section {
+  width: 100%;
+
+  padding: 0 0 25px;
+}
+
+.about-ecosystem-grid {
+  display: grid;
+
+  grid-template-columns: 23% 77%;
+
+  border: 1px solid #dfe8e9;
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+.about-ecosystem-copy {
+  padding: 20px;
+
+  background: #f1fbfa;
+}
+
+.about-ecosystem-copy p {
+  margin: 10px 0 0;
+
+  color: #38565c;
+
+  font-size: 9px;
+
+  line-height: 1.45;
+}
+
+.about-ecosystem-main {
+  padding: 8px 15px;
+}
+/* =========================================================
+   GLOBAL PERSPECTIVE — RIGHT PANEL
+   ========================================================= */
+
+.about-map-panel {
+  position: relative;
+  overflow: hidden;
+
+  padding: 30px 28px 26px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid #dce8e9;
+  border-radius: 14px;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.about-map-panel .about-eyebrow {
+  margin-bottom: 8px;
+}
+
+.global-map-title {
+  margin: 0;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 40px;
+  line-height: 1.02;
+
+  font-weight: 700;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   MAP AREA
+   ========================================================= */
+
+.global-map-area {
+  position: relative;
+
+  width: 100%;
+  height: 175px;
+
+  margin-top: 5px;
+
+  overflow: hidden;
+}
+
+.global-world-map {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+
+/* =========================================================
+   LOCATION MARKERS
+   ========================================================= */
+
+.global-location {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #073d46;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.global-location-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #087f88;
+
+  border: 3px solid #d9f2f3;
+
+  box-shadow:
+    0 0 0 2px rgba(8, 127, 136, 0.12);
+}
+
+
+/* Canada */
+
+.global-location-canada {
+  left: 7%;
+  top: 42%;
+}
+
+
+/* United States */
+
+.global-location-usa {
+  left: 31%;
+  top: 66%;
+}
+
+
+/* Europe */
+
+.global-location-europe {
+  left: 68%;
+  top: 43%;
+}
+
+
+/* United Kingdom */
+
+.global-location-uk {
+  right: 4%;
+  top: 48%;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.global-map-description {
+  margin: 3px 0 0;
+
+  color: #294c53;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.55;
+}
+
+/* =========================================================
+   LOGOS — 5 TOP + 6 BOTTOM
+   ---------------------------------------------------------
+   .about-logo-item is the JSX class; styled here directly so
+   markup and CSS refer to the same selector.
+   ========================================================= */
+
+.about-logo-grid {
+  display: grid;
+
+  grid-template-columns: repeat(30, 1fr);
+
+  width: 100%;
+
+  border-bottom: 1px solid #dfe8e9;
+}
+
+.about-logo-item {
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px 8px;
+
+  border-right: 1px solid #dfe8e9;
+
+  background: #ffffff;
+}
+
+
+/* top row — 5 items */
+.about-logo-item:nth-child(1),
+.about-logo-item:nth-child(2),
+.about-logo-item:nth-child(3),
+.about-logo-item:nth-child(4),
+.about-logo-item:nth-child(5) {
+  grid-column: span 6;
+}
+
+
+/* bottom row — 6 items */
+.about-logo-item:nth-child(6),
+.about-logo-item:nth-child(7),
+.about-logo-item:nth-child(8),
+.about-logo-item:nth-child(9),
+.about-logo-item:nth-child(10),
+.about-logo-item:nth-child(11) {
+  grid-column: span 5;
+
+  border-bottom: none;
+}
+
+
+/* outer right borders */
+.about-logo-item:nth-child(5),
+.about-logo-item:nth-child(11) {
+  border-right: none;
+}
+
+
+/* images */
+.about-logo-grid img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 45px;
+
+  object-fit: contain;
+}
+
+
+/* NATO DIANA */
+.about-logo-item:nth-child(1) img {
+  width: 112px;
+  max-height: 43px;
+}
+
+/* MEDTECH */
+.about-logo-item:nth-child(2) img {
+  width: 142px;
+  max-height: 45px;
+}
+
+/* MASSCHALLENGE */
+.about-logo-item:nth-child(3) img {
+  width: 125px;
+  max-height: 45px;
+}
+
+/* VENTURELAB */
+.about-logo-item:nth-child(4) img {
+  width: 120px;
+  max-height: 45px;
+}
+
+/* COMMUNITECH */
+.about-logo-item:nth-child(5) img {
+  width: 128px;
+  max-height: 45px;
+}
+
+/* EIT RAW MATERIALS */
+.about-logo-item:nth-child(6) img {
+  width: 130px;
+  max-height: 43px;
+}
+
+/* SCALE AI */
+.about-logo-item:nth-child(7) img {
+  width: 100px;
+  max-height: 43px;
+}
+
+/* MIX */
+.about-logo-item:nth-child(8) img {
+  width: 65px;
+  max-height: 42px;
+}
+
+/* EIT HEALTH */
+.about-logo-item:nth-child(10) img {
+  width: 115px;
+  max-height: 43px;
+}
+
+
+/* placeholder tiles — awaiting logo assets */
+.about-logo-placeholder {
+  color: #8fa7ab;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+.about-logo-placeholder span {
+  border: 1px dashed #c9dfe1;
+  border-radius: 4px;
+
+  padding: 6px 8px;
+}
+
+
+/* =========================================================
+   ECOSYSTEM STATS
+   ========================================================= */
+
+.about-ecosystem-stats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  width: 100%;
+
+  padding: 7px 3px 4px;
+}
+
+.about-ecosystem-stats > div {
+  display: grid;
+
+  grid-template-columns: 38px 1fr;
+
+  align-items: center;
+
+  min-height: 58px;
+
+  padding: 3px 20px;
+
+  border-right: 1px solid #e1e9ea;
+}
+
+.about-ecosystem-stats > div:last-child {
+  border-right: none;
+}
+
+.about-ecosystem-stats > div > svg {
+  width: 31px;
+  height: 31px;
+
+  grid-column: 1;
+
+  color: #155b64;
+}
+
+.about-ecosystem-stats > div > div {
+  grid-column: 2;
+
+  min-width: 0;
+}
+
+.about-ecosystem-stats strong {
+  display: block;
+
+  margin: 0;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.about-ecosystem-stats span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #244b52;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 7.5px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   TWO COLUMN PANELS
+   ========================================================= */
+
+.about-two-column {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.about-panel,
+.about-story-panel,
+.about-partnership-panel {
+  padding: 18px;
+
+  border: 1px solid #dfe8e9;
+  border-radius: 9px;
+
+  background: #ffffff;
+}
+
+.about-panel h2,
+.about-story-panel h2,
+.about-partnership-panel h2 {
+  margin: 5px 0 12px;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 25px;
+
+  line-height: 1.03;
+}
+
+
+/* =========================================================
+   SECTOR CARDS
+   ========================================================= */
+
+.about-sector-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 7px;
+}
+
+.about-sector-grid div {
+  min-height: 70px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px;
+
+  border: 1px solid #e1e9ea;
+  border-radius: 6px;
+
+  text-align: center;
+}
+
+.about-sector-grid svg {
+  width: 22px;
+  height: 22px;
+
+  margin-bottom: 4px;
+
+  color: #0a6b73;
+}
+
+.about-sector-grid span {
+  color: #294d54;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+.about-sector-grid1 {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 7px;
+}
+
+.about-sector-grid1 div {
+  min-height: 70px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px;
+
+  border: 1px solid #e1e9ea;
+  border-radius: 6px;
+
+  text-align: center;
+}
+
+.about-sector-grid1 svg {
+  width: 22px;
+  height: 22px;
+
+  margin-bottom: 4px;
+
+  color: #0a6b73;
+}
+
+.about-sector-grid1 span {
+  color: #294d54;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+/* =========================================================
+   INVESTOR READINESS / FUNDRAISING SERVICES
+   ========================================================= */
+
+.investor-readiness-section {
+  width: 100%;
+  padding: 38px 0 32px;
+  background: #ffffff;
+}
+
+.investor-readiness-container {
+  width: min(1400px, calc(100% - 72px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   FOUR SERVICE CARDS
+   ========================================================= */
+
+.readiness-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.readiness-card {
+  min-height: 310px;
+
+  padding: 18px 24px 20px;
+
+  border: 1px solid #dce8e9;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 25px rgba(7, 61, 70, 0.05);
+}
+
+.readiness-card-teal {
+  background: #e9f8f8;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.readiness-icon {
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  border: 1px solid #d6ebed;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  color: #073d46;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.readiness-card h3 {
+  margin: 0;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.readiness-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 17px 0 13px;
+
+  background: #cbdfe1;
+}
+
+
+/* =========================================================
+   CHECKLIST
+   ========================================================= */
+
+.readiness-card ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.readiness-card li {
+  position: relative;
+
+  margin-bottom: 10px;
+
+  padding-left: 36px;
+
+  color: #45636a;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 1.25;
+}
+
+.readiness-card li::before {
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+  top: -1px;
+
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #279eaa;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   BOTTOM TAGLINE
+   ========================================================= */
+
+.readiness-tagline {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 44px;
+
+  margin-top: 30px;
+}
+
+.readiness-tagline span {
+  flex: 0 0 160px;
+
+  height: 2px;
+
+  background: #8bc6cc;
+}
+
+.readiness-tagline p {
+  margin: 0;
+
+  color: #244b52;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 23px;
+  font-weight: 500;
+
+  line-height: 1.25;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .readiness-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .readiness-tagline span {
+    flex: 0 0 100px;
+  }
+
+  .readiness-tagline p {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .investor-readiness-container {
+    width: calc(100% - 24px);
+  }
+
+  .investor-readiness-section {
+    padding: 28px 0;
+  }
+
+  .readiness-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .readiness-card {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .readiness-card h3 {
+    font-size: 25px;
+  }
+
+  .readiness-card li {
+    font-size: 13px;
+  }
+
+  .readiness-tagline {
+    gap: 15px;
+  }
+
+  .readiness-tagline span {
+    display: none;
+  }
+
+  .readiness-tagline p {
+    font-size: 17px;
+  }
+}
+/* =========================================================
+   GEOGRAPHY MAP CONNECTOR
+   ---------------------------------------------------------
+   CSS/SVG-only line + dot connector, no image asset.
+   ========================================================= */
+
+.about-map {
+  position: relative;
+
+  width: 100%;
+  height: 90px;
+
+  margin: 12px 0 14px;
+}
+
+.about-map-line {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.about-map-line path {
+  fill: none;
+
+  stroke: #a9d8db;
+  stroke-width: 1.5;
+  stroke-dasharray: 3 4;
+}
+
+.about-map-point {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.about-map-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #087f88;
+
+  box-shadow: 0 0 0 3px rgba(8, 127, 136, 0.16);
+}
+
+.about-map-label {
+  color: #174750;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.about-map-point-top {
+  top: 6px;
+}
+
+.about-map-point-bottom {
+  bottom: 6px;
+}
+
+.about-map-point:nth-of-type(1) {
+  left: 2%;
+}
+
+.about-map-point:nth-of-type(2) {
+  left: 32%;
+}
+
+.about-map-point:nth-of-type(3) {
+  left: 63%;
+}
+
+.about-map-point:nth-of-type(4) {
+  right: 2%;
+}
+
+.about-map-point-bottom .about-map-dot {
+  order: 2;
+}
+
+.about-map-point-bottom .about-map-label {
+  order: 1;
+}
+
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.about-timeline-section {
+  padding: 4px 0 25px;
+}
+
+.about-timeline-title {
+  margin-bottom: 10px;
+
+  color: #073d46;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  text-align: center;
+}
+
+.about-timeline {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  border: 1px solid #dfe8e9;
+  border-radius: 9px;
+
+  overflow: hidden;
+}
+
+.about-timeline-item {
+  min-height: 132px;
+
+  padding: 13px;
+
+  text-align: center;
+
+  border-right: 1px solid #dfe8e9;
+}
+
+.about-timeline-item:last-child {
+  border-right: none;
+}
+
+.about-timeline-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 6px;
+
+  border-radius: 50%;
+
+  background: #087f88;
+
+  color: #ffffff;
+}
+
+.about-timeline-item:nth-child(2) .about-timeline-icon,
+.about-timeline-item:nth-child(4) .about-timeline-icon {
+  background: #f2c200;
+
+  color: #073d46;
+}
+
+.about-timeline-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.about-timeline-item h3 {
+  margin: 0 0 5px;
+
+  color: #073d46;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.about-timeline-item strong {
+  display: block;
+
+  color: #244b52;
+
+  font-size: 8px;
+}
+
+.about-timeline-item span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #62777b;
+
+  font-size: 7px;
+
+  line-height: 1.3;
+}
+
+.about-timeline-era {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #087f88;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 6.5px;
+  font-weight: 700;
+
+  font-style: normal;
+
+  letter-spacing: 0.04em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   STORY
+   ========================================================= */
+
+.about-story-panel {
+  position: relative;
+
+  min-height: 190px;
+}
+
+.about-story-panel p {
+  width: 52%;
+
+  margin: 0;
+
+  color: #38565c;
+
+  font-size: 9px;
+
+  line-height: 1.45;
+}
+
+.about-story-panel img {
+  position: absolute;
+
+  right: 14px;
+  top: 14px;
+
+  width: 45%;
+  height: 450px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   PARTNERSHIPS
+   ========================================================= */
+
+.about-partnership-icons {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 7px;
+}
+
+.about-partnership-icons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.about-partnership-icons svg {
+  width: 23px;
+  height: 23px;
+
+  margin-bottom: 4px;
+
+  color: #08727a;
+}
+
+.about-partnership-icons span {
+  color: #294d54;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   TABLET — 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .about-container,
+  .about-hero-inner {
+    width: calc(100% - 48px);
+  }
+
+  .about-hero-title {
+    font-size: 52px;
+  }
+
+  .about-hero-founder {
+    justify-content: flex-end;
+  }
+
+  .gaurav-hero-image {
+    width: 360px !important;
+    height: 390px !important;
+
+    min-width: 360px !important;
+    max-width: 360px !important;
+
+    min-height: 390px !important;
+    max-height: 390px !important;
+
+    right: 70px;
+  }
+
+  .about-hero-founder::before {
+    content: "";
+
+    position: absolute;
+    z-index: 1;
+
+    width: 370px;
+    height: 370px;
+
+    right: 70px;
+    bottom: -105px;
+
+    border-radius: 50%;
+  }
+  .about-hero-founder::after {
+    width: 410px;
+    height: 310px;
+
+    right: -5px;
+  }
+
+  .about-hero-quote {
+    right: 5px;
+
+    width: 215px;
+  }
+
+  .about-founder-grid {
+    grid-template-columns: 36% 64%;
+  }
+
+  .about-founder-copy h2 {
+    font-size: 32px;
+  }
+}
+
+
+/* =========================================================
+   TABLET — 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-container,
+  .about-hero-inner {
+    width: calc(100% - 35px);
+  }
+
+  .about-hero {
+    height: auto;
+  }
+
+  .about-hero-inner {
+    height: auto;
+
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-copy {
+    padding: 35px 0 20px;
+  }
+
+  .about-hero-title {
+    max-width: 700px;
+
+    font-size: 52px;
+  }
+
+  .about-hero-founder {
+    height: 390px;
+
+    justify-content: center;
+  }
+
+  .gaurav-hero-image {
+    width: 350px !important;
+    height: 370px !important;
+
+    min-width: 350px !important;
+    max-width: 350px !important;
+
+    min-height: 370px !important;
+    max-height: 370px !important;
+
+    right: auto;
+    bottom: 0;
+  }
+
+  .about-hero-founder::before {
+    right: 50%;
+
+    transform: translateX(50%);
+
+    bottom: -120px;
+  }
+
+  .about-hero-founder::after {
+    right: 50%;
+
+    transform: translateX(50%);
+  }
+
+  .about-hero-quote {
+    right: 15px;
+    top: 75px;
+  }
+
+  .about-metrics-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .about-founder-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-why-section .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-ecosystem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-ecosystem-copy {
+    padding: 18px;
+  }
+
+  .about-timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-timeline-item:nth-child(3) {
+    border-right: none;
+  }
+
+  .about-timeline-item:nth-child(4),
+  .about-timeline-item:nth-child(5) {
+    border-top: 1px solid #dfe8e9;
+  }
+}
+
+
+/* =========================================================
+   MOBILE — 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .about-container,
+  .about-hero-inner {
+    width: calc(100% - 24px);
+  }
+
+  .about-hero-copy {
+    padding-top: 28px;
+  }
+
+  .about-hero-title {
+    font-size: 43px;
+
+    line-height: 0.98;
+  }
+
+  .about-hero-description {
+    font-size: 12px;
+  }
+
+  .about-hero-founder {
+    height: 360px;
+  }
+
+  .gaurav-hero-image {
+    width: 300px !important;
+    height: 330px !important;
+
+    min-width: 300px !important;
+    max-width: 300px !important;
+
+    min-height: 330px !important;
+    max-height: 330px !important;
+
+    right: auto;
+    bottom: 0;
+  }
+
+  .about-hero-founder::before {
+    width: 320px;
+    height: 320px;
+
+    right: 50%;
+
+    transform: translateX(50%);
+
+    bottom: -112px;
+  }
+
+  .about-hero-founder::after {
+    width: 345px;
+    height: 265px;
+
+    right: 50%;
+
+    transform: translateX(50%);
+  }
+
+  .about-hero-quote {
+    right: 5px;
+    top: 65px;
+
+    width: 180px;
+
+    padding: 12px;
+  }
+
+  .about-hero-quote p {
+    font-size: 10px;
+  }
+
+  .about-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-metric {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .about-metric:nth-child(2n) {
+    border-right: none;
+  }
+
+  .about-founder-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-process-card::after {
+    display: none;
+  }
+
+  .about-two-column {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Mobile logos */
+  .about-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-logo-item:nth-child(1),
+  .about-logo-item:nth-child(2),
+  .about-logo-item:nth-child(3),
+  .about-logo-item:nth-child(4),
+  .about-logo-item:nth-child(5),
+  .about-logo-item:nth-child(6),
+  .about-logo-item:nth-child(7),
+  .about-logo-item:nth-child(8),
+  .about-logo-item:nth-child(9),
+  .about-logo-item:nth-child(10),
+  .about-logo-item:nth-child(11) {
+    grid-column: auto;
+  }
+
+  .about-logo-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .about-logo-item:nth-child(n) {
+    border-bottom: 1px solid #dfe8e9;
+  }
+
+  .about-logo-item:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+
+  /* Ecosystem stats */
+  .about-ecosystem-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .about-ecosystem-stats > div {
+    border-right: none;
+    border-bottom: 1px solid #e1e9ea;
+  }
+
+  .about-ecosystem-stats > div:last-child {
+    border-bottom: none;
+  }
+
+
+  /* Map */
+  .about-map {
+    height: 140px;
+  }
+
+  .about-map-point:nth-of-type(1) {
+    left: 0;
+  }
+
+  .about-map-point:nth-of-type(2) {
+    left: 28%;
+  }
+
+  .about-map-point:nth-of-type(3) {
+    left: 58%;
+  }
+
+  .about-map-point:nth-of-type(4) {
+    right: 0;
+  }
+
+
+  /* Timeline */
+  .about-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .about-timeline-item {
+    border-right: none;
+    border-bottom: 1px solid #dfe8e9;
+  }
+
+  .about-timeline-item:last-child {
+    border-bottom: none;
+  }
+
+  .about-timeline-item:nth-child(4),
+  .about-timeline-item:nth-child(5) {
+    border-top: none;
+  }
+
+
+  /* Partnerships */
+  .about-partnership-icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .about-hero-title {
+    font-size: 38px;
+  }
+
+  .gaurav-hero-image {
+    width: 275px !important;
+    height: 305px !important;
+
+    min-width: 275px !important;
+    max-width: 275px !important;
+
+    min-height: 305px !important;
+    max-height: 305px !important;
+  }
+
+  .about-hero-founder::before {
+    width: 295px;
+    height: 295px;
+  }
+
+  .about-hero-quote {
+    width: 165px;
+
+    font-size: 8px;
+  }
+}
+/* =========================================================
+   GLOBAL FONT SIZE BOOST — +25%
+   ---------------------------------------------------------
+   Increases text only.
+   Does NOT change layout, images, icons or backgrounds.
+   ========================================================= */
+
+/* Hero */
+.about-eyebrow {
+  font-size: 1.5rem;
+}
+
+.about-hero-title {
+  font-size: 58px;
+}
+
+.about-hero-description {
+  font-size: 15px;
+}
+
+.about-hero-tags span {
+  font-size: 10px;
+}
+
+
+/* Hero quote */
+.about-hero-quote p {
+  font-size: 16px;
+}
+
+.about-hero-quote strong {
+  font-size: 13.75px;
+}
+
+.about-hero-quote small {
+  font-size: 11.25px;
+}
+
+
+/* Metrics */
+.about-metrics-heading {
+  font-size: 13.75px;
+}
+
+.about-metric strong {
+  font-size: 28.75px;
+}
+
+.about-metric span {
+  font-size: 11.25px;
+}
+
+.about-metric small {
+  font-size: 10px;
+}
+
+.about-metric-bottom {
+  font-size: 12.5px;
+}
+
+
+/* Meet Gaurav */
+.about-founder-copy h2 {
+  font-size: 36px;
+}
+
+.about-founder-copy p {
+  font-size: 15.75px;
+}
+
+.about-founder-card h3 {
+  font-size: 20px;
+}
+
+.about-founder-card p {
+  font-size: 11.25px;
+}
+
+.about-button {
+  font-size: 11.25px;
+}
+
+
+/* Why AMG */
+.about-why-heading h2 {
+  font-size: 35px;
+}
+
+.about-crossed-list span {
+  font-size: 11.25px;
+}
+
+.about-process-number {
+  font-size: 11.25px;
+}
+
+.about-process-card h3 {
+  font-size: 15px;
+}
+
+.about-process-card p {
+  font-size: 11.25px;
+}
+
+
+/* Ecosystem */
+.about-ecosystem-copy p {
+  font-size: 11.25px;
+}
+
+.about-logo-placeholder {
+  font-size: 10px;
+}
+
+.about-ecosystem-stats strong {
+  font-size: 26.25px;
+}
+
+.about-ecosystem-stats span {
+  font-size: 9.375px;
+}
+
+
+/* Sector panels */
+.about-panel h2,
+.about-story-panel h2,
+.about-partnership-panel h2 {
+  font-size: 31.25px;
+}
+
+.about-sector-grid span {
+  font-size: 10px;
+}
+
+.about-panel-footer {
+  font-size: 11.25px;
+}
+
+
+/* Geography map */
+.about-map-label {
+  font-size: 10px;
+}
+
+.about-map-point {
+  gap: 6px;
+}
+
+.about-map {
+  font-size: 10px;
+}
+
+
+/* Timeline */
+.about-timeline-title {
+  font-size: 12.5px;
+}
+
+.about-timeline-item h3 {
+  font-size: 11.25px;
+}
+
+.about-timeline-item strong {
+  font-size: 10px;
+}
+
+.about-timeline-item span {
+  font-size: 8.75px;
+}
+
+.about-timeline-era {
+  font-size: 8.125px;
+}
+
+
+/* Story */
+.about-story-panel p {
+  font-size: 15.25px;
+}
+
+
+/* Partnerships */
+.about-partnership-icons span {
+  font-size: 8.75px;
+}
+
+/* =========================================================
+   CAREER TIMELINE — FINAL OVERRIDE
+   ========================================================= */
+
+.about-timeline-section {
+  width: 100%;
+  padding: 8px 0 24px;
+  background: #ffffff;
+}
+
+.about-timeline-title {
+  margin-bottom: 12px;
+
+  color: #073d46;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.10em;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   MAIN TIMELINE
+   ========================================================= */
+
+.about-timeline {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 0 12px 46px;
+
+  border: none;
+  border-radius: 0;
+
+  overflow: visible;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   TIMELINE BASELINE
+   ========================================================= */
+
+.about-timeline::after {
+  content: "";
+
+  position: absolute;
+
+  left: 34px;
+  right: 34px;
+  bottom: 23px;
+
+  height: 1px;
+
+  background: #d5e1e3;
+}
+
+
+/* =========================================================
+   TIMELINE ITEM
+   ========================================================= */
+
+.about-timeline-item {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 1 1 0;
+
+  min-width: 0;
+  min-height: 150px;
+
+  padding: 0 12px;
+
+  border: none !important;
+
+  background: transparent;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.about-timeline-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 8px;
+
+  border-radius: 50%;
+
+  background: #087f88;
+
+  color: #ffffff;
+}
+
+
+/* Yellow icons */
+
+.about-timeline-item:nth-child(3) .about-timeline-icon,
+.about-timeline-item:nth-child(7) .about-timeline-icon {
+  background: #f2c200;
+
+  color: #073d46;
+}
+
+
+.about-timeline-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.about-timeline-item h3 {
+  max-width: 190px;
+
+  margin: 0 auto 5px;
+
+  color: #073d46;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   COMPANY
+   ========================================================= */
+
+.about-timeline-item strong {
+  display: block;
+
+  margin: 0;
+
+  color: #244b52;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.about-timeline-item span {
+  display: block;
+
+  max-width: 190px;
+
+  margin: 3px auto 0;
+
+  color: #62777b;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 8.5px;
+  font-weight: 500;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   DATE / ERA
+   ========================================================= */
+
+.about-timeline-era {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -29px;
+
+  display: block;
+
+  color: #087f88;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  font-style: normal;
+
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CONNECTING ARROWS
+   ========================================================= */
+
+.about-timeline-arrow {
+  position: relative;
+
+  z-index: 3;
+
+  flex: 0 0 58px;
+
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #b8c9cb;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 27px;
+  font-weight: 300;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   REMOVE OLD VERTICAL BORDERS
+   ========================================================= */
+
+.about-timeline-item,
+.about-timeline-item:last-child {
+  border-right: none !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-timeline {
+    flex-wrap: wrap;
+
+    padding-bottom: 20px;
+  }
+
+  .about-timeline-item {
+    flex: 0 0 calc(33.333% - 20px);
+
+    margin-bottom: 35px;
+  }
+
+  .about-timeline-arrow {
+    flex: 0 0 30px;
+  }
+
+  .about-timeline::after {
+    display: none;
+  }
+
+  .about-timeline-era {
+    position: static;
+
+    margin-top: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .about-timeline {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+    padding: 0;
+  }
+
+  .about-timeline-item {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 15px 10px 20px;
+
+    border-bottom: 1px solid #dfe8e9 !important;
+  }
+
+  .about-timeline-item:last-of-type {
+    border-bottom: none !important;
+  }
+
+  .about-timeline-arrow {
+    display: none;
+  }
+
+  .about-timeline::after {
+    display: none;
+  }
+
+  .about-timeline-era {
+    position: static;
+
+    margin-top: 7px;
+  }
+
+}
+
+
+
+
+
+.about-metric-card-teal {
+  background: #e9f8f8;
+}
+
+/* ICON */
+.about-metric-card .about-metric-icon {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  color: #073d46;
+}
+
+.about-metric-card .about-metric-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* NUMBER */
+.about-metric-card strong {
+  margin: 0 0 5px;
+  font-size: 42px;
+  line-height: 0.95;
+}
+
+/* DESCRIPTION */
+.about-metric-card span {
+  font-size: 16px;
+  line-height: 1.25;
+}
+/* =========================================================
+   METRIC CARDS — FINAL FIX
+   ========================================================= */
+
+/* =========================================================
+   INVESTOR EXPERIENCE METRICS
+   RIGHT SIDE OF MEET GAURAV
+   ========================================================= */
+
+.about-metrics-section {
+  width: 100%;
+  padding: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+/* =========================================================
+   2 × 2 GRID
+   ========================================================= */
+
+.about-metrics-cards {
+  display: grid;
+
+  grid-template-columns: repeat(2, 240px);
+
+  gap: 14px;
+
+  width: fit-content;
+
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.about-metric-card {
+  width: 240px;
+  height: 185px;
+
+  padding: 20px 26px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  border: 1px solid #dce8e9;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 18px rgba(7, 61, 70, 0.04);
+}
+
+
+.about-metric-card-teal {
+  background: #e9f8f8;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.about-metric-card .about-metric-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 8px;
+
+  color: #073d46;
+}
+
+.about-metric-card .about-metric-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.about-metric-card strong {
+  display: block;
+
+  width: 100%;
+
+  margin: 0 0 5px;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 42px;
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.about-metric-card span {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+
+  color: #294c53;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 1.25;
+}
+/* =========================================================
+   FOUNDER EXPERIENCE TAGS
+   ========================================================= */
+
+.about-founder-tags {
+  display: flex;
+  /* flex-wrap: wrap; */
+
+  gap: 10px 12px;
+
+  max-width: 600px;
+
+  margin: 14px 0 14px;
+}
+
+
+.about-founder-tags span {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 18px;
+
+  border: 1px solid #cfe4e6;
+  border-radius: 22px;
+
+  background: #eef9f9;
+
+  color: #315b63;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+.about-founder-tags span svg {
+  flex-shrink: 0;
+
+  color: #087f88;
+}
+
+/* CARD */
+
+
+
+/* ICON */
+
+.about-metric-card .about-metric-icon {
+  width: 40px !important;
+  height: 40px !important;
+
+  margin-bottom: 8px !important;
+
+  display: flex !important;
+  align-items: center;
+}
+
+.about-metric-card .about-metric-icon svg {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+
+/* NUMBER */
+
+.about-metric-card strong {
+  display: block !important;
+
+  width: 100% !important;
+
+  margin: 0 0 4px !important;
+
+  font-size: 40px !important;
+  line-height: 1 !important;
+
+  color: #073d46;
+}
+
+
+/* DESCRIPTION */
+
+.about-metric-card span {
+  display: block !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+
+  color: #45636a;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .about-metrics-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-metric-card {
+    min-height: 160px !important;
+    padding: 18px 22px !important;
+  }
+
+  .about-metric-card strong {
+    font-size: 36px !important;
+  }
+
+  .about-metric-card span {
+    font-size: 15px !important;
+  }
+}
+/* =========================================================
+   HERO — ABOUT AMG CONTENT
+   ========================================================= */
+
+.about-hero-copy .about-eyebrow {
+  margin-bottom: 14px;
+}
+
+
+/* MAIN HEADING */
+
+.about-hero-copy .about-hero-title {
+  max-width: 760px;
+
+  margin: 0 0 28px;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 62px;
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* "Now Working for Founders." */
+
+.about-hero-copy .about-hero-title span {
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-weight: 400;
+}
+
+
+/* BODY COPY */
+
+.about-hero-copy .about-hero-description {
+  max-width: 700px;
+
+  margin: 0 0 22px;
+
+  color: #294c53;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  line-height: 1.45;
+}
+
+
+/* SECOND PARAGRAPH */
+
+.about-hero-copy .about-hero-description-second {
+  color: #294c53;
+
+  margin-top: 4px;
+}
+
+
+/* =========================================================
+   REMOVE HERO TAGS
+   ========================================================= */
+
+.about-hero-tags {
+  display: none;
+}
+/* =========================================================
+   GLOBAL PERSPECTIVE — PREMIUM VERSION
+   ========================================================= */
+
+.about-map-panel.about-global-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 34px 34px 28px;
+
+  border: 1px solid #dce9ea;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(112, 203, 210, 0.10),
+      transparent 35%
+    ),
+    #ffffff;
+
+  box-shadow: 0 14px 40px rgba(17, 65, 72, 0.055);
+}
+
+
+/* =========================================================
+   TOP HEADER
+   ========================================================= */
+
+.about-map-panel .about-global-header {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 8px;
+}
+
+
+/* LEFT HEADER */
+
+.about-map-panel .about-global-copy {
+  max-width: 560px;
+}
+
+.about-map-panel .about-global-copy .about-eyebrow {
+  margin-bottom: 12px;
+
+  color: #008c98;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  line-height: 1.4;
+}
+
+
+.about-map-panel .about-global-copy h2 {
+  margin: 0;
+
+  color: #123f46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: 37px;
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -1.3px;
+}
+
+
+.about-map-panel .about-global-copy h2 span {
+  color: #69c2c9;
+}
+
+
+/* SMALL ACCENT */
+
+.about-global-accent {
+  width: 42px;
+  height: 2px;
+
+  margin-top: 15px;
+
+  border-radius: 10px;
+
+  background: #67c3ca;
+}
+
+
+/* DESCRIPTION */
+
+.about-map-panel .about-global-copy p {
+  max-width: 430px;
+
+  margin: 13px 0 0;
+
+  color: #527076;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 15.25px;
+  font-weight: 500;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.about-global-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 1px;
+
+  padding: 8px 12px;
+
+  border: 1px solid #d8e9ea;
+  border-radius: 100px;
+
+  background: #fbfefe;
+
+  color: #5b7a7f;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  white-space: nowrap;
+}
+
+
+.about-global-badge svg {
+  width: 16px;
+  height: 16px;
+
+  color: #58bbc3;
+}
+
+
+/* =========================================================
+   MAP
+   ========================================================= */
+
+.about-map-panel .about-global-map-wrap {
+  position: relative;
+
+  margin: -9px  51px 12px;
+}
+
+
+.about-map-panel .about-map {
+  position: relative;
+
+  width: 100%;
+  height: 190px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(243, 251, 251, 0.72),
+      rgba(255, 255, 255, 0.15)
+    );
+}
+
+
+/* WORLD MAP */
+
+.about-map-panel .about-map > svg:first-child {
+  position: absolute !important;
+
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+  height: 190px !important;
+
+  opacity: 0.48 !important;
+}
+
+
+/* =========================================================
+   ROUTE
+   ========================================================= */
+
+.about-map-panel .about-map .about-map-line {
+  position: absolute;
+
+  top: 58px;
+
+  left: 0;
+
+  width: 100%;
+  height: 105px;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+.about-map-panel .about-map .about-map-line path {
+  fill: none;
+
+  stroke: #67c4cb;
+
+  stroke-width: 1.4;
+
+  stroke-dasharray: 5 6;
+
+  opacity: 0.75;
+}
+
+
+/* =========================================================
+   LOCATION MARKERS
+   ========================================================= */
+
+.about-map-panel .about-map .about-map-point {
+  z-index: 4;
+}
+
+
+.about-map-panel .about-map .about-map-dot {
+  width: 9px;
+  height: 9px;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+
+  background: #5bbdc5;
+
+  box-shadow:
+    0 0 0 4px rgba(91, 189, 197, 0.13),
+    0 3px 9px rgba(30, 100, 108, 0.18);
+}
+
+
+.about-map-panel .about-map .about-map-label {
+  margin-top: 6px;
+
+  color: #42676c;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  white-space: nowrap;
+}
+
+
+/* POSITION MARKERS */
+
+/* =========================================================
+   CORRECT MAP LOCATIONS
+   Coordinates aligned to the 700 x 180 world map
+   ========================================================= */
+
+/* CANADA */
+.about-map-panel .about-map .about-map-point:nth-of-type(1) {
+  left: 18% !important;
+  top: 43px !important;
+}
+
+
+/* UNITED STATES */
+.about-map-panel .about-map .about-map-point:nth-of-type(2) {
+  left: 15% !important;
+  top: 100px !important;
+}
+
+
+/* EUROPE */
+.about-map-panel .about-map .about-map-point:nth-of-type(3) {
+  left: 51% !important;
+  top: 48px !important;
+}
+
+
+/* UNITED KINGDOM */
+.about-map-panel .about-map .about-map-point:nth-of-type(4) {
+  left: 48.5% !important;
+  top: 32px !important;
+}
+
+/* =========================================================
+   MARKET STRIP
+   ========================================================= */
+
+.about-market-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 5px;
+
+  border-top: 1px solid #dfeaec;
+  border-bottom: 1px solid #dfeaec;
+}
+
+
+.about-market-item {
+  display: flex;
+  align-items: center;
+
+  min-height: 62px;
+
+  padding: 10px 13px;
+
+  gap: 9px;
+
+  background: transparent;
+
+  transition: background 0.2s ease;
+}
+
+
+.about-market-item + .about-market-item {
+  border-left: 1px solid #e4edef;
+}
+
+
+.about-market-item:hover {
+  background: #f7fbfb;
+}
+
+
+/* =========================================================
+   MARKET ICON
+   ========================================================= */
+
+.about-market-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #d4e8e9;
+
+  border-radius: 7px;
+
+  background: #f6fbfb;
+
+  color: #5abac2;
+}
+
+
+.about-market-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+
+/* MARKET TEXT */
+
+.about-market-item strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #31565c;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+
+.about-market-item span {
+  display: block;
+
+  color: #84999c;
+
+  font-family: Inter, sans-serif;
+
+  font-size: 7.5px;
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   REMOVE EXTRA PARAGRAPH SPACING
+   ========================================================= */
+
+.about-map-panel.about-global-card > p {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .about-map-panel.about-global-card {
+    padding: 28px 26px 24px;
+  }
+
+  .about-map-panel .about-global-copy h2 {
+    font-size: 34px;
+  }
+
+  .about-global-badge {
+    font-size: 7.5px;
+  }
+
+  .about-market-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-market-item:nth-child(3) {
+    border-left: none;
+  }
+
+  .about-market-item:nth-child(n + 3) {
+    border-top: 1px solid #e4edef;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .about-map-panel.about-global-card {
+    padding: 24px 20px 20px;
+
+    border-radius: 15px;
+  }
+
+
+  .about-map-panel .about-global-header {
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+
+  .about-map-panel .about-global-copy h2 {
+    font-size: 32px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .about-map-panel .about-global-copy p {
+    font-size: 15.25px;
+
+    max-width: 100%;
+  }
+
+
+  .about-global-badge {
+    align-self: flex-start;
+  }
+
+
+  .about-map-panel .about-map {
+    height: 160px;
+  }
+
+
+  .about-map-panel .about-map > svg:first-child {
+    height: 160px !important;
+  }
+
+/* =========================================================
+   CORRECT INVESTOR ROUTE
+   ========================================================= */
+
+.about-map-panel .about-map .about-map-line {
+  position: absolute;
+
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+  height: 190px !important;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+.about-map-panel .about-map .about-map-line path {
+  fill: none;
+
+  stroke: #67c4cb;
+
+  stroke-width: 2;
+
+  stroke-dasharray: 6 7;
+
+  stroke-linecap: round;
+
+  opacity: 0.75;
+}
+
+
+  .about-map-panel .about-map .about-map-label {
+    font-size: 7px;
+  }
+
+
+  .about-market-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-market-item {
+    min-height: 55px;
+  }
+
+
+  .about-market-item + .about-market-item {
+    border-left: none;
+
+    border-top: 1px solid #e4edef;
+  }
+
+}
+/* =========================================================
+   AMG GLOBAL ECOSYSTEM / LOGO SECTION
+   ========================================================= */
+
+.amg-ecosystem-section {
+  width: 100%;
+  padding: 80px 0 0;
+  background: #ffffff;
+  border-top: 1px solid #dce8e9;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.amg-ecosystem-header {
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 48px;
+}
+
+
+.amg-ecosystem-header .about-eyebrow {
+  margin-bottom: 14px;
+
+  color: #087d86;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+.amg-ecosystem-header h2 {
+  margin: 0;
+
+  color: #073d46;
+
+  font-family: "Fraunces", Georgia, serif;
+
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 700;
+
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+}
+
+
+.amg-ecosystem-header p {
+  max-width: 760px;
+
+  margin: 22px auto 0;
+
+  color: #38565c;
+
+  font-family: Inter, Arial, sans-serif;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LOGO GRID
+   ========================================================= */
+
+.amg-ecosystem-logo-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+
+  border-top: 1px solid #dce5e7;
+  border-left: 1px solid #dce5e7;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   INDIVIDUAL LOGO CELL
+   ========================================================= */
+
+.amg-ecosystem-logo {
+  position: relative;
+
+  min-height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 18px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-right: 1px solid #dce5e7;
+  border-bottom: 1px solid #dce5e7;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.amg-ecosystem-logo:hover {
+  background: #f4fbfb;
+}
+
+
+/* =========================================================
+   LOGO IMAGE
+   ========================================================= */
+
+.amg-ecosystem-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 82%;
+  max-height: 62px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   SPECIAL LOGO SIZES
+   ========================================================= */
+
+.amg-ecosystem-logo:nth-child(1) img {
+  max-width: 105px;
+}
+
+.amg-ecosystem-logo:nth-child(2) img {
+  max-width: 105px;
+}
+
+.amg-ecosystem-logo:nth-child(3) img {
+  max-width: 125px;
+}
+
+.amg-ecosystem-logo:nth-child(4) img {
+  max-width: 120px;
+}
+
+.amg-ecosystem-logo:nth-child(5) img {
+  max-width: 135px;
+}
+
+.amg-ecosystem-logo:nth-child(6) img {
+  max-width: 135px;
+}
+
+.amg-ecosystem-logo:nth-child(7) img {
+  max-width: 125px;
+}
+
+.amg-ecosystem-logo:nth-child(8) img {
+  max-width: 130px;
+}
+
+.amg-ecosystem-logo:nth-child(9) img {
+  max-width: 125px;
+}
+
+.amg-ecosystem-logo:nth-child(10) img {
+  max-width: 130px;
+}
+
+.amg-ecosystem-logo:nth-child(11) img {
+  max-width: 140px;
+}
+
+.amg-ecosystem-logo:nth-child(12) img {
+  max-width: 120px;
+}
+
+.amg-ecosystem-logo:nth-child(13) img {
+  max-width: 110px;
+}
+
+.amg-ecosystem-logo:nth-child(14) img {
+  max-width: 130px;
+}
+
+.amg-ecosystem-logo:nth-child(15) img {
+  max-width: 130px;
+}
+
+.amg-ecosystem-logo:nth-child(16) img {
+  max-width: 125px;
+}
+
+.amg-ecosystem-logo:nth-child(17) img {
+  max-width: 135px;
+}
+
+.amg-ecosystem-logo:nth-child(18) img {
+  max-width: 140px;
+}
+
+.amg-ecosystem-logo:nth-child(19) img {
+  max-width: 135px;
+}
+
+.amg-ecosystem-logo:nth-child(20) img {
+  max-width: 125px;
+}
+
+.amg-ecosystem-logo:nth-child(21) img {
+  max-width: 115px;
+}
+
+.amg-ecosystem-logo:nth-child(22) img {
+  max-width: 140px;
+}
+
+.amg-ecosystem-logo:nth-child(23) img {
+  max-width: 115px;
+}
+
+.amg-ecosystem-logo:nth-child(24) img {
+  max-width: 140px;
+}
+
+.amg-ecosystem-logo:nth-child(25) img {
+  max-width: 135px;
+}
+
+.amg-ecosystem-logo:nth-child(26) img {
+  max-width: 140px;
+}
+
+.amg-ecosystem-logo:nth-child(27) img {
+  max-width: 110px;
+}
+
+.amg-ecosystem-logo:nth-child(28) img {
+  max-width: 140px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .amg-ecosystem-section {
+    padding-top: 65px;
+  }
+
+  .amg-ecosystem-logo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .amg-ecosystem-logo {
+    min-height: 105px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .amg-ecosystem-section {
+    padding-top: 55px;
+  }
+
+  .amg-ecosystem-header {
+    width: calc(100% - 36px);
+    padding-bottom: 35px;
+  }
+
+  .amg-ecosystem-header h2 {
+    font-size: 34px;
+  }
+
+  .amg-ecosystem-header p {
+    font-size: 15px;
+  }
+
+  .amg-ecosystem-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .amg-ecosystem-logo {
+    min-height: 95px;
+    padding: 16px 10px;
+  }
+
+  .amg-ecosystem-logo img {
+    max-width: 85%;
+    max-height: 48px;
+  }
+
+}
+/* =========================================================
+   GLOBAL PERSPECTIVE — WIDER DESCRIPTION
+   ========================================================= */
+
+.about-map-panel .about-global-header {
+  position: relative;
+  display: block;
+}
+
+.about-map-panel .about-global-copy {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+.about-map-panel .about-global-copy p {
+  max-width: 700px !important;
+  width: 100% !important;
+
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+
+/* Keep badge in the top-right */
+.about-map-panel .about-global-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
